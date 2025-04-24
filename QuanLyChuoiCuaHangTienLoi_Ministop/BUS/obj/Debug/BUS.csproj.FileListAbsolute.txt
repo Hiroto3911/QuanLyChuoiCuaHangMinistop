@@ -1,0 +1,11 @@
+D:\DoAnCN.Net\Project\QuanLyChuoiCuaHangTienLoi_Ministop\BUS\bin\Debug\BUS.dll
+D:\DoAnCN.Net\Project\QuanLyChuoiCuaHangTienLoi_Ministop\BUS\bin\Debug\BUS.pdb
+D:\DoAnCN.Net\Project\QuanLyChuoiCuaHangTienLoi_Ministop\BUS\bin\Debug\DAL.dll
+D:\DoAnCN.Net\Project\QuanLyChuoiCuaHangTienLoi_Ministop\BUS\bin\Debug\ET.dll
+D:\DoAnCN.Net\Project\QuanLyChuoiCuaHangTienLoi_Ministop\BUS\bin\Debug\DAL.pdb
+D:\DoAnCN.Net\Project\QuanLyChuoiCuaHangTienLoi_Ministop\BUS\bin\Debug\ET.pdb
+D:\DoAnCN.Net\Project\QuanLyChuoiCuaHangTienLoi_Ministop\BUS\obj\Debug\BUS.csproj.AssemblyReference.cache
+D:\DoAnCN.Net\Project\QuanLyChuoiCuaHangTienLoi_Ministop\BUS\obj\Debug\BUS.csproj.CoreCompileInputs.cache
+D:\DoAnCN.Net\Project\QuanLyChuoiCuaHangTienLoi_Ministop\BUS\obj\Debug\BUS.csproj.Up2Date
+D:\DoAnCN.Net\Project\QuanLyChuoiCuaHangTienLoi_Ministop\BUS\obj\Debug\BUS.dll
+D:\DoAnCN.Net\Project\QuanLyChuoiCuaHangTienLoi_Ministop\BUS\obj\Debug\BUS.pdb

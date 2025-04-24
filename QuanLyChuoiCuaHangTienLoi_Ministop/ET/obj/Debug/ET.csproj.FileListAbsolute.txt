@@ -1,0 +1,6 @@
+D:\DoAnCN.Net\Project\QuanLyChuoiCuaHangTienLoi_Ministop\ET\bin\Debug\ET.dll
+D:\DoAnCN.Net\Project\QuanLyChuoiCuaHangTienLoi_Ministop\ET\bin\Debug\ET.pdb
+D:\DoAnCN.Net\Project\QuanLyChuoiCuaHangTienLoi_Ministop\ET\obj\Debug\ET.csproj.AssemblyReference.cache
+D:\DoAnCN.Net\Project\QuanLyChuoiCuaHangTienLoi_Ministop\ET\obj\Debug\ET.csproj.CoreCompileInputs.cache
+D:\DoAnCN.Net\Project\QuanLyChuoiCuaHangTienLoi_Ministop\ET\obj\Debug\ET.dll
+D:\DoAnCN.Net\Project\QuanLyChuoiCuaHangTienLoi_Ministop\ET\obj\Debug\ET.pdb

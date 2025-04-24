@@ -1,0 +1,9 @@
+D:\DoAnCN.Net\Project\QuanLyChuoiCuaHangTienLoi_Ministop\DAL\bin\Debug\DAL.dll
+D:\DoAnCN.Net\Project\QuanLyChuoiCuaHangTienLoi_Ministop\DAL\bin\Debug\DAL.pdb
+D:\DoAnCN.Net\Project\QuanLyChuoiCuaHangTienLoi_Ministop\DAL\bin\Debug\ET.dll
+D:\DoAnCN.Net\Project\QuanLyChuoiCuaHangTienLoi_Ministop\DAL\bin\Debug\ET.pdb
+D:\DoAnCN.Net\Project\QuanLyChuoiCuaHangTienLoi_Ministop\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
+D:\DoAnCN.Net\Project\QuanLyChuoiCuaHangTienLoi_Ministop\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+D:\DoAnCN.Net\Project\QuanLyChuoiCuaHangTienLoi_Ministop\DAL\obj\Debug\DAL.csproj.Up2Date
+D:\DoAnCN.Net\Project\QuanLyChuoiCuaHangTienLoi_Ministop\DAL\obj\Debug\DAL.dll
+D:\DoAnCN.Net\Project\QuanLyChuoiCuaHangTienLoi_Ministop\DAL\obj\Debug\DAL.pdb
