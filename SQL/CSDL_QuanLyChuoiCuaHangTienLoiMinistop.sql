@@ -96,8 +96,8 @@ CREATE TABLE PhieuXuat (
     MaPhieuXuat VARCHAR(10) PRIMARY KEY,
     MaCuaHang VARCHAR(10),
     MaNhanVien VARCHAR(10),
-    NgayXuat DATE,
-    LoaiXuat NVARCHAR(50),
+    NgayXuat DATE ,
+    LoaiXuat NVARCHAR(50),-- LOẠI XUẤT GỒM HỎNG, KIỂM KÊ LỆCH , HẾT HẠN
     FOREIGN KEY (MaCuaHang) REFERENCES CuaHang(MaCuaHang),
     FOREIGN KEY (MaNhanVien) REFERENCES NhanVien(MaNhanVien)
 );
@@ -135,6 +135,7 @@ CREATE TABLE ChiTietKiemKho (
     SoLuongHeThong INT,
     SoLuongThucTe INT,
     TrangThai NVARCHAR(50),
+	ChenhLech INT ,
     GhiChu NVARCHAR(255),
     PRIMARY KEY (MaKiemKho, MaSanPham),
     FOREIGN KEY (MaKiemKho) REFERENCES KiemKho(MaKiemKho),
@@ -201,7 +202,7 @@ CREATE TABLE LichSuThayDoiGia (
     GiaMoi DECIMAL(18,0),
     NguoiThayDoi VARCHAR(10),
     LyDo NVARCHAR(255),
-    NgayThayDoi DATETIME,
+    NgayThayDoi DATE,
     FOREIGN KEY (MaSanPham) REFERENCES SanPham(MaSanPham),
     FOREIGN KEY (MaCuaHang) REFERENCES CuaHang(MaCuaHang),
     FOREIGN KEY (NguoiThayDoi) REFERENCES NhanVien(MaNhanVien)
@@ -212,7 +213,7 @@ GO
 CREATE TABLE LichSuKho (
     MaLichSuKho VARCHAR(15) PRIMARY KEY,
     MaChiTietKho VARCHAR(20),
-    NgayThayDoi DATETIME,
+    NgayThayDoi DATE,
     SoLuongThayDoi INT,
     LoaiThayDoi NVARCHAR(50), -- Nhap, Xuat, Kiem
     MaThamChieu NVARCHAR(20)null,-- co the null hoac lien ke toi ma cua loai thay doi
