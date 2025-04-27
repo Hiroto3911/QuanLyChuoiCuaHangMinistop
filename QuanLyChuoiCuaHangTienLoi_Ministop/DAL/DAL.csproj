@@ -43,6 +43,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="DAL_DangNhap.cs" />
+    <Compile Include="DAL_NhanVien.cs" />
     <Compile Include="DB_QuanLyChuoiCuaHangTienLoiMinistop.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

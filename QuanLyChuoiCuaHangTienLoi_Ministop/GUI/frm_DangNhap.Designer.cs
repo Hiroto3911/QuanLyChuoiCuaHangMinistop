@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.btn_DangNhap = new System.Windows.Forms.Button();
@@ -40,7 +41,9 @@
             this.rb_QLCH = new System.Windows.Forms.RadioButton();
             this.rb_Admin = new System.Windows.Forms.RadioButton();
             this.chk_HienThiMatKhau = new System.Windows.Forms.CheckBox();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -73,6 +76,7 @@
             this.btn_DangNhap.TabIndex = 72;
             this.btn_DangNhap.Text = "Đăng nhập";
             this.btn_DangNhap.UseVisualStyleBackColor = true;
+            this.btn_DangNhap.Click += new System.EventHandler(this.btn_DangNhap_Click);
             // 
             // label2
             // 
@@ -100,6 +104,7 @@
             this.txt_MatKhau.Name = "txt_MatKhau";
             this.txt_MatKhau.Size = new System.Drawing.Size(229, 20);
             this.txt_MatKhau.TabIndex = 69;
+            this.txt_MatKhau.Leave += new System.EventHandler(this.txt_MatKhau_Leave);
             // 
             // txt_TaiKhoan
             // 
@@ -107,6 +112,7 @@
             this.txt_TaiKhoan.Name = "txt_TaiKhoan";
             this.txt_TaiKhoan.Size = new System.Drawing.Size(229, 20);
             this.txt_TaiKhoan.TabIndex = 68;
+            this.txt_TaiKhoan.Leave += new System.EventHandler(this.txt_TaiKhoan_Leave);
             // 
             // btn_Thoat
             // 
@@ -117,6 +123,7 @@
             this.btn_Thoat.TabIndex = 77;
             this.btn_Thoat.Text = "Thoát";
             this.btn_Thoat.UseVisualStyleBackColor = true;
+            this.btn_Thoat.Click += new System.EventHandler(this.btn_Thoat_Click);
             // 
             // rb_NhanVien
             // 
@@ -163,6 +170,11 @@
             this.chk_HienThiMatKhau.TabIndex = 78;
             this.chk_HienThiMatKhau.Text = "Hiển thị mật khẩu";
             this.chk_HienThiMatKhau.UseVisualStyleBackColor = true;
+            this.chk_HienThiMatKhau.Click += new System.EventHandler(this.chk_HienThiMatKhau_Click);
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
             // 
             // frm_DangNhap
             // 
@@ -181,11 +193,15 @@
             this.Controls.Add(this.rb_NhanVien);
             this.Controls.Add(this.rb_QLCH);
             this.Controls.Add(this.rb_Admin);
+            this.MaximizeBox = false;
             this.Name = "frm_DangNhap";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frm_DangNhap";
+            this.Text = "Đăng nhập hệ thống";
+          
+            this.Load += new System.EventHandler(this.frm_DangNhap_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -205,5 +221,6 @@
         private System.Windows.Forms.RadioButton rb_QLCH;
         private System.Windows.Forms.RadioButton rb_Admin;
         private System.Windows.Forms.CheckBox chk_HienThiMatKhau;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

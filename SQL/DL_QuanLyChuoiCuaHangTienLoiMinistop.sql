@@ -15,31 +15,31 @@ GO
 
 -- NHÂN VIÊN
 -- 3 Admin
-INSERT INTO NhanVien VALUES ('AD001', N'Nguyễn Văn A', N'Nam', '1990-01-01', '0901111222', '2023-01-01', 'admin1', '123456', 'Admin', NULL),
- ('AD002', N'Trần Thị B', N'Nữ', '1991-02-02', '0902222333', '2023-01-01', 'admin2', '123456', 'Admin', NULL),
- ('AD003', N'Lê Văn C', N'Nam', '1992-03-03', '0903333444', '2023-01-01', 'admin3', '123456', 'Admin', NULL),
+INSERT INTO NhanVien VALUES ('AD001', N'Nguyễn Văn A', N'Nam', '1990-01-01', '0901111222', '2023-01-01', 'admin1', 'jZae727K08KaOmKSgOaGzww/XVqGr/PKEgIMkjrcbJI=', 'Admin', NULL),
+ ('AD002', N'Trần Thị B', N'Nữ', '1991-02-02', '0902222333', '2023-01-01', 'admin2', 'jZae727K08KaOmKSgOaGzww/XVqGr/PKEgIMkjrcbJI=', 'Admin', NULL),
+ ('AD003', N'Lê Văn C', N'Nam', '1992-03-03', '0903333444', '2023-01-01', 'admin3', 'jZae727K08KaOmKSgOaGzww/XVqGr/PKEgIMkjrcbJI=', 'Admin', NULL),
 
 -- 6 Quản lý
- ('QL001', N'Phạm Văn D', N'Nam', '1988-04-04', '0904444555', '2023-01-01', 'ql1', '123456', 'QuanLy', 'CH001'),
- ('QL002', N'Ngô Thị E', N'Nữ', '1989-05-05', '0905555666', '2023-01-01', 'ql2', '123456', 'QuanLy', 'CH002'),
- ('QL003', N'Đỗ Văn F', N'Nam', '1990-06-06', '0906666777', '2023-01-01', 'ql3', '123456', 'QuanLy', 'CH003'),
- ('QL004', N'Hoàng Thị G', N'Nữ', '1991-07-07', '0907777888', '2023-01-01', 'ql4', '123456', 'QuanLy', 'CH004'),
- ('QL005', N'Huỳnh Văn H', N'Nam', '1992-08-08', '0908888999', '2023-01-01', 'ql5', '123456', 'QuanLy', 'CH005'),
- ('QL006', N'Đinh Thị I', N'Nữ', '1993-09-09', '0909999000', '2023-01-01', 'ql6', '123456', 'QuanLy', 'CH006'),
+ ('QL001', N'Phạm Văn D', N'Nam', '1988-04-04', '0904444555', '2023-01-01', 'ql1', 'jZae727K08KaOmKSgOaGzww/XVqGr/PKEgIMkjrcbJI=', 'QuanLy', 'CH001'),
+ ('QL002', N'Ngô Thị E', N'Nữ', '1989-05-05', '0905555666', '2023-01-01', 'ql2', 'jZae727K08KaOmKSgOaGzww/XVqGr/PKEgIMkjrcbJI=', 'QuanLy', 'CH002'),
+ ('QL003', N'Đỗ Văn F', N'Nam', '1990-06-06', '0906666777', '2023-01-01', 'ql3', 'jZae727K08KaOmKSgOaGzww/XVqGr/PKEgIMkjrcbJI=', 'QuanLy', 'CH003'),
+ ('QL004', N'Hoàng Thị G', N'Nữ', '1991-07-07', '0907777888', '2023-01-01', 'ql4', 'jZae727K08KaOmKSgOaGzww/XVqGr/PKEgIMkjrcbJI=', 'QuanLy', 'CH004'),
+ ('QL005', N'Huỳnh Văn H', N'Nam', '1992-08-08', '0908888999', '2023-01-01', 'ql5', 'jZae727K08KaOmKSgOaGzww/XVqGr/PKEgIMkjrcbJI=', 'QuanLy', 'CH005'),
+ ('QL006', N'Đinh Thị I', N'Nữ', '1993-09-09', '0909999000', '2023-01-01', 'ql6', 'jZae727K08KaOmKSgOaGzww/XVqGr/PKEgIMkjrcbJI=', 'QuanLy', 'CH006'),
 
 -- 12 Nhân viên cửa hàng (2 người/cửa hàng)
- ('NV004', N'Lâm Văn J', N'Nam', '1995-01-01', '0910000001', '2023-01-01', 'nv1', '123456', 'NhanVien', 'CH001'),
- ('NV005', N'Tạ Thị K', N'Nữ', '1995-02-01', '0910000002', '2023-01-01', 'nv2', '123456', 'NhanVien', 'CH001'),
- ('NV006', N'Bùi Văn L', N'Nam', '1995-03-01', '0910000003', '2023-01-01', 'nv3', '123456', 'NhanVien', 'CH002'),
- ('NV007', N'Trịnh Thị M', N'Nữ', '1995-04-01', '0910000004', '2023-01-01', 'nv4', '123456', 'NhanVien', 'CH002'),
- ('NV008', N'Lý Văn N', N'Nam', '1995-05-01', '0910000005', '2023-01-01', 'nv5', '123456', 'NhanVien', 'CH003'),
- ('NV009', N'Châu Thị O', N'Nữ', '1995-06-01', '0910000006', '2023-01-01', 'nv6', '123456', 'NhanVien', 'CH003'),
- ('NV010', N'Võ Văn P', N'Nam', '1995-07-01', '0910000007', '2023-01-01', 'nv7', '123456', 'NhanVien', 'CH004'),
- ('NV011', N'Đặng Thị Q', N'Nữ', '1995-08-01', '0910000008', '2023-01-01', 'nv8', '123456', 'NhanVien', 'CH004'),
- ('NV012', N'Phan Văn R', N'Nam', '1995-09-01', '0910000009', '2023-01-01', 'nv9', '123456', 'NhanVien', 'CH005'),
- ('NV013', N'Mai Thị S', N'Nữ', '1995-10-01', '0910000010', '2023-01-01', 'nv10', '123456', 'NhanVien', 'CH005'),
-('NV014', N'Lưu Văn T', N'Nam', '1995-11-01', '0910000011', '2023-01-01', 'nv11', '123456', 'NhanVien', 'CH006'),
- ('NV015', N'Cao Thị U', N'Nữ', '1995-12-01', '0910000012', '2023-01-01', 'nv12', '123456', 'NhanVien', 'CH006')
+ ('NV004', N'Lâm Văn J', N'Nam', '1995-01-01', '0910000001', '2023-01-01', 'nv1', 'jZae727K08KaOmKSgOaGzww/XVqGr/PKEgIMkjrcbJI=', 'NhanVien', 'CH001'),
+ ('NV005', N'Tạ Thị K', N'Nữ', '1995-02-01', '0910000002', '2023-01-01', 'nv2', 'jZae727K08KaOmKSgOaGzww/XVqGr/PKEgIMkjrcbJI=', 'NhanVien', 'CH001'),
+ ('NV006', N'Bùi Văn L', N'Nam', '1995-03-01', '0910000003', '2023-01-01', 'nv3', 'jZae727K08KaOmKSgOaGzww/XVqGr/PKEgIMkjrcbJI=', 'NhanVien', 'CH002'),
+ ('NV007', N'Trịnh Thị M', N'Nữ', '1995-04-01', '0910000004', '2023-01-01', 'nv4', 'jZae727K08KaOmKSgOaGzww/XVqGr/PKEgIMkjrcbJI=', 'NhanVien', 'CH002'),
+ ('NV008', N'Lý Văn N', N'Nam', '1995-05-01', '0910000005', '2023-01-01', 'nv5', 'jZae727K08KaOmKSgOaGzww/XVqGr/PKEgIMkjrcbJI=', 'NhanVien', 'CH003'),
+ ('NV009', N'Châu Thị O', N'Nữ', '1995-06-01', '0910000006', '2023-01-01', 'nv6', 'jZae727K08KaOmKSgOaGzww/XVqGr/PKEgIMkjrcbJI=', 'NhanVien', 'CH003'),
+ ('NV010', N'Võ Văn P', N'Nam', '1995-07-01', '0910000007', '2023-01-01', 'nv7', 'jZae727K08KaOmKSgOaGzww/XVqGr/PKEgIMkjrcbJI=', 'NhanVien', 'CH004'),
+ ('NV011', N'Đặng Thị Q', N'Nữ', '1995-08-01', '0910000008', '2023-01-01', 'nv8', 'jZae727K08KaOmKSgOaGzww/XVqGr/PKEgIMkjrcbJI=', 'NhanVien', 'CH004'),
+ ('NV012', N'Phan Văn R', N'Nam', '1995-09-01', '0910000009', '2023-01-01', 'nv9', 'jZae727K08KaOmKSgOaGzww/XVqGr/PKEgIMkjrcbJI=', 'NhanVien', 'CH005'),
+ ('NV013', N'Mai Thị S', N'Nữ', '1995-10-01', '0910000010', '2023-01-01', 'nv10', 'jZae727K08KaOmKSgOaGzww/XVqGr/PKEgIMkjrcbJI=', 'NhanVien', 'CH005'),
+('NV014', N'Lưu Văn T', N'Nam', '1995-11-01', '0910000011', '2023-01-01', 'nv11', 'jZae727K08KaOmKSgOaGzww/XVqGr/PKEgIMkjrcbJI=', 'NhanVien', 'CH006'),
+ ('NV015', N'Cao Thị U', N'Nữ', '1995-12-01', '0910000012', '2023-01-01', 'nv12', 'jZae727K08KaOmKSgOaGzww/XVqGr/PKEgIMkjrcbJI=', 'NhanVien', 'CH006')
  GO 
  SELECT * FROM NhanVien 
  GO 
