@@ -1,4 +1,6 @@
-﻿using System;
+﻿using BUS;
+using ET;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +14,279 @@ namespace GUI
 {
     public partial class frm_BanHang : Form
     {
+        // biến tầng bus
+        private BUS_HoaDon bus_hd = new BUS_HoaDon();
+        private BUS_ChiTietHoaDon bus_cthd = new BUS_ChiTietHoaDon();
+        private BUS_CuaHang bus_CH = new BUS_CuaHang();
+        private BUS_SanPham bus_SP = new BUS_SanPham();
+        private BUS_ChiTietKho bus_CTK = new BUS_ChiTietKho();
+        // biến tầng et 
+        private ET_ChiTietHoaDon et_cthd = new ET_ChiTietHoaDon();
+        private ET_HoaDon et_hd = new ET_HoaDon();
+        private ET_SanPham et_SP = new ET_SanPham();
+        // biến static 
+        private static string maHDMoiThem;
+
         public frm_BanHang()
         {
             InitializeComponent();
+        }
+
+        // Các Function của các control
+        private void frm_BanHang_Load(object sender, EventArgs e)
+        {
+            cbo_MaCH.Text = Session.MaCuaHang;
+            txt_MaNV.Text = Session.MaNhanVien;
+            dtp_NgayLapHD.Text = DateTime.Now.ToShortDateString();
+            LoadHoaDon();
+            LoadChiTietHoaDonTheoMaHD(dgv_Data.CurrentRow.Cells[0].Value.ToString());
+            //LoadComboboxCuaHang();
+
+
+        }
+       
+
+
+        private void frm_BanHang_Resize(object sender, EventArgs e)
+        {
+            lbl_Title.Left = (this.ClientSize.Width - lbl_Title.Width) / 2;
+            gbo_HoaDon.Left = (this.ClientSize.Width - gbo_HoaDon.Width) / 2;
+            gbo_HoaDon.Top = 90;
+            gbo_ChiTietHoaDon.Left = (this.ClientSize.Width - gbo_ChiTietHoaDon.Width) / 2;
+            gbo_ChiTietHoaDon.Top = gbo_HoaDon.Bottom + 20;
+        }
+
+        private void btn_Xoa_Click(object sender, EventArgs e)
+        {
+            string maHD = txt_MaHD.Text;
+            var chapNhanXoa = MessageBox.Show($"Bạn có chắc muốn xoá dữ liệu {maHD} này không", "Thông báo", MessageBoxButtons.OKCancel);
+            if (DialogResult.Cancel == chapNhanXoa) return;
+            try
+            {
+
+                bus_hd.Xoa(maHD);
+                MessageBox.Show("Xoá thành công");
+                LamMoiHoaDon();
+                LoadHoaDon();
+
+            }
+            catch (Exception ex) { MessageBox.Show("Xoá thất bại\n Lỗi:" + ex); }
+        }
+
+        private void btn_Them_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string maCH = Session.MaCuaHang;
+                maHDMoiThem = TaoMaTuDong.TaoMa(bus_hd.LayDanhSachMaHD(), "HD");
+                string maNV = Session.MaNhanVien;
+                DateTime ngayLap = DateTime.Now.Date;
+                et_hd.MaHoaDon = maHDMoiThem;
+                et_hd.MaCuaHang = maCH;
+                et_hd.MaNhanVien = maNV;
+                et_hd.NgayLap = ngayLap;
+                //et_hd.TongTien = 0.0;
+                bus_hd.Them(et_hd);
+                MessageBox.Show("Thêm thành công");
+                LoadHoaDon();
+                LoadChiTietHoaDonTheoMaHD(maHDMoiThem);
+                btn_HoanTat.Enabled = true; 
+                btn_InHoaDon.Enabled = true;
+                btn_Xoa.Enabled = true;
+                btn_ThemChiTiet.Enabled = true;
+                btn_XoaChiTiet.Enabled=true;
+                btn_SuaChiTiet.Enabled = true; 
+            }
+            catch (Exception ex) { MessageBox.Show("Thêm thất bại \n Lỗi:" + ex); }
+        }
+
+        private void btn_InHoaDon_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_ThemChiTiet_Click(object sender, EventArgs e)
+        {
+            if(maHDMoiThem == null) { MessageBox.Show("Thành thật xin lỗi bạn. Hoá đơn này hiện tại đã hoàn tất không thể thêm xoá sửa được nữa " +
+                "\n !Xin vui lòng tạo mã hoá đơn mới rồi bạn có thể thêm xoá sửa!", "Thông báo", MessageBoxButtons.OKCancel); return; }
+            try
+            {
+
+                string maCTHD = TaoMaTuDong.TaoMa(bus_cthd.LayDanhSachMaCTHD(), "CTHD");
+                et_cthd.MaHoaDon = maHDMoiThem;
+                et_cthd.MaChiTietHD = maCTHD;
+                et_cthd.MaSanPham = txt_SanPham.Text;
+                et_cthd.SoLuong = int.Parse(txt_SL.Text);
+                et_cthd.GiaBan = Convert.ToDecimal(txt_DonGia.Text);
+                //et_cthd.ThanhTien = 0.0;
+                bus_cthd.Them(et_cthd);
+                et_hd.MaHoaDon = maHDMoiThem;
+                et_hd.MaCuaHang = cbo_MaCH.Text;
+                et_hd.MaNhanVien = txt_MaNV.Text;
+                et_hd.NgayLap = Convert.ToDateTime(dtp_NgayLapHD.Text);
+                et_hd.TongTien = bus_cthd.TinhTongTienTheoMaHD(maHDMoiThem);
+                CapNhapTongTienHoaDon(et_hd);
+                MessageBox.Show("Thêm thành công");
+                LoadHoaDon();
+                LoadChiTietHoaDonTheoMaHD(maHDMoiThem);
+            }
+            catch (Exception ex) { MessageBox.Show("Thêm thất bại \n Lỗi:" + ex); }
+        }
+
+        private void btn_SuaChiTiet_Click(object sender, EventArgs e)
+        {
+            if (maHDMoiThem == null)
+            {
+                MessageBox.Show("Thành thật xin lỗi bạn. Hoá đơn này hiện tại đã hoàn tất không thể thêm xoá sửa được nữa " +
+                "\n !Xin vui lòng tạo mã hoá đơn mới rồi bạn có thể thêm xoá sửa!", "Thông báo", MessageBoxButtons.OKCancel); return;
+            }
+            try
+            {
+                et_cthd.MaHoaDon = maHDMoiThem;
+                et_cthd.MaChiTietHD = txt_MaCTHD.Text;
+                et_cthd.MaSanPham = txt_SanPham.Text;
+                et_cthd.SoLuong = int.Parse(txt_SL.Text);
+                et_cthd.GiaBan = Convert.ToDecimal(txt_DonGia.Text);
+                bus_cthd.Sua(et_cthd);
+                bus_cthd.Them(et_cthd);
+                et_hd.MaHoaDon = maHDMoiThem;
+                et_hd.MaCuaHang = cbo_MaCH.Text;
+                et_hd.MaNhanVien = txt_MaNV.Text;
+                et_hd.NgayLap = Convert.ToDateTime(dtp_NgayLapHD.Text);
+                et_hd.TongTien = bus_cthd.TinhTongTienTheoMaHD(maHDMoiThem);
+                CapNhapTongTienHoaDon(et_hd);
+                LoadHoaDon();
+                LoadChiTietHoaDonTheoMaHD(maHDMoiThem);
+            }
+            catch (Exception ex) { MessageBox.Show("Cập nhập thất bại\n Lỗi:" + ex, "Thông báo"); }
+        }
+
+        private void btn_XoaChiTiet_Click(object sender, EventArgs e)
+        {
+            if (maHDMoiThem == null)
+            {
+                MessageBox.Show("Thành thật xin lỗi bạn. Hoá đơn này hiện tại đã hoàn tất không thể thêm xoá sửa được nữa " +
+                "\n !Xin vui lòng tạo mã hoá đơn mới rồi bạn có thể thêm xoá sửa!", "Thông báo", MessageBoxButtons.OKCancel); return;
+            }
+            string maCTHD = txt_MaCTHD.Text;
+            var chapNhanXoa = MessageBox.Show($"Bạn có chắc muốn xoá dữ liệu {maCTHD} này không", "Thông báo", MessageBoxButtons.OKCancel);
+            if (DialogResult.Cancel == chapNhanXoa) return;
+            try
+            {
+
+                bus_cthd.Xoa(maCTHD);
+                et_hd.MaHoaDon = maHDMoiThem;
+                et_hd.MaCuaHang = cbo_MaCH.Text;
+                et_hd.MaNhanVien = txt_MaNV.Text;
+                et_hd.NgayLap = Convert.ToDateTime(dtp_NgayLapHD.Text);
+                et_hd.TongTien = bus_cthd.TinhTongTienTheoMaHD(maHDMoiThem);
+                CapNhapTongTienHoaDon(et_hd);
+                MessageBox.Show("Xoá thành công");          
+                LoadHoaDon();
+                LoadChiTietHoaDonTheoMaHD(maHDMoiThem);
+            }
+            catch (Exception ex) { MessageBox.Show("Xoá thất bại\n Lỗi:" + ex); }
+
+        }
+
+        private void btn_LamMoiChiTiet_Click(object sender, EventArgs e)
+        {
+            LoadHoaDon();
+            LoadChiTietHoaDonTheoMaHD(dgv_Data.CurrentRow.Cells[0].Value.ToString());
+            txt_MaCTHD.Clear();
+            txt_SanPham.Clear();
+            txt_SanPham.Text = "SP00";
+            txt_SL.Clear();
+            txt_ThanhTien.Clear();
+            txt_DonGia.Clear();
+            
+        }
+
+        private void dgv_Data_Click(object sender, EventArgs e)
+        {
+            int dong = dgv_Data.CurrentCell.RowIndex;
+            txt_MaHD.Text = dgv_Data.Rows[dong].Cells[0].Value.ToString();
+            dtp_NgayLapHD.Text = dgv_Data.Rows[dong].Cells[3].Value.ToString();
+            txt_TongTien.Text = dgv_Data.Rows[dong].Cells[4].Value.ToString();
+            LoadChiTietHoaDonTheoMaHD(dgv_Data.Rows[dong].Cells[0].Value.ToString());
+        }
+
+        private void dgv_DataChiTiet_Click(object sender, EventArgs e)
+        {
+
+            int dong = dgv_DataChiTiet.CurrentCell.RowIndex;
+            txt_MaCTHD.Text = dgv_DataChiTiet.Rows[dong].Cells[0].Value.ToString();
+            txt_SanPham.Text = dgv_DataChiTiet.Rows[dong].Cells[2].Value.ToString();
+            txt_SL.Text = dgv_DataChiTiet.Rows[dong].Cells[3].Value.ToString();
+            txt_DonGia.Text = dgv_DataChiTiet.Rows[dong].Cells[4].Value.ToString();
+            txt_ThanhTien.Text = dgv_DataChiTiet.Rows[dong].Cells[5].Value.ToString();
+            lbl_TenSP.Text = TimTenSanPham(dgv_DataChiTiet.Rows[dong].Cells[2].Value.ToString());
+            
+        }
+        
+
+        private void btn_HoanTat_Click(object sender, EventArgs e)
+        {
+            maHDMoiThem = null;
+           
+           
+            
+        }
+
+        private void txt_SanPham_Leave(object sender, EventArgs e)
+        {
+            lbl_TenSP.Text =  TimTenSanPham(txt_SanPham.Text);
+            txt_DonGia.Text = LayGiaBanCuaSanPham(Session.MaCuaHang, txt_SanPham.Text).ToString();
+        }
+       
+        // Các Function hỗ trợ
+        private string TimTenSanPham(string maSP)
+        {
+            return bus_SP.TimTenSPBangMaSP(maSP);
+        }
+        private void LoadHoaDon()
+        {
+            dgv_Data.DataSource = bus_hd.HienThiDuLieuMotCHSapXepGiamDanTheoMa(cbo_MaCH.Text);
+        }
+        private void LoadChiTietHoaDonTheoMaHD(string maHD)
+        {
+            dgv_DataChiTiet.DataSource = bus_cthd.HienThiDuLieuSapXepGiamDanTheoMaHD(maHD);
+        }
+        private void LoadComboboxCuaHang()
+        {
+            cbo_MaCH.DataSource = bus_CH.HienThiDuLieuSapXepGiamDanTheoMa();
+            cbo_MaCH.ValueMember ="MaCH";
+            cbo_MaCH.DisplayMember ="TenCH";
+        }
+        /// <summary>
+        /// Hàm lấy giá bán hiện tại của sản phẩm trong cửa hàng  
+        /// </summary>
+        /// <param name="maSP">mã sản phẩm</param>
+        /// <returns>giá bán hiện tại của một cửa hàng</returns>
+        private double LayGiaBanCuaSanPham(string maCH, string maSP)
+        {
+
+            return bus_CTK.LayGiaBanCuaSanPhamCuaMotCH(maCH, maSP);
+        }
+        /// <summary>
+        /// hàm cập nhập tổng tiền cho hoá đơn
+        /// </summary>
+        /// <param name="hoaDon">truyền giá trị hoá đơn cần chỉnh</param>
+        private void CapNhapTongTienHoaDon(ET_HoaDon hoaDon)
+        {
+            try
+            {
+                
+                bus_hd.Sua(hoaDon);
+            }
+            catch (Exception ex) { MessageBox.Show("Cập nhập tổng tiền thất bại\n Lỗi:" + ex, "Thông báo"); }
+
+        }
+        private void LamMoiHoaDon()
+        {
+            txt_MaHD.Clear();
+            dtp_NgayLapHD.Text = DateTime.Now.ToShortDateString();
+
         }
     }
 }

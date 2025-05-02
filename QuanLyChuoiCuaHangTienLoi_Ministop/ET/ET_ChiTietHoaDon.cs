@@ -12,7 +12,7 @@ namespace ET
         public string MaHoaDon { get; set; }
         public string MaSanPham { get; set; }
         public int SoLuong { get; set; }
-        public double GiaBan { get; set; }
-        public double ThanhTien { get; set; }
+        public decimal GiaBan { get; set; }
+        public decimal ThanhTien { get; set; }
     }
 }

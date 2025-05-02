@@ -87,8 +87,16 @@ namespace GUI
             Session.DangThoat();
             this.Hide();
             dn.ShowDialog();
+            this.Close();
 
 
+        }
+
+        private void btn_BH_Click(object sender, EventArgs e)
+        {
+            frm_BanHang bh = new frm_BanHang();
+            bh.MdiParent = this;
+            bh.Show();
         }
     }
 }

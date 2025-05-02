@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.pnl_header = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pnl_Hello = new System.Windows.Forms.Panel();
             this.btn_DangXuat = new System.Windows.Forms.Button();
             this.lbl_HelloUser = new System.Windows.Forms.Label();
             this.lbl_Title = new System.Windows.Forms.Label();
@@ -74,9 +76,8 @@
             this.pnl_BanHang = new System.Windows.Forms.Panel();
             this.panel22 = new System.Windows.Forms.Panel();
             this.btn_BH = new System.Windows.Forms.Button();
-            this.pnl_Hello = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.pnl_header.SuspendLayout();
+            this.pnl_Hello.SuspendLayout();
             this.panel2.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.fqnl_Menu.SuspendLayout();
@@ -92,7 +93,6 @@
             this.pnl_XuatHang.SuspendLayout();
             this.pnl_KiemKho.SuspendLayout();
             this.pnl_BanHang.SuspendLayout();
-            this.pnl_Hello.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnl_header
@@ -107,6 +107,27 @@
             this.pnl_header.Size = new System.Drawing.Size(1264, 52);
             this.pnl_header.TabIndex = 0;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(543, 27);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(206, 16);
+            this.label1.TabIndex = 4;
+            this.label1.Text = " Giờ mở cửa: Thứ 2 - Chủ nhật 24/7";
+            // 
+            // pnl_Hello
+            // 
+            this.pnl_Hello.Controls.Add(this.btn_DangXuat);
+            this.pnl_Hello.Controls.Add(this.lbl_HelloUser);
+            this.pnl_Hello.Dock = System.Windows.Forms.DockStyle.Right;
+            this.pnl_Hello.Location = new System.Drawing.Point(940, 0);
+            this.pnl_Hello.Name = "pnl_Hello";
+            this.pnl_Hello.Size = new System.Drawing.Size(324, 52);
+            this.pnl_Hello.TabIndex = 3;
+            // 
             // btn_DangXuat
             // 
             this.btn_DangXuat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(107)))), ((int)(((byte)(177)))));
@@ -114,7 +135,7 @@
             this.btn_DangXuat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_DangXuat.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_DangXuat.ForeColor = System.Drawing.Color.White;
-            this.btn_DangXuat.Location = new System.Drawing.Point(197, 9);
+            this.btn_DangXuat.Location = new System.Drawing.Point(195, 9);
             this.btn_DangXuat.Name = "btn_DangXuat";
             this.btn_DangXuat.Size = new System.Drawing.Size(117, 36);
             this.btn_DangXuat.TabIndex = 2;
@@ -566,27 +587,7 @@
             this.btn_BH.TabIndex = 4;
             this.btn_BH.Text = "Bán hàng";
             this.btn_BH.UseVisualStyleBackColor = true;
-            // 
-            // pnl_Hello
-            // 
-            this.pnl_Hello.Controls.Add(this.btn_DangXuat);
-            this.pnl_Hello.Controls.Add(this.lbl_HelloUser);
-            this.pnl_Hello.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pnl_Hello.Location = new System.Drawing.Point(950, 0);
-            this.pnl_Hello.Name = "pnl_Hello";
-            this.pnl_Hello.Size = new System.Drawing.Size(314, 52);
-            this.pnl_Hello.TabIndex = 3;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(543, 27);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(206, 16);
-            this.label1.TabIndex = 4;
-            this.label1.Text = " Giờ mở cửa: Thứ 2 - Chủ nhật 24/7";
+            this.btn_BH.Click += new System.EventHandler(this.btn_BH_Click);
             // 
             // frm_Main
             // 
@@ -603,6 +604,8 @@
             this.Load += new System.EventHandler(this.frm_Main_Load);
             this.pnl_header.ResumeLayout(false);
             this.pnl_header.PerformLayout();
+            this.pnl_Hello.ResumeLayout(false);
+            this.pnl_Hello.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
@@ -620,8 +623,6 @@
             this.pnl_XuatHang.ResumeLayout(false);
             this.pnl_KiemKho.ResumeLayout(false);
             this.pnl_BanHang.ResumeLayout(false);
-            this.pnl_Hello.ResumeLayout(false);
-            this.pnl_Hello.PerformLayout();
             this.ResumeLayout(false);
 
         }
