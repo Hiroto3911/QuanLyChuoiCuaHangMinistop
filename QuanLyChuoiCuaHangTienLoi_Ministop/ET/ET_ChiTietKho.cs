@@ -11,7 +11,7 @@ namespace ET
         public string MaChiTietKho { get; set; }
         public string MaCuaHang { get; set; }
         public string MaSanPham { get; set; }
-        public  int SoluongTon { get; set; }
+        public  int? SoluongTon { get; set; }
         public  double GiaBan { get; set; }
     }
 }

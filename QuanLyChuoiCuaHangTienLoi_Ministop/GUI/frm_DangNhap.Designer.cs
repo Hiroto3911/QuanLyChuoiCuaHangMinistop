@@ -104,6 +104,7 @@
             this.txt_MatKhau.Name = "txt_MatKhau";
             this.txt_MatKhau.Size = new System.Drawing.Size(229, 20);
             this.txt_MatKhau.TabIndex = 69;
+            this.txt_MatKhau.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_MatKhau_KeyDown);
             this.txt_MatKhau.Leave += new System.EventHandler(this.txt_MatKhau_Leave);
             // 
             // txt_TaiKhoan
@@ -112,6 +113,7 @@
             this.txt_TaiKhoan.Name = "txt_TaiKhoan";
             this.txt_TaiKhoan.Size = new System.Drawing.Size(229, 20);
             this.txt_TaiKhoan.TabIndex = 68;
+            this.txt_TaiKhoan.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_TaiKhoan_KeyDown);
             this.txt_TaiKhoan.Leave += new System.EventHandler(this.txt_TaiKhoan_Leave);
             // 
             // btn_Thoat
@@ -197,7 +199,6 @@
             this.Name = "frm_DangNhap";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Đăng nhập hệ thống";
-          
             this.Load += new System.EventHandler(this.frm_DangNhap_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
