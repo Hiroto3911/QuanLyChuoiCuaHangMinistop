@@ -15,5 +15,24 @@ namespace BUS
         {
             return dal_CH.HienThiDuLieuSapXepGiamDanTheoMa();
         }
+        public bool Them(ET_CuaHang cuaHang)
+        {
+           return dal_CH.Them(cuaHang);
+        }
+
+        public bool Xoa(string maCH)
+        {
+            return dal_CH.Xoa(maCH);
+        }
+        public bool Sua(ET_CuaHang cuaHang)
+
+        {
+            return dal_CH.Sua(cuaHang);
+
+        }
+        public List<string> LayDanhSachMaCH()
+        {
+            return dal_CH.LayDanhSachMaCH();
+        }
     }
 }
