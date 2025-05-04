@@ -30,10 +30,7 @@ namespace BUS
         {
            return dal_cthd.Xoa(maCTHD); 
         }
-        public ChiTietHoaDon TimChiTietHoaDonBangMaHD(string maCTHD)
-        {
-            return dal_cthd.TimChiTietHoaDonBangMaHD(maCTHD);
-        }
+        
         public List<string> LayDanhSachMaCTHD()
         {
            
@@ -43,6 +40,14 @@ namespace BUS
         {
            
             return dal_cthd.TinhTongTienTheoMaHD(maHD);
+        }
+        public int LaySLCuaChiTietHDTheoMaCTHD(string maHD, string maCTHD)
+        {
+           return dal_cthd.LaySLCuaChiTietHDTheoMaCTHD(maHD, maCTHD);
+        }
+        public bool CapNhapThanhTien(ET_ChiTietHoaDon chiTietHD)
+        {
+            return dal_cthd.CapNhapThanhTien(chiTietHD);
         }
     }
 }

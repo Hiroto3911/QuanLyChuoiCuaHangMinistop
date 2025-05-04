@@ -162,7 +162,7 @@ CREATE TABLE ChiTietHoaDon (
     MaSanPham VARCHAR(10),
     SoLuong INT,
     GiaBan DECIMAL(18,0),
-    ThanhTien AS (SoLuong * GiaBan) PERSISTED,
+    ThanhTien DECIMAL(18,0),
     FOREIGN KEY (MaHoaDon) REFERENCES HoaDon(MaHoaDon),
     FOREIGN KEY (MaSanPham) REFERENCES SanPham(MaSanPham)
 );

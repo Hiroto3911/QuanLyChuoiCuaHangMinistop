@@ -22,5 +22,15 @@ namespace BUS
             return dal_CTK.LayGiaBanCuaSanPhamCuaMotCH(maCH,maSP);
 
         }
+        public bool KiemTraSanPhamConHang(string maCH, ET_ChiTietHoaDon sp)
+        {
+
+            return dal_CTK.KiemTraSanPhamConHang(maCH,sp);
+        }
+        public bool CapNhapSLSanPham(string maCH, string loaiCapNhap, ET_ChiTietHoaDon sp,int? soLuongCu = null)
+        {
+            return dal_CTK.CapNhapSLSanPham(maCH,loaiCapNhap, sp,soLuongCu);
+
+        }
     }
 }
