@@ -42,11 +42,13 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txt_MaSP = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cbo_DonVi = new System.Windows.Forms.ComboBox();
+            this.cbo_LoaiSP = new System.Windows.Forms.ComboBox();
             this.txt_TenSP = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.cbo_LoaiSP = new System.Windows.Forms.ComboBox();
-            this.cbo_DonVi = new System.Windows.Forms.ComboBox();
+            this.txt_TimKiem = new System.Windows.Forms.TextBox();
+            this.btn_TimKiem = new System.Windows.Forms.Button();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Data)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -128,7 +130,9 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.btn_TimKiem);
             this.groupBox2.Controls.Add(this.dgv_Data);
+            this.groupBox2.Controls.Add(this.txt_TimKiem);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(429, 102);
             this.groupBox2.Name = "groupBox2";
@@ -140,10 +144,10 @@
             // dgv_Data
             // 
             this.dgv_Data.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_Data.Location = new System.Drawing.Point(18, 51);
+            this.dgv_Data.Location = new System.Drawing.Point(15, 23);
             this.dgv_Data.Name = "dgv_Data";
             this.dgv_Data.RowHeadersWidth = 51;
-            this.dgv_Data.Size = new System.Drawing.Size(465, 398);
+            this.dgv_Data.Size = new System.Drawing.Size(469, 398);
             this.dgv_Data.TabIndex = 65;
             // 
             // label3
@@ -198,6 +202,22 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Nhập thông tin ";
             // 
+            // cbo_DonVi
+            // 
+            this.cbo_DonVi.FormattingEnabled = true;
+            this.cbo_DonVi.Location = new System.Drawing.Point(165, 176);
+            this.cbo_DonVi.Name = "cbo_DonVi";
+            this.cbo_DonVi.Size = new System.Drawing.Size(192, 26);
+            this.cbo_DonVi.TabIndex = 92;
+            // 
+            // cbo_LoaiSP
+            // 
+            this.cbo_LoaiSP.FormattingEnabled = true;
+            this.cbo_LoaiSP.Location = new System.Drawing.Point(165, 132);
+            this.cbo_LoaiSP.Name = "cbo_LoaiSP";
+            this.cbo_LoaiSP.Size = new System.Drawing.Size(192, 26);
+            this.cbo_LoaiSP.TabIndex = 91;
+            // 
             // txt_TenSP
             // 
             this.txt_TenSP.Location = new System.Drawing.Point(165, 90);
@@ -226,21 +246,22 @@
             this.panel1.Size = new System.Drawing.Size(944, 52);
             this.panel1.TabIndex = 83;
             // 
-            // cbo_LoaiSP
+            // txt_TimKiem
             // 
-            this.cbo_LoaiSP.FormattingEnabled = true;
-            this.cbo_LoaiSP.Location = new System.Drawing.Point(165, 132);
-            this.cbo_LoaiSP.Name = "cbo_LoaiSP";
-            this.cbo_LoaiSP.Size = new System.Drawing.Size(192, 26);
-            this.cbo_LoaiSP.TabIndex = 91;
+            this.txt_TimKiem.Enabled = false;
+            this.txt_TimKiem.Location = new System.Drawing.Point(242, 435);
+            this.txt_TimKiem.Name = "txt_TimKiem";
+            this.txt_TimKiem.Size = new System.Drawing.Size(243, 24);
+            this.txt_TimKiem.TabIndex = 93;
             // 
-            // cbo_DonVi
+            // btn_TimKiem
             // 
-            this.cbo_DonVi.FormattingEnabled = true;
-            this.cbo_DonVi.Location = new System.Drawing.Point(165, 176);
-            this.cbo_DonVi.Name = "cbo_DonVi";
-            this.cbo_DonVi.Size = new System.Drawing.Size(192, 26);
-            this.cbo_DonVi.TabIndex = 92;
+            this.btn_TimKiem.Location = new System.Drawing.Point(149, 435);
+            this.btn_TimKiem.Name = "btn_TimKiem";
+            this.btn_TimKiem.Size = new System.Drawing.Size(88, 26);
+            this.btn_TimKiem.TabIndex = 94;
+            this.btn_TimKiem.Text = "Tìm kiếm";
+            this.btn_TimKiem.UseVisualStyleBackColor = true;
             // 
             // frm_QuanLySanPham
             // 
@@ -254,6 +275,7 @@
             this.Name = "frm_QuanLySanPham";
             this.Text = "frm_QuanLySanPham";
             this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Data)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -284,5 +306,7 @@
         private System.Windows.Forms.TextBox txt_TenSP;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.TextBox txt_TimKiem;
+        private System.Windows.Forms.Button btn_TimKiem;
     }
 }

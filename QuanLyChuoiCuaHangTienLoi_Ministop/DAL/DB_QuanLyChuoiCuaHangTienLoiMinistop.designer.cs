@@ -800,7 +800,7 @@ namespace DAL
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ThanhTien", AutoSync=AutoSync.Always, DbType="Decimal(29,0)", IsDbGenerated=true, UpdateCheck=UpdateCheck.Never)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ThanhTien", DbType="Decimal(18,0)")]
 		public System.Nullable<decimal> ThanhTien
 		{
 			get
@@ -925,6 +925,8 @@ namespace DAL
 		
 		private string _TrangThai;
 		
+		private System.Nullable<int> _ChenhLech;
+		
 		private string _GhiChu;
 		
 		private EntityRef<KiemKho> _KiemKho;
@@ -945,6 +947,8 @@ namespace DAL
     partial void OnSoLuongThucTeChanged();
     partial void OnTrangThaiChanging(string value);
     partial void OnTrangThaiChanged();
+    partial void OnChenhLechChanging(System.Nullable<int> value);
+    partial void OnChenhLechChanged();
     partial void OnGhiChuChanging(string value);
     partial void OnGhiChuChanged();
     #endregion
@@ -1060,6 +1064,26 @@ namespace DAL
 					this._TrangThai = value;
 					this.SendPropertyChanged("TrangThai");
 					this.OnTrangThaiChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ChenhLech", DbType="Int")]
+		public System.Nullable<int> ChenhLech
+		{
+			get
+			{
+				return this._ChenhLech;
+			}
+			set
+			{
+				if ((this._ChenhLech != value))
+				{
+					this.OnChenhLechChanging(value);
+					this.SendPropertyChanging();
+					this._ChenhLech = value;
+					this.SendPropertyChanged("ChenhLech");
+					this.OnChenhLechChanged();
 				}
 			}
 		}
@@ -3043,7 +3067,7 @@ namespace DAL
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NgayThayDoi", DbType="DateTime")]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NgayThayDoi", DbType="Date")]
 		public System.Nullable<System.DateTime> NgayThayDoi
 		{
 			get
@@ -3388,7 +3412,7 @@ namespace DAL
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NgayThayDoi", DbType="DateTime")]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NgayThayDoi", DbType="Date")]
 		public System.Nullable<System.DateTime> NgayThayDoi
 		{
 			get

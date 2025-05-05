@@ -24,7 +24,7 @@
       <Column Name="MaSanPham" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
       <Column Name="SoLuong" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="GiaBan" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
-      <Column Name="ThanhTien" Type="System.Decimal" DbType="Decimal(29,0)" IsDbGenerated="true" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="ThanhTien" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
       <Association Name="HoaDon_ChiTietHoaDon" Member="HoaDon" ThisKey="MaHoaDon" OtherKey="MaHoaDon" Type="HoaDon" IsForeignKey="true" />
       <Association Name="SanPham_ChiTietHoaDon" Member="SanPham" ThisKey="MaSanPham" OtherKey="MaSanPham" Type="SanPham" IsForeignKey="true" />
     </Type>
@@ -36,6 +36,7 @@
       <Column Name="SoLuongHeThong" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="SoLuongThucTe" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="TrangThai" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ChenhLech" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="GhiChu" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
       <Association Name="KiemKho_ChiTietKiemKho" Member="KiemKho" ThisKey="MaKiemKho" OtherKey="MaKiemKho" Type="KiemKho" IsForeignKey="true" />
       <Association Name="SanPham_ChiTietKiemKho" Member="SanPham" ThisKey="MaSanPham" OtherKey="MaSanPham" Type="SanPham" IsForeignKey="true" />
@@ -127,7 +128,7 @@
     <Type Name="LichSuKho">
       <Column Name="MaLichSuKho" Type="System.String" DbType="VarChar(15) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="MaChiTietKho" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
-      <Column Name="NgayThayDoi" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="NgayThayDoi" Type="System.DateTime" DbType="Date" CanBeNull="true" />
       <Column Name="SoLuongThayDoi" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="LoaiThayDoi" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="MaThamChieu" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
@@ -143,7 +144,7 @@
       <Column Name="GiaMoi" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
       <Column Name="NguoiThayDoi" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
       <Column Name="LyDo" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="NgayThayDoi" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="NgayThayDoi" Type="System.DateTime" DbType="Date" CanBeNull="true" />
       <Association Name="CuaHang_LichSuThayDoiGia" Member="CuaHang" ThisKey="MaCuaHang" OtherKey="MaCuaHang" Type="CuaHang" IsForeignKey="true" />
       <Association Name="NhanVien_LichSuThayDoiGia" Member="NhanVien" ThisKey="NguoiThayDoi" OtherKey="MaNhanVien" Type="NhanVien" IsForeignKey="true" />
       <Association Name="SanPham_LichSuThayDoiGia" Member="SanPham" ThisKey="MaSanPham" OtherKey="MaSanPham" Type="SanPham" IsForeignKey="true" />

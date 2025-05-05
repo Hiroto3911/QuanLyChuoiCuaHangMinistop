@@ -34,6 +34,8 @@
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -42,7 +44,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DAL_ChiTietKiemKho.cs" />
     <Compile Include="Class1.cs" />
+    <Compile Include="DAL_ChiTietHoaDon.cs" />
+    <Compile Include="DAL_ChiTietKho.cs" />
+    <Compile Include="DAL_ChiTietXuatHang.cs" />
+    <Compile Include="DAL_CuaHang.cs" />
+    <Compile Include="DAL_DangNhap.cs" />
+    <Compile Include="DAL_HoaDon.cs" />
+    <Compile Include="DAL_KhuyenMai.cs" />
+    <Compile Include="DAL_KhuyenMai_SanPham.cs" />
+    <Compile Include="DAL_KiemKho.cs" />
+    <Compile Include="DAL_LichSuKho.cs" />
+    <Compile Include="DAL_LichSuThayDoiGia.cs" />
+    <Compile Include="DAL_NhaCungCap.cs" />
+    <Compile Include="DAL_NhanVien.cs" />
+    <Compile Include="DAL_NhapHang.cs" />
+    <Compile Include="DAL_SanPham.cs" />
+    <Compile Include="DAL_XuatHang.cs" />
     <Compile Include="DB_QuanLyChuoiCuaHangTienLoiMinistop.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
