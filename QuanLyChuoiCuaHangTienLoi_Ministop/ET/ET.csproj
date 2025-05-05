@@ -51,6 +51,7 @@
     <Compile Include="ET_HoaDon.cs" />
     <Compile Include="ET_KhuyenMai.cs" />
     <Compile Include="ET_KhuyenMaiApDung.cs" />
+    <Compile Include="ET_KhuyenMaiApDungHoaDon.cs" />
     <Compile Include="ET_KhuyenMai_SanPham.cs" />
     <Compile Include="ET_KiemKho.cs" />
     <Compile Include="ET_LichSuThayDoiGia.cs" />

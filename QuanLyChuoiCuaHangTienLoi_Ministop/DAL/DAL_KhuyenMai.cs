@@ -122,6 +122,23 @@ namespace DAL
             var danhSachID = db.KhuyenMais.Select(id => id.MaKhuyenMai).ToList();
             return danhSachID;
         }
+        public ET_KhuyenMaiApDungHoaDon ApDungKhuyenMaiChoHoaDon(ET_HoaDon hoaDon, DateTime tgianMua)
+        {
+            var query = from km in db.KhuyenMais
+                        where km.LoaiApDung =="Hoá đơn"
+                        && hoaDon.TongTien >= km.DieuKienApDung
+                        && km.TrangThai == 1
+                        && tgianMua >= km.NgayBatDau
+                        && tgianMua <= km.NgayKetThuc
+                        select new ET_KhuyenMaiApDungHoaDon
+                        {
+                            MaHoaDon = hoaDon.MaHoaDon ,
+                            TenKhuyenMai = km.TenKhuyenMai,
+                            MucGiamGia =(decimal) km.MucGiamGia,   
+                            DieuKienAP = (decimal) km.DieuKienApDung
+                        };
 
+            return query.FirstOrDefault();
+        }
     }
 }
