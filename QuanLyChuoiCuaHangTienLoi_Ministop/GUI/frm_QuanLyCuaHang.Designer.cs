@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label6 = new System.Windows.Forms.Label();
+            this.pnl_Title = new System.Windows.Forms.Panel();
+            this.lbl_Title = new System.Windows.Forms.Label();
             this.dgv_Data = new System.Windows.Forms.DataGridView();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.gbo_NhapThongTin = new System.Windows.Forms.GroupBox();
             this.rtf_DiaChi = new System.Windows.Forms.RichTextBox();
             this.btn_LamMoi = new System.Windows.Forms.Button();
             this.txt_MaNguoiQL = new System.Windows.Forms.TextBox();
@@ -46,66 +46,68 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txt_TenCH = new System.Windows.Forms.TextBox();
             this.txt_MaCH = new System.Windows.Forms.TextBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.panel1.SuspendLayout();
+            this.gbo_Data = new System.Windows.Forms.GroupBox();
+            this.pnl_Title.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Data)).BeginInit();
-            this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
+            this.gbo_NhapThongTin.SuspendLayout();
+            this.gbo_Data.SuspendLayout();
             this.SuspendLayout();
             // 
-            // panel1
+            // pnl_Title
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(81)))), ((int)(((byte)(152)))));
-            this.panel1.Controls.Add(this.label6);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(944, 52);
-            this.panel1.TabIndex = 78;
+            this.pnl_Title.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(81)))), ((int)(((byte)(152)))));
+            this.pnl_Title.Controls.Add(this.lbl_Title);
+            this.pnl_Title.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnl_Title.Location = new System.Drawing.Point(0, 0);
+            this.pnl_Title.Name = "pnl_Title";
+            this.pnl_Title.Size = new System.Drawing.Size(944, 52);
+            this.pnl_Title.TabIndex = 78;
             // 
-            // label6
+            // lbl_Title
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(328, 9);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(259, 33);
-            this.label6.TabIndex = 18;
-            this.label6.Text = "Quản lý cửa hàng";
+            this.lbl_Title.AutoSize = true;
+            this.lbl_Title.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Title.ForeColor = System.Drawing.Color.White;
+            this.lbl_Title.Location = new System.Drawing.Point(328, 9);
+            this.lbl_Title.Name = "lbl_Title";
+            this.lbl_Title.Size = new System.Drawing.Size(259, 33);
+            this.lbl_Title.TabIndex = 18;
+            this.lbl_Title.Text = "Quản lý cửa hàng";
             // 
             // dgv_Data
             // 
+            this.dgv_Data.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_Data.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_Data.Location = new System.Drawing.Point(18, 51);
             this.dgv_Data.Name = "dgv_Data";
             this.dgv_Data.RowHeadersWidth = 51;
             this.dgv_Data.Size = new System.Drawing.Size(465, 398);
             this.dgv_Data.TabIndex = 65;
+            this.dgv_Data.Click += new System.EventHandler(this.dgv_Data_Click);
             // 
-            // groupBox1
+            // gbo_NhapThongTin
             // 
-            this.groupBox1.Controls.Add(this.rtf_DiaChi);
-            this.groupBox1.Controls.Add(this.btn_LamMoi);
-            this.groupBox1.Controls.Add(this.txt_MaNguoiQL);
-            this.groupBox1.Controls.Add(this.btn_Sua);
-            this.groupBox1.Controls.Add(this.txt_DTH);
-            this.groupBox1.Controls.Add(this.btn_Xoa);
-            this.groupBox1.Controls.Add(this.btn_Them);
-            this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.txt_TenCH);
-            this.groupBox1.Controls.Add(this.txt_MaCH);
-            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(12, 76);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(392, 473);
-            this.groupBox1.TabIndex = 81;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Nhập thông tin cửa hàng";
+            this.gbo_NhapThongTin.Controls.Add(this.rtf_DiaChi);
+            this.gbo_NhapThongTin.Controls.Add(this.btn_LamMoi);
+            this.gbo_NhapThongTin.Controls.Add(this.txt_MaNguoiQL);
+            this.gbo_NhapThongTin.Controls.Add(this.btn_Sua);
+            this.gbo_NhapThongTin.Controls.Add(this.txt_DTH);
+            this.gbo_NhapThongTin.Controls.Add(this.btn_Xoa);
+            this.gbo_NhapThongTin.Controls.Add(this.btn_Them);
+            this.gbo_NhapThongTin.Controls.Add(this.label7);
+            this.gbo_NhapThongTin.Controls.Add(this.label5);
+            this.gbo_NhapThongTin.Controls.Add(this.label4);
+            this.gbo_NhapThongTin.Controls.Add(this.label3);
+            this.gbo_NhapThongTin.Controls.Add(this.label2);
+            this.gbo_NhapThongTin.Controls.Add(this.txt_TenCH);
+            this.gbo_NhapThongTin.Controls.Add(this.txt_MaCH);
+            this.gbo_NhapThongTin.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbo_NhapThongTin.Location = new System.Drawing.Point(12, 76);
+            this.gbo_NhapThongTin.Name = "gbo_NhapThongTin";
+            this.gbo_NhapThongTin.Size = new System.Drawing.Size(392, 473);
+            this.gbo_NhapThongTin.TabIndex = 81;
+            this.gbo_NhapThongTin.TabStop = false;
+            this.gbo_NhapThongTin.Text = "Nhập thông tin cửa hàng";
             // 
             // rtf_DiaChi
             // 
@@ -123,9 +125,11 @@
             this.btn_LamMoi.TabIndex = 73;
             this.btn_LamMoi.Text = "Làm mới";
             this.btn_LamMoi.UseVisualStyleBackColor = true;
+            this.btn_LamMoi.Click += new System.EventHandler(this.btn_LamMoi_Click);
             // 
             // txt_MaNguoiQL
             // 
+            this.txt_MaNguoiQL.Enabled = false;
             this.txt_MaNguoiQL.Location = new System.Drawing.Point(165, 279);
             this.txt_MaNguoiQL.Name = "txt_MaNguoiQL";
             this.txt_MaNguoiQL.Size = new System.Drawing.Size(192, 24);
@@ -139,6 +143,7 @@
             this.btn_Sua.TabIndex = 72;
             this.btn_Sua.Text = "Sửa";
             this.btn_Sua.UseVisualStyleBackColor = true;
+            this.btn_Sua.Click += new System.EventHandler(this.btn_Sua_Click);
             // 
             // txt_DTH
             // 
@@ -155,6 +160,7 @@
             this.btn_Xoa.TabIndex = 71;
             this.btn_Xoa.Text = "Xoá";
             this.btn_Xoa.UseVisualStyleBackColor = true;
+            this.btn_Xoa.Click += new System.EventHandler(this.btn_Xoa_Click);
             // 
             // btn_Them
             // 
@@ -164,6 +170,7 @@
             this.btn_Them.TabIndex = 70;
             this.btn_Them.Text = "Thêm";
             this.btn_Them.UseVisualStyleBackColor = true;
+            this.btn_Them.Click += new System.EventHandler(this.btn_Them_Click);
             // 
             // label7
             // 
@@ -230,45 +237,49 @@
             this.txt_MaCH.Size = new System.Drawing.Size(192, 24);
             this.txt_MaCH.TabIndex = 81;
             // 
-            // groupBox2
+            // gbo_Data
             // 
-            this.groupBox2.Controls.Add(this.dgv_Data);
-            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(429, 76);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(503, 473);
-            this.groupBox2.TabIndex = 82;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Thông tin cửa hàng";
+            this.gbo_Data.Controls.Add(this.dgv_Data);
+            this.gbo_Data.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbo_Data.Location = new System.Drawing.Point(429, 76);
+            this.gbo_Data.Name = "gbo_Data";
+            this.gbo_Data.Size = new System.Drawing.Size(503, 473);
+            this.gbo_Data.TabIndex = 82;
+            this.gbo_Data.TabStop = false;
+            this.gbo_Data.Text = "Thông tin cửa hàng";
             // 
             // frm_QuanLyCuaHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(240)))), ((int)(((byte)(144)))));
             this.ClientSize = new System.Drawing.Size(944, 601);
-            this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.gbo_Data);
+            this.Controls.Add(this.gbo_NhapThongTin);
+            this.Controls.Add(this.pnl_Title);
             this.Name = "frm_QuanLyCuaHang";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frm_QuanLyCuaHang";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.Load += new System.EventHandler(this.frm_QuanLyCuaHang_Load);
+            this.Resize += new System.EventHandler(this.frm_QuanLyCuaHang_Resize);
+            this.pnl_Title.ResumeLayout(false);
+            this.pnl_Title.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Data)).EndInit();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
+            this.gbo_NhapThongTin.ResumeLayout(false);
+            this.gbo_NhapThongTin.PerformLayout();
+            this.gbo_Data.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Panel pnl_Title;
+        private System.Windows.Forms.Label lbl_Title;
         private System.Windows.Forms.DataGridView dgv_Data;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox gbo_NhapThongTin;
         private System.Windows.Forms.TextBox txt_MaNguoiQL;
         private System.Windows.Forms.TextBox txt_DTH;
         private System.Windows.Forms.Label label7;
@@ -278,7 +289,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txt_TenCH;
         private System.Windows.Forms.TextBox txt_MaCH;
-        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.GroupBox gbo_Data;
         private System.Windows.Forms.Button btn_LamMoi;
         private System.Windows.Forms.Button btn_Sua;
         private System.Windows.Forms.Button btn_Xoa;
