@@ -1,12 +1,120 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "D:\\DoAnCN.Net\\QuanLyChuoiCuaHangMinistop\\QuanLyChuoiCuaHangTienLoi_Ministop\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{793C3164-1583-4C6D-B761-B8F74EC73D87}|GUI\\GUI.csproj|d:\\doancn.net\\quanlychuoicuahangministop\\quanlychuoicuahangtienloi_ministop\\gui\\frm_banhang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{793C3164-1583-4C6D-B761-B8F74EC73D87}|GUI\\GUI.csproj|solutionrelative:gui\\frm_banhang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{793C3164-1583-4C6D-B761-B8F74EC73D87}|GUI\\GUI.csproj|d:\\doancn.net\\quanlychuoicuahangministop\\quanlychuoicuahangtienloi_ministop\\gui\\frm_banhang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{793C3164-1583-4C6D-B761-B8F74EC73D87}|GUI\\GUI.csproj|solutionrelative:gui\\frm_banhang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{90C7EBD9-C1F2-4E5A-B429-2C254B24C20A}|DAL\\DAL.csproj|d:\\doancn.net\\quanlychuoicuahangministop\\quanlychuoicuahangtienloi_ministop\\dal\\dal_khuyenmai_sanpham.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{90C7EBD9-C1F2-4E5A-B429-2C254B24C20A}|DAL\\DAL.csproj|solutionrelative:dal\\dal_khuyenmai_sanpham.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{90C7EBD9-C1F2-4E5A-B429-2C254B24C20A}|DAL\\DAL.csproj|d:\\doancn.net\\quanlychuoicuahangministop\\quanlychuoicuahangtienloi_ministop\\dal\\dal_chitiethoadon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{90C7EBD9-C1F2-4E5A-B429-2C254B24C20A}|DAL\\DAL.csproj|solutionrelative:dal\\dal_chitiethoadon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{90C7EBD9-C1F2-4E5A-B429-2C254B24C20A}|DAL\\DAL.csproj|d:\\doancn.net\\quanlychuoicuahangministop\\quanlychuoicuahangtienloi_ministop\\dal\\db_quanlychuoicuahangtienloiministop.dbml||{B465B5AD-8799-4507-B90A-EE29ACF36AF9}|",
+      "RelativeMoniker": "D:0:0:{90C7EBD9-C1F2-4E5A-B429-2C254B24C20A}|DAL\\DAL.csproj|solutionrelative:dal\\db_quanlychuoicuahangtienloiministop.dbml||{B465B5AD-8799-4507-B90A-EE29ACF36AF9}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2E2EBEAA-B372-48FD-81AA-7AEC0788D1DF}|BUS\\BUS.csproj|d:\\doancn.net\\quanlychuoicuahangministop\\quanlychuoicuahangtienloi_ministop\\bus\\bus_chitiethoadon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2E2EBEAA-B372-48FD-81AA-7AEC0788D1DF}|BUS\\BUS.csproj|solutionrelative:bus\\bus_chitiethoadon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "DB_QuanLyChuoiCuaHangTienLoiMinistop.dbml",
+              "DocumentMoniker": "D:\\DoAnCN.Net\\QuanLyChuoiCuaHangMinistop\\QuanLyChuoiCuaHangTienLoi_Ministop\\DAL\\DB_QuanLyChuoiCuaHangTienLoiMinistop.dbml",
+              "RelativeDocumentMoniker": "DAL\\DB_QuanLyChuoiCuaHangTienLoiMinistop.dbml",
+              "ToolTip": "D:\\DoAnCN.Net\\QuanLyChuoiCuaHangMinistop\\QuanLyChuoiCuaHangTienLoi_Ministop\\DAL\\DB_QuanLyChuoiCuaHangTienLoiMinistop.dbml",
+              "RelativeToolTip": "DAL\\DB_QuanLyChuoiCuaHangTienLoiMinistop.dbml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001722|",
+              "WhenOpened": "2025-05-04T14:52:47.208Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "DAL_KhuyenMai_SanPham.cs",
+              "DocumentMoniker": "D:\\DoAnCN.Net\\QuanLyChuoiCuaHangMinistop\\QuanLyChuoiCuaHangTienLoi_Ministop\\DAL\\DAL_KhuyenMai_SanPham.cs",
+              "RelativeDocumentMoniker": "DAL\\DAL_KhuyenMai_SanPham.cs",
+              "ToolTip": "D:\\DoAnCN.Net\\QuanLyChuoiCuaHangMinistop\\QuanLyChuoiCuaHangTienLoi_Ministop\\DAL\\DAL_KhuyenMai_SanPham.cs",
+              "RelativeToolTip": "DAL\\DAL_KhuyenMai_SanPham.cs",
+              "ViewState": "AgIAAFIAAAAAAAAAAAAQwGQAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-04T14:13:23.064Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "BUS_ChiTietHoaDon.cs",
+              "DocumentMoniker": "D:\\DoAnCN.Net\\QuanLyChuoiCuaHangMinistop\\QuanLyChuoiCuaHangTienLoi_Ministop\\BUS\\BUS_ChiTietHoaDon.cs",
+              "RelativeDocumentMoniker": "BUS\\BUS_ChiTietHoaDon.cs",
+              "ToolTip": "D:\\DoAnCN.Net\\QuanLyChuoiCuaHangMinistop\\QuanLyChuoiCuaHangTienLoi_Ministop\\BUS\\BUS_ChiTietHoaDon.cs",
+              "RelativeToolTip": "BUS\\BUS_ChiTietHoaDon.cs",
+              "ViewState": "AgIAACUAAAAAAAAAAAAEwDEAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-04T14:01:54.493Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "DAL_ChiTietHoaDon.cs",
+              "DocumentMoniker": "D:\\DoAnCN.Net\\QuanLyChuoiCuaHangMinistop\\QuanLyChuoiCuaHangTienLoi_Ministop\\DAL\\DAL_ChiTietHoaDon.cs",
+              "RelativeDocumentMoniker": "DAL\\DAL_ChiTietHoaDon.cs",
+              "ToolTip": "D:\\DoAnCN.Net\\QuanLyChuoiCuaHangMinistop\\QuanLyChuoiCuaHangTienLoi_Ministop\\DAL\\DAL_ChiTietHoaDon.cs",
+              "RelativeToolTip": "DAL\\DAL_ChiTietHoaDon.cs",
+              "ViewState": "AgIAAFcAAAAAAAAAAAAjwFEAAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-04T13:58:07.092Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "frm_BanHang.cs",
+              "DocumentMoniker": "D:\\DoAnCN.Net\\QuanLyChuoiCuaHangMinistop\\QuanLyChuoiCuaHangTienLoi_Ministop\\GUI\\frm_BanHang.cs",
+              "RelativeDocumentMoniker": "GUI\\frm_BanHang.cs",
+              "ToolTip": "D:\\DoAnCN.Net\\QuanLyChuoiCuaHangMinistop\\QuanLyChuoiCuaHangTienLoi_Ministop\\GUI\\frm_BanHang.cs",
+              "RelativeToolTip": "GUI\\frm_BanHang.cs",
+              "ViewState": "AgIAAO4AAAAAAAAAAAAgwAYBAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-04T13:56:38.594Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "frm_BanHang.cs [Design]",
+              "DocumentMoniker": "D:\\DoAnCN.Net\\QuanLyChuoiCuaHangMinistop\\QuanLyChuoiCuaHangTienLoi_Ministop\\GUI\\frm_BanHang.cs",
+              "RelativeDocumentMoniker": "GUI\\frm_BanHang.cs",
+              "ToolTip": "D:\\DoAnCN.Net\\QuanLyChuoiCuaHangMinistop\\QuanLyChuoiCuaHangTienLoi_Ministop\\GUI\\frm_BanHang.cs [Design]",
+              "RelativeToolTip": "GUI\\frm_BanHang.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-04T13:56:36.935Z",
+              "EditorCaption": " [Design]"
+            }
+          ]
+        }
+      ]
     }
   ]
 }

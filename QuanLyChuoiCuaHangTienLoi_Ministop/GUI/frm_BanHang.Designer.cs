@@ -40,6 +40,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.gbo_HoaDon = new System.Windows.Forms.GroupBox();
+            this.lbl_KhuyenMai_HoaDon = new System.Windows.Forms.Label();
             this.btn_HoanTat = new System.Windows.Forms.Button();
             this.btn_InHoaDon = new System.Windows.Forms.Button();
             this.txt_TongTien = new System.Windows.Forms.TextBox();
@@ -47,6 +48,7 @@
             this.dgv_Data = new System.Windows.Forms.DataGridView();
             this.txt_MaNV = new System.Windows.Forms.TextBox();
             this.gbo_ChiTietHoaDon = new System.Windows.Forms.GroupBox();
+            this.lbl_KhuyenMai_SanPham = new System.Windows.Forms.Label();
             this.lbl_TenSP = new System.Windows.Forms.Label();
             this.txt_SanPham = new System.Windows.Forms.TextBox();
             this.txt_ThanhTien = new System.Windows.Forms.TextBox();
@@ -180,6 +182,7 @@
             // 
             // gbo_HoaDon
             // 
+            this.gbo_HoaDon.Controls.Add(this.lbl_KhuyenMai_HoaDon);
             this.gbo_HoaDon.Controls.Add(this.btn_HoanTat);
             this.gbo_HoaDon.Controls.Add(this.btn_InHoaDon);
             this.gbo_HoaDon.Controls.Add(this.txt_TongTien);
@@ -202,6 +205,14 @@
             this.gbo_HoaDon.TabIndex = 65;
             this.gbo_HoaDon.TabStop = false;
             this.gbo_HoaDon.Text = "Thông tin Hoá đơn";
+            // 
+            // lbl_KhuyenMai_HoaDon
+            // 
+            this.lbl_KhuyenMai_HoaDon.AutoSize = true;
+            this.lbl_KhuyenMai_HoaDon.Location = new System.Drawing.Point(21, 133);
+            this.lbl_KhuyenMai_HoaDon.Name = "lbl_KhuyenMai_HoaDon";
+            this.lbl_KhuyenMai_HoaDon.Size = new System.Drawing.Size(0, 18);
+            this.lbl_KhuyenMai_HoaDon.TabIndex = 67;
             // 
             // btn_HoanTat
             // 
@@ -263,6 +274,7 @@
             // 
             // gbo_ChiTietHoaDon
             // 
+            this.gbo_ChiTietHoaDon.Controls.Add(this.lbl_KhuyenMai_SanPham);
             this.gbo_ChiTietHoaDon.Controls.Add(this.lbl_TenSP);
             this.gbo_ChiTietHoaDon.Controls.Add(this.txt_SanPham);
             this.gbo_ChiTietHoaDon.Controls.Add(this.txt_ThanhTien);
@@ -286,6 +298,14 @@
             this.gbo_ChiTietHoaDon.TabIndex = 66;
             this.gbo_ChiTietHoaDon.TabStop = false;
             this.gbo_ChiTietHoaDon.Text = "Thông tin chi tiết Hoá đơn";
+            // 
+            // lbl_KhuyenMai_SanPham
+            // 
+            this.lbl_KhuyenMai_SanPham.AutoSize = true;
+            this.lbl_KhuyenMai_SanPham.Location = new System.Drawing.Point(21, 140);
+            this.lbl_KhuyenMai_SanPham.Name = "lbl_KhuyenMai_SanPham";
+            this.lbl_KhuyenMai_SanPham.Size = new System.Drawing.Size(0, 18);
+            this.lbl_KhuyenMai_SanPham.TabIndex = 73;
             // 
             // lbl_TenSP
             // 
@@ -312,6 +332,7 @@
             this.txt_ThanhTien.Name = "txt_ThanhTien";
             this.txt_ThanhTien.Size = new System.Drawing.Size(151, 24);
             this.txt_ThanhTien.TabIndex = 70;
+            this.txt_ThanhTien.Text = "0";
             // 
             // btn_LamMoiChiTiet
             // 
@@ -443,12 +464,15 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(240)))), ((int)(((byte)(144)))));
             this.ClientSize = new System.Drawing.Size(1003, 713);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.gbo_HoaDon);
             this.Controls.Add(this.gbo_ChiTietHoaDon);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frm_BanHang";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frm_BanHang";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frm_BanHang_Load);
@@ -502,5 +526,7 @@
         private System.Windows.Forms.Button btn_HoanTat;
         private System.Windows.Forms.TextBox txt_SanPham;
         private System.Windows.Forms.Label lbl_TenSP;
+        private System.Windows.Forms.Label lbl_KhuyenMai_HoaDon;
+        private System.Windows.Forms.Label lbl_KhuyenMai_SanPham;
     }
 }

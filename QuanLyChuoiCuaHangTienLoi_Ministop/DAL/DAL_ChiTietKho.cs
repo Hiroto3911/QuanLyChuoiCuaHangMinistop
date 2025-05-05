@@ -22,7 +22,7 @@ namespace DAL
                     MaCuaHang = item.MaCuaHang,
                     MaChiTietKho = item.MaChiTietKho,
                     MaSanPham = item.MaSanPham,
-                    GiaBan = (double) item.GiaBan,
+                    GiaBan = (double)item.GiaBan,
                     SoluongTon = item.SoLuongTon
                 });
             }
@@ -46,12 +46,63 @@ namespace DAL
             var danhSachID = db.CuaHangs.Select(id => id.MaCuaHang).ToList();
             return danhSachID;
         }
-        public double LayGiaBanCuaSanPhamCuaMotCH(string maCH,string maSP)
+        public double LayGiaBanCuaSanPhamCuaMotCH(string maCH, string maSP)
         {
             var query = db.ChiTietKhos.Where(ma => ma.MaCuaHang == maCH && ma.MaSanPham == maSP).Select(ma => ma.GiaBan).FirstOrDefault();
             if (query == null) return 0.0;
             return Convert.ToDouble(query);
 
         }
+        public bool KiemTraSanPhamConHang(string maCH, ET_ChiTietHoaDon sp) {
+
+            var query = db.ChiTietKhos.Any(ctk => ctk.MaCuaHang == maCH && ctk.MaSanPham == sp.MaSanPham && ctk.SoLuongTon >= sp.SoLuong);
+            return query;
+        }
+        public int LaySLSanpham(string maCH , string maSP)
+        {
+            var query = db.ChiTietKhos.Where(ctk => ctk.MaCuaHang == maCH && ctk.MaSanPham == maSP).FirstOrDefault();
+            if (query == null) return 0; 
+            return Convert.ToInt32(query.SoLuongTon);
+        }
+        public bool CapNhapSLSanPham(string maCH,string loaiCapNhap, ET_ChiTietHoaDon sp, int? soLuongCu = null) 
+        {
+            if(maCH == null ||sp == null || loaiCapNhap == null) return false;
+            try
+            {
+
+                
+                var query = db.ChiTietKhos.Where(ctk => ctk.MaCuaHang == maCH && ctk.MaSanPham == sp.MaSanPham ).FirstOrDefault();
+                if (query == null) return false;
+                if (loaiCapNhap == "Them")
+                {
+                    query.SoLuongTon -= sp.SoLuong;
+                    
+                }
+                else if(loaiCapNhap == "Xoa")
+                {
+                    query.SoLuongTon += sp.SoLuong;
+                   
+                }
+                else if(loaiCapNhap =="Sua" && soLuongCu.HasValue)
+                {
+                   query.SoLuongTon += soLuongCu;
+                    query.SoLuongTon -= sp.SoLuong;
+                   
+                }
+                else
+                {
+                    return false;
+                }
+                db.SubmitChanges();
+                return true;
+
+            }
+            catch(Exception ex)
+            {
+                throw ex;
+            }
+                       
+        }
+
     }
 }

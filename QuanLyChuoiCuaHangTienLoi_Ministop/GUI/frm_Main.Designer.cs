@@ -135,7 +135,7 @@
             this.btn_DangXuat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_DangXuat.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_DangXuat.ForeColor = System.Drawing.Color.White;
-            this.btn_DangXuat.Location = new System.Drawing.Point(195, 9);
+            this.btn_DangXuat.Location = new System.Drawing.Point(174, 10);
             this.btn_DangXuat.Name = "btn_DangXuat";
             this.btn_DangXuat.Size = new System.Drawing.Size(117, 36);
             this.btn_DangXuat.TabIndex = 2;
@@ -186,6 +186,7 @@
             this.menuStrip1.Size = new System.Drawing.Size(1264, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
+         
             // 
             // hệThốngToolStripMenuItem
             // 
@@ -406,6 +407,7 @@
             this.btn_QLKM.TabIndex = 4;
             this.btn_QLKM.Text = "Quản lý khuyến mãi";
             this.btn_QLKM.UseVisualStyleBackColor = true;
+            this.btn_QLKM.Click += new System.EventHandler(this.btn_QLKM_Click);
             // 
             // pnl_ChiTietKho
             // 
