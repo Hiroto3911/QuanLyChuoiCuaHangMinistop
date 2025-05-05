@@ -41,5 +41,9 @@ namespace BUS
         {
             return dal_KM.LayDanhSachMaKM();
         }
+        public ET_KhuyenMaiApDungHoaDon ApDungKhuyenMaiChoHoaDon(ET_HoaDon hoaDon, DateTime tgianMua)
+        {
+           return dal_KM.ApDungKhuyenMaiChoHoaDon(hoaDon,tgianMua);
+        }
     }
 }
