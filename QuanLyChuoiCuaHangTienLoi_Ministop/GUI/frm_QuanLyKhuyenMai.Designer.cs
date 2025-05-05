@@ -28,7 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label6 = new System.Windows.Forms.Label();
+            this.components = new System.ComponentModel.Container();
+            this.llbl_title = new System.Windows.Forms.Label();
             this.cbo_MaKM = new System.Windows.Forms.ComboBox();
             this.btn_Them = new System.Windows.Forms.Button();
             this.dtp_NgayBatDau = new System.Windows.Forms.DateTimePicker();
@@ -36,22 +37,23 @@
             this.label = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.gbo_ChiTietKhuyenMai = new System.Windows.Forms.GroupBox();
             this.cbo_MaSP = new System.Windows.Forms.ComboBox();
             this.cbo_UuTien = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.dgv_Data = new System.Windows.Forms.DataGridView();
             this.txt_SLToiThieu = new System.Windows.Forms.TextBox();
             this.btn_LamMoiChiTiet = new System.Windows.Forms.Button();
             this.btn_SuaChiTiet = new System.Windows.Forms.Button();
             this.btn_XoaChiTiet = new System.Windows.Forms.Button();
             this.btn_ThemChiTiet = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.txt_DieuKienApDung = new System.Windows.Forms.TextBox();
             this.dgv_DataChiTiet = new System.Windows.Forms.DataGridView();
+            this.dgv_Data = new System.Windows.Forms.DataGridView();
+            this.pnl_Title = new System.Windows.Forms.Panel();
+            this.txt_DieuKienApDung = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.txt_MucGiam = new System.Windows.Forms.TextBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.gbo_KhuyenMai = new System.Windows.Forms.GroupBox();
+            this.btn_Sua = new System.Windows.Forms.Button();
             this.txt_MaKM = new System.Windows.Forms.TextBox();
             this.rb_Tat = new System.Windows.Forms.RadioButton();
             this.rb_Bat = new System.Windows.Forms.RadioButton();
@@ -65,27 +67,32 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_Data)).BeginInit();
-            this.panel1.SuspendLayout();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.cbo_LocDuLieu = new System.Windows.Forms.ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.gbo_ChiTietKhuyenMai.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_DataChiTiet)).BeginInit();
-            this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_Data)).BeginInit();
+            this.pnl_Title.SuspendLayout();
+            this.gbo_KhuyenMai.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
-            // label6
+            // llbl_title
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(342, 9);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(292, 33);
-            this.label6.TabIndex = 18;
-            this.label6.Text = "Quản lý khuyến mãi";
+            this.llbl_title.AutoSize = true;
+            this.llbl_title.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.llbl_title.ForeColor = System.Drawing.Color.White;
+            this.llbl_title.Location = new System.Drawing.Point(342, 9);
+            this.llbl_title.Name = "llbl_title";
+            this.llbl_title.Size = new System.Drawing.Size(292, 33);
+            this.llbl_title.TabIndex = 18;
+            this.llbl_title.Text = "Quản lý khuyến mãi";
             // 
             // cbo_MaKM
             // 
-            this.cbo_MaKM.Enabled = false;
+            this.cbo_MaKM.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.cbo_MaKM.DropDownWidth = 200;
             this.cbo_MaKM.FormattingEnabled = true;
             this.cbo_MaKM.Location = new System.Drawing.Point(126, 37);
             this.cbo_MaKM.Name = "cbo_MaKM";
@@ -94,16 +101,16 @@
             // 
             // btn_Them
             // 
-            this.btn_Them.Location = new System.Drawing.Point(876, 28);
+            this.btn_Them.Location = new System.Drawing.Point(876, 39);
             this.btn_Them.Name = "btn_Them";
-            this.btn_Them.Size = new System.Drawing.Size(75, 49);
+            this.btn_Them.Size = new System.Drawing.Size(75, 26);
             this.btn_Them.TabIndex = 42;
             this.btn_Them.Text = "Thêm";
             this.btn_Them.UseVisualStyleBackColor = true;
+            this.btn_Them.Click += new System.EventHandler(this.btn_Them_Click);
             // 
             // dtp_NgayBatDau
             // 
-            this.dtp_NgayBatDau.Enabled = false;
             this.dtp_NgayBatDau.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtp_NgayBatDau.Location = new System.Drawing.Point(398, 38);
             this.dtp_NgayBatDau.Name = "dtp_NgayBatDau";
@@ -112,12 +119,13 @@
             // 
             // btn_Xoa
             // 
-            this.btn_Xoa.Location = new System.Drawing.Point(876, 95);
+            this.btn_Xoa.Location = new System.Drawing.Point(876, 80);
             this.btn_Xoa.Name = "btn_Xoa";
-            this.btn_Xoa.Size = new System.Drawing.Size(75, 48);
+            this.btn_Xoa.Size = new System.Drawing.Size(75, 26);
             this.btn_Xoa.TabIndex = 43;
             this.btn_Xoa.Text = "Xoá";
             this.btn_Xoa.UseVisualStyleBackColor = true;
+            this.btn_Xoa.Click += new System.EventHandler(this.btn_Xoa_Click);
             // 
             // label
             // 
@@ -149,32 +157,32 @@
             this.label2.TabIndex = 52;
             this.label2.Text = "Mã khuyến mãi";
             // 
-            // groupBox1
+            // gbo_ChiTietKhuyenMai
             // 
-            this.groupBox1.Controls.Add(this.cbo_MaSP);
-            this.groupBox1.Controls.Add(this.cbo_UuTien);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.dgv_Data);
-            this.groupBox1.Controls.Add(this.txt_SLToiThieu);
-            this.groupBox1.Controls.Add(this.cbo_MaKM);
-            this.groupBox1.Controls.Add(this.btn_LamMoiChiTiet);
-            this.groupBox1.Controls.Add(this.btn_SuaChiTiet);
-            this.groupBox1.Controls.Add(this.btn_XoaChiTiet);
-            this.groupBox1.Controls.Add(this.btn_ThemChiTiet);
-            this.groupBox1.Controls.Add(this.label);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(12, 431);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(979, 274);
-            this.groupBox1.TabIndex = 71;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Chi tiết khuyến mãi";
+            this.gbo_ChiTietKhuyenMai.Controls.Add(this.cbo_MaSP);
+            this.gbo_ChiTietKhuyenMai.Controls.Add(this.cbo_UuTien);
+            this.gbo_ChiTietKhuyenMai.Controls.Add(this.label1);
+            this.gbo_ChiTietKhuyenMai.Controls.Add(this.txt_SLToiThieu);
+            this.gbo_ChiTietKhuyenMai.Controls.Add(this.cbo_MaKM);
+            this.gbo_ChiTietKhuyenMai.Controls.Add(this.btn_LamMoiChiTiet);
+            this.gbo_ChiTietKhuyenMai.Controls.Add(this.btn_SuaChiTiet);
+            this.gbo_ChiTietKhuyenMai.Controls.Add(this.btn_XoaChiTiet);
+            this.gbo_ChiTietKhuyenMai.Controls.Add(this.btn_ThemChiTiet);
+            this.gbo_ChiTietKhuyenMai.Controls.Add(this.label);
+            this.gbo_ChiTietKhuyenMai.Controls.Add(this.label3);
+            this.gbo_ChiTietKhuyenMai.Controls.Add(this.label2);
+            this.gbo_ChiTietKhuyenMai.Controls.Add(this.dgv_DataChiTiet);
+            this.gbo_ChiTietKhuyenMai.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbo_ChiTietKhuyenMai.Location = new System.Drawing.Point(12, 431);
+            this.gbo_ChiTietKhuyenMai.Name = "gbo_ChiTietKhuyenMai";
+            this.gbo_ChiTietKhuyenMai.Size = new System.Drawing.Size(979, 274);
+            this.gbo_ChiTietKhuyenMai.TabIndex = 71;
+            this.gbo_ChiTietKhuyenMai.TabStop = false;
+            this.gbo_ChiTietKhuyenMai.Text = "Chi tiết khuyến mãi";
             // 
             // cbo_MaSP
             // 
-            this.cbo_MaSP.Enabled = false;
+            this.cbo_MaSP.DropDownWidth = 200;
             this.cbo_MaSP.FormattingEnabled = true;
             this.cbo_MaSP.Location = new System.Drawing.Point(126, 80);
             this.cbo_MaSP.Name = "cbo_MaSP";
@@ -199,17 +207,8 @@
             this.label1.TabIndex = 64;
             this.label1.Text = "Độ ưu tiên";
             // 
-            // dgv_Data
-            // 
-            this.dgv_Data.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_Data.Location = new System.Drawing.Point(14, 123);
-            this.dgv_Data.Name = "dgv_Data";
-            this.dgv_Data.Size = new System.Drawing.Size(937, 145);
-            this.dgv_Data.TabIndex = 62;
-            // 
             // txt_SLToiThieu
             // 
-            this.txt_SLToiThieu.Enabled = false;
             this.txt_SLToiThieu.Location = new System.Drawing.Point(398, 39);
             this.txt_SLToiThieu.Name = "txt_SLToiThieu";
             this.txt_SLToiThieu.Size = new System.Drawing.Size(151, 24);
@@ -223,6 +222,7 @@
             this.btn_LamMoiChiTiet.TabIndex = 69;
             this.btn_LamMoiChiTiet.Text = "Làm mới";
             this.btn_LamMoiChiTiet.UseVisualStyleBackColor = true;
+            this.btn_LamMoiChiTiet.Click += new System.EventHandler(this.btn_LamMoiChiTiet_Click);
             // 
             // btn_SuaChiTiet
             // 
@@ -232,6 +232,7 @@
             this.btn_SuaChiTiet.TabIndex = 68;
             this.btn_SuaChiTiet.Text = "Sửa";
             this.btn_SuaChiTiet.UseVisualStyleBackColor = true;
+            this.btn_SuaChiTiet.Click += new System.EventHandler(this.btn_SuaChiTiet_Click);
             // 
             // btn_XoaChiTiet
             // 
@@ -241,6 +242,7 @@
             this.btn_XoaChiTiet.TabIndex = 67;
             this.btn_XoaChiTiet.Text = "Xoá";
             this.btn_XoaChiTiet.UseVisualStyleBackColor = true;
+            this.btn_XoaChiTiet.Click += new System.EventHandler(this.btn_XoaChiTiet_Click);
             // 
             // btn_ThemChiTiet
             // 
@@ -250,16 +252,37 @@
             this.btn_ThemChiTiet.TabIndex = 66;
             this.btn_ThemChiTiet.Text = "Thêm";
             this.btn_ThemChiTiet.UseVisualStyleBackColor = true;
+            this.btn_ThemChiTiet.Click += new System.EventHandler(this.btn_ThemChiTiet_Click);
             // 
-            // panel1
+            // dgv_DataChiTiet
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(81)))), ((int)(((byte)(152)))));
-            this.panel1.Controls.Add(this.label6);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1003, 52);
-            this.panel1.TabIndex = 70;
+            this.dgv_DataChiTiet.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgv_DataChiTiet.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_DataChiTiet.Location = new System.Drawing.Point(6, 112);
+            this.dgv_DataChiTiet.Name = "dgv_DataChiTiet";
+            this.dgv_DataChiTiet.Size = new System.Drawing.Size(967, 152);
+            this.dgv_DataChiTiet.TabIndex = 65;
+            this.dgv_DataChiTiet.Click += new System.EventHandler(this.dgv_DataChiTiet_Click);
+            // 
+            // dgv_Data
+            // 
+            this.dgv_Data.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgv_Data.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_Data.Location = new System.Drawing.Point(6, 157);
+            this.dgv_Data.Name = "dgv_Data";
+            this.dgv_Data.Size = new System.Drawing.Size(967, 190);
+            this.dgv_Data.TabIndex = 62;
+            this.dgv_Data.Click += new System.EventHandler(this.dgv_Data_Click);
+            // 
+            // pnl_Title
+            // 
+            this.pnl_Title.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(81)))), ((int)(((byte)(152)))));
+            this.pnl_Title.Controls.Add(this.llbl_title);
+            this.pnl_Title.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnl_Title.Location = new System.Drawing.Point(0, 0);
+            this.pnl_Title.Name = "pnl_Title";
+            this.pnl_Title.Size = new System.Drawing.Size(1003, 52);
+            this.pnl_Title.TabIndex = 70;
             // 
             // txt_DieuKienApDung
             // 
@@ -267,14 +290,6 @@
             this.txt_DieuKienApDung.Name = "txt_DieuKienApDung";
             this.txt_DieuKienApDung.Size = new System.Drawing.Size(151, 24);
             this.txt_DieuKienApDung.TabIndex = 70;
-            // 
-            // dgv_DataChiTiet
-            // 
-            this.dgv_DataChiTiet.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_DataChiTiet.Location = new System.Drawing.Point(6, 165);
-            this.dgv_DataChiTiet.Name = "dgv_DataChiTiet";
-            this.dgv_DataChiTiet.Size = new System.Drawing.Size(967, 182);
-            this.dgv_DataChiTiet.TabIndex = 65;
             // 
             // label12
             // 
@@ -288,44 +303,59 @@
             // 
             // txt_MucGiam
             // 
-            this.txt_MucGiam.Enabled = false;
             this.txt_MucGiam.Location = new System.Drawing.Point(112, 119);
             this.txt_MucGiam.Name = "txt_MucGiam";
             this.txt_MucGiam.Size = new System.Drawing.Size(151, 24);
             this.txt_MucGiam.TabIndex = 56;
+            this.txt_MucGiam.Leave += new System.EventHandler(this.txt_MucGiam_Leave);
             // 
-            // groupBox2
+            // gbo_KhuyenMai
             // 
-            this.groupBox2.Controls.Add(this.txt_MaKM);
-            this.groupBox2.Controls.Add(this.rb_Tat);
-            this.groupBox2.Controls.Add(this.rb_Bat);
-            this.groupBox2.Controls.Add(this.cbo_LoaiApDung);
-            this.groupBox2.Controls.Add(this.dtp_NgayKetThuc);
-            this.groupBox2.Controls.Add(this.label14);
-            this.groupBox2.Controls.Add(this.btn_Them);
-            this.groupBox2.Controls.Add(this.label13);
-            this.groupBox2.Controls.Add(this.btn_Xoa);
-            this.groupBox2.Controls.Add(this.label10);
-            this.groupBox2.Controls.Add(this.label4);
-            this.groupBox2.Controls.Add(this.txt_DieuKienApDung);
-            this.groupBox2.Controls.Add(this.dgv_DataChiTiet);
-            this.groupBox2.Controls.Add(this.label12);
-            this.groupBox2.Controls.Add(this.dtp_NgayBatDau);
-            this.groupBox2.Controls.Add(this.txt_MucGiam);
-            this.groupBox2.Controls.Add(this.txt_TenKM);
-            this.groupBox2.Controls.Add(this.label7);
-            this.groupBox2.Controls.Add(this.label8);
-            this.groupBox2.Controls.Add(this.label9);
-            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(12, 72);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(979, 353);
-            this.groupBox2.TabIndex = 72;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Thông tin khuyến mãi";
+            this.gbo_KhuyenMai.Controls.Add(this.cbo_LocDuLieu);
+            this.gbo_KhuyenMai.Controls.Add(this.label5);
+            this.gbo_KhuyenMai.Controls.Add(this.btn_Sua);
+            this.gbo_KhuyenMai.Controls.Add(this.txt_MaKM);
+            this.gbo_KhuyenMai.Controls.Add(this.rb_Tat);
+            this.gbo_KhuyenMai.Controls.Add(this.dgv_Data);
+            this.gbo_KhuyenMai.Controls.Add(this.rb_Bat);
+            this.gbo_KhuyenMai.Controls.Add(this.cbo_LoaiApDung);
+            this.gbo_KhuyenMai.Controls.Add(this.dtp_NgayKetThuc);
+            this.gbo_KhuyenMai.Controls.Add(this.label14);
+            this.gbo_KhuyenMai.Controls.Add(this.btn_Them);
+            this.gbo_KhuyenMai.Controls.Add(this.label13);
+            this.gbo_KhuyenMai.Controls.Add(this.btn_Xoa);
+            this.gbo_KhuyenMai.Controls.Add(this.label10);
+            this.gbo_KhuyenMai.Controls.Add(this.label4);
+            this.gbo_KhuyenMai.Controls.Add(this.txt_DieuKienApDung);
+            this.gbo_KhuyenMai.Controls.Add(this.label12);
+            this.gbo_KhuyenMai.Controls.Add(this.dtp_NgayBatDau);
+            this.gbo_KhuyenMai.Controls.Add(this.txt_MucGiam);
+            this.gbo_KhuyenMai.Controls.Add(this.txt_TenKM);
+            this.gbo_KhuyenMai.Controls.Add(this.label7);
+            this.gbo_KhuyenMai.Controls.Add(this.label8);
+            this.gbo_KhuyenMai.Controls.Add(this.label9);
+            this.gbo_KhuyenMai.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbo_KhuyenMai.Location = new System.Drawing.Point(12, 72);
+            this.gbo_KhuyenMai.Name = "gbo_KhuyenMai";
+            this.gbo_KhuyenMai.Size = new System.Drawing.Size(979, 353);
+            this.gbo_KhuyenMai.TabIndex = 72;
+            this.gbo_KhuyenMai.TabStop = false;
+            this.gbo_KhuyenMai.Text = "Thông tin khuyến mãi";
+            this.gbo_KhuyenMai.Enter += new System.EventHandler(this.gbo_KhuyenMai_Enter);
+            // 
+            // btn_Sua
+            // 
+            this.btn_Sua.Location = new System.Drawing.Point(876, 118);
+            this.btn_Sua.Name = "btn_Sua";
+            this.btn_Sua.Size = new System.Drawing.Size(75, 25);
+            this.btn_Sua.TabIndex = 118;
+            this.btn_Sua.Text = "Sửa";
+            this.btn_Sua.UseVisualStyleBackColor = true;
+            this.btn_Sua.Click += new System.EventHandler(this.btn_Sua_Click);
             // 
             // txt_MaKM
             // 
+            this.txt_MaKM.Enabled = false;
             this.txt_MaKM.Location = new System.Drawing.Point(112, 38);
             this.txt_MaKM.Name = "txt_MaKM";
             this.txt_MaKM.Size = new System.Drawing.Size(151, 24);
@@ -362,15 +392,16 @@
             this.cbo_LoaiApDung.Name = "cbo_LoaiApDung";
             this.cbo_LoaiApDung.Size = new System.Drawing.Size(151, 26);
             this.cbo_LoaiApDung.TabIndex = 77;
+            this.cbo_LoaiApDung.SelectedValueChanged += new System.EventHandler(this.cbo_LoaiApDung_SelectedValueChanged);
             // 
             // dtp_NgayKetThuc
             // 
-            this.dtp_NgayKetThuc.Enabled = false;
             this.dtp_NgayKetThuc.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtp_NgayKetThuc.Location = new System.Drawing.Point(398, 79);
             this.dtp_NgayKetThuc.Name = "dtp_NgayKetThuc";
             this.dtp_NgayKetThuc.Size = new System.Drawing.Size(151, 24);
             this.dtp_NgayKetThuc.TabIndex = 75;
+            this.dtp_NgayKetThuc.Leave += new System.EventHandler(this.dtp_NgayKetThuc_Leave);
             // 
             // label14
             // 
@@ -418,6 +449,7 @@
             this.txt_TenKM.Name = "txt_TenKM";
             this.txt_TenKM.Size = new System.Drawing.Size(151, 24);
             this.txt_TenKM.TabIndex = 50;
+            this.txt_TenKM.Leave += new System.EventHandler(this.txt_TenKM_Leave);
             // 
             // label7
             // 
@@ -449,32 +481,61 @@
             this.label9.TabIndex = 52;
             this.label9.Text = "Mã Khuyến mãi";
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
+            // cbo_LocDuLieu
+            // 
+            this.cbo_LocDuLieu.FormattingEnabled = true;
+            this.cbo_LocDuLieu.Location = new System.Drawing.Point(705, 117);
+            this.cbo_LocDuLieu.Name = "cbo_LocDuLieu";
+            this.cbo_LocDuLieu.Size = new System.Drawing.Size(151, 26);
+            this.cbo_LocDuLieu.TabIndex = 120;
+            this.cbo_LocDuLieu.SelectedValueChanged += new System.EventHandler(this.cbo_LocDuLieu_SelectedValueChanged);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(572, 119);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(58, 16);
+            this.label5.TabIndex = 119;
+            this.label5.Text = "Lọc theo";
+            // 
             // frm_QuanLyKhuyenMai
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(240)))), ((int)(((byte)(144)))));
             this.ClientSize = new System.Drawing.Size(1003, 713);
-            this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.gbo_ChiTietKhuyenMai);
+            this.Controls.Add(this.pnl_Title);
+            this.Controls.Add(this.gbo_KhuyenMai);
             this.Name = "frm_QuanLyKhuyenMai";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frm_QuanLyKhuyenMai";
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_Data)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.frm_QuanLyKhuyenMai_Load);
+            this.Resize += new System.EventHandler(this.frm_QuanLyKhuyenMai_Resize);
+            this.gbo_ChiTietKhuyenMai.ResumeLayout(false);
+            this.gbo_ChiTietKhuyenMai.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_DataChiTiet)).EndInit();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_Data)).EndInit();
+            this.pnl_Title.ResumeLayout(false);
+            this.pnl_Title.PerformLayout();
+            this.gbo_KhuyenMai.ResumeLayout(false);
+            this.gbo_KhuyenMai.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label llbl_title;
         private System.Windows.Forms.ComboBox cbo_MaKM;
         private System.Windows.Forms.Button btn_Them;
         private System.Windows.Forms.DateTimePicker dtp_NgayBatDau;
@@ -482,18 +543,18 @@
         private System.Windows.Forms.Label label;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox gbo_ChiTietKhuyenMai;
         private System.Windows.Forms.ComboBox cbo_UuTien;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dgv_Data;
         private System.Windows.Forms.TextBox txt_SLToiThieu;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel pnl_Title;
         private System.Windows.Forms.TextBox txt_DieuKienApDung;
         private System.Windows.Forms.Button btn_ThemChiTiet;
         private System.Windows.Forms.DataGridView dgv_DataChiTiet;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox txt_MucGiam;
-        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.GroupBox gbo_KhuyenMai;
         private System.Windows.Forms.Button btn_LamMoiChiTiet;
         private System.Windows.Forms.Button btn_SuaChiTiet;
         private System.Windows.Forms.Button btn_XoaChiTiet;
@@ -511,5 +572,9 @@
         private System.Windows.Forms.RadioButton rb_Tat;
         private System.Windows.Forms.RadioButton rb_Bat;
         private System.Windows.Forms.ComboBox cbo_MaSP;
+        private System.Windows.Forms.Button btn_Sua;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.ComboBox cbo_LocDuLieu;
+        private System.Windows.Forms.Label label5;
     }
 }

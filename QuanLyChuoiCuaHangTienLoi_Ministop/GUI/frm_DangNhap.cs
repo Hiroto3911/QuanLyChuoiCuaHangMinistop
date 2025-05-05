@@ -118,6 +118,8 @@ namespace GUI
             if (e.KeyCode == Keys.Enter)
             {
                 btn_DangNhap_Click(sender, e);
+                e.Handled = true; 
+                e.SuppressKeyPress = true;
             }
         }
     }

@@ -4,8 +4,10 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics.Eventing.Reader;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -20,12 +22,16 @@ namespace GUI
         private BUS_CuaHang bus_CH = new BUS_CuaHang();
         private BUS_SanPham bus_SP = new BUS_SanPham();
         private BUS_ChiTietKho bus_CTK = new BUS_ChiTietKho();
+        private BUS_KhuyenMai_SanPham bus_KM_SP = new BUS_KhuyenMai_SanPham();
         // biến tầng et 
         private ET_ChiTietHoaDon et_cthd = new ET_ChiTietHoaDon();
         private ET_HoaDon et_hd = new ET_HoaDon();
         private ET_SanPham et_SP = new ET_SanPham();
+        private ET_KhuyenMaiApDung et_KMAP = new ET_KhuyenMaiApDung();
         // biến static 
         private static string maHDMoiThem;
+        // biến local 
+     
 
         public frm_BanHang()
         {
@@ -119,16 +125,24 @@ namespace GUI
                 et_cthd.SoLuong = int.Parse(txt_SL.Text);
                 et_cthd.GiaBan = Convert.ToDecimal(txt_DonGia.Text);
                 //et_cthd.ThanhTien = 0.0;
-                bus_cthd.Them(et_cthd);
-                et_hd.MaHoaDon = maHDMoiThem;
-                et_hd.MaCuaHang = cbo_MaCH.Text;
-                et_hd.MaNhanVien = txt_MaNV.Text;
-                et_hd.NgayLap = Convert.ToDateTime(dtp_NgayLapHD.Text);
-                et_hd.TongTien = bus_cthd.TinhTongTienTheoMaHD(maHDMoiThem);
-                CapNhapTongTienHoaDon(et_hd);
-                MessageBox.Show("Thêm thành công");
-                LoadHoaDon();
-                LoadChiTietHoaDonTheoMaHD(maHDMoiThem);
+                if (!bus_CTK.KiemTraSanPhamConHang(Session.MaCuaHang, et_cthd))
+                {
+                    MessageBox.Show("Thành thật xin lỗi bạn. Nhưng sản phẩm trong kho không đáp ứng đủ Sl mua"
+                  , "Thông báo", MessageBoxButtons.OKCancel);
+                    return;
+                }
+                else
+                {
+                    et_KMAP = bus_KM_SP.ApDungKhuyenMaiChoSanPham(et_cthd, Convert.ToDateTime(dtp_NgayLapHD.Text));
+                    if(et_KMAP == null) { lbl_KhuyenMai_SanPham.Text = ""; }
+                    else { lbl_KhuyenMai_SanPham.Text = "Sản phẩm đã áp dụng KM "+et_KMAP.TenKhuyenMai; }
+                    bus_cthd.Them(et_cthd);
+                    bus_CTK.CapNhapSLSanPham(Session.MaCuaHang,"Them", et_cthd);
+                    CapNhapTongTienChoHoaDon();
+                    MessageBox.Show("Thêm thành công");
+                    LoadHoaDon();
+                    LoadChiTietHoaDonTheoMaHD(maHDMoiThem);
+                }
             }
             catch (Exception ex) { MessageBox.Show("Thêm thất bại \n Lỗi:" + ex); }
         }
@@ -142,19 +156,21 @@ namespace GUI
             }
             try
             {
+              
                 et_cthd.MaHoaDon = maHDMoiThem;
                 et_cthd.MaChiTietHD = txt_MaCTHD.Text;
                 et_cthd.MaSanPham = txt_SanPham.Text;
                 et_cthd.SoLuong = int.Parse(txt_SL.Text);
                 et_cthd.GiaBan = Convert.ToDecimal(txt_DonGia.Text);
+                // Cập nhập lại chi tiết kho 
+                bus_CTK.CapNhapSLSanPham(Session.MaCuaHang, "Sua", et_cthd, bus_cthd.LaySLCuaChiTietHDTheoMaCTHD(et_cthd.MaHoaDon, et_cthd.MaChiTietHD));
+                // kiểm tra xem sản phẩm có đủ điều kiện để áp dụng khuyến mãi hay không
+                et_KMAP = bus_KM_SP.ApDungKhuyenMaiChoSanPham(et_cthd, Convert.ToDateTime(dtp_NgayLapHD.Text));
+                if (et_KMAP == null) { lbl_KhuyenMai_SanPham.Text = ""; }
+                else { lbl_KhuyenMai_SanPham.Text = "Sản phẩm đã áp dụng KM " + et_KMAP.TenKhuyenMai; }
+                // sửa lại sản phẩm
                 bus_cthd.Sua(et_cthd);
-                bus_cthd.Them(et_cthd);
-                et_hd.MaHoaDon = maHDMoiThem;
-                et_hd.MaCuaHang = cbo_MaCH.Text;
-                et_hd.MaNhanVien = txt_MaNV.Text;
-                et_hd.NgayLap = Convert.ToDateTime(dtp_NgayLapHD.Text);
-                et_hd.TongTien = bus_cthd.TinhTongTienTheoMaHD(maHDMoiThem);
-                CapNhapTongTienHoaDon(et_hd);
+                CapNhapTongTienChoHoaDon();
                 LoadHoaDon();
                 LoadChiTietHoaDonTheoMaHD(maHDMoiThem);
             }
@@ -173,14 +189,9 @@ namespace GUI
             if (DialogResult.Cancel == chapNhanXoa) return;
             try
             {
-
+                bus_CTK.CapNhapSLSanPham(Session.MaCuaHang, "Xoa", et_cthd);
                 bus_cthd.Xoa(maCTHD);
-                et_hd.MaHoaDon = maHDMoiThem;
-                et_hd.MaCuaHang = cbo_MaCH.Text;
-                et_hd.MaNhanVien = txt_MaNV.Text;
-                et_hd.NgayLap = Convert.ToDateTime(dtp_NgayLapHD.Text);
-                et_hd.TongTien = bus_cthd.TinhTongTienTheoMaHD(maHDMoiThem);
-                CapNhapTongTienHoaDon(et_hd);
+                CapNhapTongTienChoHoaDon();
                 MessageBox.Show("Xoá thành công");          
                 LoadHoaDon();
                 LoadChiTietHoaDonTheoMaHD(maHDMoiThem);
@@ -197,14 +208,16 @@ namespace GUI
             txt_SanPham.Clear();
             txt_SanPham.Text = "SP00";
             txt_SL.Clear();
-            txt_ThanhTien.Clear();
+            txt_ThanhTien.Text="0";
             txt_DonGia.Clear();
+            
             
         }
 
         private void dgv_Data_Click(object sender, EventArgs e)
         {
             int dong = dgv_Data.CurrentCell.RowIndex;
+            if (dong > dgv_Data.Rows.Count - 1) return;
             txt_MaHD.Text = dgv_Data.Rows[dong].Cells[0].Value.ToString();
             dtp_NgayLapHD.Text = dgv_Data.Rows[dong].Cells[3].Value.ToString();
             txt_TongTien.Text = dgv_Data.Rows[dong].Cells[4].Value.ToString();
@@ -215,6 +228,7 @@ namespace GUI
         {
 
             int dong = dgv_DataChiTiet.CurrentCell.RowIndex;
+            if (dong > dgv_DataChiTiet.Rows.Count - 1) return;
             txt_MaCTHD.Text = dgv_DataChiTiet.Rows[dong].Cells[0].Value.ToString();
             txt_SanPham.Text = dgv_DataChiTiet.Rows[dong].Cells[2].Value.ToString();
             txt_SL.Text = dgv_DataChiTiet.Rows[dong].Cells[3].Value.ToString();
@@ -227,10 +241,29 @@ namespace GUI
 
         private void btn_HoanTat_Click(object sender, EventArgs e)
         {
+            int dem = 0;
+            foreach (var cthd in bus_cthd.HienThiDuLieuSapXepGiamDanTheoMaHD(maHDMoiThem))
+            {
+                et_KMAP = bus_KM_SP.ApDungKhuyenMaiChoSanPham(cthd, Convert.ToDateTime(dtp_NgayLapHD.Text));
+                if (et_KMAP != null)
+                {
+                    cthd.ThanhTien -= et_KMAP.MucGiamGia;
+                    bus_cthd.CapNhapThanhTien(cthd);
+                    dem++;
+                   
+                }
+               
+
+            }
+            if(dem > 0)
+            {
+                CapNhapTongTienChoHoaDon();
+               
+            }
+            LoadHoaDon();
+            LoadChiTietHoaDonTheoMaHD(dgv_Data.CurrentRow.Cells[0].Value.ToString());
             maHDMoiThem = null;
            
-           
-            
         }
 
         private void txt_SanPham_Leave(object sender, EventArgs e)
@@ -288,5 +321,15 @@ namespace GUI
             dtp_NgayLapHD.Text = DateTime.Now.ToShortDateString();
 
         }
+        private void CapNhapTongTienChoHoaDon()
+        {
+            et_hd.MaHoaDon = maHDMoiThem;
+            et_hd.MaCuaHang = cbo_MaCH.Text;
+            et_hd.MaNhanVien = txt_MaNV.Text;
+            et_hd.NgayLap = Convert.ToDateTime(dtp_NgayLapHD.Text);
+            et_hd.TongTien = bus_cthd.TinhTongTienTheoMaHD(maHDMoiThem);
+            CapNhapTongTienHoaDon(et_hd);
+        }
+       
     }
 }

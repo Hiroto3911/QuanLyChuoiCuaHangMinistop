@@ -38,10 +38,10 @@ namespace GUI
         private void frm_Main_Load(object sender, EventArgs e)
         {
             lbl_HelloUser.Text = "Xin chào " + Session.HoTen + " |";
-
+           
             if (Session.VaiTro == "Admin")
             {
-
+                
             }
             else
             {
@@ -98,5 +98,14 @@ namespace GUI
             bh.MdiParent = this;
             bh.Show();
         }
+
+        private void btn_QLKM_Click(object sender, EventArgs e)
+        {
+            frm_QuanLyKhuyenMai km = new frm_QuanLyKhuyenMai();
+            km.MdiParent = this;
+            km.Show();
+        }
+
+       
     }
 }

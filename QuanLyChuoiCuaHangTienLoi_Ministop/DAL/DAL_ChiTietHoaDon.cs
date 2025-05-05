@@ -12,7 +12,7 @@ namespace DAL
         private DB_QuanLyChuoiCuaHangTienLoiMinistopDataContext db = new DB_QuanLyChuoiCuaHangTienLoiMinistopDataContext();
         public List<ET_ChiTietHoaDon> HienThiDuLieuSapXepGiamDanTheoMaHD(string maHD)
         {
-            var query = db.ChiTietHoaDons.Where(ma => ma.MaHoaDon == maHD).OrderByDescending(ma => ma.MaChiTietHD).ToList();
+            var query = db.ChiTietHoaDons.Where(ma =>ma.MaHoaDon == maHD).OrderByDescending(ma => ma.MaChiTietHD).ToList();
             List<ET_ChiTietHoaDon> ds = new List<ET_ChiTietHoaDon>();
             foreach(var item in query)
             {
@@ -21,9 +21,9 @@ namespace DAL
                     MaChiTietHD = item.MaChiTietHD,
                     MaHoaDon = item.MaHoaDon,
                     MaSanPham = item.MaSanPham,
-                    SoLuong =(int) item.SoLuong,
+                    SoLuong = (int)item.SoLuong,
                     GiaBan = (decimal)item.GiaBan,
-                    ThanhTien =(decimal)item.ThanhTien 
+                    ThanhTien = (decimal)(item.ThanhTien ?? 0)
                 });
             }
             return ds;
@@ -50,6 +50,7 @@ namespace DAL
                         MaSanPham = chiTietHD.MaSanPham,
                         SoLuong = chiTietHD.SoLuong,
                         GiaBan = (decimal?)chiTietHD.GiaBan,
+                        ThanhTien = chiTietHD.SoLuong * chiTietHD.GiaBan
                     };
                     db.ChiTietHoaDons.InsertOnSubmit(cthd);
                     db.SubmitChanges();
@@ -65,7 +66,8 @@ namespace DAL
             if (chiTietHD == null) return false;
             try
             {
-                var capNhap = TimChiTietHoaDonBangMaHD(chiTietHD.MaChiTietHD);
+                var capNhap = TimChiTietHoaDonBangMaCTHD(chiTietHD.MaChiTietHD);
+                if (capNhap == null) return false;
                 capNhap.SoLuong = chiTietHD.SoLuong;
                 db.SubmitChanges();
                 return true;
@@ -77,7 +79,7 @@ namespace DAL
             if (string.IsNullOrWhiteSpace(maCTHD)) return false;
             try
             {
-                var del = TimChiTietHoaDonBangMaHD(maCTHD);
+                var del = TimChiTietHoaDonBangMaCTHD(maCTHD);
                 if (del == null) return false;
                 db.ChiTietHoaDons.DeleteOnSubmit(del);
                 db.SubmitChanges();
@@ -85,7 +87,7 @@ namespace DAL
             }
             catch (Exception ex) { throw ex; }
         }
-        public ChiTietHoaDon TimChiTietHoaDonBangMaHD(string maCTHD)
+        public ChiTietHoaDon TimChiTietHoaDonBangMaCTHD(string maCTHD)
         {
             var kq = db.ChiTietHoaDons.Where(n => n.MaChiTietHD == maCTHD).FirstOrDefault();
             return kq;
@@ -101,6 +103,25 @@ namespace DAL
             var query = db.ChiTietHoaDons.Where(cthd => cthd.MaHoaDon == maHD).Sum(cthd => cthd.ThanhTien);
             if(query == null) return 0;
             return (decimal)query; 
+        }
+        public int LaySLCuaChiTietHDTheoMaCTHD(string maHD,string maCTHD)
+        {
+            var query = db.ChiTietHoaDons.Where(cthd => cthd.MaHoaDon == maHD && cthd.MaChiTietHD == maCTHD).Select(cthd => cthd.SoLuong).FirstOrDefault();
+            if(query == null) return 0;
+            return (int)query;
+        }
+        public bool CapNhapThanhTien(ET_ChiTietHoaDon chiTietHD)
+        {
+            if (chiTietHD == null) return false;
+            try
+            {
+                var capNhap = TimChiTietHoaDonBangMaCTHD(chiTietHD.MaChiTietHD);
+                if (capNhap == null) return false;
+                capNhap.ThanhTien = chiTietHD.ThanhTien;
+                db.SubmitChanges();
+                return true;
+            }
+            catch (Exception ex) { throw ex; }
         }
 
     }
