@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using ET;
 using DAL;
+using System.Net.Http.Headers;
 namespace BUS
 {
     public class BUS_NhanVien
@@ -16,8 +17,36 @@ namespace BUS
         }
         public List<string> LayDanhSachMaNV()
         {
-            
+
             return nv.LayDanhSachMaNV();
+
         }
+        public List<string> LayDanhSachMaNVTheoVaiTro(string vaiTro)
+        {
+
+            return nv.LayDanhSachMaCHTheoVaiTro(vaiTro);
+
+        }
+
+        public List<ET_NhanVien> HienThiDuLieuSapXepGiamDanTheoMa()
+        {
+            return nv.HienThiDuLieuSapXepGiamDanTheoMa();
+        }
+        public bool Them(ET_NhanVien nhanVien)
+        {
+            return nv.Them(nhanVien);
+        }
+        public bool Xoa(string maMV)
+        {
+            return nv.Xoa(maMV);
+        }
+        public bool Sua(ET_NhanVien nhanVien)
+
+        {
+            return nv.Sua(nhanVien);
+            
+
+        }
+      
     }
 }

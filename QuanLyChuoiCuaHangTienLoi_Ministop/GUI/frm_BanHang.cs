@@ -386,5 +386,6 @@ namespace GUI
             lbl_KhuyenMai_SanPham.Text = "";
         }
 
+       
     }
 }

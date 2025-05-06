@@ -22,7 +22,7 @@ namespace DAL
                    TenCH = item.TenCuaHang,
                    SDT = item.SoDienThoai,
                    DChi = item.DiaChi,
-                   NguoiQL = item.MaQuanLy
+                   NguoiQL = item.MaQuanLy 
                 });
             }
             return ds;
