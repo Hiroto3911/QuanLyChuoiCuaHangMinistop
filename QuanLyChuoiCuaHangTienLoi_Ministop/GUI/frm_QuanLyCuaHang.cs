@@ -113,5 +113,15 @@ namespace GUI
             gbo_NhapThongTin.Top = 90;
             gbo_Data.Top = 90;
         }
+
+        private void pnl_Title_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void dgv_Data_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
