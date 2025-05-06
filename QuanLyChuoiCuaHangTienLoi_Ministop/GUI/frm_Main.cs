@@ -106,6 +106,11 @@ namespace GUI
             km.Show();
         }
 
-       
+        private void btn_QLNV_Click(object sender, EventArgs e)
+        {
+            frm_QuanLyNhanVien nv = new frm_QuanLyNhanVien();
+            nv.MdiParent = this;
+            nv.Show();
+        }
     }
 }

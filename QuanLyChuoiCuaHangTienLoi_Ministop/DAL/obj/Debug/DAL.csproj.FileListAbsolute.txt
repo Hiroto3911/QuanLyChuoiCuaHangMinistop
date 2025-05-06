@@ -17,3 +17,13 @@ D:\DoAnCN.Net\QuanLyChuoiCuaHangMinistop\QuanLyChuoiCuaHangTienLoi_Ministop\DAL\
 D:\DoAnCN.Net\QuanLyChuoiCuaHangMinistop\QuanLyChuoiCuaHangTienLoi_Ministop\DAL\obj\Debug\DAL.csproj.Up2Date
 D:\DoAnCN.Net\QuanLyChuoiCuaHangMinistop\QuanLyChuoiCuaHangTienLoi_Ministop\DAL\obj\Debug\DAL.dll
 D:\DoAnCN.Net\QuanLyChuoiCuaHangMinistop\QuanLyChuoiCuaHangTienLoi_Ministop\DAL\obj\Debug\DAL.pdb
+D:\QuanLyChuoiCuaHangMinistop\QuanLyChuoiCuaHangTienLoi_Ministop\DAL\bin\Debug\DAL.dll.config
+D:\QuanLyChuoiCuaHangMinistop\QuanLyChuoiCuaHangTienLoi_Ministop\DAL\bin\Debug\DAL.dll
+D:\QuanLyChuoiCuaHangMinistop\QuanLyChuoiCuaHangTienLoi_Ministop\DAL\bin\Debug\DAL.pdb
+D:\QuanLyChuoiCuaHangMinistop\QuanLyChuoiCuaHangTienLoi_Ministop\DAL\bin\Debug\ET.dll
+D:\QuanLyChuoiCuaHangMinistop\QuanLyChuoiCuaHangTienLoi_Ministop\DAL\bin\Debug\ET.pdb
+D:\QuanLyChuoiCuaHangMinistop\QuanLyChuoiCuaHangTienLoi_Ministop\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
+D:\QuanLyChuoiCuaHangMinistop\QuanLyChuoiCuaHangTienLoi_Ministop\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+D:\QuanLyChuoiCuaHangMinistop\QuanLyChuoiCuaHangTienLoi_Ministop\DAL\obj\Debug\DAL.csproj.Up2Date
+D:\QuanLyChuoiCuaHangMinistop\QuanLyChuoiCuaHangTienLoi_Ministop\DAL\obj\Debug\DAL.dll
+D:\QuanLyChuoiCuaHangMinistop\QuanLyChuoiCuaHangTienLoi_Ministop\DAL\obj\Debug\DAL.pdb
