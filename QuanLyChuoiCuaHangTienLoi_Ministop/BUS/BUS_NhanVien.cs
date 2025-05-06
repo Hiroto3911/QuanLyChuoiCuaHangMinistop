@@ -27,6 +27,11 @@ namespace BUS
             return nv.LayDanhSachMaCHTheoVaiTro(vaiTro);
 
         }
+        public List<ET_NhanVien> HienThiDuLieuTheoVaiTro(string vaiTro)
+        {
+           
+            return nv.HienThiDuLieuTheoVaiTro(vaiTro);
+        }
 
         public List<ET_NhanVien> HienThiDuLieuSapXepGiamDanTheoMa()
         {
