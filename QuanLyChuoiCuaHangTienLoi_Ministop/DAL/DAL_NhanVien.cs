@@ -44,12 +44,34 @@ namespace DAL
                     GioiTinh = item.GioiTinh,
                     NgaySinh = (DateTime)item.NgaySinh,
                     SoDienThoai = item.SoDienThoai,
-                    
                     NgayLamViec = (DateTime)item.NgayLamViec,
                     TaiKhoan = item.TaiKhoan,
                     MatKhau = item.MatKhau,
                     VaiTro = item.VaiTro,
                      MaCuaHang = item.MaCuaHang
+                });
+            }
+            return ds;
+        }
+        public List<ET_NhanVien> HienThiDuLieuTheoVaiTro(string vaiTro)
+        {
+            var query = db.NhanViens.Where(nv => nv.VaiTro == vaiTro).OrderByDescending(ma => ma.MaNhanVien).ToList();
+            List<ET_NhanVien> ds = new List<ET_NhanVien>();
+            foreach (var item in query)
+            {
+                ds.Add(new ET_NhanVien
+                {
+
+                    MaNV = item.MaNhanVien,
+                    HoTen = item.HoTen,
+                    GioiTinh = item.GioiTinh,
+                    NgaySinh = (DateTime)item.NgaySinh,
+                    SoDienThoai = item.SoDienThoai,
+                    NgayLamViec = (DateTime)item.NgayLamViec,
+                    TaiKhoan = item.TaiKhoan,
+                    MatKhau = item.MatKhau,
+                    VaiTro = item.VaiTro,
+                    MaCuaHang = item.MaCuaHang
                 });
             }
             return ds;
@@ -81,6 +103,7 @@ namespace DAL
                     NgayLamViec = nhanVien.NgayLamViec,
                     TaiKhoan = nhanVien.TaiKhoan,
                     MatKhau = nhanVien.MatKhau,
+                    SoDienThoai = nhanVien.SoDienThoai,
                     VaiTro = nhanVien.VaiTro
                 };
                 db.NhanViens.InsertOnSubmit(ch);
@@ -112,12 +135,12 @@ namespace DAL
                 var capNhat = TimCuaHangBangMaNV(nhanVien.MaNV);
                 if (capNhat == null) return false;
                 capNhat.MaCuaHang = nhanVien.MaCuaHang;
-               
                 capNhat.HoTen = nhanVien.HoTen;
                 capNhat.NgaySinh = nhanVien.NgaySinh;
                 capNhat.GioiTinh = nhanVien.GioiTinh;
                 capNhat.NgayLamViec = nhanVien.NgayLamViec;
                 capNhat.TaiKhoan = nhanVien.TaiKhoan;
+                capNhat.SoDienThoai = nhanVien.SoDienThoai;
                 capNhat.MatKhau = nhanVien.MatKhau;
                 capNhat.VaiTro = nhanVien.VaiTro;
                 db.SubmitChanges();
