@@ -119,5 +119,12 @@ namespace GUI
             sp.MdiParent = this;
             sp.Show();
         }
+
+        private void btn_QLNCC_Click(object sender, EventArgs e)
+        {
+            frm_QuanLyNhaCungCap ncc = new frm_QuanLyNhaCungCap();
+            ncc.MdiParent = this;
+            ncc.Show();
+        }
     }
 }
