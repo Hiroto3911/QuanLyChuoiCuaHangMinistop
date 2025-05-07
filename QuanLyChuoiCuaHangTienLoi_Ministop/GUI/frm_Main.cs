@@ -112,5 +112,12 @@ namespace GUI
             nv.MdiParent = this;
             nv.Show();
         }
+
+        private void btn_QLSP_Click(object sender, EventArgs e)
+        {
+            frm_QuanLySanPham sp = new frm_QuanLySanPham();
+            sp.MdiParent = this;
+            sp.Show();
+        }
     }
 }
