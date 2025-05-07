@@ -11,7 +11,7 @@ namespace ET
         public string MaSanPham { get; set; }
 
         public string TenSanPham { get; set; } 
-        public double GiaMacDinh { get; set; } 
+        public decimal GiaMacDinh { get; set; } 
         public string DonViTinh { get; set; } 
         public string LoaiSanPham { get; set; } 
     }
