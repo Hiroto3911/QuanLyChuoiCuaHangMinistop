@@ -130,13 +130,15 @@ namespace DAL
                         && km.TrangThai == 1
                         && tgianMua >= km.NgayBatDau
                         && tgianMua <= km.NgayKetThuc
+                        orderby km.DieuKienApDung descending
                         select new ET_KhuyenMaiApDungHoaDon
                         {
                             MaHoaDon = hoaDon.MaHoaDon ,
                             TenKhuyenMai = km.TenKhuyenMai,
                             MucGiamGia =(decimal) km.MucGiamGia,   
                             DieuKienAP = (decimal) km.DieuKienApDung
-                        };
+                        }
+                        ;
 
             return query.FirstOrDefault();
         }
