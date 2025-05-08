@@ -369,6 +369,7 @@
             this.btn_QLNCC.TabIndex = 4;
             this.btn_QLNCC.Text = "Quản lý nhà cung cấp";
             this.btn_QLNCC.UseVisualStyleBackColor = true;
+            this.btn_QLNCC.Click += new System.EventHandler(this.btn_QLNCC_Click);
             // 
             // pnl_QuanLySanPham
             // 
