@@ -18,7 +18,11 @@ namespace BUS
 
         public bool Them(ET_NhaCungCap nhaCungCap)
         {
+
            return dal_NhaCungCap.Them(nhaCungCap);
+
+            
+
         }
 
         public bool Xoa(string maNCC)
@@ -29,6 +33,7 @@ namespace BUS
 
         {
 
+
            return dal_NhaCungCap.Sua(maNCC);
         }
         public List<string> LayDanhSachMaNCC()
@@ -36,5 +41,8 @@ namespace BUS
            return dal_NhaCungCap.LayDanhSachMaNCC();
         }
        
+
+        
+   
     }
 }

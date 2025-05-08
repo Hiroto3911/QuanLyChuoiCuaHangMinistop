@@ -49,6 +49,7 @@
     <Compile Include="ET_ChiTietNhapHang.cs" />
     <Compile Include="ET_ChiTietXuatHang.cs" />
     <Compile Include="ET_CuaHang.cs" />
+    <Compile Include="ET_DoanhThuCuaHangTheoThang.cs" />
     <Compile Include="ET_HoaDon.cs" />
     <Compile Include="ET_KhuyenMai.cs" />
     <Compile Include="ET_KhuyenMaiApDung.cs" />

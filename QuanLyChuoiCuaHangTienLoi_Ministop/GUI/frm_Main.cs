@@ -54,7 +54,9 @@ namespace GUI
                         pnl_QuanLyNhanVien,
                         pnl_QuanLyNhaCungCap,
                         pnl_QuanLySanPham,
-                        pnl_QuanLyKhuyenMai
+                        pnl_QuanLyKhuyenMai,
+                        pnl_TongHopHeThong,
+                        pnl_TongDoanhThu
                     };
 
 
@@ -70,7 +72,11 @@ namespace GUI
                         pnl_QuanLyKhuyenMai,
                         pnl_NhapHang,
                         pnl_ChiTietKho,
-                        pnl_QuanLyLichSuGiaSP
+                        pnl_QuanLyLichSuGiaSP,
+                        pnl_DoanhThuCuaHang,
+                        pnl_BaoCaoKho,
+                        pnl_TongHopHeThong,
+                        pnl_TongDoanhThu
                     };
 
                 }
@@ -111,6 +117,20 @@ namespace GUI
             frm_QuanLyNhanVien nv = new frm_QuanLyNhanVien();
             nv.MdiParent = this;
             nv.Show();
+        }
+
+        private void btn_QLLSGSP_Click(object sender, EventArgs e)
+        {
+            frm_QuanLyLichSuThayDoiGiaSanPham lsg = new frm_QuanLyLichSuThayDoiGiaSanPham();
+            lsg.MdiParent = this;
+            lsg.Show();
+        }
+
+        private void btn_DoanhThuTungCH_Click(object sender, EventArgs e)
+        {
+            frm_BaoCaoDoanhThu baoCao = new frm_BaoCaoDoanhThu();
+            baoCao.MdiParent = this; 
+            baoCao.Show();
         }
 
         private void btn_QLSP_Click(object sender, EventArgs e)

@@ -22,10 +22,19 @@ namespace GUI
         private ET_NhaCungCap et_NhaCungCap = new ET_NhaCungCap();
 
 
+
         private void  LoadDuLieuNhaCungCap()
         {
             dgv_Data.DataSource = bus_NhaCungCap.HienThiDuLieuSapXepGiamDanTheoMa();
         }
+
+       
+        private void frm_QuanLyNhaCungCap_Load(object sender, EventArgs e)
+        {
+            LoadDuLieuNhaCungCap();
+        }
+
+
         private void btn_Them_Click(object sender, EventArgs e)
         {
             try
@@ -33,7 +42,11 @@ namespace GUI
 
                 try
                 {
+
                     et_NhaCungCap.MaNcc = TaoMaTuDong.TaoMa(bus_NhaCungCap.LayDanhSachMaNCC(), "MCC");
+
+                    et_NhaCungCap.MaNcc = TaoMaTuDong.TaoMa(bus_NhaCungCap.LayDanhSachMaNCC(), "NCC");
+
                     et_NhaCungCap.TenNcc = txt_TenNCC.Text;
                     et_NhaCungCap.DiaChi = rtf_DiaChi.Text;
                     et_NhaCungCap.SoDienThoai = txt_DTH.Text;
@@ -57,6 +70,7 @@ namespace GUI
             }
         }
 
+
         private void btn_Xoa_Click(object sender, EventArgs e)
         {
             try
@@ -72,6 +86,8 @@ namespace GUI
                 MessageBox.Show(" Xoá Thất Bại" + ex);
             }
         }
+
+
 
         private void btn_Sua_Click(object sender, EventArgs e)
         {
@@ -104,10 +120,9 @@ namespace GUI
             LoadDuLieuNhaCungCap();
         }
 
-        private void frm_QuanLyNhaCungCap_Load(object sender, EventArgs e)
-        {
-            LoadDuLieuNhaCungCap();
-        }
+
+       
+
 
         private void dgv_Data_Click(object sender, EventArgs e)
         {
@@ -118,5 +133,16 @@ namespace GUI
             txt_DTH.Text = dgv_Data.Rows[dong].Cells[3].Value.ToString();
             txt_Email.Text = dgv_Data.Rows[dong].Cells[4].Value.ToString();
         }
+
+
+        private void frm_QuanLyNhaCungCap_Resize(object sender, EventArgs e)
+        {
+            lbl_Title.Left = (this.ClientSize.Width - lbl_Title.Width) / 2;
+            gbo_NhapThongTin.Left = (this.ClientSize.Width - gbo_NhapThongTin.Width) / 4;
+            gbo_ThongTin.Left = gbo_NhapThongTin.Right + 20;
+            gbo_NhapThongTin.Top = 90;
+            gbo_ThongTin.Top = 90;
+        }
+
     }
 }

@@ -30,7 +30,9 @@ namespace DAL
             }
             return ds;
         }
-       
+
+
+
         public bool Them(ET_NhaCungCap nhaCungCap)
         {
             if (nhaCungCap == null) return false;
@@ -44,7 +46,6 @@ namespace DAL
                     DiaChi = nhaCungCap.DiaChi,
                     SoDienThoai = nhaCungCap.SoDienThoai,
                     Email = nhaCungCap.Email
-                    
                 };
                 db.NhaCungCaps.InsertOnSubmit(sp);
                 db.SubmitChanges();
