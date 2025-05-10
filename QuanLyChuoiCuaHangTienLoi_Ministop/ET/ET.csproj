@@ -42,6 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ET_BaoCaoTonKho.cs" />
     <Compile Include="ET_ChiTietHoaDon.cs" />
     <Compile Include="ET_ChiTietKho.cs" />
     <Compile Include="ET_ChiTietKiemKho.cs" />

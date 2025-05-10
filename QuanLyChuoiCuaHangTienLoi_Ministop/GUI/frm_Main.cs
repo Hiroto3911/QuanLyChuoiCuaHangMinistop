@@ -146,5 +146,12 @@ namespace GUI
             ncc.MdiParent = this;
             ncc.Show();
         }
+
+        private void btn_BaoCaoKho_Click(object sender, EventArgs e)
+        {
+            frm_BaoCaoTonKho tk = new frm_BaoCaoTonKho();
+            tk.MdiParent = this;
+            tk.Show();
+        }
     }
 }
