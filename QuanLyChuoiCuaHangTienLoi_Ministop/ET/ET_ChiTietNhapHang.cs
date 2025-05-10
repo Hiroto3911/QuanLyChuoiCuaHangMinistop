@@ -11,8 +11,8 @@ namespace ET
         public string MaPhieuNhap { get; set; }
         public string MaSanPham { get; set; }
         public int SoLuong { get; set; }
-        public double GiaNhap { get; set; }
-        public double TongTien { get; set; }
+        public decimal GiaNhap { get; set; }
+        public decimal TongTien { get; set; }
         public string GhiChu { get; set; }
     }
 }

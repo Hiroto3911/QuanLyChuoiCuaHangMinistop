@@ -11,10 +11,10 @@ namespace BUS
     public class BUS_ChiTietKho
     {
         private DAL_ChiTietKho dal_CTK = new DAL_ChiTietKho();
-        public List<ET_ChiTietKho> HienThiDuLieuSapXepGiamDanTheoMaSP(string maCH)
+        public List<ET_ChiTietKho> HienThiDuLieuSapXepGiamDanTheoMaCH(string maCH)
         {
            
-            return dal_CTK.HienThiDuLieuSapXepGiamDanTheoMaSP(maCH);
+            return dal_CTK.HienThiDuLieuSapXepGiamDanTheoMaCH(maCH);
         }
         public double LayGiaBanCuaSanPhamCuaMotCH(string maCH, string maSP)
         {
@@ -31,6 +31,19 @@ namespace BUS
         {
             return dal_CTK.CapNhapSLSanPham(maCH,loaiCapNhap, sp,soLuongCu);
 
+        }
+        public bool Them(ET_ChiTietKho ct)
+        {
+            return dal_CTK.Them(ct);
+        }
+
+        public bool Xoa(string mact)
+        {
+            return dal_CTK.Xoa(mact);
+        }
+        public bool CapNhapChiTietKhoKhiNhapHang(string maCH, ET_ChiTietNhapHang nh, DateTime ngayNhap)
+        {
+            return dal_CTK.CapNhapChiTietKhoKhiNhapHang(maCH,nh,ngayNhap);
         }
     }
 }

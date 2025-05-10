@@ -153,5 +153,26 @@ namespace GUI
             tk.MdiParent = this;
             tk.Show();
         }
+
+        private void btn_NH_Click(object sender, EventArgs e)
+        {
+            frm_NhapKho nk = new frm_NhapKho();
+            nk.MdiParent = this;
+            nk.Show();
+        }
+
+        private void btn_XH_Click(object sender, EventArgs e)
+        {
+            frm_XuatKho xk = new frm_XuatKho();
+            xk.MdiParent = this;
+            xk.Show();
+        }
+
+        private void btn_KK_Click(object sender, EventArgs e)
+        {
+            frm_KiemKho kk = new frm_KiemKho();
+            kk.MdiParent = this;
+            kk.Show();
+        }
     }
 }

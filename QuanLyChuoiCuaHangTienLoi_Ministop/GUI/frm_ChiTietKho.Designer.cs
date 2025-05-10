@@ -32,7 +32,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.cbo_MaCH = new System.Windows.Forms.ComboBox();
             this.btn_Them = new System.Windows.Forms.Button();
-            this.btn_Xoa = new System.Windows.Forms.Button();
             this.txt_MaCTK = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label = new System.Windows.Forms.Label();
@@ -50,9 +49,6 @@
             this.cbo_LoaiThayDoi = new System.Windows.Forms.ComboBox();
             this.dtp_NgayThayDoi = new System.Windows.Forms.DateTimePicker();
             this.btn_LamMoiChiTiet = new System.Windows.Forms.Button();
-            this.btn_SuaChiTiet = new System.Windows.Forms.Button();
-            this.btn_XoaChiTiet = new System.Windows.Forms.Button();
-            this.btn_ThemChiTiet = new System.Windows.Forms.Button();
             this.dgv_DataChiTiet = new System.Windows.Forms.DataGridView();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
@@ -101,21 +97,13 @@
             // 
             // btn_Them
             // 
-            this.btn_Them.Location = new System.Drawing.Point(723, 32);
+            this.btn_Them.Location = new System.Drawing.Point(667, 51);
             this.btn_Them.Name = "btn_Them";
             this.btn_Them.Size = new System.Drawing.Size(75, 49);
             this.btn_Them.TabIndex = 42;
             this.btn_Them.Text = "Thêm";
             this.btn_Them.UseVisualStyleBackColor = true;
-            // 
-            // btn_Xoa
-            // 
-            this.btn_Xoa.Location = new System.Drawing.Point(614, 32);
-            this.btn_Xoa.Name = "btn_Xoa";
-            this.btn_Xoa.Size = new System.Drawing.Size(75, 48);
-            this.btn_Xoa.TabIndex = 43;
-            this.btn_Xoa.Text = "Xoá";
-            this.btn_Xoa.UseVisualStyleBackColor = true;
+            this.btn_Them.Click += new System.EventHandler(this.btn_Them_Click);
             // 
             // txt_MaCTK
             // 
@@ -174,7 +162,6 @@
             this.groupBox1.Controls.Add(this.dgv_Data);
             this.groupBox1.Controls.Add(this.cbo_MaCH);
             this.groupBox1.Controls.Add(this.btn_Them);
-            this.groupBox1.Controls.Add(this.btn_Xoa);
             this.groupBox1.Controls.Add(this.txt_MaCTK);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label);
@@ -222,11 +209,13 @@
             // 
             // dgv_Data
             // 
+            this.dgv_Data.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_Data.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_Data.Location = new System.Drawing.Point(23, 132);
             this.dgv_Data.Name = "dgv_Data";
             this.dgv_Data.Size = new System.Drawing.Size(815, 136);
             this.dgv_Data.TabIndex = 62;
+            this.dgv_Data.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_Data_CellClick);
             // 
             // txt_MaCTLSK
             // 
@@ -242,9 +231,6 @@
             this.groupBox2.Controls.Add(this.cbo_LoaiThayDoi);
             this.groupBox2.Controls.Add(this.dtp_NgayThayDoi);
             this.groupBox2.Controls.Add(this.btn_LamMoiChiTiet);
-            this.groupBox2.Controls.Add(this.btn_SuaChiTiet);
-            this.groupBox2.Controls.Add(this.btn_XoaChiTiet);
-            this.groupBox2.Controls.Add(this.btn_ThemChiTiet);
             this.groupBox2.Controls.Add(this.txt_MaCTLSK);
             this.groupBox2.Controls.Add(this.dgv_DataChiTiet);
             this.groupBox2.Controls.Add(this.label12);
@@ -288,47 +274,22 @@
             // 
             // btn_LamMoiChiTiet
             // 
-            this.btn_LamMoiChiTiet.Location = new System.Drawing.Point(723, 103);
+            this.btn_LamMoiChiTiet.Location = new System.Drawing.Point(667, 64);
             this.btn_LamMoiChiTiet.Name = "btn_LamMoiChiTiet";
             this.btn_LamMoiChiTiet.Size = new System.Drawing.Size(75, 49);
             this.btn_LamMoiChiTiet.TabIndex = 69;
             this.btn_LamMoiChiTiet.Text = "Làm mới";
             this.btn_LamMoiChiTiet.UseVisualStyleBackColor = true;
             // 
-            // btn_SuaChiTiet
-            // 
-            this.btn_SuaChiTiet.Location = new System.Drawing.Point(614, 103);
-            this.btn_SuaChiTiet.Name = "btn_SuaChiTiet";
-            this.btn_SuaChiTiet.Size = new System.Drawing.Size(75, 49);
-            this.btn_SuaChiTiet.TabIndex = 68;
-            this.btn_SuaChiTiet.Text = "Sửa";
-            this.btn_SuaChiTiet.UseVisualStyleBackColor = true;
-            // 
-            // btn_XoaChiTiet
-            // 
-            this.btn_XoaChiTiet.Location = new System.Drawing.Point(723, 36);
-            this.btn_XoaChiTiet.Name = "btn_XoaChiTiet";
-            this.btn_XoaChiTiet.Size = new System.Drawing.Size(75, 49);
-            this.btn_XoaChiTiet.TabIndex = 67;
-            this.btn_XoaChiTiet.Text = "Xoá";
-            this.btn_XoaChiTiet.UseVisualStyleBackColor = true;
-            // 
-            // btn_ThemChiTiet
-            // 
-            this.btn_ThemChiTiet.Location = new System.Drawing.Point(614, 36);
-            this.btn_ThemChiTiet.Name = "btn_ThemChiTiet";
-            this.btn_ThemChiTiet.Size = new System.Drawing.Size(75, 49);
-            this.btn_ThemChiTiet.TabIndex = 66;
-            this.btn_ThemChiTiet.Text = "Thêm";
-            this.btn_ThemChiTiet.UseVisualStyleBackColor = true;
-            // 
             // dgv_DataChiTiet
             // 
+            this.dgv_DataChiTiet.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_DataChiTiet.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_DataChiTiet.Location = new System.Drawing.Point(23, 173);
             this.dgv_DataChiTiet.Name = "dgv_DataChiTiet";
             this.dgv_DataChiTiet.Size = new System.Drawing.Size(815, 174);
             this.dgv_DataChiTiet.TabIndex = 65;
+            this.dgv_DataChiTiet.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_DataChiTiet_CellClick);
             // 
             // label12
             // 
@@ -417,6 +378,7 @@
             this.Name = "frm_ChiTietKho";
             this.Text = "frm_ChiTietKho";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.frm_ChiTietKho_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.groupBox1.ResumeLayout(false);
@@ -435,7 +397,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox cbo_MaCH;
         private System.Windows.Forms.Button btn_Them;
-        private System.Windows.Forms.Button btn_Xoa;
         private System.Windows.Forms.TextBox txt_MaCTK;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label;
@@ -446,9 +407,6 @@
         private System.Windows.Forms.TextBox txt_MaCTLSK;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button btn_LamMoiChiTiet;
-        private System.Windows.Forms.Button btn_SuaChiTiet;
-        private System.Windows.Forms.Button btn_XoaChiTiet;
-        private System.Windows.Forms.Button btn_ThemChiTiet;
         private System.Windows.Forms.DataGridView dgv_DataChiTiet;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
