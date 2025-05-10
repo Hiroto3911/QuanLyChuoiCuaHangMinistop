@@ -34,8 +34,8 @@ namespace DAL
             var check = db.ChiTietHoaDons.Where(cthd => cthd.MaHoaDon == chiTietHD.MaHoaDon && cthd.MaSanPham == chiTietHD.MaSanPham).FirstOrDefault();
             if (check != null)
             {
-                check.SoLuong += chiTietHD.SoLuong; 
-                //check.ThanhTien = check.SoLuong * check.GiaBan;
+                check.SoLuong += chiTietHD.SoLuong;
+                check.ThanhTien = check.SoLuong * check.GiaBan;
                 db.SubmitChanges();
                 return true;
             }
@@ -69,6 +69,7 @@ namespace DAL
                 var capNhap = TimChiTietHoaDonBangMaCTHD(chiTietHD.MaChiTietHD);
                 if (capNhap == null) return false;
                 capNhap.SoLuong = chiTietHD.SoLuong;
+                capNhap.ThanhTien = chiTietHD.SoLuong * chiTietHD.GiaBan;
                 db.SubmitChanges();
                 return true;
             }

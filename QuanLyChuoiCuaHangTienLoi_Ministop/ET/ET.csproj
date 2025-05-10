@@ -42,6 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ET_BaoCaoTonKho.cs" />
     <Compile Include="ET_ChiTietHoaDon.cs" />
     <Compile Include="ET_ChiTietKho.cs" />
     <Compile Include="ET_ChiTietKiemKho.cs" />
@@ -49,12 +50,14 @@
     <Compile Include="ET_ChiTietNhapHang.cs" />
     <Compile Include="ET_ChiTietXuatHang.cs" />
     <Compile Include="ET_CuaHang.cs" />
+    <Compile Include="ET_DoanhThuCuaHangTheoThang.cs" />
     <Compile Include="ET_HoaDon.cs" />
     <Compile Include="ET_KhuyenMai.cs" />
     <Compile Include="ET_KhuyenMaiApDung.cs" />
     <Compile Include="ET_KhuyenMaiApDungHoaDon.cs" />
     <Compile Include="ET_KhuyenMai_SanPham.cs" />
     <Compile Include="ET_KiemKho.cs" />
+    <Compile Include="ET_LichSuKho.cs" />
     <Compile Include="ET_LichSuThayDoiGia.cs" />
     <Compile Include="ET_NhaCungCap.cs" />
     <Compile Include="ET_NhanVien.cs" />

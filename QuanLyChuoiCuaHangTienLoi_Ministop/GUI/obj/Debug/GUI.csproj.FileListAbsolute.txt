@@ -85,3 +85,5 @@ D:\QuanLyChuoiCuaHangMinistop\QuanLyChuoiCuaHangTienLoi_Ministop\GUI\obj\Debug\G
 D:\QuanLyChuoiCuaHangMinistop\QuanLyChuoiCuaHangTienLoi_Ministop\GUI\obj\Debug\GUI.csproj.Up2Date
 D:\QuanLyChuoiCuaHangMinistop\QuanLyChuoiCuaHangTienLoi_Ministop\GUI\obj\Debug\GUI.exe
 D:\QuanLyChuoiCuaHangMinistop\QuanLyChuoiCuaHangTienLoi_Ministop\GUI\obj\Debug\GUI.pdb
+D:\DoAnCN.Net\QuanLyChuoiCuaHangMinistop\QuanLyChuoiCuaHangTienLoi_Ministop\GUI\obj\Debug\GUI.frm_BaoCaoDoanhThu.resources
+D:\DoAnCN.Net\QuanLyChuoiCuaHangMinistop\QuanLyChuoiCuaHangTienLoi_Ministop\GUI\obj\Debug\GUI.frm_BaoCaoTonKho.resources

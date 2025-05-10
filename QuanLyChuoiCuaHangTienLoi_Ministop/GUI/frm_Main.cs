@@ -54,7 +54,9 @@ namespace GUI
                         pnl_QuanLyNhanVien,
                         pnl_QuanLyNhaCungCap,
                         pnl_QuanLySanPham,
-                        pnl_QuanLyKhuyenMai
+                        pnl_QuanLyKhuyenMai,
+                        pnl_TongHopHeThong,
+                        pnl_TongDoanhThu
                     };
 
 
@@ -70,7 +72,11 @@ namespace GUI
                         pnl_QuanLyKhuyenMai,
                         pnl_NhapHang,
                         pnl_ChiTietKho,
-                        pnl_QuanLyLichSuGiaSP
+                        pnl_QuanLyLichSuGiaSP,
+                        pnl_DoanhThuCuaHang,
+                        pnl_BaoCaoKho,
+                        pnl_TongHopHeThong,
+                        pnl_TongDoanhThu
                     };
 
                 }
@@ -113,11 +119,60 @@ namespace GUI
             nv.Show();
         }
 
+        private void btn_QLLSGSP_Click(object sender, EventArgs e)
+        {
+            frm_QuanLyLichSuThayDoiGiaSanPham lsg = new frm_QuanLyLichSuThayDoiGiaSanPham();
+            lsg.MdiParent = this;
+            lsg.Show();
+        }
+
+        private void btn_DoanhThuTungCH_Click(object sender, EventArgs e)
+        {
+            frm_BaoCaoDoanhThu baoCao = new frm_BaoCaoDoanhThu();
+            baoCao.MdiParent = this; 
+            baoCao.Show();
+        }
+
         private void btn_QLSP_Click(object sender, EventArgs e)
         {
             frm_QuanLySanPham sp = new frm_QuanLySanPham();
             sp.MdiParent = this;
             sp.Show();
+        }
+
+        private void btn_QLNCC_Click(object sender, EventArgs e)
+        {
+            frm_QuanLyNhaCungCap ncc = new frm_QuanLyNhaCungCap();
+            ncc.MdiParent = this;
+            ncc.Show();
+        }
+
+        private void btn_BaoCaoKho_Click(object sender, EventArgs e)
+        {
+            frm_BaoCaoTonKho tk = new frm_BaoCaoTonKho();
+            tk.MdiParent = this;
+            tk.Show();
+        }
+
+        private void btn_NH_Click(object sender, EventArgs e)
+        {
+            frm_NhapKho nk = new frm_NhapKho();
+            nk.MdiParent = this;
+            nk.Show();
+        }
+
+        private void btn_XH_Click(object sender, EventArgs e)
+        {
+            frm_XuatKho xk = new frm_XuatKho();
+            xk.MdiParent = this;
+            xk.Show();
+        }
+
+        private void btn_KK_Click(object sender, EventArgs e)
+        {
+            frm_KiemKho kk = new frm_KiemKho();
+            kk.MdiParent = this;
+            kk.Show();
         }
     }
 }
