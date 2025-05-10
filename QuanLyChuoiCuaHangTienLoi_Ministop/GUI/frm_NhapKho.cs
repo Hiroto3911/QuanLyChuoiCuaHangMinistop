@@ -26,7 +26,6 @@ namespace GUI
         private BUS_NhaCungCap bus_NhaCungCap = new BUS_NhaCungCap();
         private BUS_CuaHang bus_CuaHang = new BUS_CuaHang();
         private BUS_SanPham bus_SanPham = new BUS_SanPham();
-        private ET_SanPham et_SanPham = new ET_SanPham();
 
         // Sự kiện xảy ra khi form được load
         private void frm_NhapKho_Load(object sender, EventArgs e)
@@ -195,7 +194,7 @@ namespace GUI
                 et_CT.MaSanPham = cbo_MaSP.Text;
                 et_CT.SoLuong = int.Parse(txt_SLNhap.Text);
                 et_CT.GiaNhap = decimal.Parse(txt_GiaNhap.Text);
-                et_CT.TongTien = et_CT.SoLuong * (decimal)et_CT.GiaNhap;
+                et_CT.TongTien = decimal.Parse(txt_TongTien.Text);
                 et_CT.GhiChu = rtf_GhiChu.Text;
 
                 if (bus_CT.Sua(et_CT))

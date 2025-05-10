@@ -23,6 +23,21 @@ namespace DAL
             }).ToList();
         }
 
+        public List<ET_LichSuKho> LayLichSuTheoMaCTK(string maCTK)
+        {
+            return db.LichSuKhos
+                .Where(lss => lss.ChiTietKho.Equals(maCTK))
+                .Select(ct => new ET_LichSuKho
+                {
+                    MaLichSuKho = ct.MaLichSuKho,
+                    MaChiTietKho = ct.MaChiTietKho,
+                    NgayThayDoi = (DateTime)ct.NgayThayDoi,
+                    SoLuongThayDoi = (int)ct.SoLuongThayDoi,
+                    LoaiThayDoi = ct.LoaiThayDoi,
+                    MaThamChieu = ct.MaThamChieu
+                }).ToList();
+        }
+
         public bool Them(ET_LichSuKho ls)
         {
             try

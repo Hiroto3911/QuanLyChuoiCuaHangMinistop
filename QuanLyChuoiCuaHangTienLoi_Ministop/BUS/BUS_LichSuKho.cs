@@ -35,5 +35,10 @@ namespace BUS
 
             return dal.Xoa(maLichSuKho);
         }
+
+        public List<ET_LichSuKho> LayLichSuKhoTheoMaCTK(string maCTK)
+        {
+            return dal.LayLichSuTheoMaCTK(maCTK);
+        } 
     }
 }

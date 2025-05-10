@@ -28,19 +28,18 @@ namespace DAL
             }
             return ds;
         }
-        //public bool Them(ET_HoaDon hoaDon)
-        //{
 
-        //}
-
-        //public bool Xoa(string maHD)
-        //{
-
-        //}
-        //public HoaDon TimHoaDonBangMaHD(string maHD)
-        //{
-
-        //}
+        public List<ET_ChiTietKho> HienThiTatCa()
+        {
+            return db.ChiTietKhos.Select(p => new ET_ChiTietKho
+            {
+                MaCuaHang = p.MaCuaHang,
+                MaChiTietKho = p.MaChiTietKho,
+                MaSanPham = p.MaSanPham,
+                GiaBan = (double)p.GiaBan,
+                SoluongTon = p.SoLuongTon
+            }).ToList();
+        } 
         public List<string> LayDanhSachMaCH()
         {
             var danhSachID = db.CuaHangs.Select(id => id.MaCuaHang).ToList();
@@ -53,41 +52,42 @@ namespace DAL
             return Convert.ToDouble(query);
 
         }
-        public bool KiemTraSanPhamConHang(string maCH, ET_ChiTietHoaDon sp) {
+        public bool KiemTraSanPhamConHang(string maCH, ET_ChiTietHoaDon sp)
+        {
 
             var query = db.ChiTietKhos.Any(ctk => ctk.MaCuaHang == maCH && ctk.MaSanPham == sp.MaSanPham && ctk.SoLuongTon >= sp.SoLuong);
             return query;
         }
-        public int LaySLSanpham(string maCH , string maSP)
+        public int LaySLSanpham(string maCH, string maSP)
         {
             var query = db.ChiTietKhos.Where(ctk => ctk.MaCuaHang == maCH && ctk.MaSanPham == maSP).FirstOrDefault();
-            if (query == null) return 0; 
+            if (query == null) return 0;
             return Convert.ToInt32(query.SoLuongTon);
         }
-        public bool CapNhapSLSanPham(string maCH,string loaiCapNhap, ET_ChiTietHoaDon sp, int? soLuongCu = null) 
+        public bool CapNhapSLSanPham(string maCH, string loaiCapNhap, ET_ChiTietHoaDon sp, int? soLuongCu = null)
         {
-            if(maCH == null ||sp == null || loaiCapNhap == null) return false;
+            if (maCH == null || sp == null || loaiCapNhap == null) return false;
             try
             {
 
-                
-                var query = db.ChiTietKhos.Where(ctk => ctk.MaCuaHang == maCH && ctk.MaSanPham == sp.MaSanPham ).FirstOrDefault();
+
+                var query = db.ChiTietKhos.Where(ctk => ctk.MaCuaHang == maCH && ctk.MaSanPham == sp.MaSanPham).FirstOrDefault();
                 if (query == null) return false;
                 if (loaiCapNhap == "Them")
                 {
                     query.SoLuongTon -= sp.SoLuong;
-                    
+
                 }
-                else if(loaiCapNhap == "Xoa")
+                else if (loaiCapNhap == "Xoa")
                 {
                     query.SoLuongTon += sp.SoLuong;
-                   
+
                 }
-                else if(loaiCapNhap =="Sua" && soLuongCu.HasValue)
+                else if (loaiCapNhap == "Sua" && soLuongCu.HasValue)
                 {
-                   query.SoLuongTon += soLuongCu;
+                    query.SoLuongTon += soLuongCu;
                     query.SoLuongTon -= sp.SoLuong;
-                   
+
                 }
                 else
                 {
@@ -97,12 +97,40 @@ namespace DAL
                 return true;
 
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 throw ex;
             }
-                       
+
         }
 
+
+        public bool Them(ET_ChiTietKho ct)
+        {
+            try
+            {
+                db.ChiTietKhos.InsertOnSubmit(new ChiTietKho
+                {
+                    MaChiTietKho = ct.MaChiTietKho,
+                    MaCuaHang = ct.MaCuaHang,
+                    MaSanPham = ct.MaSanPham,
+                    SoLuongTon = ct.SoluongTon,
+                    GiaBan = (decimal?)ct.GiaBan
+
+                }) ;
+                db.SubmitChanges();
+                return true;
+            }
+            catch { return false; }
+        }
+
+        public bool Xoa(string mact)
+        {
+            var obj = db.ChiTietKhos.FirstOrDefault(l => l.MaChiTietKho == mact);
+            if (obj == null) return false;
+            db.ChiTietKhos.DeleteOnSubmit(obj);
+            db.SubmitChanges();
+            return true;
+        }
     }
 }

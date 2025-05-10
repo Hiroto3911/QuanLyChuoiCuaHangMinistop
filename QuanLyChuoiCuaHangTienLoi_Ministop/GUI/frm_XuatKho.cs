@@ -32,6 +32,8 @@ namespace GUI
         // Khi form load, gọi dữ liệu phiếu xuất và combobox
         private void frm_NhapKho_Load(object sender, EventArgs e)
         {
+            cbo_MaCH.Text = Session.MaCuaHang;
+            txt_MaNV.Text = Session.MaNhanVien;
             LoadDuLieuXuatHang();
             LoadComboBox();
         }
@@ -39,7 +41,7 @@ namespace GUI
         // Hiển thị tất cả phiếu xuất và sinh mã phiếu mới
         public void LoadDuLieuXuatHang()
         {
-            txt_MaXH.Text = TaoMaTuDong.TaoMa(bus_XuatHang.HienThiTatCa().Select(x => x.MaPhieuXuat).ToList(), "PN");
+            txt_MaXH.Text = TaoMaTuDong.TaoMa(bus_XuatHang.HienThiTatCa().Select(x => x.MaPhieuXuat).ToList(), "PX");
             dgv_Data.DataSource = bus_XuatHang.HienThiTatCa();
         }
 
@@ -50,7 +52,7 @@ namespace GUI
         }
 
         // Hiển thị chi tiết xuất theo mã phiếu
-        private void LoadChiTietTheoMaPN(string maPhieuNhap)
+        private void LoadChiTietTheoMaPX(string maPhieuNhap)
         {
             var dsChiTiet = bus_ChiTietXuat.LayChiTietTheoMaPhieu(maPhieuNhap);
             dgv_DataChiTiet.DataSource = dsChiTiet;
@@ -60,6 +62,7 @@ namespace GUI
         private void LoadComboBox()
         {
             string[] listLoai = { "KiemKeLech", "HangLoi", "HangHetHan"};
+            cbo_LoaiXuat.DataSource = listLoai;
 
             cbo_MaCH.DataSource = bus_CuaHang.HienThiDuLieuSapXepGiamDanTheoMa();
             cbo_MaCH.DisplayMember = "TenCH";
@@ -123,6 +126,8 @@ namespace GUI
             }
         }
 
+        
+
         // Thêm chi tiết phiếu nhập
         private void btn_ThemChiTiet_Click(object sender, EventArgs e)
         {
@@ -138,22 +143,17 @@ namespace GUI
                 if (bus_ChiTietXuat.Them(et_ChiTietXuat))
                 {
                     MessageBox.Show("Thêm chi tiết xuất thành công");
-                    LoadChiTietTheoMaPX(txt_MaXH.Text);
                 }
                 else
                 {
                     MessageBox.Show("Thêm chi tiết xuất thất bại");
                 }
+                LoadChiTietTheoMaPX(txt_MaXH.Text);
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Lỗi thêm: " + ex.Message);
             }
-        }
-
-        private void LoadChiTietTheoMaPX(string maPhieuXuat)
-        {
-            dgv_DataChiTiet.DataSource = bus_ChiTietXuat.LayChiTietTheoMaPhieu(maPhieuXuat);
         }
 
         // Xoá chi tiết
@@ -165,12 +165,12 @@ namespace GUI
                 if (bus_ChiTietXuat.Xoa(txt_MaXH.Text, maSanPham))
                 {
                     MessageBox.Show("Xóa chi tiết xuất thành công");
-                    LoadChiTietTheoMaPX(txt_MaXH.Text);
                 }
                 else
                 {
                     MessageBox.Show("Xóa chi tiết xuất thất bại");
                 }
+                LoadChiTietTheoMaPX(txt_MaXH.Text);
             }
             catch (Exception ex)
             {
@@ -236,23 +236,23 @@ namespace GUI
         // Làm mới dữ liệu phiếu nhập và chi tiết
         private void btn_LamMoiChiTiet_Click(object sender, EventArgs e)
         {
-            et_ChiTietXuat.MaPhieu = txt_MaXH.Text;
-            et_ChiTietXuat.MaSanPham = cbo_MaSP.SelectedItem.ToString();
-            et_ChiTietXuat.SoLuong = int.Parse(txt_SLNhap.Text);
-            et_ChiTietXuat.GiaXuat = double.Parse(txt_GiaNhap.Text);
-            et_ChiTietXuat.TongTien = double.Parse(txt_TongTien.Text);
-            et_ChiTietXuat.GhiChu = rtf_GhiChu.Text;
+            txt_MaXH.Clear();
+            cbo_MaCH.SelectedIndex = 0;
+            txt_MaNV.Clear();
+            dtp_NgayXuat.Value = DateTime.Now;
+            cbo_LoaiXuat.SelectedIndex = 0;
 
-            if (bus_ChiTietXuat.Sua(et_ChiTietXuat))
-            {
-                MessageBox.Show("Cập nhật chi tiết xuất thành công");
-                LoadChiTietTheoMaPX(txt_MaXH.Text); // Tải lại chi tiết theo mã phiếu
-            }
-            else
-            {
-                MessageBox.Show("Cập nhật chi tiết xuất thất bại");
-            }
+            cbo_MaSP.SelectedIndex = 0;
+            txt_SLNhap.Clear();
+            txt_GiaNhap.Clear();
+            txt_TongTien.Clear();
+            rtf_GhiChu.Clear();
+            txt_MaXH.Focus();
+
+            dgv_DataChiTiet.DataSource = null;
         }
+
+
 
         // Hiển thị dữ liệu chi tiết khi click vào dòng chi tiết
         private void dgv_DataChiTiet_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -273,8 +273,15 @@ namespace GUI
         {
             if (e.RowIndex >= 0)
             {
+                txt_MaXH.Text = dgv_DataChiTiet.Rows[e.RowIndex].Cells[0].Value.ToString();
+                cbo_MaCH.Text = dgv_DataChiTiet.Rows[e.RowIndex].Cells[1].Value.ToString();
+                txt_MaNV.Text = dgv_DataChiTiet.Rows[e.RowIndex].Cells[2].Value.ToString();
+                dtp_NgayXuat.Text = dgv_DataChiTiet.Rows[e.RowIndex].Cells[3].Value.ToString();
+                cbo_LoaiXuat.Text = dgv_DataChiTiet.Rows[e.RowIndex].Cells[4].Value.ToString();
+
+
                 string maPN = dgv_Data.Rows[e.RowIndex].Cells[0].Value.ToString();
-                LoadChiTietTheoMaPN(maPN);
+                LoadChiTietTheoMaPX(maPN);
             }
         }
 
@@ -282,6 +289,13 @@ namespace GUI
         private void btn_InPhieuNhap_Click(object sender, EventArgs e)
         {
             // TODO: Làm Crystal Report in phiếu nhập
+        }
+
+        private void cbo_MaSP_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+            ET_SanPham sp = bus_SanPham.TimSanPhamBangMa(cbo_MaSP.Text).ToList().FirstOrDefault();
+            txt_GiaNhap.Text = sp.GiaMacDinh.ToString();
         }
     }
 }

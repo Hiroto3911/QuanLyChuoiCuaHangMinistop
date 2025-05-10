@@ -59,6 +59,9 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
+            this.btn_ThemChiTiet = new System.Windows.Forms.Button();
+            this.btn_SuaChiTiet = new System.Windows.Forms.Button();
+            this.btn_XoaChiTiet = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Data)).BeginInit();
@@ -244,6 +247,7 @@
             this.dgv_Data.RowHeadersWidth = 51;
             this.dgv_Data.Size = new System.Drawing.Size(1222, 209);
             this.dgv_Data.TabIndex = 62;
+            this.dgv_Data.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_Data_CellClick);
             // 
             // txt_MaCTLSK
             // 
@@ -260,6 +264,9 @@
             this.groupBox2.Controls.Add(this.cbo_LoaiThayDoi);
             this.groupBox2.Controls.Add(this.dtp_NgayThayDoi);
             this.groupBox2.Controls.Add(this.btn_LamMoiChiTiet);
+            this.groupBox2.Controls.Add(this.btn_SuaChiTiet);
+            this.groupBox2.Controls.Add(this.btn_XoaChiTiet);
+            this.groupBox2.Controls.Add(this.btn_ThemChiTiet);
             this.groupBox2.Controls.Add(this.txt_MaCTLSK);
             this.groupBox2.Controls.Add(this.dgv_DataChiTiet);
             this.groupBox2.Controls.Add(this.label12);
@@ -308,7 +315,7 @@
             // 
             // btn_LamMoiChiTiet
             // 
-            this.btn_LamMoiChiTiet.Location = new System.Drawing.Point(1084, 147);
+            this.btn_LamMoiChiTiet.Location = new System.Drawing.Point(1084, 158);
             this.btn_LamMoiChiTiet.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btn_LamMoiChiTiet.Name = "btn_LamMoiChiTiet";
             this.btn_LamMoiChiTiet.Size = new System.Drawing.Size(112, 75);
@@ -326,6 +333,7 @@
             this.dgv_DataChiTiet.RowHeadersWidth = 51;
             this.dgv_DataChiTiet.Size = new System.Drawing.Size(1222, 268);
             this.dgv_DataChiTiet.TabIndex = 65;
+            this.dgv_DataChiTiet.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_DataChiTiet_CellClick);
             // 
             // label12
             // 
@@ -410,6 +418,36 @@
             this.label9.TabIndex = 52;
             this.label9.Text = "Mã CTLSK";
             // 
+            // btn_ThemChiTiet
+            // 
+            this.btn_ThemChiTiet.Location = new System.Drawing.Point(921, 55);
+            this.btn_ThemChiTiet.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btn_ThemChiTiet.Name = "btn_ThemChiTiet";
+            this.btn_ThemChiTiet.Size = new System.Drawing.Size(112, 75);
+            this.btn_ThemChiTiet.TabIndex = 66;
+            this.btn_ThemChiTiet.Text = "Thêm";
+            this.btn_ThemChiTiet.UseVisualStyleBackColor = true;
+            // 
+            // btn_SuaChiTiet
+            // 
+            this.btn_SuaChiTiet.Location = new System.Drawing.Point(921, 158);
+            this.btn_SuaChiTiet.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btn_SuaChiTiet.Name = "btn_SuaChiTiet";
+            this.btn_SuaChiTiet.Size = new System.Drawing.Size(112, 75);
+            this.btn_SuaChiTiet.TabIndex = 68;
+            this.btn_SuaChiTiet.Text = "Sửa";
+            this.btn_SuaChiTiet.UseVisualStyleBackColor = true;
+            // 
+            // btn_XoaChiTiet
+            // 
+            this.btn_XoaChiTiet.Location = new System.Drawing.Point(1084, 55);
+            this.btn_XoaChiTiet.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btn_XoaChiTiet.Name = "btn_XoaChiTiet";
+            this.btn_XoaChiTiet.Size = new System.Drawing.Size(112, 75);
+            this.btn_XoaChiTiet.TabIndex = 67;
+            this.btn_XoaChiTiet.Text = "Xoá";
+            this.btn_XoaChiTiet.UseVisualStyleBackColor = true;
+            // 
             // frm_ChiTietKho
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -469,5 +507,8 @@
         private System.Windows.Forms.ComboBox cbo_LoaiThayDoi;
         private System.Windows.Forms.DateTimePicker dtp_NgayThayDoi;
         private System.Windows.Forms.TextBox txt_MaThamChieu;
+        private System.Windows.Forms.Button btn_SuaChiTiet;
+        private System.Windows.Forms.Button btn_XoaChiTiet;
+        private System.Windows.Forms.Button btn_ThemChiTiet;
     }
 }

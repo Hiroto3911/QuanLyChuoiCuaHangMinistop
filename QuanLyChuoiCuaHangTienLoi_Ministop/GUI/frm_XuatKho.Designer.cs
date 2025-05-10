@@ -132,6 +132,7 @@
             this.btn_LamMoiChiTiet.TabIndex = 69;
             this.btn_LamMoiChiTiet.Text = "Làm mới";
             this.btn_LamMoiChiTiet.UseVisualStyleBackColor = true;
+            this.btn_LamMoiChiTiet.Click += new System.EventHandler(this.btn_LamMoiChiTiet_Click);
             // 
             // btn_SuaChiTiet
             // 
@@ -142,6 +143,7 @@
             this.btn_SuaChiTiet.TabIndex = 68;
             this.btn_SuaChiTiet.Text = "Sửa";
             this.btn_SuaChiTiet.UseVisualStyleBackColor = true;
+            this.btn_SuaChiTiet.Click += new System.EventHandler(this.btn_SuaChiTiet_Click);
             // 
             // btn_XoaChiTiet
             // 
@@ -152,6 +154,7 @@
             this.btn_XoaChiTiet.TabIndex = 67;
             this.btn_XoaChiTiet.Text = "Xoá";
             this.btn_XoaChiTiet.UseVisualStyleBackColor = true;
+            this.btn_XoaChiTiet.Click += new System.EventHandler(this.btn_XoaChiTiet_Click);
             // 
             // btn_ThemChiTiet
             // 
@@ -162,6 +165,7 @@
             this.btn_ThemChiTiet.TabIndex = 66;
             this.btn_ThemChiTiet.Text = "Thêm";
             this.btn_ThemChiTiet.UseVisualStyleBackColor = true;
+            this.btn_ThemChiTiet.Click += new System.EventHandler(this.btn_ThemChiTiet_Click);
             // 
             // dgv_DataChiTiet
             // 
@@ -200,9 +204,9 @@
             this.label11.Location = new System.Drawing.Point(30, 169);
             this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(50, 20);
+            this.label11.Size = new System.Drawing.Size(35, 20);
             this.label11.TabIndex = 62;
-            this.label11.Text = "Lý do";
+            this.label11.Text = "Giá";
             // 
             // txt_TongTien
             // 
@@ -221,6 +225,7 @@
             this.cbo_MaSP.Name = "cbo_MaSP";
             this.cbo_MaSP.Size = new System.Drawing.Size(224, 32);
             this.cbo_MaSP.TabIndex = 48;
+            this.cbo_MaSP.SelectedIndexChanged += new System.EventHandler(this.cbo_MaSP_SelectedIndexChanged);
             // 
             // txt_SLNhap
             // 
@@ -318,6 +323,7 @@
             this.btn_InPhieuXuat.TabIndex = 66;
             this.btn_InPhieuXuat.Text = "In phiếu xuất";
             this.btn_InPhieuXuat.UseVisualStyleBackColor = true;
+            this.btn_InPhieuXuat.Click += new System.EventHandler(this.btn_InPhieuNhap_Click);
             // 
             // cbo_MaCH
             // 
@@ -338,6 +344,7 @@
             this.btn_Them.TabIndex = 42;
             this.btn_Them.Text = "Thêm";
             this.btn_Them.UseVisualStyleBackColor = true;
+            this.btn_Them.Click += new System.EventHandler(this.btn_Them_Click);
             // 
             // dtp_NgayXuat
             // 
@@ -358,6 +365,7 @@
             this.btn_Xoa.TabIndex = 43;
             this.btn_Xoa.Text = "Xoá";
             this.btn_Xoa.UseVisualStyleBackColor = true;
+            this.btn_Xoa.Click += new System.EventHandler(this.btn_Xoa_Click);
             // 
             // txt_MaXH
             // 
@@ -447,6 +455,7 @@
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "frm_XuatKho";
             this.Text = "frm_XuatKho";
+            this.Load += new System.EventHandler(this.frm_NhapKho_Load);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_DataChiTiet)).EndInit();
