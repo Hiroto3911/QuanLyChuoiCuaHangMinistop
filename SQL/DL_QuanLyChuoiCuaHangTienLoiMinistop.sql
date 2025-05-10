@@ -823,7 +823,7 @@ INSERT INTO PhieuXuat VALUES
 ('PX002', 'CH002', 'NV006', '2025-01-16', N'KiemKeLech'),
 ('PX003', 'CH003', 'NV008', '2025-01-16', N'KiemKeLech')
 GO
-SELECT * FROM PhieuXuat 
+SELECT * FROM ChiTietXuatHang 
 GO 
 
 -- CHI TIẾT XUẤT HÀNG

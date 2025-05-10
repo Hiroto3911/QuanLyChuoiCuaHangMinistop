@@ -46,6 +46,12 @@ namespace BUS
                          
             return dal_SP.TimSanPhamBangTen(name);
         }
+        public List<ET_SanPham> TimSanPhamBangMa(string name)
+        {
+
+
+            return dal_SP.TimSanPhamBangMa(name);
+        }
         public List<ET_SanPham> HienThiSanPhamBangLoaiSanPham(string loaiSP)
         {
            return dal_SP.HienThiSanPhamBangLoaiSanPham(loaiSP);

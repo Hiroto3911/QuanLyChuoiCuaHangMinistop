@@ -119,5 +119,26 @@ namespace GUI
             sp.MdiParent = this;
             sp.Show();
         }
+
+        private void btn_QLNH_Click(object sender, EventArgs e)
+        {
+            frm_NhapKho nv = new frm_NhapKho();
+            nv.MdiParent = this;
+            nv.Show();
+        }
+
+        private void btn_QLXH_Click(object sender, EventArgs e)
+        {
+            frm_XuatKho nv = new frm_XuatKho();
+            nv.MdiParent = this;
+            nv.Show();
+        }
+
+        private void btn_QLKH_Click(object sender, EventArgs e)
+        {
+            frm_KiemKho nv = new frm_KiemKho();
+            nv.MdiParent = this;
+            nv.Show();
+        }
     }
 }

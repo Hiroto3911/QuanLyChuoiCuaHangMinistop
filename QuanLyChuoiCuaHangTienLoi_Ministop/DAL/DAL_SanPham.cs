@@ -121,6 +121,29 @@ namespace DAL
             }
             return ds;
         }
+
+        public List<ET_SanPham> TimSanPhamBangMa(string name)
+        {
+            var sanPham = from sp in db.SanPhams
+                          where (sp.MaSanPham.Equals(name))
+                          select sp;
+
+            List<ET_SanPham> ds = new List<ET_SanPham>();
+            foreach (var item in sanPham)
+            {
+                ds.Add(new ET_SanPham
+                {
+                    MaSanPham = item.MaSanPham,
+                    TenSanPham = item.TenSanPham,
+                    LoaiSanPham = item.LoaiSanPham,
+                    DonViTinh = item.DonViTinh,
+                    GiaMacDinh = (decimal)item.GiaMacDinh
+
+
+                });
+            }
+            return ds;
+        }
         public List<ET_SanPham> HienThiSanPhamBangLoaiSanPham(string loaiSP)
         {
             var sanPham = from sp in db.SanPhams

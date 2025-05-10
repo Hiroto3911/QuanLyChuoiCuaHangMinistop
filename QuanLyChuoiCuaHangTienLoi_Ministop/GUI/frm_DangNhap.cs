@@ -23,7 +23,7 @@ namespace GUI
 
         private void frm_DangNhap_Load(object sender, EventArgs e)
         {
-            rb_NhanVien.Checked = true;
+            rb_QLCH.Checked = true;
             txt_MatKhau.UseSystemPasswordChar = true;
         }
 
