@@ -1,4 +1,5 @@
 ﻿using BUS;
+using CrystalDecisions.CrystalReports.Engine;
 using ET;
 using System;
 using System.Collections.Generic;
@@ -140,6 +141,10 @@ namespace GUI
         private void btn_InPhieuNhap_Click(object sender, EventArgs e)
         {
             //lam crytal report
+            string maNH = txt_MaNH.Text;
+            frm_RP_PhieuNhap frm = new frm_RP_PhieuNhap(maNH);
+            frm.MdiParent = this.MdiParent;
+            frm.Show();
         }
 
         // Thêm chi tiết nhập hàng

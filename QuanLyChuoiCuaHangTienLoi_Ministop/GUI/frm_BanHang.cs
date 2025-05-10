@@ -110,7 +110,10 @@ namespace GUI
 
         private void btn_InHoaDon_Click(object sender, EventArgs e)
         {
-
+            string maHD = txt_MaHD.Text;
+            frm_RP_HoaDon frm = new frm_RP_HoaDon(maHD);
+            frm.MdiParent = this.MdiParent;
+            frm.Show();
         }
 
         private void btn_ThemChiTiet_Click(object sender, EventArgs e)

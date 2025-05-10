@@ -288,7 +288,10 @@ namespace GUI
         // Nút in phiếu nhập (chưa làm)
         private void btn_InPhieuNhap_Click(object sender, EventArgs e)
         {
-            // TODO: Làm Crystal Report in phiếu nhập
+            string maXH = txt_MaXH.Text;
+            frm_RP_PhieuXuat frm = new frm_RP_PhieuXuat(maXH);
+            frm.MdiParent = this.MdiParent;
+            frm.Show();
         }
 
         private void cbo_MaSP_SelectedIndexChanged(object sender, EventArgs e)
