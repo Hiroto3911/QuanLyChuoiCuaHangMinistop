@@ -60,6 +60,12 @@
     <Compile Include="frm_BaoCaoDoanhThu.Designer.cs">
       <DependentUpon>frm_BaoCaoDoanhThu.cs</DependentUpon>
     </Compile>
+    <Compile Include="frm_BaoCaoTonKho.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_BaoCaoTonKho.Designer.cs">
+      <DependentUpon>frm_BaoCaoTonKho.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_ChiTietKho.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -139,6 +145,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frm_BaoCaoDoanhThu.resx">
       <DependentUpon>frm_BaoCaoDoanhThu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_BaoCaoTonKho.resx">
+      <DependentUpon>frm_BaoCaoTonKho.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_ChiTietKho.resx">
       <DependentUpon>frm_ChiTietKho.cs</DependentUpon>
