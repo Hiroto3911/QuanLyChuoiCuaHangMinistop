@@ -86,6 +86,7 @@ D:\QuanLyChuoiCuaHangMinistop\QuanLyChuoiCuaHangTienLoi_Ministop\GUI\obj\Debug\G
 D:\QuanLyChuoiCuaHangMinistop\QuanLyChuoiCuaHangTienLoi_Ministop\GUI\obj\Debug\GUI.exe
 D:\QuanLyChuoiCuaHangMinistop\QuanLyChuoiCuaHangTienLoi_Ministop\GUI\obj\Debug\GUI.pdb
 D:\DoAnCN.Net\QuanLyChuoiCuaHangMinistop\QuanLyChuoiCuaHangTienLoi_Ministop\GUI\obj\Debug\GUI.frm_BaoCaoDoanhThu.resources
+<<<<<<< HEAD
 D:\DoAnCN.Net\Linh\QuanLyChuoiCuaHangMinistop\QuanLyChuoiCuaHangTienLoi_Ministop\GUI\bin\Debug\GUI.exe.config
 D:\DoAnCN.Net\Linh\QuanLyChuoiCuaHangMinistop\QuanLyChuoiCuaHangTienLoi_Ministop\GUI\bin\Debug\GUI.exe
 D:\DoAnCN.Net\Linh\QuanLyChuoiCuaHangMinistop\QuanLyChuoiCuaHangTienLoi_Ministop\GUI\bin\Debug\GUI.pdb
@@ -117,3 +118,7 @@ D:\DoAnCN.Net\Linh\QuanLyChuoiCuaHangMinistop\QuanLyChuoiCuaHangTienLoi_Ministop
 D:\DoAnCN.Net\Linh\QuanLyChuoiCuaHangMinistop\QuanLyChuoiCuaHangTienLoi_Ministop\GUI\obj\Debug\GUI.csproj.Up2Date
 D:\DoAnCN.Net\Linh\QuanLyChuoiCuaHangMinistop\QuanLyChuoiCuaHangTienLoi_Ministop\GUI\obj\Debug\GUI.exe
 D:\DoAnCN.Net\Linh\QuanLyChuoiCuaHangMinistop\QuanLyChuoiCuaHangTienLoi_Ministop\GUI\obj\Debug\GUI.pdb
+=======
+D:\DoAnCN.Net\QuanLyChuoiCuaHangMinistop\QuanLyChuoiCuaHangTienLoi_Ministop\GUI\obj\Debug\GUI.frm_BaoCaoTonKho.resources
+>>>>>>> 741461adb502d793f8420c9461312aa55b27b809
+D:\DoAnCN.Net\Linh\QuanLyChuoiCuaHangMinistop\QuanLyChuoiCuaHangTienLoi_Ministop\GUI\obj\Debug\GUI.frm_BaoCaoTonKho.resources

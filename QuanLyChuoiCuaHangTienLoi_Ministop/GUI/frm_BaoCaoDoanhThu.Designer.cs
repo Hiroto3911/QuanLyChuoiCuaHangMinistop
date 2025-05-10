@@ -49,7 +49,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(987, 52);
+            this.panel1.Size = new System.Drawing.Size(944, 52);
             this.panel1.TabIndex = 65;
             // 
             // lbl_Title
@@ -75,7 +75,7 @@
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(987, 622);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(944, 549);
             this.tableLayoutPanel1.TabIndex = 67;
             // 
             // chart_DoanhThu
@@ -92,7 +92,7 @@
             series1.Name = "Series1";
             series1.YValuesPerPoint = 2;
             this.chart_DoanhThu.Series.Add(series1);
-            this.chart_DoanhThu.Size = new System.Drawing.Size(622, 616);
+            this.chart_DoanhThu.Size = new System.Drawing.Size(594, 543);
             this.chart_DoanhThu.TabIndex = 67;
             this.chart_DoanhThu.Text = "Báo cao doanh thu của hàng";
             // 
@@ -101,9 +101,9 @@
             this.dgv_Data.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_Data.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_Data.Dock = System.Windows.Forms.DockStyle.Top;
-            this.dgv_Data.Location = new System.Drawing.Point(631, 3);
+            this.dgv_Data.Location = new System.Drawing.Point(603, 3);
             this.dgv_Data.Name = "dgv_Data";
-            this.dgv_Data.Size = new System.Drawing.Size(353, 616);
+            this.dgv_Data.Size = new System.Drawing.Size(338, 543);
             this.dgv_Data.TabIndex = 68;
             this.dgv_Data.Click += new System.EventHandler(this.dgv_Data_Click);
             // 
@@ -112,7 +112,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(240)))), ((int)(((byte)(144)))));
-            this.ClientSize = new System.Drawing.Size(987, 674);
+            this.ClientSize = new System.Drawing.Size(944, 601);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.panel1);
             this.Name = "frm_BaoCaoDoanhThu";

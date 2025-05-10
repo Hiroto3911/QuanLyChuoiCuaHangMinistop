@@ -42,7 +42,6 @@
             this.phiếuNhậpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.phiếuXuấtHàngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.fqnl_Menu = new System.Windows.Forms.FlowLayoutPanel();
-            this.pic_Logo = new System.Windows.Forms.PictureBox();
             this.pnl_QuanLyCuaHang = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btn_QLCH = new System.Windows.Forms.Button();
@@ -88,12 +87,12 @@
             this.pnl_TongHopHeThong = new System.Windows.Forms.Panel();
             this.panel17 = new System.Windows.Forms.Panel();
             this.btn_TongHopHeThong = new System.Windows.Forms.Button();
+            this.pic_Logo = new System.Windows.Forms.PictureBox();
             this.pnl_header.SuspendLayout();
             this.pnl_Hello.SuspendLayout();
             this.panel2.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.fqnl_Menu.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_Logo)).BeginInit();
             this.pnl_QuanLyCuaHang.SuspendLayout();
             this.pnl_QuanLyNhanVien.SuspendLayout();
             this.pnl_QuanLyNhaCungCap.SuspendLayout();
@@ -109,6 +108,7 @@
             this.pnl_TongDoanhThu.SuspendLayout();
             this.pnl_BaoCaoKho.SuspendLayout();
             this.pnl_TongHopHeThong.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_Logo)).BeginInit();
             this.SuspendLayout();
             // 
             // pnl_header
@@ -265,18 +265,6 @@
             this.fqnl_Menu.Name = "fqnl_Menu";
             this.fqnl_Menu.Size = new System.Drawing.Size(245, 600);
             this.fqnl_Menu.TabIndex = 2;
-            // 
-            // pic_Logo
-            // 
-            this.pic_Logo.BackColor = System.Drawing.Color.White;
-            this.pic_Logo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pic_Logo.Image = global::GUI.Properties.Resources.MINISTOP_logo_svg;
-            this.pic_Logo.Location = new System.Drawing.Point(3, 3);
-            this.pic_Logo.Name = "pic_Logo";
-            this.pic_Logo.Size = new System.Drawing.Size(221, 155);
-            this.pic_Logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pic_Logo.TabIndex = 1;
-            this.pic_Logo.TabStop = false;
             // 
             // pnl_QuanLyCuaHang
             // 
@@ -706,6 +694,7 @@
             this.btn_BaoCaoKho.TabIndex = 4;
             this.btn_BaoCaoKho.Text = "Báo cáo kho";
             this.btn_BaoCaoKho.UseVisualStyleBackColor = true;
+            this.btn_BaoCaoKho.Click += new System.EventHandler(this.btn_BaoCaoKho_Click);
             // 
             // pnl_TongHopHeThong
             // 
@@ -737,6 +726,18 @@
             this.btn_TongHopHeThong.Text = "Báo cáo tổng hợp hệ thống";
             this.btn_TongHopHeThong.UseVisualStyleBackColor = true;
             // 
+            // pic_Logo
+            // 
+            this.pic_Logo.BackColor = System.Drawing.Color.White;
+            this.pic_Logo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pic_Logo.Image = global::GUI.Properties.Resources.MINISTOP_logo_svg;
+            this.pic_Logo.Location = new System.Drawing.Point(3, 3);
+            this.pic_Logo.Name = "pic_Logo";
+            this.pic_Logo.Size = new System.Drawing.Size(221, 155);
+            this.pic_Logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pic_Logo.TabIndex = 1;
+            this.pic_Logo.TabStop = false;
+            // 
             // frm_Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -759,7 +760,6 @@
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.fqnl_Menu.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pic_Logo)).EndInit();
             this.pnl_QuanLyCuaHang.ResumeLayout(false);
             this.pnl_QuanLyNhanVien.ResumeLayout(false);
             this.pnl_QuanLyNhaCungCap.ResumeLayout(false);
@@ -775,6 +775,7 @@
             this.pnl_TongDoanhThu.ResumeLayout(false);
             this.pnl_BaoCaoKho.ResumeLayout(false);
             this.pnl_TongHopHeThong.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pic_Logo)).EndInit();
             this.ResumeLayout(false);
 
         }
