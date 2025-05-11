@@ -114,5 +114,11 @@ namespace GUI
                 MessageBox.Show("Lỗi: " + ex.Message);
             }
         }
+
+        private void btn_LamMoiChiTiet_Click(object sender, EventArgs e)
+        {
+            LoadDuLieuChiTietKho();
+            LoadDuLieuLichSuKhoTheoMa(dgv_Data.CurrentRow.Cells[0].Value.ToString());
+        }
     }
 }

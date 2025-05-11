@@ -15,7 +15,7 @@ namespace DAL
         {
             return db.ChiTietXuatHangs.Select(ct => new ET_ChiTietXuatHang
             {
-                MaPhieu = ct.MaPhieuXuat,
+                MaPhieuXuat = ct.MaPhieuXuat,
                 MaSanPham = ct.MaSanPham,
                 SoLuong = (int)ct.SoLuong,
                 GiaXuat = (double)ct.GiaXuat,
@@ -28,7 +28,7 @@ namespace DAL
         {
             return db.ChiTietXuatHangs.Where(ct => ct.MaPhieuXuat == maPhieuXuat).Select(ct => new ET_ChiTietXuatHang
             {
-                MaPhieu = ct.MaPhieuXuat,
+                MaPhieuXuat = ct.MaPhieuXuat,
                 MaSanPham = ct.MaSanPham,
                 SoLuong = (int)ct.SoLuong,
                 GiaXuat = (double)ct.GiaXuat,
@@ -43,7 +43,7 @@ namespace DAL
             {
                 db.ChiTietXuatHangs.InsertOnSubmit(new ChiTietXuatHang
                 {
-                    MaPhieuXuat = ct.MaPhieu,
+                    MaPhieuXuat = ct.MaPhieuXuat,
                     MaSanPham = ct.MaSanPham,
                     SoLuong = ct.SoLuong,
                     GiaXuat = (decimal)ct.GiaXuat,
@@ -58,7 +58,7 @@ namespace DAL
 
         public bool Sua(ET_ChiTietXuatHang ct)
         {
-            var obj = db.ChiTietXuatHangs.FirstOrDefault(x => x.MaPhieuXuat == ct.MaPhieu && x.MaSanPham == ct.MaSanPham);
+            var obj = db.ChiTietXuatHangs.FirstOrDefault(x => x.MaPhieuXuat == ct.MaPhieuXuat && x.MaSanPham == ct.MaSanPham);
             if (obj == null) return false;
             obj.SoLuong = ct.SoLuong;
             obj.GiaXuat = (decimal)ct.GiaXuat;

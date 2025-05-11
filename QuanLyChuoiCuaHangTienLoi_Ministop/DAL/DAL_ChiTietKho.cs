@@ -175,6 +175,42 @@ namespace DAL
             }
         }
 
+        public bool CapNhapChiTietKhoKhiXuatHang(string maCH, ET_ChiTietXuatHang xh, DateTime ngayXuat)
+        {
+            try
+            {
+                var chitietKho = db.ChiTietKhos
+                    .FirstOrDefault(ctk => ctk.MaCuaHang == maCH && ctk.MaSanPham == xh.MaSanPham);
+
+                DAL_LichSuKho lsk = new DAL_LichSuKho();
+
+                if (chitietKho == null)
+                {
+                   return false;
+                }
+                else
+                {
+                    chitietKho.SoLuongTon -= xh.SoLuong;
+                    db.SubmitChanges();
+                    lsk.Them(new ET_LichSuKho
+                    {
+                        MaLichSuKho = TaoMa(lsk.LayDanhSachMaLSK(), "LSK"),
+                        MaChiTietKho = chitietKho.MaChiTietKho,
+                        NgayThayDoi = ngayXuat,
+                        SoLuongThayDoi = -xh.SoLuong,
+                        LoaiThayDoi = "Xuat",
+                        MaThamChieu = xh.MaPhieuXuat
+                    });
+                }
+
+                return true;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Lỗi khi cập nhật kho: " + ex.Message);
+            }
+        }
+
         private string TaoMa(List<string> DanhSachMa, string tienTo)
         {
             // lấy ra mã cuối có chứa số lớn nhất

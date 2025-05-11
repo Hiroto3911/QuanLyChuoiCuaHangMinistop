@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using GUI.Reporting;
 
 namespace GUI
 {
@@ -31,7 +32,7 @@ namespace GUI
 
         private void frm_NhapKho_Load(object sender, EventArgs e)
         {
-            
+
             LoadComboBox();
             if (Session.VaiTro == "Admin")
             {
@@ -49,10 +50,10 @@ namespace GUI
         // Load dữ liệu nhập hàng lên DataGridView và tạo mã phiếu nhập mới
         public void LoadDuLieuNhapHang()
         {
-            
+
             dgv_Data.DataSource = bus_NhapHang.HienThiDuLieuTheoMaCH(cbo_MaCH.SelectedValue.ToString());
         }
-       
+
 
         // Load chi tiết nhập theo mã phiếu nhập được chọn
         private void LoadChiTietTheoMaPN(string maPhieuNhap)
@@ -194,7 +195,7 @@ namespace GUI
                 et_CT.GhiChu = rtf_GhiChu.Text;
                 bus_CT.Sua(et_CT);
                 MessageBox.Show("Sửa thành công");
-                btn_LamMoiChiTiet_Click(sender,e);
+                btn_LamMoiChiTiet_Click(sender, e);
             }
             catch (Exception ex)
             {
@@ -226,20 +227,6 @@ namespace GUI
             gbo_ThongTin.Top = gbo_NhapThongTin.Bottom + 20;
         }
 
-        private void dgv_Data_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (e.RowIndex >= 0)
-            {
-
-                txt_MaNH.Text = dgv_Data.Rows[e.RowIndex].Cells[0].Value.ToString();
-                cbo_NCC.Text = dgv_Data.Rows[e.RowIndex].Cells[1].Value.ToString();
-                cbo_MaCH.Text = dgv_Data.Rows[e.RowIndex].Cells[2].Value.ToString();
-                dtp_NgayNhap.Text = dgv_Data.Rows[e.RowIndex].Cells[3].Value.ToString();
-                txt_MaNV.Text = dgv_Data.Rows[e.RowIndex].Cells[4].Value.ToString();
-                string maPN = dgv_Data.Rows[e.RowIndex].Cells[0].Value.ToString();
-                LoadChiTietTheoMaPN(maPN);
-            }
-        }
 
         private void dgv_DataChiTiet_CellClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -258,25 +245,48 @@ namespace GUI
         {
             try
             {
-                foreach(var ct in bus_CT.LayChiTietTheoMaPhieu(maNhapMoiThem))
+                foreach (var ct in bus_CT.LayChiTietTheoMaPhieu(maNhapMoiThem))
                 {
-                    bus_CTK.CapNhapChiTietKhoKhiNhapHang(cbo_MaCH.Text, ct,et_NhapHang.NgayNhap);
+                    bus_CTK.CapNhapChiTietKhoKhiNhapHang(cbo_MaCH.Text, ct, et_NhapHang.NgayNhap);
                 }
                 maNhapMoiThem = null;
                 MessageBox.Show("Cập nhập kho thành công");
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show("việc xử lý đã xảy ra lỗi: " + ex.Message);
             }
-           
+
         }
 
         private void txt_GiaNhap_Leave(object sender, EventArgs e)
         {
             int sl = Convert.ToInt32(txt_SLNhap.Text);
             decimal gia = Convert.ToDecimal(txt_GiaNhap.Text);
-            txt_TongTien.Text = (sl * gia ).ToString();
+            txt_TongTien.Text = (sl * gia).ToString();
+        }
+
+        private void btn_InPhieuNhap_Click(object sender, EventArgs e)
+        {
+            string maNH = txt_MaNH.Text;
+            frm_RP_PhieuNhapHang frm = new frm_RP_PhieuNhapHang(maNH);
+            frm.MdiParent = this.MdiParent;
+            frm.Show();
+        }
+
+        private void dgv_Data_Click(object sender, EventArgs e)
+        {
+            int dong = dgv_Data.CurrentCell.RowIndex;
+            if (dong > dgv_Data.Rows.Count - 1) return;
+
+            txt_MaNH.Text = dgv_Data.Rows[dong].Cells[0].Value.ToString();
+            cbo_NCC.Text = dgv_Data.Rows[dong].Cells[1].Value.ToString();
+            cbo_MaCH.Text = dgv_Data.Rows[dong].Cells[2].Value.ToString();
+            dtp_NgayNhap.Text = dgv_Data.Rows[dong].Cells[3].Value.ToString();
+            txt_MaNV.Text = dgv_Data.Rows[dong].Cells[4].Value.ToString();
+            string maPN = dgv_Data.Rows[dong].Cells[0].Value.ToString();
+            LoadChiTietTheoMaPN(maPN);
+
         }
     }
 }

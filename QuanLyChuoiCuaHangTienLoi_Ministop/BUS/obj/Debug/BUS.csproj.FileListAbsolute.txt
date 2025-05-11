@@ -33,3 +33,15 @@ D:\QuanLyChuoiCuaHangMinistop\QuanLyChuoiCuaHangTienLoi_Ministop\BUS\obj\Debug\B
 D:\QuanLyChuoiCuaHangMinistop\QuanLyChuoiCuaHangTienLoi_Ministop\BUS\obj\Debug\BUS.csproj.Up2Date
 D:\QuanLyChuoiCuaHangMinistop\QuanLyChuoiCuaHangTienLoi_Ministop\BUS\obj\Debug\BUS.dll
 D:\QuanLyChuoiCuaHangMinistop\QuanLyChuoiCuaHangTienLoi_Ministop\BUS\obj\Debug\BUS.pdb
+C:\Users\Chris\Desktop\DoAnDotNET\project-AnhHao\QuanLyChuoiCuaHangTienLoi_Ministop\BUS\bin\Debug\BUS.dll
+C:\Users\Chris\Desktop\DoAnDotNET\project-AnhHao\QuanLyChuoiCuaHangTienLoi_Ministop\BUS\bin\Debug\BUS.pdb
+C:\Users\Chris\Desktop\DoAnDotNET\project-AnhHao\QuanLyChuoiCuaHangTienLoi_Ministop\BUS\bin\Debug\DAL.dll
+C:\Users\Chris\Desktop\DoAnDotNET\project-AnhHao\QuanLyChuoiCuaHangTienLoi_Ministop\BUS\bin\Debug\ET.dll
+C:\Users\Chris\Desktop\DoAnDotNET\project-AnhHao\QuanLyChuoiCuaHangTienLoi_Ministop\BUS\bin\Debug\DAL.pdb
+C:\Users\Chris\Desktop\DoAnDotNET\project-AnhHao\QuanLyChuoiCuaHangTienLoi_Ministop\BUS\bin\Debug\DAL.dll.config
+C:\Users\Chris\Desktop\DoAnDotNET\project-AnhHao\QuanLyChuoiCuaHangTienLoi_Ministop\BUS\bin\Debug\ET.pdb
+C:\Users\Chris\Desktop\DoAnDotNET\project-AnhHao\QuanLyChuoiCuaHangTienLoi_Ministop\BUS\obj\Debug\BUS.csproj.AssemblyReference.cache
+C:\Users\Chris\Desktop\DoAnDotNET\project-AnhHao\QuanLyChuoiCuaHangTienLoi_Ministop\BUS\obj\Debug\BUS.csproj.CoreCompileInputs.cache
+C:\Users\Chris\Desktop\DoAnDotNET\project-AnhHao\QuanLyChuoiCuaHangTienLoi_Ministop\BUS\obj\Debug\BUS.csproj.Up2Date
+C:\Users\Chris\Desktop\DoAnDotNET\project-AnhHao\QuanLyChuoiCuaHangTienLoi_Ministop\BUS\obj\Debug\BUS.dll
+C:\Users\Chris\Desktop\DoAnDotNET\project-AnhHao\QuanLyChuoiCuaHangTienLoi_Ministop\BUS\obj\Debug\BUS.pdb
