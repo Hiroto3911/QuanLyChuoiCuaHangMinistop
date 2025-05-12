@@ -16,3 +16,9 @@ D:\QuanLyChuoiCuaHangMinistop\QuanLyChuoiCuaHangTienLoi_Ministop\ET\obj\Debug\ET
 D:\QuanLyChuoiCuaHangMinistop\QuanLyChuoiCuaHangTienLoi_Ministop\ET\obj\Debug\ET.csproj.CoreCompileInputs.cache
 D:\QuanLyChuoiCuaHangMinistop\QuanLyChuoiCuaHangTienLoi_Ministop\ET\obj\Debug\ET.dll
 D:\QuanLyChuoiCuaHangMinistop\QuanLyChuoiCuaHangTienLoi_Ministop\ET\obj\Debug\ET.pdb
+C:\Users\Chris\Desktop\DoAnDotNET\project-AnhHao\QuanLyChuoiCuaHangTienLoi_Ministop\ET\bin\Debug\ET.dll
+C:\Users\Chris\Desktop\DoAnDotNET\project-AnhHao\QuanLyChuoiCuaHangTienLoi_Ministop\ET\bin\Debug\ET.pdb
+C:\Users\Chris\Desktop\DoAnDotNET\project-AnhHao\QuanLyChuoiCuaHangTienLoi_Ministop\ET\obj\Debug\ET.csproj.AssemblyReference.cache
+C:\Users\Chris\Desktop\DoAnDotNET\project-AnhHao\QuanLyChuoiCuaHangTienLoi_Ministop\ET\obj\Debug\ET.csproj.CoreCompileInputs.cache
+C:\Users\Chris\Desktop\DoAnDotNET\project-AnhHao\QuanLyChuoiCuaHangTienLoi_Ministop\ET\obj\Debug\ET.dll
+C:\Users\Chris\Desktop\DoAnDotNET\project-AnhHao\QuanLyChuoiCuaHangTienLoi_Ministop\ET\obj\Debug\ET.pdb

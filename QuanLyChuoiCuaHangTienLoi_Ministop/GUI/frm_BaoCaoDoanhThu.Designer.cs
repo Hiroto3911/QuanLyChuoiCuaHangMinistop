@@ -48,8 +48,9 @@
             this.panel1.Controls.Add(this.lbl_Title);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(944, 52);
+            this.panel1.Size = new System.Drawing.Size(1259, 64);
             this.panel1.TabIndex = 65;
             // 
             // lbl_Title
@@ -57,11 +58,12 @@
             this.lbl_Title.AutoSize = true;
             this.lbl_Title.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Title.ForeColor = System.Drawing.Color.White;
-            this.lbl_Title.Location = new System.Drawing.Point(356, 9);
+            this.lbl_Title.Location = new System.Drawing.Point(475, 11);
+            this.lbl_Title.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_Title.Name = "lbl_Title";
-            this.lbl_Title.Size = new System.Drawing.Size(283, 33);
+            this.lbl_Title.Size = new System.Drawing.Size(588, 42);
             this.lbl_Title.TabIndex = 18;
-            this.lbl_Title.Text = "Báo cáo doanh thu ";
+            this.lbl_Title.Text = "Biểu đồ doanh thu của cửa hàng";
             // 
             // tableLayoutPanel1
             // 
@@ -71,11 +73,12 @@
             this.tableLayoutPanel1.Controls.Add(this.chart_DoanhThu, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.dgv_Data, 1, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 52);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 64);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(944, 549);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1259, 676);
             this.tableLayoutPanel1.TabIndex = 67;
             // 
             // chart_DoanhThu
@@ -85,14 +88,15 @@
             this.chart_DoanhThu.Dock = System.Windows.Forms.DockStyle.Fill;
             legend1.Name = "Legend1";
             this.chart_DoanhThu.Legends.Add(legend1);
-            this.chart_DoanhThu.Location = new System.Drawing.Point(3, 3);
+            this.chart_DoanhThu.Location = new System.Drawing.Point(4, 4);
+            this.chart_DoanhThu.Margin = new System.Windows.Forms.Padding(4);
             this.chart_DoanhThu.Name = "chart_DoanhThu";
             series1.ChartArea = "ChartArea1";
             series1.Legend = "Legend1";
             series1.Name = "Series1";
             series1.YValuesPerPoint = 2;
             this.chart_DoanhThu.Series.Add(series1);
-            this.chart_DoanhThu.Size = new System.Drawing.Size(594, 543);
+            this.chart_DoanhThu.Size = new System.Drawing.Size(793, 668);
             this.chart_DoanhThu.TabIndex = 67;
             this.chart_DoanhThu.Text = "Báo cao doanh thu của hàng";
             // 
@@ -101,20 +105,24 @@
             this.dgv_Data.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_Data.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_Data.Dock = System.Windows.Forms.DockStyle.Top;
-            this.dgv_Data.Location = new System.Drawing.Point(603, 3);
+            this.dgv_Data.Location = new System.Drawing.Point(805, 4);
+            this.dgv_Data.Margin = new System.Windows.Forms.Padding(4);
             this.dgv_Data.Name = "dgv_Data";
-            this.dgv_Data.Size = new System.Drawing.Size(338, 543);
+            this.dgv_Data.RowHeadersWidth = 51;
+            this.dgv_Data.Size = new System.Drawing.Size(450, 668);
             this.dgv_Data.TabIndex = 68;
             this.dgv_Data.Click += new System.EventHandler(this.dgv_Data_Click);
             // 
             // frm_BaoCaoDoanhThu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(240)))), ((int)(((byte)(144)))));
-            this.ClientSize = new System.Drawing.Size(944, 601);
+            this.ClientSize = new System.Drawing.Size(1259, 740);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.panel1);
+            this.Margin = new System.Windows.Forms.Padding(4);
+            this.MinimizeBox = false;
             this.Name = "frm_BaoCaoDoanhThu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frm_BaoCaoDoanhThu";

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="QuanLyChuoiCuaHangMinistop" Class="DB_QuanLyChuoiCuaHangTienLoiMinistopDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-G20M4PR;Initial Catalog=QuanLyChuoiCuaHangMinistop;Integrated Security=True;Trust Server Certificate=True" SettingsObjectName="DAL.Properties.Settings" SettingsPropertyName="QuanLyChuoiCuaHangMinistopConnectionString" Provider="System.Data.SqlClient" />
+  <Connection Mode="AppSettings" ConnectionString="Data Source=LATI7480\SQLEXPRESS;Initial Catalog=QuanLyChuoiCuaHangMinistop;Integrated Security=True;Trust Server Certificate=True" SettingsObjectName="DAL.Properties.Settings" SettingsPropertyName="QuanLyChuoiCuaHangMinistopConnectionString" Provider="System.Data.SqlClient" />
   <Table Name="dbo.CuaHang" Member="CuaHangs">
     <Type Name="CuaHang">
       <Column Name="MaCuaHang" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />

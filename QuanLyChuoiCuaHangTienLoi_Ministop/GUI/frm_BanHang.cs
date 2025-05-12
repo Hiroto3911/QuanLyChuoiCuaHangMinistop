@@ -1,6 +1,8 @@
 ﻿using BUS;
 using ET;
+using GUI.Reporting;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -24,15 +26,15 @@ namespace GUI
         private BUS_ChiTietKho bus_CTK = new BUS_ChiTietKho();
         private BUS_KhuyenMai_SanPham bus_KM_SP = new BUS_KhuyenMai_SanPham();
         private BUS_KhuyenMai bus_KM = new BUS_KhuyenMai();
+        private BUS_LichSuKho bus_LichSuKho = new BUS_LichSuKho();
         // biến tầng et 
         private ET_ChiTietHoaDon et_cthd = new ET_ChiTietHoaDon();
         private ET_HoaDon et_hd = new ET_HoaDon();
-        private ET_SanPham et_SP = new ET_SanPham();
         private ET_KhuyenMaiApDung et_KMAP = new ET_KhuyenMaiApDung();
         // biến static 
         private static string maHDMoiThem;
         // biến local 
-     
+
 
         public frm_BanHang()
         {
@@ -42,16 +44,21 @@ namespace GUI
         // Các Function của các control
         private void frm_BanHang_Load(object sender, EventArgs e)
         {
+            if (Session.VaiTro == "QuanLy")
+            {
+                btn_Them.Enabled = false;
+            }
             cbo_MaCH.Text = Session.MaCuaHang;
             txt_MaNV.Text = Session.MaNhanVien;
             dtp_NgayLapHD.Text = DateTime.Now.ToShortDateString();
             LoadHoaDon();
             LoadChiTietHoaDonTheoMaHD(dgv_Data.CurrentRow.Cells[0].Value.ToString());
+
             //LoadComboboxCuaHang();
 
 
         }
-       
+
 
 
         private void frm_BanHang_Resize(object sender, EventArgs e)
@@ -98,25 +105,31 @@ namespace GUI
                 MessageBox.Show("Thêm thành công");
                 LoadHoaDon();
                 LoadChiTietHoaDonTheoMaHD(maHDMoiThem);
-                btn_HoanTat.Enabled = true; 
+                btn_HoanTat.Enabled = true;
                 btn_InHoaDon.Enabled = true;
                 btn_Xoa.Enabled = true;
                 btn_ThemChiTiet.Enabled = true;
-                btn_XoaChiTiet.Enabled=true;
-                btn_SuaChiTiet.Enabled = true; 
+                btn_XoaChiTiet.Enabled = true;
+                btn_SuaChiTiet.Enabled = true;
             }
             catch (Exception ex) { MessageBox.Show("Thêm thất bại \n Lỗi:" + ex); }
         }
 
         private void btn_InHoaDon_Click(object sender, EventArgs e)
         {
-
+            string maHD = txt_MaHD.Text;
+            frm_RP_HoaDon frm = new frm_RP_HoaDon(maHD);
+            frm.MdiParent = this.MdiParent;
+            frm.Show();
         }
 
         private void btn_ThemChiTiet_Click(object sender, EventArgs e)
         {
-            if(maHDMoiThem == null) { MessageBox.Show("Thành thật xin lỗi bạn. Hoá đơn này hiện tại đã hoàn tất không thể thêm xoá sửa được nữa " +
-                "\n !Xin vui lòng tạo mã hoá đơn mới rồi bạn có thể thêm xoá sửa!", "Thông báo", MessageBoxButtons.OKCancel); return; }
+            if (maHDMoiThem == null)
+            {
+                MessageBox.Show("Thành thật xin lỗi bạn. Hoá đơn này hiện tại đã hoàn tất không thể thêm xoá sửa được nữa " +
+                "\n !Xin vui lòng tạo mã hoá đơn mới rồi bạn có thể thêm xoá sửa!", "Thông báo", MessageBoxButtons.OKCancel); return;
+            }
             try
             {
 
@@ -138,15 +151,15 @@ namespace GUI
                 {
                     // kiểm tra xem sản phẩm có đủ điều kiện để áp dụng khuyến mãi hay không
                     et_KMAP = bus_KM_SP.ApDungKhuyenMaiChoSanPham(et_cthd, Convert.ToDateTime(dtp_NgayLapHD.Text));
-                    if(et_KMAP == null) { lbl_KhuyenMai_SanPham.Text = ""; }
-                    else { lbl_KhuyenMai_SanPham.Text = "Sản phẩm đã áp dụng KM "+et_KMAP.TenKhuyenMai; }
+                    if (et_KMAP == null) { lbl_KhuyenMai_SanPham.Text = ""; }
+                    else { lbl_KhuyenMai_SanPham.Text = "Sản phẩm đã áp dụng KM " + et_KMAP.TenKhuyenMai; }
                     // thêm sản phẩm
                     bus_cthd.Them(et_cthd);
                     MessageBox.Show("Thêm thành công");
                     // Cập nhập lại chi tiết kho 
-                    bus_CTK.CapNhapSLSanPham(Session.MaCuaHang,"Them", et_cthd);
+                    bus_CTK.CapNhapSLSanPham(Session.MaCuaHang, "Them", et_cthd);
                     // cập nhập tổng tiền cho hoá đơn
-                    CapNhapTongTienChoHoaDon();             
+                    CapNhapTongTienChoHoaDon();
                     // làm mới dữ liệu
                     LoadHoaDon();
                     LoadChiTietHoaDonTheoMaHD(maHDMoiThem);
@@ -166,7 +179,7 @@ namespace GUI
             }
             try
             {
-              
+
                 et_cthd.MaHoaDon = maHDMoiThem;
                 et_cthd.MaChiTietHD = txt_MaCTHD.Text;
                 et_cthd.MaSanPham = txt_SanPham.Text;
@@ -248,25 +261,37 @@ namespace GUI
             txt_DonGia.Text = dgv_DataChiTiet.Rows[dong].Cells[4].Value.ToString();
             txt_ThanhTien.Text = dgv_DataChiTiet.Rows[dong].Cells[5].Value.ToString();
             lbl_TenSP.Text = TimTenSanPham(dgv_DataChiTiet.Rows[dong].Cells[2].Value.ToString());
-            
+
         }
-        
+
 
         private void btn_HoanTat_Click(object sender, EventArgs e)
         {
-            int dem = 0; 
-           // kiểm tra lại các sản phẩm để áp dụng khuyến mãi
+            int dem = 0;
+            // kiểm tra lại các sản phẩm để áp dụng khuyến mãi
             foreach (var cthd in bus_cthd.HienThiDuLieuSapXepGiamDanTheoMaHD(maHDMoiThem))
             {
+
+
+
                 et_KMAP = bus_KM_SP.ApDungKhuyenMaiChoSanPham(cthd, Convert.ToDateTime(dtp_NgayLapHD.Text));
                 if (et_KMAP != null)
                 {
                     cthd.ThanhTien -= et_KMAP.MucGiamGia;
                     bus_cthd.CapNhapThanhTien(cthd);
                     dem++;
-                   
+
                 }
-               
+                var query = bus_CTK.layChiTietKhoTheoMaSPVaMaCH(cbo_MaCH.Text, cthd.MaSanPham);
+                bus_LichSuKho.ThemLichSuKho(new ET_LichSuKho
+                {
+                    MaLichSuKho = TaoMaTuDong.TaoMa(bus_LichSuKho.LayDanhSachMaLSK(), "LSK"),
+                    MaChiTietKho = query.MaChiTietKho,
+                    NgayThayDoi = DateTime.Now,
+                    SoLuongThayDoi = -cthd.SoLuong,
+                    LoaiThayDoi = "Ban",
+                    MaThamChieu = cthd.MaHoaDon
+                });
             }
             if (dem > 0)
             {
@@ -276,19 +301,19 @@ namespace GUI
             ApDungKhuyenMaiChoHoaDon(et_hd, et_hd.NgayLap);
             // làm mới dữ liệu
             LoadHoaDon();
-            LoadChiTietHoaDonTheoMaHD(dgv_Data.CurrentRow.Cells[0].Value.ToString());      
+            LoadChiTietHoaDonTheoMaHD(dgv_Data.CurrentRow.Cells[0].Value.ToString());
             // set hoá đơn về null để người dùng muốn crud thì phải tạo một hoá đơn mới
             maHDMoiThem = null;
             btn_HoanTat.Enabled = false;
-           
+
         }
 
         private void txt_SanPham_Leave(object sender, EventArgs e)
         {
-            lbl_TenSP.Text =  TimTenSanPham(txt_SanPham.Text);
+            lbl_TenSP.Text = TimTenSanPham(txt_SanPham.Text);
             txt_DonGia.Text = LayGiaBanCuaSanPham(Session.MaCuaHang, txt_SanPham.Text).ToString();
         }
-       
+
         // Các Function hỗ trợ
         private string TimTenSanPham(string maSP)
         {
@@ -305,8 +330,8 @@ namespace GUI
         private void LoadComboboxCuaHang()
         {
             cbo_MaCH.DataSource = bus_CH.HienThiDuLieuSapXepGiamDanTheoMa();
-            cbo_MaCH.ValueMember ="MaCH";
-            cbo_MaCH.DisplayMember ="TenCH";
+            cbo_MaCH.ValueMember = "MaCH";
+            cbo_MaCH.DisplayMember = "TenCH";
         }
         /// <summary>
         /// Hàm lấy giá bán hiện tại của sản phẩm trong cửa hàng  
@@ -326,13 +351,13 @@ namespace GUI
         {
             try
             {
-                
+
                 bus_hd.Sua(hoaDon);
             }
             catch (Exception ex) { MessageBox.Show("Cập nhập tổng tiền thất bại\n Lỗi:" + ex, "Thông báo"); }
 
         }
-       
+
         private void CapNhapTongTienChoHoaDon()
         {
             et_hd.MaHoaDon = maHDMoiThem;
@@ -341,19 +366,19 @@ namespace GUI
             et_hd.NgayLap = Convert.ToDateTime(dtp_NgayLapHD.Text);
             et_hd.TongTien = bus_cthd.TinhTongTienTheoMaHD(maHDMoiThem);
             CapNhapTongTienHoaDon(et_hd);
-            
+
         }
         /// <summary>
         /// Hàm kiểm tra, áp dụng khuyến mãi và cập nhập lại tổng tiền cho hoá đơn
         /// </summary>
         /// <param name="hd"> hoá đơn cần kiểm tra</param>
         /// <param name="tgianMua">tgian lập hoá đơn </param>
-        private void ApDungKhuyenMaiChoHoaDon(ET_HoaDon hd , DateTime tgianMua)
+        private void ApDungKhuyenMaiChoHoaDon(ET_HoaDon hd, DateTime tgianMua)
         {
             var km_HD = bus_KM.ApDungKhuyenMaiChoHoaDon(hd, tgianMua);
-            if (km_HD != null )
+            if (km_HD != null)
             {
-                lbl_KhuyenMai_HoaDon.Text = "Đã áp dụng khuyến mãi cho hoá đơn trên "+km_HD.DieuKienAP+" giảm "+km_HD.MucGiamGia+"vnd";
+                lbl_KhuyenMai_HoaDon.Text = "Đã áp dụng khuyến mãi cho hoá đơn trên " + km_HD.DieuKienAP + " giảm " + km_HD.MucGiamGia + "vnd";
                 hd.TongTien -= km_HD.MucGiamGia;
                 CapNhapTongTienHoaDon(et_hd);
 
@@ -386,6 +411,6 @@ namespace GUI
             lbl_KhuyenMai_SanPham.Text = "";
         }
 
-       
+
     }
 }

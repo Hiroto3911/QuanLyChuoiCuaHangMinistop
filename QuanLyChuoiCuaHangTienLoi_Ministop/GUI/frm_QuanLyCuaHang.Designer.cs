@@ -282,6 +282,7 @@
             this.Controls.Add(this.gbo_NhapThongTin);
             this.Controls.Add(this.pnl_Title);
             this.Margin = new System.Windows.Forms.Padding(4);
+            this.MinimizeBox = false;
             this.Name = "frm_QuanLyCuaHang";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frm_QuanLyCuaHang";
