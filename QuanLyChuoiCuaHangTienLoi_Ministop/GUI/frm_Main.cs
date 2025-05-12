@@ -41,7 +41,7 @@ namespace GUI
            
             if (Session.VaiTro == "Admin")
             {
-                
+                pnl_BanHang.Visible = false;
             }
             else
             {
@@ -145,6 +145,41 @@ namespace GUI
             frm_QuanLyNhaCungCap ncc = new frm_QuanLyNhaCungCap();
             ncc.MdiParent = this;
             ncc.Show();
+        }
+
+        private void btn_BaoCaoKho_Click(object sender, EventArgs e)
+        {
+            frm_BaoCaoTonKho tk = new frm_BaoCaoTonKho();
+            tk.MdiParent = this;
+            tk.Show();
+        }
+
+        private void btn_NH_Click(object sender, EventArgs e)
+        {
+            frm_NhapKho nk = new frm_NhapKho();
+            nk.MdiParent = this;
+            nk.Show();
+        }
+
+        private void btn_XH_Click(object sender, EventArgs e)
+        {
+            frm_XuatKho xk = new frm_XuatKho();
+            xk.MdiParent = this;
+            xk.Show();
+        }
+
+        private void btn_KK_Click(object sender, EventArgs e)
+        {
+            frm_KiemKho kk = new frm_KiemKho();
+            kk.MdiParent = this;
+            kk.Show();
+        }
+
+        private void btn_TongDoanhThu_Click(object sender, EventArgs e)
+        {
+            frm_BaoCaoTongDoanhThu tdh = new frm_BaoCaoTongDoanhThu();
+            tdh.MdiParent = this;
+            tdh.Show();
         }
     }
 }
