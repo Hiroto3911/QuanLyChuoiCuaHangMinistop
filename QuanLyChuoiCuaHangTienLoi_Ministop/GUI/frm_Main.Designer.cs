@@ -76,6 +76,18 @@
             this.pnl_BanHang = new System.Windows.Forms.Panel();
             this.panel22 = new System.Windows.Forms.Panel();
             this.btn_BH = new System.Windows.Forms.Button();
+            this.pnl_DoanhThuCuaHang = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.btn_DoanhThuTungCH = new System.Windows.Forms.Button();
+            this.pnl_TongDoanhThu = new System.Windows.Forms.Panel();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.btn_TongDoanhThu = new System.Windows.Forms.Button();
+            this.pnl_BaoCaoKho = new System.Windows.Forms.Panel();
+            this.panel13 = new System.Windows.Forms.Panel();
+            this.btn_BaoCaoKho = new System.Windows.Forms.Button();
+            this.pnl_TongHopHeThong = new System.Windows.Forms.Panel();
+            this.panel17 = new System.Windows.Forms.Panel();
+            this.btn_TongHopHeThong = new System.Windows.Forms.Button();
             this.pnl_header.SuspendLayout();
             this.pnl_Hello.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -93,6 +105,10 @@
             this.pnl_XuatHang.SuspendLayout();
             this.pnl_KiemKho.SuspendLayout();
             this.pnl_BanHang.SuspendLayout();
+            this.pnl_DoanhThuCuaHang.SuspendLayout();
+            this.pnl_TongDoanhThu.SuspendLayout();
+            this.pnl_BaoCaoKho.SuspendLayout();
+            this.pnl_TongHopHeThong.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnl_header
@@ -191,6 +207,7 @@
             this.bToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
             this.menuStrip1.Size = new System.Drawing.Size(1685, 28);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
@@ -246,6 +263,10 @@
             this.fqnl_Menu.Controls.Add(this.pnl_XuatHang);
             this.fqnl_Menu.Controls.Add(this.pnl_KiemKho);
             this.fqnl_Menu.Controls.Add(this.pnl_BanHang);
+            this.fqnl_Menu.Controls.Add(this.pnl_DoanhThuCuaHang);
+            this.fqnl_Menu.Controls.Add(this.pnl_TongDoanhThu);
+            this.fqnl_Menu.Controls.Add(this.pnl_BaoCaoKho);
+            this.fqnl_Menu.Controls.Add(this.pnl_TongHopHeThong);
             this.fqnl_Menu.Dock = System.Windows.Forms.DockStyle.Left;
             this.fqnl_Menu.Location = new System.Drawing.Point(0, 100);
             this.fqnl_Menu.Margin = new System.Windows.Forms.Padding(4);
@@ -366,6 +387,7 @@
             this.btn_QLNCC.TabIndex = 4;
             this.btn_QLNCC.Text = "Quản lý nhà cung cấp";
             this.btn_QLNCC.UseVisualStyleBackColor = true;
+            this.btn_QLNCC.Click += new System.EventHandler(this.btn_QLNCC_Click);
             // 
             // pnl_QuanLySanPham
             // 
@@ -501,6 +523,7 @@
             this.btn_QLLSGSP.TabIndex = 4;
             this.btn_QLLSGSP.Text = "Lịch sử giá sản phẩm";
             this.btn_QLLSGSP.UseVisualStyleBackColor = true;
+            this.btn_QLLSGSP.Click += new System.EventHandler(this.btn_QLLSGSP_Click);
             // 
             // pnl_NhapHang
             // 
@@ -534,6 +557,7 @@
             this.btn_NH.TabIndex = 4;
             this.btn_NH.Text = "Nhập hàng";
             this.btn_NH.UseVisualStyleBackColor = true;
+            this.btn_NH.Click += new System.EventHandler(this.btn_NH_Click);
             // 
             // pnl_XuatHang
             // 
@@ -567,6 +591,7 @@
             this.btn_XH.TabIndex = 4;
             this.btn_XH.Text = "Xuất hàng";
             this.btn_XH.UseVisualStyleBackColor = true;
+            this.btn_XH.Click += new System.EventHandler(this.btn_XH_Click);
             // 
             // pnl_KiemKho
             // 
@@ -600,6 +625,7 @@
             this.btn_KK.TabIndex = 4;
             this.btn_KK.Text = "Kiểm kho";
             this.btn_KK.UseVisualStyleBackColor = true;
+            this.btn_KK.Click += new System.EventHandler(this.btn_KK_Click);
             // 
             // pnl_BanHang
             // 
@@ -635,6 +661,141 @@
             this.btn_BH.UseVisualStyleBackColor = true;
             this.btn_BH.Click += new System.EventHandler(this.btn_BH_Click);
             // 
+            // pnl_DoanhThuCuaHang
+            // 
+            this.pnl_DoanhThuCuaHang.Controls.Add(this.panel5);
+            this.pnl_DoanhThuCuaHang.Controls.Add(this.btn_DoanhThuTungCH);
+            this.pnl_DoanhThuCuaHang.Location = new System.Drawing.Point(4, 1105);
+            this.pnl_DoanhThuCuaHang.Margin = new System.Windows.Forms.Padding(4);
+            this.pnl_DoanhThuCuaHang.Name = "pnl_DoanhThuCuaHang";
+            this.pnl_DoanhThuCuaHang.Size = new System.Drawing.Size(295, 74);
+            this.pnl_DoanhThuCuaHang.TabIndex = 13;
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(56)))), ((int)(((byte)(148)))));
+            this.panel5.Location = new System.Drawing.Point(0, 2);
+            this.panel5.Margin = new System.Windows.Forms.Padding(4);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(295, 5);
+            this.panel5.TabIndex = 5;
+            // 
+            // btn_DoanhThuTungCH
+            // 
+            this.btn_DoanhThuTungCH.FlatAppearance.BorderSize = 0;
+            this.btn_DoanhThuTungCH.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_DoanhThuTungCH.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_DoanhThuTungCH.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(56)))), ((int)(((byte)(148)))));
+            this.btn_DoanhThuTungCH.Location = new System.Drawing.Point(0, 6);
+            this.btn_DoanhThuTungCH.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_DoanhThuTungCH.Name = "btn_DoanhThuTungCH";
+            this.btn_DoanhThuTungCH.Size = new System.Drawing.Size(295, 70);
+            this.btn_DoanhThuTungCH.TabIndex = 4;
+            this.btn_DoanhThuTungCH.Text = "Doanh thu cửa hàng";
+            this.btn_DoanhThuTungCH.UseVisualStyleBackColor = true;
+            this.btn_DoanhThuTungCH.Click += new System.EventHandler(this.btn_DoanhThuTungCH_Click);
+            // 
+            // pnl_TongDoanhThu
+            // 
+            this.pnl_TongDoanhThu.Controls.Add(this.panel9);
+            this.pnl_TongDoanhThu.Controls.Add(this.btn_TongDoanhThu);
+            this.pnl_TongDoanhThu.Location = new System.Drawing.Point(4, 1187);
+            this.pnl_TongDoanhThu.Margin = new System.Windows.Forms.Padding(4);
+            this.pnl_TongDoanhThu.Name = "pnl_TongDoanhThu";
+            this.pnl_TongDoanhThu.Size = new System.Drawing.Size(295, 74);
+            this.pnl_TongDoanhThu.TabIndex = 14;
+            // 
+            // panel9
+            // 
+            this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(56)))), ((int)(((byte)(148)))));
+            this.panel9.Location = new System.Drawing.Point(0, 2);
+            this.panel9.Margin = new System.Windows.Forms.Padding(4);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(295, 5);
+            this.panel9.TabIndex = 5;
+            // 
+            // btn_TongDoanhThu
+            // 
+            this.btn_TongDoanhThu.FlatAppearance.BorderSize = 0;
+            this.btn_TongDoanhThu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_TongDoanhThu.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_TongDoanhThu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(56)))), ((int)(((byte)(148)))));
+            this.btn_TongDoanhThu.Location = new System.Drawing.Point(0, 6);
+            this.btn_TongDoanhThu.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_TongDoanhThu.Name = "btn_TongDoanhThu";
+            this.btn_TongDoanhThu.Size = new System.Drawing.Size(295, 70);
+            this.btn_TongDoanhThu.TabIndex = 4;
+            this.btn_TongDoanhThu.Text = "Tổng doanh thu";
+            this.btn_TongDoanhThu.UseVisualStyleBackColor = true;
+            this.btn_TongDoanhThu.Click += new System.EventHandler(this.btn_TongDoanhThu_Click);
+            // 
+            // pnl_BaoCaoKho
+            // 
+            this.pnl_BaoCaoKho.Controls.Add(this.panel13);
+            this.pnl_BaoCaoKho.Controls.Add(this.btn_BaoCaoKho);
+            this.pnl_BaoCaoKho.Location = new System.Drawing.Point(4, 1269);
+            this.pnl_BaoCaoKho.Margin = new System.Windows.Forms.Padding(4);
+            this.pnl_BaoCaoKho.Name = "pnl_BaoCaoKho";
+            this.pnl_BaoCaoKho.Size = new System.Drawing.Size(295, 74);
+            this.pnl_BaoCaoKho.TabIndex = 15;
+            // 
+            // panel13
+            // 
+            this.panel13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(56)))), ((int)(((byte)(148)))));
+            this.panel13.Location = new System.Drawing.Point(0, 2);
+            this.panel13.Margin = new System.Windows.Forms.Padding(4);
+            this.panel13.Name = "panel13";
+            this.panel13.Size = new System.Drawing.Size(295, 5);
+            this.panel13.TabIndex = 5;
+            // 
+            // btn_BaoCaoKho
+            // 
+            this.btn_BaoCaoKho.FlatAppearance.BorderSize = 0;
+            this.btn_BaoCaoKho.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_BaoCaoKho.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_BaoCaoKho.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(56)))), ((int)(((byte)(148)))));
+            this.btn_BaoCaoKho.Location = new System.Drawing.Point(0, 6);
+            this.btn_BaoCaoKho.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_BaoCaoKho.Name = "btn_BaoCaoKho";
+            this.btn_BaoCaoKho.Size = new System.Drawing.Size(295, 70);
+            this.btn_BaoCaoKho.TabIndex = 4;
+            this.btn_BaoCaoKho.Text = "Báo cáo kho";
+            this.btn_BaoCaoKho.UseVisualStyleBackColor = true;
+            this.btn_BaoCaoKho.Click += new System.EventHandler(this.btn_BaoCaoKho_Click);
+            // 
+            // pnl_TongHopHeThong
+            // 
+            this.pnl_TongHopHeThong.Controls.Add(this.panel17);
+            this.pnl_TongHopHeThong.Controls.Add(this.btn_TongHopHeThong);
+            this.pnl_TongHopHeThong.Location = new System.Drawing.Point(4, 1351);
+            this.pnl_TongHopHeThong.Margin = new System.Windows.Forms.Padding(4);
+            this.pnl_TongHopHeThong.Name = "pnl_TongHopHeThong";
+            this.pnl_TongHopHeThong.Size = new System.Drawing.Size(295, 74);
+            this.pnl_TongHopHeThong.TabIndex = 16;
+            // 
+            // panel17
+            // 
+            this.panel17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(56)))), ((int)(((byte)(148)))));
+            this.panel17.Location = new System.Drawing.Point(0, 2);
+            this.panel17.Margin = new System.Windows.Forms.Padding(4);
+            this.panel17.Name = "panel17";
+            this.panel17.Size = new System.Drawing.Size(295, 5);
+            this.panel17.TabIndex = 5;
+            // 
+            // btn_TongHopHeThong
+            // 
+            this.btn_TongHopHeThong.FlatAppearance.BorderSize = 0;
+            this.btn_TongHopHeThong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_TongHopHeThong.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_TongHopHeThong.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(56)))), ((int)(((byte)(148)))));
+            this.btn_TongHopHeThong.Location = new System.Drawing.Point(0, 6);
+            this.btn_TongHopHeThong.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_TongHopHeThong.Name = "btn_TongHopHeThong";
+            this.btn_TongHopHeThong.Size = new System.Drawing.Size(295, 70);
+            this.btn_TongHopHeThong.TabIndex = 4;
+            this.btn_TongHopHeThong.Text = "Báo cáo tổng hợp hệ thống";
+            this.btn_TongHopHeThong.UseVisualStyleBackColor = true;
+            // 
             // frm_Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -648,6 +809,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frm_Main";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frm_Main_Load);
             this.pnl_header.ResumeLayout(false);
             this.pnl_header.PerformLayout();
@@ -670,6 +832,10 @@
             this.pnl_XuatHang.ResumeLayout(false);
             this.pnl_KiemKho.ResumeLayout(false);
             this.pnl_BanHang.ResumeLayout(false);
+            this.pnl_DoanhThuCuaHang.ResumeLayout(false);
+            this.pnl_TongDoanhThu.ResumeLayout(false);
+            this.pnl_BaoCaoKho.ResumeLayout(false);
+            this.pnl_TongHopHeThong.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -724,5 +890,17 @@
         private System.Windows.Forms.ToolStripMenuItem phiếuXuấtHàngToolStripMenuItem;
         private System.Windows.Forms.Panel pnl_Hello;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel pnl_DoanhThuCuaHang;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Button btn_DoanhThuTungCH;
+        private System.Windows.Forms.Panel pnl_TongDoanhThu;
+        private System.Windows.Forms.Panel panel9;
+        private System.Windows.Forms.Button btn_TongDoanhThu;
+        private System.Windows.Forms.Panel pnl_BaoCaoKho;
+        private System.Windows.Forms.Panel panel13;
+        private System.Windows.Forms.Button btn_BaoCaoKho;
+        private System.Windows.Forms.Panel pnl_TongHopHeThong;
+        private System.Windows.Forms.Panel panel17;
+        private System.Windows.Forms.Button btn_TongHopHeThong;
     }
 }

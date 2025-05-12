@@ -1,10 +1,8 @@
 ﻿using ET;
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace DAL
@@ -44,11 +42,11 @@ namespace DAL
 
                 SanPham sp = new SanPham()
                 {
-                   MaSanPham = sanPham.MaSanPham,
-                   TenSanPham = sanPham.TenSanPham,
-                   GiaMacDinh = (decimal)sanPham.GiaMacDinh,
-                   DonViTinh= sanPham.DonViTinh,
-                   LoaiSanPham = sanPham.LoaiSanPham
+                    MaSanPham = sanPham.MaSanPham,
+                    TenSanPham = sanPham.TenSanPham,
+                    GiaMacDinh = (decimal)sanPham.GiaMacDinh,
+                    DonViTinh = sanPham.DonViTinh,
+                    LoaiSanPham = sanPham.LoaiSanPham
                 };
                 db.SanPhams.InsertOnSubmit(sp);
                 db.SubmitChanges();
@@ -79,7 +77,7 @@ namespace DAL
             {
                 var capNhat = TimCuaSanPhamMaSanPham(sanPham.MaSanPham);
                 if (capNhat == null) return false;
-              
+
                 capNhat.TenSanPham = sanPham.TenSanPham;
                 capNhat.GiaMacDinh = sanPham.GiaMacDinh;
                 capNhat.DonViTinh = sanPham.DonViTinh;
@@ -102,9 +100,9 @@ namespace DAL
         public List<ET_SanPham> TimSanPhamBangTen(string name)
         {
             var sanPham = from sp in db.SanPhams
-                          where (sp.TenSanPham.StartsWith(name))
+                          where (sp.TenSanPham.ToLower().Contains(name.ToLower()))
                           select sp;
-                          
+
             List<ET_SanPham> ds = new List<ET_SanPham>();
             foreach (var item in sanPham)
             {

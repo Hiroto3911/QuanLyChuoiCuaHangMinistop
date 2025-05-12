@@ -27,3 +27,13 @@ D:\QuanLyChuoiCuaHangMinistop\QuanLyChuoiCuaHangTienLoi_Ministop\DAL\obj\Debug\D
 D:\QuanLyChuoiCuaHangMinistop\QuanLyChuoiCuaHangTienLoi_Ministop\DAL\obj\Debug\DAL.csproj.Up2Date
 D:\QuanLyChuoiCuaHangMinistop\QuanLyChuoiCuaHangTienLoi_Ministop\DAL\obj\Debug\DAL.dll
 D:\QuanLyChuoiCuaHangMinistop\QuanLyChuoiCuaHangTienLoi_Ministop\DAL\obj\Debug\DAL.pdb
+C:\Users\Chris\Desktop\DoAnDotNET\project-AnhHao\QuanLyChuoiCuaHangTienLoi_Ministop\DAL\bin\Debug\DAL.dll.config
+C:\Users\Chris\Desktop\DoAnDotNET\project-AnhHao\QuanLyChuoiCuaHangTienLoi_Ministop\DAL\bin\Debug\DAL.dll
+C:\Users\Chris\Desktop\DoAnDotNET\project-AnhHao\QuanLyChuoiCuaHangTienLoi_Ministop\DAL\bin\Debug\DAL.pdb
+C:\Users\Chris\Desktop\DoAnDotNET\project-AnhHao\QuanLyChuoiCuaHangTienLoi_Ministop\DAL\bin\Debug\ET.dll
+C:\Users\Chris\Desktop\DoAnDotNET\project-AnhHao\QuanLyChuoiCuaHangTienLoi_Ministop\DAL\bin\Debug\ET.pdb
+C:\Users\Chris\Desktop\DoAnDotNET\project-AnhHao\QuanLyChuoiCuaHangTienLoi_Ministop\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
+C:\Users\Chris\Desktop\DoAnDotNET\project-AnhHao\QuanLyChuoiCuaHangTienLoi_Ministop\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+C:\Users\Chris\Desktop\DoAnDotNET\project-AnhHao\QuanLyChuoiCuaHangTienLoi_Ministop\DAL\obj\Debug\DAL.csproj.Up2Date
+C:\Users\Chris\Desktop\DoAnDotNET\project-AnhHao\QuanLyChuoiCuaHangTienLoi_Ministop\DAL\obj\Debug\DAL.dll
+C:\Users\Chris\Desktop\DoAnDotNET\project-AnhHao\QuanLyChuoiCuaHangTienLoi_Ministop\DAL\obj\Debug\DAL.pdb

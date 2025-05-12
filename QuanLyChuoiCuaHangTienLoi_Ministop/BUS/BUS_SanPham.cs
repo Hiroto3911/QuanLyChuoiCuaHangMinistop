@@ -32,23 +32,23 @@ namespace BUS
         public bool Sua(ET_SanPham sanPham)
 
         {
-          return  dal_SP.Sua(sanPham);
+            return dal_SP.Sua(sanPham);
 
         }
         public List<string> LayDanhSachMaSP()
         {
-            
+
             return dal_SP.LayDanhSachMaSP();
         }
         public List<ET_SanPham> TimSanPhamBangTen(string name)
         {
-           
-                         
+
+
             return dal_SP.TimSanPhamBangTen(name);
         }
         public List<ET_SanPham> HienThiSanPhamBangLoaiSanPham(string loaiSP)
         {
-           return dal_SP.HienThiSanPhamBangLoaiSanPham(loaiSP);
+            return dal_SP.HienThiSanPhamBangLoaiSanPham(loaiSP);
         }
     }
 }

@@ -12,6 +12,6 @@ namespace ET
         public string MaCuaHang { get; set; }
         public string MaSanPham { get; set; }
         public  int? SoluongTon { get; set; }
-        public  double GiaBan { get; set; }
+        public  decimal GiaBan { get; set; }
     }
 }
