@@ -41,6 +41,28 @@ namespace DAL
             return ds;
 
         }
+        public List<ET_TongDoanhThu> TongDoanhThuTheoThang()
+        {
+            var ds = db.HoaDons
+                .SelectMany(hd => hd.ChiTietHoaDons , (hd , ct)=> new
+                {
+                    hd.NgayLap,
+                    hd.MaCuaHang,
+                    ct.ThanhTien 
+                })
+                .GroupBy(x => new
+                {
+                    x.NgayLap.Value.Year,
+                    x.NgayLap.Value.Month
+                })
+                .Select( g => new ET_TongDoanhThu
+                {
+                    Nam = g.Key.Year , 
+                    Thang = g.Key.Month,
+                    TongDoanhThu = (decimal)g.Sum(x => x.ThanhTien)
+                }).OrderBy(x => x.Nam).ThenBy (x => x.Thang).ToList();
+            return ds;
+        }
         public List<ET_BaoCaoTonKho> BaoCaoTonKhoTrongCuaHang(int nam, int thang, string maCH)
         {
             try
@@ -89,7 +111,7 @@ namespace DAL
                              .Sum(ct => (int?)ct.ChenhLech) ?? 0
                              let tongXuat = xuatHang + xuatBan
                              let tongKiem = slChenhLechDu +slChenhLechThieu
-                             let tonCuoiKy = (tonDauKy + nhapTrongKy) - tongXuat +tongKiem
+                             let tonCuoiKy = (tonDauKy + nhapTrongKy) - tongXuat + tongKiem
                              select new ET_BaoCaoTonKho
                              {
                                  maSP = sp.MaSanPham,

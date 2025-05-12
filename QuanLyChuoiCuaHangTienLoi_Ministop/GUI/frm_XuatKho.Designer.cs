@@ -469,8 +469,10 @@
             this.Controls.Add(this.gbo_NhapThongTin);
             this.Controls.Add(this.panel1);
             this.Margin = new System.Windows.Forms.Padding(4);
+            this.MinimizeBox = false;
             this.Name = "frm_XuatKho";
             this.Text = "frm_XuatKho";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frm_XuatKho_Load);
             this.Resize += new System.EventHandler(this.frm_XuatKho_Resize);
             this.gbo_ThongTin.ResumeLayout(false);

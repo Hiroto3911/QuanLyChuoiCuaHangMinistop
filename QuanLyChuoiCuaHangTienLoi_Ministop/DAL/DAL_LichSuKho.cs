@@ -72,5 +72,6 @@ namespace DAL
             var danhSachID = db.LichSuKhos.Select(id => id.MaLichSuKho).ToList();
             return danhSachID;
         }
+
     }
 }

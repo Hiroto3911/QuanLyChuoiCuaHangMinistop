@@ -75,7 +75,7 @@
             this.panel1.Controls.Add(this.lbl_Title);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1337, 64);
             this.panel1.TabIndex = 64;
@@ -97,7 +97,7 @@
             this.cbo_MaCH.Enabled = false;
             this.cbo_MaCH.FormattingEnabled = true;
             this.cbo_MaCH.Location = new System.Drawing.Point(168, 26);
-            this.cbo_MaCH.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbo_MaCH.Margin = new System.Windows.Forms.Padding(4);
             this.cbo_MaCH.Name = "cbo_MaCH";
             this.cbo_MaCH.Size = new System.Drawing.Size(200, 32);
             this.cbo_MaCH.TabIndex = 48;
@@ -105,7 +105,7 @@
             // btn_Them
             // 
             this.btn_Them.Location = new System.Drawing.Point(819, 25);
-            this.btn_Them.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_Them.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Them.Name = "btn_Them";
             this.btn_Them.Size = new System.Drawing.Size(100, 60);
             this.btn_Them.TabIndex = 42;
@@ -118,7 +118,7 @@
             this.dtp_NgayNhap.Enabled = false;
             this.dtp_NgayNhap.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtp_NgayNhap.Location = new System.Drawing.Point(564, 110);
-            this.dtp_NgayNhap.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtp_NgayNhap.Margin = new System.Windows.Forms.Padding(4);
             this.dtp_NgayNhap.Name = "dtp_NgayNhap";
             this.dtp_NgayNhap.Size = new System.Drawing.Size(200, 29);
             this.dtp_NgayNhap.TabIndex = 57;
@@ -126,7 +126,7 @@
             // btn_Xoa
             // 
             this.btn_Xoa.Location = new System.Drawing.Point(976, 26);
-            this.btn_Xoa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_Xoa.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Xoa.Name = "btn_Xoa";
             this.btn_Xoa.Size = new System.Drawing.Size(100, 59);
             this.btn_Xoa.TabIndex = 43;
@@ -138,7 +138,7 @@
             // 
             this.txt_MaNH.Enabled = false;
             this.txt_MaNH.Location = new System.Drawing.Point(168, 68);
-            this.txt_MaNH.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_MaNH.Margin = new System.Windows.Forms.Padding(4);
             this.txt_MaNH.Name = "txt_MaNH";
             this.txt_MaNH.Size = new System.Drawing.Size(200, 29);
             this.txt_MaNH.TabIndex = 50;
@@ -206,9 +206,9 @@
             this.gbo_NhapThongTin.Controls.Add(this.label2);
             this.gbo_NhapThongTin.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbo_NhapThongTin.Location = new System.Drawing.Point(80, 95);
-            this.gbo_NhapThongTin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbo_NhapThongTin.Margin = new System.Windows.Forms.Padding(4);
             this.gbo_NhapThongTin.Name = "gbo_NhapThongTin";
-            this.gbo_NhapThongTin.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbo_NhapThongTin.Padding = new System.Windows.Forms.Padding(4);
             this.gbo_NhapThongTin.Size = new System.Drawing.Size(1163, 337);
             this.gbo_NhapThongTin.TabIndex = 65;
             this.gbo_NhapThongTin.TabStop = false;
@@ -217,7 +217,7 @@
             // btn_HoanTat
             // 
             this.btn_HoanTat.Location = new System.Drawing.Point(819, 97);
-            this.btn_HoanTat.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_HoanTat.Margin = new System.Windows.Forms.Padding(4);
             this.btn_HoanTat.Name = "btn_HoanTat";
             this.btn_HoanTat.Size = new System.Drawing.Size(100, 60);
             this.btn_HoanTat.TabIndex = 68;
@@ -228,7 +228,7 @@
             // btn_InPhieuNhap
             // 
             this.btn_InPhieuNhap.Location = new System.Drawing.Point(976, 97);
-            this.btn_InPhieuNhap.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_InPhieuNhap.Margin = new System.Windows.Forms.Padding(4);
             this.btn_InPhieuNhap.Name = "btn_InPhieuNhap";
             this.btn_InPhieuNhap.Size = new System.Drawing.Size(100, 60);
             this.btn_InPhieuNhap.TabIndex = 67;
@@ -240,7 +240,7 @@
             // 
             this.cbo_NCC.FormattingEnabled = true;
             this.cbo_NCC.Location = new System.Drawing.Point(564, 66);
-            this.cbo_NCC.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbo_NCC.Margin = new System.Windows.Forms.Padding(4);
             this.cbo_NCC.Name = "cbo_NCC";
             this.cbo_NCC.Size = new System.Drawing.Size(200, 32);
             this.cbo_NCC.TabIndex = 63;
@@ -261,19 +261,18 @@
             this.dgv_Data.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_Data.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_Data.Location = new System.Drawing.Point(31, 164);
-            this.dgv_Data.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgv_Data.Margin = new System.Windows.Forms.Padding(4);
             this.dgv_Data.Name = "dgv_Data";
             this.dgv_Data.RowHeadersWidth = 51;
             this.dgv_Data.Size = new System.Drawing.Size(1087, 166);
             this.dgv_Data.TabIndex = 62;
-      
             this.dgv_Data.Click += new System.EventHandler(this.dgv_Data_Click);
             // 
             // txt_MaNV
             // 
             this.txt_MaNV.Enabled = false;
             this.txt_MaNV.Location = new System.Drawing.Point(564, 25);
-            this.txt_MaNV.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_MaNV.Margin = new System.Windows.Forms.Padding(4);
             this.txt_MaNV.Name = "txt_MaNV";
             this.txt_MaNV.Size = new System.Drawing.Size(200, 29);
             this.txt_MaNV.TabIndex = 58;
@@ -297,9 +296,9 @@
             this.gbo_ThongTin.Controls.Add(this.label9);
             this.gbo_ThongTin.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbo_ThongTin.Location = new System.Drawing.Point(80, 439);
-            this.gbo_ThongTin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbo_ThongTin.Margin = new System.Windows.Forms.Padding(4);
             this.gbo_ThongTin.Name = "gbo_ThongTin";
-            this.gbo_ThongTin.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbo_ThongTin.Padding = new System.Windows.Forms.Padding(4);
             this.gbo_ThongTin.Size = new System.Drawing.Size(1163, 434);
             this.gbo_ThongTin.TabIndex = 66;
             this.gbo_ThongTin.TabStop = false;
@@ -308,7 +307,7 @@
             // txt_GiaNhap
             // 
             this.txt_GiaNhap.Location = new System.Drawing.Point(168, 138);
-            this.txt_GiaNhap.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_GiaNhap.Margin = new System.Windows.Forms.Padding(4);
             this.txt_GiaNhap.Name = "txt_GiaNhap";
             this.txt_GiaNhap.Size = new System.Drawing.Size(200, 29);
             this.txt_GiaNhap.TabIndex = 70;
@@ -317,7 +316,7 @@
             // btn_LamMoiChiTiet
             // 
             this.btn_LamMoiChiTiet.Location = new System.Drawing.Point(964, 127);
-            this.btn_LamMoiChiTiet.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_LamMoiChiTiet.Margin = new System.Windows.Forms.Padding(4);
             this.btn_LamMoiChiTiet.Name = "btn_LamMoiChiTiet";
             this.btn_LamMoiChiTiet.Size = new System.Drawing.Size(100, 60);
             this.btn_LamMoiChiTiet.TabIndex = 69;
@@ -328,7 +327,7 @@
             // btn_SuaChiTiet
             // 
             this.btn_SuaChiTiet.Location = new System.Drawing.Point(819, 127);
-            this.btn_SuaChiTiet.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_SuaChiTiet.Margin = new System.Windows.Forms.Padding(4);
             this.btn_SuaChiTiet.Name = "btn_SuaChiTiet";
             this.btn_SuaChiTiet.Size = new System.Drawing.Size(100, 60);
             this.btn_SuaChiTiet.TabIndex = 68;
@@ -339,7 +338,7 @@
             // btn_XoaChiTiet
             // 
             this.btn_XoaChiTiet.Location = new System.Drawing.Point(964, 44);
-            this.btn_XoaChiTiet.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_XoaChiTiet.Margin = new System.Windows.Forms.Padding(4);
             this.btn_XoaChiTiet.Name = "btn_XoaChiTiet";
             this.btn_XoaChiTiet.Size = new System.Drawing.Size(100, 60);
             this.btn_XoaChiTiet.TabIndex = 67;
@@ -350,7 +349,7 @@
             // btn_ThemChiTiet
             // 
             this.btn_ThemChiTiet.Location = new System.Drawing.Point(819, 44);
-            this.btn_ThemChiTiet.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_ThemChiTiet.Margin = new System.Windows.Forms.Padding(4);
             this.btn_ThemChiTiet.Name = "btn_ThemChiTiet";
             this.btn_ThemChiTiet.Size = new System.Drawing.Size(100, 60);
             this.btn_ThemChiTiet.TabIndex = 66;
@@ -363,7 +362,7 @@
             this.dgv_DataChiTiet.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_DataChiTiet.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_DataChiTiet.Location = new System.Drawing.Point(31, 223);
-            this.dgv_DataChiTiet.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgv_DataChiTiet.Margin = new System.Windows.Forms.Padding(4);
             this.dgv_DataChiTiet.Name = "dgv_DataChiTiet";
             this.dgv_DataChiTiet.RowHeadersWidth = 51;
             this.dgv_DataChiTiet.Size = new System.Drawing.Size(1087, 201);
@@ -373,7 +372,7 @@
             // rtf_GhiChu
             // 
             this.rtf_GhiChu.Location = new System.Drawing.Point(564, 92);
-            this.rtf_GhiChu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rtf_GhiChu.Margin = new System.Windows.Forms.Padding(4);
             this.rtf_GhiChu.Name = "rtf_GhiChu";
             this.rtf_GhiChu.Size = new System.Drawing.Size(200, 74);
             this.rtf_GhiChu.TabIndex = 64;
@@ -405,7 +404,7 @@
             // 
             this.txt_TongTien.Enabled = false;
             this.txt_TongTien.Location = new System.Drawing.Point(564, 47);
-            this.txt_TongTien.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_TongTien.Margin = new System.Windows.Forms.Padding(4);
             this.txt_TongTien.Name = "txt_TongTien";
             this.txt_TongTien.Size = new System.Drawing.Size(200, 29);
             this.txt_TongTien.TabIndex = 56;
@@ -414,7 +413,7 @@
             // 
             this.cbo_MaSP.FormattingEnabled = true;
             this.cbo_MaSP.Location = new System.Drawing.Point(168, 44);
-            this.cbo_MaSP.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbo_MaSP.Margin = new System.Windows.Forms.Padding(4);
             this.cbo_MaSP.Name = "cbo_MaSP";
             this.cbo_MaSP.Size = new System.Drawing.Size(200, 32);
             this.cbo_MaSP.TabIndex = 48;
@@ -422,7 +421,7 @@
             // txt_SLNhap
             // 
             this.txt_SLNhap.Location = new System.Drawing.Point(168, 94);
-            this.txt_SLNhap.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_SLNhap.Margin = new System.Windows.Forms.Padding(4);
             this.txt_SLNhap.Name = "txt_SLNhap";
             this.txt_SLNhap.Size = new System.Drawing.Size(200, 29);
             this.txt_SLNhap.TabIndex = 50;
@@ -469,9 +468,11 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.gbo_NhapThongTin);
             this.Controls.Add(this.gbo_ThongTin);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
+            this.MinimizeBox = false;
             this.Name = "frm_NhapKho";
             this.Text = "frm_NhapKho";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frm_NhapKho_Load);
             this.Resize += new System.EventHandler(this.frm_NhapKho_Resize);
             this.panel1.ResumeLayout(false);

@@ -107,7 +107,7 @@ namespace DAL
                 {
                     return false;
                 }
-                db.SubmitChanges();
+                db.SubmitChanges();              
                 return true;
 
             }
@@ -211,6 +211,8 @@ namespace DAL
             }
         }
 
+        
+
         private string TaoMa(List<string> DanhSachMa, string tienTo)
         {
             // lấy ra mã cuối có chứa số lớn nhất
@@ -229,6 +231,19 @@ namespace DAL
         {
             var danhSachID = db.ChiTietKhos.Select(id => id.MaChiTietKho).ToList();
             return danhSachID;
+        }
+        public ET_ChiTietKho layChiTietKhoTheoMaSPVaMaCH(string maCH , string maSP)
+        {
+            var chitietKho = db.ChiTietKhos.Where(ctk => ctk.MaCuaHang == maCH && ctk.MaSanPham == maSP)
+                .Select(ctk => new ET_ChiTietKho
+                {
+                    MaChiTietKho = ctk.MaChiTietKho,
+                    MaSanPham = ctk.MaSanPham,
+                    GiaBan =(decimal) ctk.GiaBan,
+                    SoluongTon = ctk.SoLuongTon ,
+                    MaCuaHang = ctk.MaCuaHang
+                });
+            return chitietKho.FirstOrDefault();
         }
 
     }

@@ -49,5 +49,10 @@ namespace BUS
         {
             return dal_CTK.CapNhapChiTietKhoKhiXuatHang(maCH,xh,ngayXuat);
         }
+        public ET_ChiTietKho layChiTietKhoTheoMaSPVaMaCH(string maCH, string maSP)
+        {
+            
+            return dal_CTK.layChiTietKhoTheoMaSPVaMaCH(maCH, maSP);
+        }
     } 
 }

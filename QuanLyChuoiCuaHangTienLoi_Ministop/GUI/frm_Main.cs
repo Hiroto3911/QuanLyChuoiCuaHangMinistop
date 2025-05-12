@@ -41,7 +41,7 @@ namespace GUI
            
             if (Session.VaiTro == "Admin")
             {
-                
+                pnl_BanHang.Visible = false;
             }
             else
             {
@@ -173,6 +173,13 @@ namespace GUI
             frm_KiemKho kk = new frm_KiemKho();
             kk.MdiParent = this;
             kk.Show();
+        }
+
+        private void btn_TongDoanhThu_Click(object sender, EventArgs e)
+        {
+            frm_BaoCaoTongDoanhThu tdh = new frm_BaoCaoTongDoanhThu();
+            tdh.MdiParent = this;
+            tdh.Show();
         }
     }
 }

@@ -119,7 +119,7 @@
             this.pnl_header.Controls.Add(this.lbl_Title);
             this.pnl_header.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnl_header.Location = new System.Drawing.Point(0, 0);
-            this.pnl_header.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnl_header.Margin = new System.Windows.Forms.Padding(4);
             this.pnl_header.Name = "pnl_header";
             this.pnl_header.Size = new System.Drawing.Size(1685, 64);
             this.pnl_header.TabIndex = 0;
@@ -142,7 +142,7 @@
             this.pnl_Hello.Controls.Add(this.lbl_HelloUser);
             this.pnl_Hello.Dock = System.Windows.Forms.DockStyle.Right;
             this.pnl_Hello.Location = new System.Drawing.Point(1253, 0);
-            this.pnl_Hello.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnl_Hello.Margin = new System.Windows.Forms.Padding(4);
             this.pnl_Hello.Name = "pnl_Hello";
             this.pnl_Hello.Size = new System.Drawing.Size(432, 64);
             this.pnl_Hello.TabIndex = 3;
@@ -155,7 +155,7 @@
             this.btn_DangXuat.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_DangXuat.ForeColor = System.Drawing.Color.White;
             this.btn_DangXuat.Location = new System.Drawing.Point(232, 12);
-            this.btn_DangXuat.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_DangXuat.Margin = new System.Windows.Forms.Padding(4);
             this.btn_DangXuat.Name = "btn_DangXuat";
             this.btn_DangXuat.Size = new System.Drawing.Size(156, 44);
             this.btn_DangXuat.TabIndex = 2;
@@ -193,7 +193,7 @@
             this.panel2.Controls.Add(this.menuStrip1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 64);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1685, 36);
             this.panel2.TabIndex = 1;
@@ -269,7 +269,7 @@
             this.fqnl_Menu.Controls.Add(this.pnl_TongHopHeThong);
             this.fqnl_Menu.Dock = System.Windows.Forms.DockStyle.Left;
             this.fqnl_Menu.Location = new System.Drawing.Point(0, 100);
-            this.fqnl_Menu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.fqnl_Menu.Margin = new System.Windows.Forms.Padding(4);
             this.fqnl_Menu.Name = "fqnl_Menu";
             this.fqnl_Menu.Size = new System.Drawing.Size(327, 738);
             this.fqnl_Menu.TabIndex = 2;
@@ -280,7 +280,7 @@
             this.pic_Logo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pic_Logo.Image = global::GUI.Properties.Resources.MINISTOP_logo_svg;
             this.pic_Logo.Location = new System.Drawing.Point(4, 4);
-            this.pic_Logo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pic_Logo.Margin = new System.Windows.Forms.Padding(4);
             this.pic_Logo.Name = "pic_Logo";
             this.pic_Logo.Size = new System.Drawing.Size(295, 191);
             this.pic_Logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -292,7 +292,7 @@
             this.pnl_QuanLyCuaHang.Controls.Add(this.panel3);
             this.pnl_QuanLyCuaHang.Controls.Add(this.btn_QLCH);
             this.pnl_QuanLyCuaHang.Location = new System.Drawing.Point(4, 203);
-            this.pnl_QuanLyCuaHang.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnl_QuanLyCuaHang.Margin = new System.Windows.Forms.Padding(4);
             this.pnl_QuanLyCuaHang.Name = "pnl_QuanLyCuaHang";
             this.pnl_QuanLyCuaHang.Size = new System.Drawing.Size(295, 74);
             this.pnl_QuanLyCuaHang.TabIndex = 2;
@@ -301,7 +301,7 @@
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(56)))), ((int)(((byte)(148)))));
             this.panel3.Location = new System.Drawing.Point(0, 2);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(295, 5);
             this.panel3.TabIndex = 5;
@@ -313,7 +313,7 @@
             this.btn_QLCH.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_QLCH.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(56)))), ((int)(((byte)(148)))));
             this.btn_QLCH.Location = new System.Drawing.Point(0, 6);
-            this.btn_QLCH.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_QLCH.Margin = new System.Windows.Forms.Padding(4);
             this.btn_QLCH.Name = "btn_QLCH";
             this.btn_QLCH.Size = new System.Drawing.Size(295, 70);
             this.btn_QLCH.TabIndex = 4;
@@ -326,7 +326,7 @@
             this.pnl_QuanLyNhanVien.Controls.Add(this.panel4);
             this.pnl_QuanLyNhanVien.Controls.Add(this.btn_QLNV);
             this.pnl_QuanLyNhanVien.Location = new System.Drawing.Point(4, 285);
-            this.pnl_QuanLyNhanVien.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnl_QuanLyNhanVien.Margin = new System.Windows.Forms.Padding(4);
             this.pnl_QuanLyNhanVien.Name = "pnl_QuanLyNhanVien";
             this.pnl_QuanLyNhanVien.Size = new System.Drawing.Size(295, 74);
             this.pnl_QuanLyNhanVien.TabIndex = 3;
@@ -335,7 +335,7 @@
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(56)))), ((int)(((byte)(148)))));
             this.panel4.Location = new System.Drawing.Point(0, 2);
-            this.panel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel4.Margin = new System.Windows.Forms.Padding(4);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(295, 5);
             this.panel4.TabIndex = 5;
@@ -347,7 +347,7 @@
             this.btn_QLNV.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_QLNV.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(56)))), ((int)(((byte)(148)))));
             this.btn_QLNV.Location = new System.Drawing.Point(0, 6);
-            this.btn_QLNV.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_QLNV.Margin = new System.Windows.Forms.Padding(4);
             this.btn_QLNV.Name = "btn_QLNV";
             this.btn_QLNV.Size = new System.Drawing.Size(295, 70);
             this.btn_QLNV.TabIndex = 4;
@@ -360,7 +360,7 @@
             this.pnl_QuanLyNhaCungCap.Controls.Add(this.panel6);
             this.pnl_QuanLyNhaCungCap.Controls.Add(this.btn_QLNCC);
             this.pnl_QuanLyNhaCungCap.Location = new System.Drawing.Point(4, 367);
-            this.pnl_QuanLyNhaCungCap.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnl_QuanLyNhaCungCap.Margin = new System.Windows.Forms.Padding(4);
             this.pnl_QuanLyNhaCungCap.Name = "pnl_QuanLyNhaCungCap";
             this.pnl_QuanLyNhaCungCap.Size = new System.Drawing.Size(295, 74);
             this.pnl_QuanLyNhaCungCap.TabIndex = 4;
@@ -369,7 +369,7 @@
             // 
             this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(56)))), ((int)(((byte)(148)))));
             this.panel6.Location = new System.Drawing.Point(0, 2);
-            this.panel6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel6.Margin = new System.Windows.Forms.Padding(4);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(295, 5);
             this.panel6.TabIndex = 5;
@@ -381,7 +381,7 @@
             this.btn_QLNCC.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_QLNCC.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(56)))), ((int)(((byte)(148)))));
             this.btn_QLNCC.Location = new System.Drawing.Point(0, 6);
-            this.btn_QLNCC.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_QLNCC.Margin = new System.Windows.Forms.Padding(4);
             this.btn_QLNCC.Name = "btn_QLNCC";
             this.btn_QLNCC.Size = new System.Drawing.Size(295, 70);
             this.btn_QLNCC.TabIndex = 4;
@@ -394,7 +394,7 @@
             this.pnl_QuanLySanPham.Controls.Add(this.panel8);
             this.pnl_QuanLySanPham.Controls.Add(this.btn_QLSP);
             this.pnl_QuanLySanPham.Location = new System.Drawing.Point(4, 449);
-            this.pnl_QuanLySanPham.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnl_QuanLySanPham.Margin = new System.Windows.Forms.Padding(4);
             this.pnl_QuanLySanPham.Name = "pnl_QuanLySanPham";
             this.pnl_QuanLySanPham.Size = new System.Drawing.Size(295, 74);
             this.pnl_QuanLySanPham.TabIndex = 5;
@@ -403,7 +403,7 @@
             // 
             this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(56)))), ((int)(((byte)(148)))));
             this.panel8.Location = new System.Drawing.Point(0, 2);
-            this.panel8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel8.Margin = new System.Windows.Forms.Padding(4);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(295, 5);
             this.panel8.TabIndex = 5;
@@ -415,7 +415,7 @@
             this.btn_QLSP.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_QLSP.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(56)))), ((int)(((byte)(148)))));
             this.btn_QLSP.Location = new System.Drawing.Point(0, 6);
-            this.btn_QLSP.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_QLSP.Margin = new System.Windows.Forms.Padding(4);
             this.btn_QLSP.Name = "btn_QLSP";
             this.btn_QLSP.Size = new System.Drawing.Size(295, 70);
             this.btn_QLSP.TabIndex = 4;
@@ -428,7 +428,7 @@
             this.pnl_QuanLyKhuyenMai.Controls.Add(this.panel10);
             this.pnl_QuanLyKhuyenMai.Controls.Add(this.btn_QLKM);
             this.pnl_QuanLyKhuyenMai.Location = new System.Drawing.Point(4, 531);
-            this.pnl_QuanLyKhuyenMai.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnl_QuanLyKhuyenMai.Margin = new System.Windows.Forms.Padding(4);
             this.pnl_QuanLyKhuyenMai.Name = "pnl_QuanLyKhuyenMai";
             this.pnl_QuanLyKhuyenMai.Size = new System.Drawing.Size(295, 74);
             this.pnl_QuanLyKhuyenMai.TabIndex = 6;
@@ -437,7 +437,7 @@
             // 
             this.panel10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(56)))), ((int)(((byte)(148)))));
             this.panel10.Location = new System.Drawing.Point(0, 2);
-            this.panel10.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel10.Margin = new System.Windows.Forms.Padding(4);
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(295, 5);
             this.panel10.TabIndex = 5;
@@ -449,7 +449,7 @@
             this.btn_QLKM.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_QLKM.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(56)))), ((int)(((byte)(148)))));
             this.btn_QLKM.Location = new System.Drawing.Point(0, 6);
-            this.btn_QLKM.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_QLKM.Margin = new System.Windows.Forms.Padding(4);
             this.btn_QLKM.Name = "btn_QLKM";
             this.btn_QLKM.Size = new System.Drawing.Size(295, 70);
             this.btn_QLKM.TabIndex = 4;
@@ -462,7 +462,7 @@
             this.pnl_ChiTietKho.Controls.Add(this.panel12);
             this.pnl_ChiTietKho.Controls.Add(this.btn_CTK);
             this.pnl_ChiTietKho.Location = new System.Drawing.Point(4, 613);
-            this.pnl_ChiTietKho.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnl_ChiTietKho.Margin = new System.Windows.Forms.Padding(4);
             this.pnl_ChiTietKho.Name = "pnl_ChiTietKho";
             this.pnl_ChiTietKho.Size = new System.Drawing.Size(295, 74);
             this.pnl_ChiTietKho.TabIndex = 7;
@@ -471,7 +471,7 @@
             // 
             this.panel12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(56)))), ((int)(((byte)(148)))));
             this.panel12.Location = new System.Drawing.Point(0, 2);
-            this.panel12.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel12.Margin = new System.Windows.Forms.Padding(4);
             this.panel12.Name = "panel12";
             this.panel12.Size = new System.Drawing.Size(295, 5);
             this.panel12.TabIndex = 5;
@@ -483,7 +483,7 @@
             this.btn_CTK.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_CTK.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(56)))), ((int)(((byte)(148)))));
             this.btn_CTK.Location = new System.Drawing.Point(0, 6);
-            this.btn_CTK.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_CTK.Margin = new System.Windows.Forms.Padding(4);
             this.btn_CTK.Name = "btn_CTK";
             this.btn_CTK.Size = new System.Drawing.Size(295, 70);
             this.btn_CTK.TabIndex = 4;
@@ -496,7 +496,7 @@
             this.pnl_QuanLyLichSuGiaSP.Controls.Add(this.panel14);
             this.pnl_QuanLyLichSuGiaSP.Controls.Add(this.btn_QLLSGSP);
             this.pnl_QuanLyLichSuGiaSP.Location = new System.Drawing.Point(4, 695);
-            this.pnl_QuanLyLichSuGiaSP.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnl_QuanLyLichSuGiaSP.Margin = new System.Windows.Forms.Padding(4);
             this.pnl_QuanLyLichSuGiaSP.Name = "pnl_QuanLyLichSuGiaSP";
             this.pnl_QuanLyLichSuGiaSP.Size = new System.Drawing.Size(295, 74);
             this.pnl_QuanLyLichSuGiaSP.TabIndex = 8;
@@ -505,7 +505,7 @@
             // 
             this.panel14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(56)))), ((int)(((byte)(148)))));
             this.panel14.Location = new System.Drawing.Point(0, 2);
-            this.panel14.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel14.Margin = new System.Windows.Forms.Padding(4);
             this.panel14.Name = "panel14";
             this.panel14.Size = new System.Drawing.Size(295, 5);
             this.panel14.TabIndex = 5;
@@ -517,7 +517,7 @@
             this.btn_QLLSGSP.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_QLLSGSP.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(56)))), ((int)(((byte)(148)))));
             this.btn_QLLSGSP.Location = new System.Drawing.Point(0, 6);
-            this.btn_QLLSGSP.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_QLLSGSP.Margin = new System.Windows.Forms.Padding(4);
             this.btn_QLLSGSP.Name = "btn_QLLSGSP";
             this.btn_QLLSGSP.Size = new System.Drawing.Size(295, 70);
             this.btn_QLLSGSP.TabIndex = 4;
@@ -530,7 +530,7 @@
             this.pnl_NhapHang.Controls.Add(this.panel16);
             this.pnl_NhapHang.Controls.Add(this.btn_NH);
             this.pnl_NhapHang.Location = new System.Drawing.Point(4, 777);
-            this.pnl_NhapHang.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnl_NhapHang.Margin = new System.Windows.Forms.Padding(4);
             this.pnl_NhapHang.Name = "pnl_NhapHang";
             this.pnl_NhapHang.Size = new System.Drawing.Size(295, 74);
             this.pnl_NhapHang.TabIndex = 9;
@@ -539,7 +539,7 @@
             // 
             this.panel16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(56)))), ((int)(((byte)(148)))));
             this.panel16.Location = new System.Drawing.Point(0, 2);
-            this.panel16.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel16.Margin = new System.Windows.Forms.Padding(4);
             this.panel16.Name = "panel16";
             this.panel16.Size = new System.Drawing.Size(295, 5);
             this.panel16.TabIndex = 5;
@@ -551,7 +551,7 @@
             this.btn_NH.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_NH.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(56)))), ((int)(((byte)(148)))));
             this.btn_NH.Location = new System.Drawing.Point(0, 6);
-            this.btn_NH.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_NH.Margin = new System.Windows.Forms.Padding(4);
             this.btn_NH.Name = "btn_NH";
             this.btn_NH.Size = new System.Drawing.Size(295, 70);
             this.btn_NH.TabIndex = 4;
@@ -564,7 +564,7 @@
             this.pnl_XuatHang.Controls.Add(this.panel18);
             this.pnl_XuatHang.Controls.Add(this.btn_XH);
             this.pnl_XuatHang.Location = new System.Drawing.Point(4, 859);
-            this.pnl_XuatHang.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnl_XuatHang.Margin = new System.Windows.Forms.Padding(4);
             this.pnl_XuatHang.Name = "pnl_XuatHang";
             this.pnl_XuatHang.Size = new System.Drawing.Size(295, 74);
             this.pnl_XuatHang.TabIndex = 10;
@@ -573,7 +573,7 @@
             // 
             this.panel18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(56)))), ((int)(((byte)(148)))));
             this.panel18.Location = new System.Drawing.Point(0, 2);
-            this.panel18.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel18.Margin = new System.Windows.Forms.Padding(4);
             this.panel18.Name = "panel18";
             this.panel18.Size = new System.Drawing.Size(295, 5);
             this.panel18.TabIndex = 5;
@@ -585,7 +585,7 @@
             this.btn_XH.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_XH.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(56)))), ((int)(((byte)(148)))));
             this.btn_XH.Location = new System.Drawing.Point(0, 6);
-            this.btn_XH.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_XH.Margin = new System.Windows.Forms.Padding(4);
             this.btn_XH.Name = "btn_XH";
             this.btn_XH.Size = new System.Drawing.Size(295, 70);
             this.btn_XH.TabIndex = 4;
@@ -598,7 +598,7 @@
             this.pnl_KiemKho.Controls.Add(this.panel20);
             this.pnl_KiemKho.Controls.Add(this.btn_KK);
             this.pnl_KiemKho.Location = new System.Drawing.Point(4, 941);
-            this.pnl_KiemKho.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnl_KiemKho.Margin = new System.Windows.Forms.Padding(4);
             this.pnl_KiemKho.Name = "pnl_KiemKho";
             this.pnl_KiemKho.Size = new System.Drawing.Size(295, 74);
             this.pnl_KiemKho.TabIndex = 11;
@@ -607,7 +607,7 @@
             // 
             this.panel20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(56)))), ((int)(((byte)(148)))));
             this.panel20.Location = new System.Drawing.Point(0, 2);
-            this.panel20.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel20.Margin = new System.Windows.Forms.Padding(4);
             this.panel20.Name = "panel20";
             this.panel20.Size = new System.Drawing.Size(295, 5);
             this.panel20.TabIndex = 5;
@@ -619,7 +619,7 @@
             this.btn_KK.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_KK.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(56)))), ((int)(((byte)(148)))));
             this.btn_KK.Location = new System.Drawing.Point(0, 6);
-            this.btn_KK.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_KK.Margin = new System.Windows.Forms.Padding(4);
             this.btn_KK.Name = "btn_KK";
             this.btn_KK.Size = new System.Drawing.Size(295, 70);
             this.btn_KK.TabIndex = 4;
@@ -632,7 +632,7 @@
             this.pnl_BanHang.Controls.Add(this.panel22);
             this.pnl_BanHang.Controls.Add(this.btn_BH);
             this.pnl_BanHang.Location = new System.Drawing.Point(4, 1023);
-            this.pnl_BanHang.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnl_BanHang.Margin = new System.Windows.Forms.Padding(4);
             this.pnl_BanHang.Name = "pnl_BanHang";
             this.pnl_BanHang.Size = new System.Drawing.Size(295, 74);
             this.pnl_BanHang.TabIndex = 12;
@@ -641,7 +641,7 @@
             // 
             this.panel22.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(56)))), ((int)(((byte)(148)))));
             this.panel22.Location = new System.Drawing.Point(0, 2);
-            this.panel22.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel22.Margin = new System.Windows.Forms.Padding(4);
             this.panel22.Name = "panel22";
             this.panel22.Size = new System.Drawing.Size(295, 5);
             this.panel22.TabIndex = 5;
@@ -653,7 +653,7 @@
             this.btn_BH.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_BH.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(56)))), ((int)(((byte)(148)))));
             this.btn_BH.Location = new System.Drawing.Point(0, 6);
-            this.btn_BH.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_BH.Margin = new System.Windows.Forms.Padding(4);
             this.btn_BH.Name = "btn_BH";
             this.btn_BH.Size = new System.Drawing.Size(295, 70);
             this.btn_BH.TabIndex = 4;
@@ -666,7 +666,7 @@
             this.pnl_DoanhThuCuaHang.Controls.Add(this.panel5);
             this.pnl_DoanhThuCuaHang.Controls.Add(this.btn_DoanhThuTungCH);
             this.pnl_DoanhThuCuaHang.Location = new System.Drawing.Point(4, 1105);
-            this.pnl_DoanhThuCuaHang.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnl_DoanhThuCuaHang.Margin = new System.Windows.Forms.Padding(4);
             this.pnl_DoanhThuCuaHang.Name = "pnl_DoanhThuCuaHang";
             this.pnl_DoanhThuCuaHang.Size = new System.Drawing.Size(295, 74);
             this.pnl_DoanhThuCuaHang.TabIndex = 13;
@@ -675,7 +675,7 @@
             // 
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(56)))), ((int)(((byte)(148)))));
             this.panel5.Location = new System.Drawing.Point(0, 2);
-            this.panel5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel5.Margin = new System.Windows.Forms.Padding(4);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(295, 5);
             this.panel5.TabIndex = 5;
@@ -687,7 +687,7 @@
             this.btn_DoanhThuTungCH.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_DoanhThuTungCH.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(56)))), ((int)(((byte)(148)))));
             this.btn_DoanhThuTungCH.Location = new System.Drawing.Point(0, 6);
-            this.btn_DoanhThuTungCH.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_DoanhThuTungCH.Margin = new System.Windows.Forms.Padding(4);
             this.btn_DoanhThuTungCH.Name = "btn_DoanhThuTungCH";
             this.btn_DoanhThuTungCH.Size = new System.Drawing.Size(295, 70);
             this.btn_DoanhThuTungCH.TabIndex = 4;
@@ -700,7 +700,7 @@
             this.pnl_TongDoanhThu.Controls.Add(this.panel9);
             this.pnl_TongDoanhThu.Controls.Add(this.btn_TongDoanhThu);
             this.pnl_TongDoanhThu.Location = new System.Drawing.Point(4, 1187);
-            this.pnl_TongDoanhThu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnl_TongDoanhThu.Margin = new System.Windows.Forms.Padding(4);
             this.pnl_TongDoanhThu.Name = "pnl_TongDoanhThu";
             this.pnl_TongDoanhThu.Size = new System.Drawing.Size(295, 74);
             this.pnl_TongDoanhThu.TabIndex = 14;
@@ -709,7 +709,7 @@
             // 
             this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(56)))), ((int)(((byte)(148)))));
             this.panel9.Location = new System.Drawing.Point(0, 2);
-            this.panel9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel9.Margin = new System.Windows.Forms.Padding(4);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(295, 5);
             this.panel9.TabIndex = 5;
@@ -721,19 +721,20 @@
             this.btn_TongDoanhThu.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_TongDoanhThu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(56)))), ((int)(((byte)(148)))));
             this.btn_TongDoanhThu.Location = new System.Drawing.Point(0, 6);
-            this.btn_TongDoanhThu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_TongDoanhThu.Margin = new System.Windows.Forms.Padding(4);
             this.btn_TongDoanhThu.Name = "btn_TongDoanhThu";
             this.btn_TongDoanhThu.Size = new System.Drawing.Size(295, 70);
             this.btn_TongDoanhThu.TabIndex = 4;
             this.btn_TongDoanhThu.Text = "Tổng doanh thu";
             this.btn_TongDoanhThu.UseVisualStyleBackColor = true;
+            this.btn_TongDoanhThu.Click += new System.EventHandler(this.btn_TongDoanhThu_Click);
             // 
             // pnl_BaoCaoKho
             // 
             this.pnl_BaoCaoKho.Controls.Add(this.panel13);
             this.pnl_BaoCaoKho.Controls.Add(this.btn_BaoCaoKho);
             this.pnl_BaoCaoKho.Location = new System.Drawing.Point(4, 1269);
-            this.pnl_BaoCaoKho.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnl_BaoCaoKho.Margin = new System.Windows.Forms.Padding(4);
             this.pnl_BaoCaoKho.Name = "pnl_BaoCaoKho";
             this.pnl_BaoCaoKho.Size = new System.Drawing.Size(295, 74);
             this.pnl_BaoCaoKho.TabIndex = 15;
@@ -742,7 +743,7 @@
             // 
             this.panel13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(56)))), ((int)(((byte)(148)))));
             this.panel13.Location = new System.Drawing.Point(0, 2);
-            this.panel13.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel13.Margin = new System.Windows.Forms.Padding(4);
             this.panel13.Name = "panel13";
             this.panel13.Size = new System.Drawing.Size(295, 5);
             this.panel13.TabIndex = 5;
@@ -754,7 +755,7 @@
             this.btn_BaoCaoKho.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_BaoCaoKho.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(56)))), ((int)(((byte)(148)))));
             this.btn_BaoCaoKho.Location = new System.Drawing.Point(0, 6);
-            this.btn_BaoCaoKho.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_BaoCaoKho.Margin = new System.Windows.Forms.Padding(4);
             this.btn_BaoCaoKho.Name = "btn_BaoCaoKho";
             this.btn_BaoCaoKho.Size = new System.Drawing.Size(295, 70);
             this.btn_BaoCaoKho.TabIndex = 4;
@@ -767,7 +768,7 @@
             this.pnl_TongHopHeThong.Controls.Add(this.panel17);
             this.pnl_TongHopHeThong.Controls.Add(this.btn_TongHopHeThong);
             this.pnl_TongHopHeThong.Location = new System.Drawing.Point(4, 1351);
-            this.pnl_TongHopHeThong.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnl_TongHopHeThong.Margin = new System.Windows.Forms.Padding(4);
             this.pnl_TongHopHeThong.Name = "pnl_TongHopHeThong";
             this.pnl_TongHopHeThong.Size = new System.Drawing.Size(295, 74);
             this.pnl_TongHopHeThong.TabIndex = 16;
@@ -776,7 +777,7 @@
             // 
             this.panel17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(56)))), ((int)(((byte)(148)))));
             this.panel17.Location = new System.Drawing.Point(0, 2);
-            this.panel17.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel17.Margin = new System.Windows.Forms.Padding(4);
             this.panel17.Name = "panel17";
             this.panel17.Size = new System.Drawing.Size(295, 5);
             this.panel17.TabIndex = 5;
@@ -788,7 +789,7 @@
             this.btn_TongHopHeThong.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_TongHopHeThong.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(56)))), ((int)(((byte)(148)))));
             this.btn_TongHopHeThong.Location = new System.Drawing.Point(0, 6);
-            this.btn_TongHopHeThong.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_TongHopHeThong.Margin = new System.Windows.Forms.Padding(4);
             this.btn_TongHopHeThong.Name = "btn_TongHopHeThong";
             this.btn_TongHopHeThong.Size = new System.Drawing.Size(295, 70);
             this.btn_TongHopHeThong.TabIndex = 4;
@@ -805,7 +806,7 @@
             this.Controls.Add(this.pnl_header);
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frm_Main";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

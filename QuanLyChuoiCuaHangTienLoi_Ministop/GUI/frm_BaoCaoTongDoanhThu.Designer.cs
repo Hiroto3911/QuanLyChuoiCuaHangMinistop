@@ -1,6 +1,6 @@
 ﻿namespace GUI
 {
-    partial class frm_BaoCaoDoanhThu
+    partial class frm_BaoCaoTongDoanhThu
     {
         /// <summary>
         /// Required designer variable.
@@ -28,17 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lbl_Title = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.chart_DoanhThu = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.chart_TongDoanhThu = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.dgv_Data = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chart_DoanhThu)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chart_TongDoanhThu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Data)).BeginInit();
             this.SuspendLayout();
             // 
@@ -51,69 +51,65 @@
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1259, 64);
-            this.panel1.TabIndex = 65;
+            this.panel1.TabIndex = 66;
             // 
             // lbl_Title
             // 
             this.lbl_Title.AutoSize = true;
             this.lbl_Title.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Title.ForeColor = System.Drawing.Color.White;
-            this.lbl_Title.Location = new System.Drawing.Point(475, 11);
+            this.lbl_Title.Location = new System.Drawing.Point(389, 9);
             this.lbl_Title.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_Title.Name = "lbl_Title";
-            this.lbl_Title.Size = new System.Drawing.Size(588, 42);
+            this.lbl_Title.Size = new System.Drawing.Size(489, 42);
             this.lbl_Title.TabIndex = 18;
-            this.lbl_Title.Text = "Biểu đồ doanh thu của cửa hàng";
+            this.lbl_Title.Text = "Biểu đồ doanh thu công ty ";
             // 
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 63.62715F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 36.37285F));
-            this.tableLayoutPanel1.Controls.Add(this.chart_DoanhThu, 0, 0);
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 67.35504F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 32.64495F));
+            this.tableLayoutPanel1.Controls.Add(this.chart_TongDoanhThu, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.dgv_Data, 1, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 64);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1259, 676);
-            this.tableLayoutPanel1.TabIndex = 67;
+            this.tableLayoutPanel1.TabIndex = 68;
             // 
-            // chart_DoanhThu
+            // chart_TongDoanhThu
             // 
-            chartArea1.Name = "ChartArea1";
-            this.chart_DoanhThu.ChartAreas.Add(chartArea1);
-            this.chart_DoanhThu.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend1.Name = "Legend1";
-            this.chart_DoanhThu.Legends.Add(legend1);
-            this.chart_DoanhThu.Location = new System.Drawing.Point(4, 4);
-            this.chart_DoanhThu.Margin = new System.Windows.Forms.Padding(4);
-            this.chart_DoanhThu.Name = "chart_DoanhThu";
-            series1.ChartArea = "ChartArea1";
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            series1.YValuesPerPoint = 2;
-            this.chart_DoanhThu.Series.Add(series1);
-            this.chart_DoanhThu.Size = new System.Drawing.Size(793, 668);
-            this.chart_DoanhThu.TabIndex = 67;
-            this.chart_DoanhThu.Text = "Báo cao doanh thu của hàng";
+            chartArea2.Name = "ChartArea1";
+            this.chart_TongDoanhThu.ChartAreas.Add(chartArea2);
+            this.chart_TongDoanhThu.Dock = System.Windows.Forms.DockStyle.Fill;
+            legend2.Name = "Legend1";
+            this.chart_TongDoanhThu.Legends.Add(legend2);
+            this.chart_TongDoanhThu.Location = new System.Drawing.Point(3, 3);
+            this.chart_TongDoanhThu.Name = "chart_TongDoanhThu";
+            series2.ChartArea = "ChartArea1";
+            series2.Legend = "Legend1";
+            series2.Name = "Series1";
+            this.chart_TongDoanhThu.Series.Add(series2);
+            this.chart_TongDoanhThu.Size = new System.Drawing.Size(842, 670);
+            this.chart_TongDoanhThu.TabIndex = 68;
+            this.chart_TongDoanhThu.Text = "chart1";
             // 
             // dgv_Data
             // 
             this.dgv_Data.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_Data.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_Data.Dock = System.Windows.Forms.DockStyle.Top;
-            this.dgv_Data.Location = new System.Drawing.Point(805, 4);
-            this.dgv_Data.Margin = new System.Windows.Forms.Padding(4);
+            this.dgv_Data.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgv_Data.Location = new System.Drawing.Point(851, 3);
             this.dgv_Data.Name = "dgv_Data";
             this.dgv_Data.RowHeadersWidth = 51;
-            this.dgv_Data.Size = new System.Drawing.Size(450, 668);
-            this.dgv_Data.TabIndex = 68;
-            this.dgv_Data.Click += new System.EventHandler(this.dgv_Data_Click);
+            this.dgv_Data.RowTemplate.Height = 24;
+            this.dgv_Data.Size = new System.Drawing.Size(405, 670);
+            this.dgv_Data.TabIndex = 69;
             // 
-            // frm_BaoCaoDoanhThu
+            // frm_BaoCaoTongDoanhThu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -121,18 +117,15 @@
             this.ClientSize = new System.Drawing.Size(1259, 740);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(4);
-            this.MinimizeBox = false;
-            this.Name = "frm_BaoCaoDoanhThu";
+            this.Name = "frm_BaoCaoTongDoanhThu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frm_BaoCaoDoanhThu";
+            this.Text = "frm_BaoCaoTongDoanhThu";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.frm_BaoCaoDoanhThu_Load);
-            this.Resize += new System.EventHandler(this.frm_BaoCaoDoanhThu_Resize);
+            this.Load += new System.EventHandler(this.frm_BaoCaoTongDoanhThu_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.chart_DoanhThu)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chart_TongDoanhThu)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Data)).EndInit();
             this.ResumeLayout(false);
 
@@ -143,7 +136,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label lbl_Title;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chart_DoanhThu;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chart_TongDoanhThu;
         private System.Windows.Forms.DataGridView dgv_Data;
     }
 }

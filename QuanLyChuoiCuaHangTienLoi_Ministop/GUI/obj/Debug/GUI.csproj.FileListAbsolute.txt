@@ -145,3 +145,4 @@ C:\Users\Chris\Desktop\DoAnDotNET\project-AnhHao\QuanLyChuoiCuaHangTienLoi_Minis
 C:\Users\Chris\Desktop\DoAnDotNET\project-AnhHao\QuanLyChuoiCuaHangTienLoi_Ministop\GUI\bin\Debug\Reporting\RP_HoaDon.cs
 C:\Users\Chris\Desktop\DoAnDotNET\project-AnhHao\QuanLyChuoiCuaHangTienLoi_Ministop\GUI\bin\Debug\Reporting\RP_PhieuNhapHang.cs
 C:\Users\Chris\Desktop\DoAnDotNET\project-AnhHao\QuanLyChuoiCuaHangTienLoi_Ministop\GUI\bin\Debug\Reporting\RP_PhieuXuatHang.cs
+C:\Users\Chris\Desktop\DoAnDotNET\project-AnhHao\QuanLyChuoiCuaHangTienLoi_Ministop\GUI\obj\Debug\GUI.frm_BaoCaoTongDoanhThu.resources

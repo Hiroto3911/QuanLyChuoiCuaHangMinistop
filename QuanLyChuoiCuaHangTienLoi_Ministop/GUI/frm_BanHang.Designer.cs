@@ -511,8 +511,9 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.gbo_HoaDon);
             this.Controls.Add(this.gbo_ChiTietHoaDon);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(4);
+            this.MinimizeBox = false;
             this.Name = "frm_BanHang";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frm_BanHang";
