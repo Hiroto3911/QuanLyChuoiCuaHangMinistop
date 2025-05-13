@@ -1,3 +1,5 @@
+USE QuanLyChuoiCuaHangMinistop;
+GO
 --Tao phieu nhap hang
 CREATE PROCEDURE sp_InPhieuNhap
     @MaPhieuNhap VARCHAR(10)

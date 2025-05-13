@@ -41,6 +41,35 @@ namespace DAL
             return ds;
 
         }
+        public List<ET_DoanhThuCuaHangTheoThang> BaoCaoDoanhThuCuaHangDieuChinhTheoTgianMongMuon(string maCH , DateTime tuNgay, DateTime denNgay)
+        {
+            var ds = db.HoaDons
+                .Where(hd =>hd.MaCuaHang == maCH && hd.NgayLap >= tuNgay && hd.NgayLap <= denNgay)
+                .SelectMany(hd => hd.ChiTietHoaDons, (hd, ct) => new
+                {
+                    hd.NgayLap,
+                    hd.MaCuaHang,
+                    hd.CuaHang.TenCuaHang,
+                    ct.ThanhTien
+                })
+                .GroupBy(x => new
+                {
+                    x.NgayLap.Value.Year,
+                    x.NgayLap.Value.Month,
+                    x.MaCuaHang,
+                    x.TenCuaHang
+                })
+                .Select(g => new ET_DoanhThuCuaHangTheoThang
+                {
+                    Nam = g.Key.Year,
+                    Thang = g.Key.Month,
+                    TenCH = g.Key.TenCuaHang,
+                    MaCH = g.Key.MaCuaHang,
+                    DoanhThu = (decimal)g.Sum(x => x.ThanhTien)
+                }).OrderBy(x => x.Nam).ThenBy(x => x.Thang).ToList();
+            return ds;
+
+        }
         public List<ET_TongDoanhThu> TongDoanhThuTheoThang()
         {
             var ds = db.HoaDons

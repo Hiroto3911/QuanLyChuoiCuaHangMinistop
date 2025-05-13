@@ -25,8 +25,8 @@ namespace GUI.Reporting
         private void frm_RP_PhieuNhap_Load(object sender, EventArgs e)
         {
             ReportDocument cryRpt = new ReportDocument();
-            //string reportPath = Path.Combine(Application.StartupPath, "Reporting", "RP_PhieuNhapHang.rpt");
-            cryRpt.Load(@"C:\Users\Chris\Desktop\DoAnDotNET\project-AnhHao\QuanLyChuoiCuaHangTienLoi_Ministop\GUI\Reporting\RP_PhieuNhapHang.rpt");
+            string reportPath = Path.Combine(Application.StartupPath, "Reporting", "RP_PhieuNhapHang.rpt");
+            cryRpt.Load(reportPath);
 
             cryRpt.SetParameterValue("@MaPhieuNhap", maNH);
 

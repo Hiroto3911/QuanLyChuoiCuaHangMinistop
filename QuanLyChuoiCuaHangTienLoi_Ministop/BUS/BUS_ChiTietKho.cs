@@ -32,6 +32,11 @@ namespace BUS
             return dal_CTK.CapNhapSLSanPham(maCH, loaiCapNhap, sp, soLuongCu);
 
         }
+        public bool CapNhapGiaCuaSanPhamTaiMotCuaHang(ET_LichSuThayDoiGia lsg)
+        {
+
+            return dal_CTK.CapNhapGiaCuaSanPhamTaiMotCuaHang(lsg);
+        }
         public bool Them(ET_ChiTietKho ct)
         {
             return dal_CTK.Them(ct);

@@ -268,6 +268,10 @@ namespace GUI
 
         private void btn_InPhieuNhap_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrWhiteSpace(txt_MaNH.Text))
+            {
+                return;
+            }
             string maNH = txt_MaNH.Text;
             frm_RP_PhieuNhapHang frm = new frm_RP_PhieuNhapHang(maNH);
             frm.MdiParent = this.MdiParent;

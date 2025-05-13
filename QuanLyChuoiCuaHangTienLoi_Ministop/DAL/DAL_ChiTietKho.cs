@@ -117,6 +117,25 @@ namespace DAL
             }
                        
         }
+        public bool CapNhapGiaCuaSanPhamTaiMotCuaHang(ET_LichSuThayDoiGia lsg)
+        {
+            if (lsg == null) return false;
+            try
+            {
+
+                var query = db.ChiTietKhos.Where(ctk => ctk.MaCuaHang == lsg.MaCuaHang && ctk.MaSanPham == lsg.MaSanPham).FirstOrDefault();
+                if (query == null) return false;
+                query.GiaBan = lsg.GiaMoi;
+                db.SubmitChanges();
+                return true;
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+        }
         public bool CapNhapChiTietKhoKhiNhapHang(string maCH, ET_ChiTietNhapHang nh, DateTime ngayNhap)
         {
             try
@@ -154,7 +173,7 @@ namespace DAL
                 else
                 {
                     chitietKho.SoLuongTon += nh.SoLuong;
-                    chitietKho.GiaBan = nh.GiaNhap;
+                    //chitietKho.GiaBan = nh.GiaNhap;
                     db.SubmitChanges();
                     lsk.Them(new ET_LichSuKho
                     {

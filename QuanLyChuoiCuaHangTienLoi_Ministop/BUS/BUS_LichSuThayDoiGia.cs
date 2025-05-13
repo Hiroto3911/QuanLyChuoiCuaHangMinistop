@@ -41,10 +41,13 @@ namespace BUS
 
         }
 
-
         public List<string> LayDanhSachMaLS()
         {
             return dal_LSG.LayDanhSachMaLS();
+        }
+        public decimal TinhTongThayDoiGiaTrongMotThang(ET_LichSuThayDoiGia ls)
+        {
+           return dal_LSG.TinhTongThayDoiGiaTrongMotThang(ls);
         }
     }
 }

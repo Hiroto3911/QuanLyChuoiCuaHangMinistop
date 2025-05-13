@@ -17,6 +17,11 @@ namespace BUS
             return dal_BaoCao.BaoCaoDoanhThuCuaHangTheoThang(maCH);
 
         }
+        public List<ET_DoanhThuCuaHangTheoThang> BaoCaoDoanhThuCuaHangDieuChinhTheoTgianMongMuon(string maCH, DateTime tuNgay, DateTime denNgay)
+        {
+            return dal_BaoCao.BaoCaoDoanhThuCuaHangDieuChinhTheoTgianMongMuon(maCH, tuNgay, denNgay);
+
+        }
         public List<ET_TongDoanhThu> TongDoanhThuTheoThang()
         {
             return dal_BaoCao.TongDoanhThuTheoThang();
