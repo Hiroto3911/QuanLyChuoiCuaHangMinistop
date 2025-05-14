@@ -13,24 +13,34 @@ namespace BUS
         private DAL_ChiTietKho dal_CTK = new DAL_ChiTietKho();
         public List<ET_ChiTietKho> HienThiDuLieuSapXepGiamDanTheoMaCH(string maCH)
         {
-           
+
             return dal_CTK.HienThiDuLieuSapXepGiamDanTheoMaCH(maCH);
         }
         public double LayGiaBanCuaSanPhamCuaMotCH(string maCH, string maSP)
         {
-            
-            return dal_CTK.LayGiaBanCuaSanPhamCuaMotCH(maCH,maSP);
+
+            return dal_CTK.LayGiaBanCuaSanPhamCuaMotCH(maCH, maSP);
+
+        }
+        public int LaySLSanPhamCuaMotCH(string maCH, string maSP)
+        {
+            return dal_CTK.LaySLSanPhamCuaMotCH(maCH, maSP);
 
         }
         public bool KiemTraSanPhamConHang(string maCH, ET_ChiTietHoaDon sp)
         {
 
-            return dal_CTK.KiemTraSanPhamConHang(maCH,sp);
+            return dal_CTK.KiemTraSanPhamConHang(maCH, sp);
         }
-        public bool CapNhapSLSanPham(string maCH, string loaiCapNhap, ET_ChiTietHoaDon sp,int? soLuongCu = null)
+        public bool CapNhapSLSanPham(string maCH, string loaiCapNhap, ET_ChiTietHoaDon sp, int? soLuongCu = null)
         {
-            return dal_CTK.CapNhapSLSanPham(maCH,loaiCapNhap, sp,soLuongCu);
+            return dal_CTK.CapNhapSLSanPham(maCH, loaiCapNhap, sp, soLuongCu);
 
+        }
+        public bool CapNhapGiaCuaSanPhamTaiMotCuaHang(ET_LichSuThayDoiGia lsg)
+        {
+
+            return dal_CTK.CapNhapGiaCuaSanPhamTaiMotCuaHang(lsg);
         }
         public bool Them(ET_ChiTietKho ct)
         {
@@ -43,7 +53,20 @@ namespace BUS
         }
         public bool CapNhapChiTietKhoKhiNhapHang(string maCH, ET_ChiTietNhapHang nh, DateTime ngayNhap)
         {
-            return dal_CTK.CapNhapChiTietKhoKhiNhapHang(maCH,nh,ngayNhap);
+            return dal_CTK.CapNhapChiTietKhoKhiNhapHang(maCH, nh, ngayNhap);
         }
-    }
+        public bool CapNhapChiTietKhoKhiXuatHang(string maCH, ET_ChiTietXuatHang xh, DateTime ngayXuat)
+        {
+            return dal_CTK.CapNhapChiTietKhoKhiXuatHang(maCH,xh,ngayXuat);
+        }
+        public bool CapNhapChiTietKhoKhiKiemKho(string maCH, ET_ChiTietKiemKho ctkk, DateTime ngayKiem)
+        {
+            return dal_CTK.CapNhapChiTietKhoKhiKiemKho(maCH,ctkk,ngayKiem);
+        }
+        public ET_ChiTietKho layChiTietKhoTheoMaSPVaMaCH(string maCH, string maSP)
+        {
+            
+            return dal_CTK.layChiTietKhoTheoMaSPVaMaCH(maCH, maSP);
+        }
+    } 
 }

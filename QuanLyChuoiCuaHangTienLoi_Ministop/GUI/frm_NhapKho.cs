@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using GUI.Reporting;
 
 namespace GUI
 {
@@ -31,11 +32,13 @@ namespace GUI
 
         private void frm_NhapKho_Load(object sender, EventArgs e)
         {
-            
+
             LoadComboBox();
             if (Session.VaiTro == "Admin")
             {
                 cbo_MaCH.Enabled = true;
+                btn_Them.Enabled = false;
+                btn_Xoa.Enabled = false;
             }
             else
             {
@@ -49,10 +52,10 @@ namespace GUI
         // Load dữ liệu nhập hàng lên DataGridView và tạo mã phiếu nhập mới
         public void LoadDuLieuNhapHang()
         {
-            
+
             dgv_Data.DataSource = bus_NhapHang.HienThiDuLieuTheoMaCH(cbo_MaCH.SelectedValue.ToString());
         }
-       
+
 
         // Load chi tiết nhập theo mã phiếu nhập được chọn
         private void LoadChiTietTheoMaPN(string maPhieuNhap)
@@ -93,6 +96,7 @@ namespace GUI
         }
         private void btn_Them_Click(object sender, EventArgs e)
         {
+            btn_HoanTat.Enabled = true;
             try
             {
                 maNhapMoiThem = TaoMaTuDong.TaoMa(bus_NhapHang.LayDanhSachMaNH(), "PN");
@@ -114,6 +118,8 @@ namespace GUI
 
         private void btn_Xoa_Click(object sender, EventArgs e)
         {
+            var chapNhanXoa = MessageBox.Show($"Bạn có chắc muốn xoá dữ liệu {txt_MaNH.Text} này không", "Thông báo", MessageBoxButtons.OKCancel);
+            if (DialogResult.Cancel == chapNhanXoa) return;
             if (bus_CT.LayChiTietTheoMaPhieu(txt_MaNH.Text).Count == 0)
             {
                 try
@@ -122,6 +128,7 @@ namespace GUI
                     MessageBox.Show("Xóa thành công");
                     LoadDuLieuNhapHang();
                     LoadChiTietTheoMaPN(dgv_Data.CurrentRow.Cells[0].Value.ToString());
+                    maNhapMoiThem = null;
                 }
                 catch (Exception ex)
                 {
@@ -165,6 +172,8 @@ namespace GUI
                 MessageBox.Show("Thành thật xin lỗi bạn. Phiếu nhập này hiện tại đã hoàn tất không thể thêm xoá sửa được nữa " +
                 "\n !Xin vui lòng tạo phiếu nhập mới rồi bạn có thể thêm xoá sửa!", "Thông báo", MessageBoxButtons.OKCancel); return;
             }
+            var chapNhanXoa = MessageBox.Show($"Bạn có chắc muốn xoá dữ liệu {maNhapMoiThem}-{cbo_MaSP.Text} này không", "Thông báo", MessageBoxButtons.OKCancel);
+            if (DialogResult.Cancel == chapNhanXoa) return;
             try
             {
                 bus_CT.Xoa(maNhapMoiThem, cbo_MaSP.Text);
@@ -194,7 +203,7 @@ namespace GUI
                 et_CT.GhiChu = rtf_GhiChu.Text;
                 bus_CT.Sua(et_CT);
                 MessageBox.Show("Sửa thành công");
-                btn_LamMoiChiTiet_Click(sender,e);
+                btn_LamMoiChiTiet_Click(sender, e);
             }
             catch (Exception ex)
             {
@@ -226,20 +235,6 @@ namespace GUI
             gbo_ThongTin.Top = gbo_NhapThongTin.Bottom + 20;
         }
 
-        private void dgv_Data_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (e.RowIndex >= 0)
-            {
-
-                txt_MaNH.Text = dgv_Data.Rows[e.RowIndex].Cells[0].Value.ToString();
-                cbo_NCC.Text = dgv_Data.Rows[e.RowIndex].Cells[1].Value.ToString();
-                cbo_MaCH.Text = dgv_Data.Rows[e.RowIndex].Cells[2].Value.ToString();
-                dtp_NgayNhap.Text = dgv_Data.Rows[e.RowIndex].Cells[3].Value.ToString();
-                txt_MaNV.Text = dgv_Data.Rows[e.RowIndex].Cells[4].Value.ToString();
-                string maPN = dgv_Data.Rows[e.RowIndex].Cells[0].Value.ToString();
-                LoadChiTietTheoMaPN(maPN);
-            }
-        }
 
         private void dgv_DataChiTiet_CellClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -258,25 +253,83 @@ namespace GUI
         {
             try
             {
-                foreach(var ct in bus_CT.LayChiTietTheoMaPhieu(maNhapMoiThem))
+                foreach (var ct in bus_CT.LayChiTietTheoMaPhieu(maNhapMoiThem))
                 {
-                    bus_CTK.CapNhapChiTietKhoKhiNhapHang(cbo_MaCH.Text, ct,et_NhapHang.NgayNhap);
+                    bus_CTK.CapNhapChiTietKhoKhiNhapHang(cbo_MaCH.Text, ct, et_NhapHang.NgayNhap);
                 }
                 maNhapMoiThem = null;
                 MessageBox.Show("Cập nhập kho thành công");
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show("việc xử lý đã xảy ra lỗi: " + ex.Message);
             }
-           
+
         }
 
         private void txt_GiaNhap_Leave(object sender, EventArgs e)
         {
+            if (!KiemTraSoThucHopLe(txt_GiaNhap.Text))
+            {
+                errorProvider1.SetError(txt_GiaNhap, "Chỉ được nhập số");
+                txt_GiaNhap.Text = "";
+                txt_TongTien.Text = "";
+                return;
+            }
+            errorProvider1.SetError(txt_GiaNhap, "");
             int sl = Convert.ToInt32(txt_SLNhap.Text);
             decimal gia = Convert.ToDecimal(txt_GiaNhap.Text);
-            txt_TongTien.Text = (sl * gia ).ToString();
+            txt_TongTien.Text = (sl * gia).ToString();
+        }
+
+        private void btn_InPhieuNhap_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txt_MaNH.Text))
+            {
+                return;
+            }
+            string maNH = txt_MaNH.Text;
+            frm_RP_PhieuNhapHang frm = new frm_RP_PhieuNhapHang(maNH);
+            frm.MdiParent = this.MdiParent;
+            frm.Show();
+        }
+
+        private void dgv_Data_Click(object sender, EventArgs e)
+        {
+            if (dgv_Data.CurrentCell == null || dgv_Data.Rows.Count == 0)
+                return;
+            int dong = dgv_Data.CurrentCell.RowIndex;
+            if (dong > dgv_Data.Rows.Count - 1) return;
+            txt_MaNH.Text = dgv_Data.Rows[dong].Cells[0].Value.ToString();
+            cbo_NCC.Text = dgv_Data.Rows[dong].Cells[1].Value.ToString();
+            cbo_MaCH.Text = dgv_Data.Rows[dong].Cells[2].Value.ToString();
+            dtp_NgayNhap.Text = dgv_Data.Rows[dong].Cells[3].Value.ToString();
+            txt_MaNV.Text = dgv_Data.Rows[dong].Cells[4].Value.ToString();
+            string maPN = dgv_Data.Rows[dong].Cells[0].Value.ToString();
+            LoadChiTietTheoMaPN(maPN);
+
+        }
+        public bool KiemTraSoNguyenHopLe(string s)
+        {
+            return int.TryParse(s, out _);
+        }
+        public bool KiemTraSoThucHopLe(string s)
+        {
+            return decimal.TryParse(s, out _);
+        }
+
+        private void txt_SLNhap_Leave(object sender, EventArgs e)
+        {
+            if (!KiemTraSoNguyenHopLe(txt_SLNhap.Text))
+            {
+                errorProvider1.SetError(txt_SLNhap, "Chỉ được nhập số");
+                txt_SLNhap.Text = "";
+                txt_TongTien.Text = "";
+            }
+            else
+            {
+                errorProvider1.SetError(txt_SLNhap, "");
+            }
         }
     }
 }

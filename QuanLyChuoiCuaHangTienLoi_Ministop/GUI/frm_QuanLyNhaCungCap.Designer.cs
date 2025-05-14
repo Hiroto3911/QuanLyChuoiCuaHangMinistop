@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.rtf_DiaChi = new System.Windows.Forms.RichTextBox();
             this.btn_LamMoi = new System.Windows.Forms.Button();
             this.txt_Email = new System.Windows.Forms.TextBox();
@@ -47,10 +48,12 @@
             this.txt_TenNCC = new System.Windows.Forms.TextBox();
             this.lbl_Title = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.gbo_ThongTin.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Data)).BeginInit();
             this.gbo_NhapThongTin.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // rtf_DiaChi
@@ -77,6 +80,7 @@
             this.txt_Email.Name = "txt_Email";
             this.txt_Email.Size = new System.Drawing.Size(192, 24);
             this.txt_Email.TabIndex = 90;
+            this.txt_Email.Leave += new System.EventHandler(this.txt_Email_Leave);
             // 
             // btn_Sua
             // 
@@ -94,6 +98,7 @@
             this.txt_DTH.Name = "txt_DTH";
             this.txt_DTH.Size = new System.Drawing.Size(192, 24);
             this.txt_DTH.TabIndex = 89;
+            this.txt_DTH.Leave += new System.EventHandler(this.txt_DTH_Leave);
             // 
             // btn_Xoa
             // 
@@ -246,6 +251,10 @@
             this.panel1.Size = new System.Drawing.Size(944, 52);
             this.panel1.TabIndex = 83;
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // frm_QuanLyNhaCungCap
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -255,6 +264,7 @@
             this.Controls.Add(this.gbo_ThongTin);
             this.Controls.Add(this.gbo_NhapThongTin);
             this.Controls.Add(this.panel1);
+            this.MinimizeBox = false;
             this.Name = "frm_QuanLyNhaCungCap";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frm_QuanLyNhaCungCap";
@@ -267,6 +277,7 @@
             this.gbo_NhapThongTin.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -292,5 +303,6 @@
         private System.Windows.Forms.TextBox txt_TenNCC;
         private System.Windows.Forms.Label lbl_Title;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

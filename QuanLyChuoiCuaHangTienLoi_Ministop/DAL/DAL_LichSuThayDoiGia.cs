@@ -79,6 +79,7 @@ namespace DAL
                 var capNhat = TimLichSuBangMaCHVaMaLS(ls.MaCuaHang, ls.MaLichSu);
                 if (capNhat == null) return false;
                 capNhat.GiaMoi = ls.GiaMoi;
+                capNhat.NgayThayDoi = ls.NgayThayDoi;
                 capNhat.LyDo = ls.LyDo; 
                 db.SubmitChanges();
                 return true;
@@ -119,6 +120,13 @@ namespace DAL
         {
             var danhSachID = db.LichSuThayDoiGias.Select(id => id.MaLichSu).ToList();
             return danhSachID;
+        }
+        public decimal TinhTongThayDoiGiaTrongMotThang(ET_LichSuThayDoiGia ls)
+        {
+            DateTime ngayBatDau = ls.NgayThayDoi.AddMonths(-1);
+            var phanTram = db.LichSuThayDoiGias.Where(lsg => lsg.MaCuaHang == ls.MaCuaHang && lsg.MaSanPham == ls.MaSanPham && ngayBatDau <= ls.NgayThayDoi)
+                .Sum(lsg => (lsg.GiaMoi - lsg.GiaCu)/lsg.GiaCu*100);
+            return (decimal)phanTram; 
         }
     }
 }

@@ -8,6 +8,8 @@ namespace ET
 {
     public class ET_LichSuKho
     {
+  
+
         public string MaLichSuKho { get; set; }
         public string MaChiTietKho { get; set; }
         public DateTime NgayThayDoi { get; set; }

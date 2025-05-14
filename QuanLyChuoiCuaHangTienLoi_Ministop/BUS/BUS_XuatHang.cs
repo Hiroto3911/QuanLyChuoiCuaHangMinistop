@@ -12,10 +12,12 @@ namespace BUS
     {
         private DAL_XuatHang dal = new DAL_XuatHang();
 
-        public List<ET_XuatHang> HienThiTatCa()
+       
+        public List<ET_XuatHang> HienThiDuLieuTheoMaCH(string maCH)
         {
-            return dal.HienThiTatCa();
+            return dal.HienThiDuLieuTheoMaCH(maCH);
         }
+    
 
         public bool Them(ET_XuatHang px)
         {
@@ -30,6 +32,10 @@ namespace BUS
         public bool Sua(ET_XuatHang px)
         {
             return dal.Sua(px);
+        }
+        public List<string> LayDanhSachMaXH()
+        {
+            return dal.LayDanhSachMaXH();
         }
     }
 }

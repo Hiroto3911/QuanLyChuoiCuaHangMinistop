@@ -28,9 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lbl_Title = new System.Windows.Forms.Label();
             this.gbo_ThongTin = new System.Windows.Forms.GroupBox();
+            this.cbo_LocDanhSach = new System.Windows.Forms.ComboBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.btn_LamMoi = new System.Windows.Forms.Button();
             this.btn_Sua = new System.Windows.Forms.Button();
             this.btn_Xoa = new System.Windows.Forms.Button();
@@ -58,12 +61,12 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txt_MaNV = new System.Windows.Forms.TextBox();
             this.cbo_MaCH = new System.Windows.Forms.ComboBox();
-            this.cbo_LocDanhSach = new System.Windows.Forms.ComboBox();
-            this.label6 = new System.Windows.Forms.Label();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.panel1.SuspendLayout();
             this.gbo_ThongTin.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Data)).BeginInit();
             this.gbo_NhapThongTin.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -103,6 +106,25 @@
             this.gbo_ThongTin.TabIndex = 81;
             this.gbo_ThongTin.TabStop = false;
             this.gbo_ThongTin.Text = "Danh sách nhân viên";
+            // 
+            // cbo_LocDanhSach
+            // 
+            this.cbo_LocDanhSach.FormattingEnabled = true;
+            this.cbo_LocDanhSach.Location = new System.Drawing.Point(709, 272);
+            this.cbo_LocDanhSach.Name = "cbo_LocDanhSach";
+            this.cbo_LocDanhSach.Size = new System.Drawing.Size(151, 26);
+            this.cbo_LocDanhSach.TabIndex = 156;
+            this.cbo_LocDanhSach.SelectedValueChanged += new System.EventHandler(this.cbo_LocDanhSach_SelectedValueChanged);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(609, 272);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(94, 16);
+            this.label6.TabIndex = 155;
+            this.label6.Text = "Lọc danh sách";
             // 
             // btn_LamMoi
             // 
@@ -156,7 +178,6 @@
             this.dgv_Data.RowHeadersWidth = 51;
             this.dgv_Data.Size = new System.Drawing.Size(841, 233);
             this.dgv_Data.TabIndex = 54;
-            this.dgv_Data.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_Data_CellContentClick);
             this.dgv_Data.Click += new System.EventHandler(this.dgv_Data_Click);
             // 
             // gbo_NhapThongTin
@@ -196,6 +217,7 @@
             this.txt_sodienthoai.Name = "txt_sodienthoai";
             this.txt_sodienthoai.Size = new System.Drawing.Size(151, 24);
             this.txt_sodienthoai.TabIndex = 161;
+            this.txt_sodienthoai.Leave += new System.EventHandler(this.txt_sodienthoai_Leave);
             // 
             // label11
             // 
@@ -383,24 +405,9 @@
             this.cbo_MaCH.Size = new System.Drawing.Size(151, 26);
             this.cbo_MaCH.TabIndex = 141;
             // 
-            // cbo_LocDanhSach
+            // errorProvider1
             // 
-            this.cbo_LocDanhSach.FormattingEnabled = true;
-            this.cbo_LocDanhSach.Location = new System.Drawing.Point(709, 272);
-            this.cbo_LocDanhSach.Name = "cbo_LocDanhSach";
-            this.cbo_LocDanhSach.Size = new System.Drawing.Size(151, 26);
-            this.cbo_LocDanhSach.TabIndex = 156;
-            this.cbo_LocDanhSach.SelectedValueChanged += new System.EventHandler(this.cbo_LocDanhSach_SelectedValueChanged);
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(609, 272);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(94, 16);
-            this.label6.TabIndex = 155;
-            this.label6.Text = "Lọc danh sách";
+            this.errorProvider1.ContainerControl = this;
             // 
             // frm_QuanLyNhanVien
             // 
@@ -411,8 +418,8 @@
             this.Controls.Add(this.gbo_NhapThongTin);
             this.Controls.Add(this.gbo_ThongTin);
             this.Controls.Add(this.panel1);
+            this.MinimizeBox = false;
             this.Name = "frm_QuanLyNhanVien";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frm_QuanLyNhanVien";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frm_QuanLyNhanVien_Load);
@@ -424,6 +431,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Data)).EndInit();
             this.gbo_NhapThongTin.ResumeLayout(false);
             this.gbo_NhapThongTin.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -462,5 +470,6 @@
         private System.Windows.Forms.Button btn_Them;
         private System.Windows.Forms.ComboBox cbo_LocDanhSach;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

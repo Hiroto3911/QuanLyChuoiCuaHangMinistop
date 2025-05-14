@@ -88,6 +88,9 @@
             this.pnl_TongHopHeThong = new System.Windows.Forms.Panel();
             this.panel17 = new System.Windows.Forms.Panel();
             this.btn_TongHopHeThong = new System.Windows.Forms.Button();
+            this.pnl_SanPhamHayThatThoat = new System.Windows.Forms.Panel();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.btn_SPHM = new System.Windows.Forms.Button();
             this.pnl_header.SuspendLayout();
             this.pnl_Hello.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -109,6 +112,7 @@
             this.pnl_TongDoanhThu.SuspendLayout();
             this.pnl_BaoCaoKho.SuspendLayout();
             this.pnl_TongHopHeThong.SuspendLayout();
+            this.pnl_SanPhamHayThatThoat.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnl_header
@@ -260,6 +264,7 @@
             this.fqnl_Menu.Controls.Add(this.pnl_TongDoanhThu);
             this.fqnl_Menu.Controls.Add(this.pnl_BaoCaoKho);
             this.fqnl_Menu.Controls.Add(this.pnl_TongHopHeThong);
+            this.fqnl_Menu.Controls.Add(this.pnl_SanPhamHayThatThoat);
             this.fqnl_Menu.Dock = System.Windows.Forms.DockStyle.Left;
             this.fqnl_Menu.Location = new System.Drawing.Point(0, 81);
             this.fqnl_Menu.Name = "fqnl_Menu";
@@ -679,6 +684,7 @@
             this.btn_TongDoanhThu.TabIndex = 4;
             this.btn_TongDoanhThu.Text = "Tổng doanh thu";
             this.btn_TongDoanhThu.UseVisualStyleBackColor = true;
+            this.btn_TongDoanhThu.Click += new System.EventHandler(this.btn_TongDoanhThu_Click);
             // 
             // pnl_BaoCaoKho
             // 
@@ -741,6 +747,37 @@
             this.btn_TongHopHeThong.Text = "Báo cáo tổng hợp hệ thống";
             this.btn_TongHopHeThong.UseVisualStyleBackColor = true;
             // 
+            // pnl_SanPhamHayThatThoat
+            // 
+            this.pnl_SanPhamHayThatThoat.Controls.Add(this.panel7);
+            this.pnl_SanPhamHayThatThoat.Controls.Add(this.btn_SPHM);
+            this.pnl_SanPhamHayThatThoat.Location = new System.Drawing.Point(3, 1154);
+            this.pnl_SanPhamHayThatThoat.Name = "pnl_SanPhamHayThatThoat";
+            this.pnl_SanPhamHayThatThoat.Size = new System.Drawing.Size(221, 60);
+            this.pnl_SanPhamHayThatThoat.TabIndex = 17;
+            // 
+            // panel7
+            // 
+            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(56)))), ((int)(((byte)(148)))));
+            this.panel7.Location = new System.Drawing.Point(0, 2);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(221, 4);
+            this.panel7.TabIndex = 5;
+            // 
+            // btn_SPHM
+            // 
+            this.btn_SPHM.FlatAppearance.BorderSize = 0;
+            this.btn_SPHM.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_SPHM.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_SPHM.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(56)))), ((int)(((byte)(148)))));
+            this.btn_SPHM.Location = new System.Drawing.Point(0, 5);
+            this.btn_SPHM.Name = "btn_SPHM";
+            this.btn_SPHM.Size = new System.Drawing.Size(221, 57);
+            this.btn_SPHM.TabIndex = 4;
+            this.btn_SPHM.Text = "Báo cáo sản phẩm hay thất thoát";
+            this.btn_SPHM.UseVisualStyleBackColor = true;
+            this.btn_SPHM.Click += new System.EventHandler(this.btn_SPHM_Click);
+            // 
             // frm_Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -753,6 +790,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "frm_Main";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frm_Main_Load);
             this.pnl_header.ResumeLayout(false);
             this.pnl_header.PerformLayout();
@@ -779,6 +817,7 @@
             this.pnl_TongDoanhThu.ResumeLayout(false);
             this.pnl_BaoCaoKho.ResumeLayout(false);
             this.pnl_TongHopHeThong.ResumeLayout(false);
+            this.pnl_SanPhamHayThatThoat.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -845,5 +884,8 @@
         private System.Windows.Forms.Panel pnl_TongHopHeThong;
         private System.Windows.Forms.Panel panel17;
         private System.Windows.Forms.Button btn_TongHopHeThong;
+        private System.Windows.Forms.Panel pnl_SanPhamHayThatThoat;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Button btn_SPHM;
     }
 }

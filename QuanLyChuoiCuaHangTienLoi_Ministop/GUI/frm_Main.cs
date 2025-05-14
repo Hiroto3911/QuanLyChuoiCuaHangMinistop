@@ -41,7 +41,7 @@ namespace GUI
            
             if (Session.VaiTro == "Admin")
             {
-                
+                pnl_BanHang.Visible = false;
             }
             else
             {
@@ -76,7 +76,8 @@ namespace GUI
                         pnl_DoanhThuCuaHang,
                         pnl_BaoCaoKho,
                         pnl_TongHopHeThong,
-                        pnl_TongDoanhThu
+                        pnl_TongDoanhThu,
+                        pnl_SanPhamHayThatThoat
                     };
 
                 }
@@ -173,6 +174,20 @@ namespace GUI
             frm_KiemKho kk = new frm_KiemKho();
             kk.MdiParent = this;
             kk.Show();
+        }
+
+        private void btn_TongDoanhThu_Click(object sender, EventArgs e)
+        {
+            frm_BaoCaoTongDoanhThu tdh = new frm_BaoCaoTongDoanhThu();
+            tdh.MdiParent = this;
+            tdh.Show();
+        }
+
+        private void btn_SPHM_Click(object sender, EventArgs e)
+        {
+            frm_BaoCaoSanPhamHayThatThoat sphm = new frm_BaoCaoSanPhamHayThatThoat();
+            sphm.MdiParent = this;
+            sphm.Show();
         }
     }
 }

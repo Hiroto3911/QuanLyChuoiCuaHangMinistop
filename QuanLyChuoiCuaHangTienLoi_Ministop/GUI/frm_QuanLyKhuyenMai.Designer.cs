@@ -96,7 +96,7 @@
             this.cbo_MaKM.DropDownWidth = 200;
             this.cbo_MaKM.FormattingEnabled = true;
             this.cbo_MaKM.Location = new System.Drawing.Point(168, 46);
-            this.cbo_MaKM.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbo_MaKM.Margin = new System.Windows.Forms.Padding(4);
             this.cbo_MaKM.Name = "cbo_MaKM";
             this.cbo_MaKM.Size = new System.Drawing.Size(200, 32);
             this.cbo_MaKM.TabIndex = 48;
@@ -104,7 +104,7 @@
             // btn_Them
             // 
             this.btn_Them.Location = new System.Drawing.Point(1168, 48);
-            this.btn_Them.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_Them.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Them.Name = "btn_Them";
             this.btn_Them.Size = new System.Drawing.Size(100, 32);
             this.btn_Them.TabIndex = 42;
@@ -116,7 +116,7 @@
             // 
             this.dtp_NgayBatDau.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtp_NgayBatDau.Location = new System.Drawing.Point(531, 47);
-            this.dtp_NgayBatDau.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtp_NgayBatDau.Margin = new System.Windows.Forms.Padding(4);
             this.dtp_NgayBatDau.Name = "dtp_NgayBatDau";
             this.dtp_NgayBatDau.Size = new System.Drawing.Size(200, 29);
             this.dtp_NgayBatDau.TabIndex = 57;
@@ -124,7 +124,7 @@
             // btn_Xoa
             // 
             this.btn_Xoa.Location = new System.Drawing.Point(1168, 98);
-            this.btn_Xoa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_Xoa.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Xoa.Name = "btn_Xoa";
             this.btn_Xoa.Size = new System.Drawing.Size(100, 32);
             this.btn_Xoa.TabIndex = 43;
@@ -182,9 +182,9 @@
             this.gbo_ChiTietKhuyenMai.Controls.Add(this.dgv_DataChiTiet);
             this.gbo_ChiTietKhuyenMai.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbo_ChiTietKhuyenMai.Location = new System.Drawing.Point(16, 530);
-            this.gbo_ChiTietKhuyenMai.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbo_ChiTietKhuyenMai.Margin = new System.Windows.Forms.Padding(4);
             this.gbo_ChiTietKhuyenMai.Name = "gbo_ChiTietKhuyenMai";
-            this.gbo_ChiTietKhuyenMai.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbo_ChiTietKhuyenMai.Padding = new System.Windows.Forms.Padding(4);
             this.gbo_ChiTietKhuyenMai.Size = new System.Drawing.Size(1305, 337);
             this.gbo_ChiTietKhuyenMai.TabIndex = 71;
             this.gbo_ChiTietKhuyenMai.TabStop = false;
@@ -195,7 +195,7 @@
             this.cbo_MaSP.DropDownWidth = 200;
             this.cbo_MaSP.FormattingEnabled = true;
             this.cbo_MaSP.Location = new System.Drawing.Point(168, 98);
-            this.cbo_MaSP.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbo_MaSP.Margin = new System.Windows.Forms.Padding(4);
             this.cbo_MaSP.Name = "cbo_MaSP";
             this.cbo_MaSP.Size = new System.Drawing.Size(200, 32);
             this.cbo_MaSP.TabIndex = 70;
@@ -204,7 +204,7 @@
             // 
             this.cbo_UuTien.FormattingEnabled = true;
             this.cbo_UuTien.Location = new System.Drawing.Point(531, 98);
-            this.cbo_UuTien.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbo_UuTien.Margin = new System.Windows.Forms.Padding(4);
             this.cbo_UuTien.Name = "cbo_UuTien";
             this.cbo_UuTien.Size = new System.Drawing.Size(200, 32);
             this.cbo_UuTien.TabIndex = 63;
@@ -223,7 +223,7 @@
             // txt_SLToiThieu
             // 
             this.txt_SLToiThieu.Location = new System.Drawing.Point(531, 48);
-            this.txt_SLToiThieu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_SLToiThieu.Margin = new System.Windows.Forms.Padding(4);
             this.txt_SLToiThieu.Name = "txt_SLToiThieu";
             this.txt_SLToiThieu.Size = new System.Drawing.Size(200, 29);
             this.txt_SLToiThieu.TabIndex = 58;
@@ -231,7 +231,7 @@
             // btn_LamMoiChiTiet
             // 
             this.btn_LamMoiChiTiet.Location = new System.Drawing.Point(1168, 48);
-            this.btn_LamMoiChiTiet.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_LamMoiChiTiet.Margin = new System.Windows.Forms.Padding(4);
             this.btn_LamMoiChiTiet.Name = "btn_LamMoiChiTiet";
             this.btn_LamMoiChiTiet.Size = new System.Drawing.Size(100, 60);
             this.btn_LamMoiChiTiet.TabIndex = 69;
@@ -242,7 +242,7 @@
             // btn_SuaChiTiet
             // 
             this.btn_SuaChiTiet.Location = new System.Drawing.Point(1041, 46);
-            this.btn_SuaChiTiet.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_SuaChiTiet.Margin = new System.Windows.Forms.Padding(4);
             this.btn_SuaChiTiet.Name = "btn_SuaChiTiet";
             this.btn_SuaChiTiet.Size = new System.Drawing.Size(100, 60);
             this.btn_SuaChiTiet.TabIndex = 68;
@@ -253,7 +253,7 @@
             // btn_XoaChiTiet
             // 
             this.btn_XoaChiTiet.Location = new System.Drawing.Point(923, 46);
-            this.btn_XoaChiTiet.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_XoaChiTiet.Margin = new System.Windows.Forms.Padding(4);
             this.btn_XoaChiTiet.Name = "btn_XoaChiTiet";
             this.btn_XoaChiTiet.Size = new System.Drawing.Size(100, 60);
             this.btn_XoaChiTiet.TabIndex = 67;
@@ -264,7 +264,7 @@
             // btn_ThemChiTiet
             // 
             this.btn_ThemChiTiet.Location = new System.Drawing.Point(792, 46);
-            this.btn_ThemChiTiet.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_ThemChiTiet.Margin = new System.Windows.Forms.Padding(4);
             this.btn_ThemChiTiet.Name = "btn_ThemChiTiet";
             this.btn_ThemChiTiet.Size = new System.Drawing.Size(100, 60);
             this.btn_ThemChiTiet.TabIndex = 66;
@@ -277,7 +277,7 @@
             this.dgv_DataChiTiet.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_DataChiTiet.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_DataChiTiet.Location = new System.Drawing.Point(8, 138);
-            this.dgv_DataChiTiet.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgv_DataChiTiet.Margin = new System.Windows.Forms.Padding(4);
             this.dgv_DataChiTiet.Name = "dgv_DataChiTiet";
             this.dgv_DataChiTiet.RowHeadersWidth = 51;
             this.dgv_DataChiTiet.Size = new System.Drawing.Size(1289, 187);
@@ -289,12 +289,11 @@
             this.dgv_Data.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_Data.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_Data.Location = new System.Drawing.Point(8, 193);
-            this.dgv_Data.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgv_Data.Margin = new System.Windows.Forms.Padding(4);
             this.dgv_Data.Name = "dgv_Data";
             this.dgv_Data.RowHeadersWidth = 51;
             this.dgv_Data.Size = new System.Drawing.Size(1289, 234);
             this.dgv_Data.TabIndex = 62;
-        
             this.dgv_Data.Click += new System.EventHandler(this.dgv_Data_Click);
             // 
             // pnl_Title
@@ -303,7 +302,7 @@
             this.pnl_Title.Controls.Add(this.llbl_title);
             this.pnl_Title.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnl_Title.Location = new System.Drawing.Point(0, 0);
-            this.pnl_Title.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnl_Title.Margin = new System.Windows.Forms.Padding(4);
             this.pnl_Title.Name = "pnl_Title";
             this.pnl_Title.Size = new System.Drawing.Size(1337, 64);
             this.pnl_Title.TabIndex = 70;
@@ -311,7 +310,7 @@
             // txt_DieuKienApDung
             // 
             this.txt_DieuKienApDung.Location = new System.Drawing.Point(940, 101);
-            this.txt_DieuKienApDung.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_DieuKienApDung.Margin = new System.Windows.Forms.Padding(4);
             this.txt_DieuKienApDung.Name = "txt_DieuKienApDung";
             this.txt_DieuKienApDung.Size = new System.Drawing.Size(200, 29);
             this.txt_DieuKienApDung.TabIndex = 70;
@@ -330,7 +329,7 @@
             // txt_MucGiam
             // 
             this.txt_MucGiam.Location = new System.Drawing.Point(149, 146);
-            this.txt_MucGiam.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_MucGiam.Margin = new System.Windows.Forms.Padding(4);
             this.txt_MucGiam.Name = "txt_MucGiam";
             this.txt_MucGiam.Size = new System.Drawing.Size(200, 29);
             this.txt_MucGiam.TabIndex = 56;
@@ -363,9 +362,9 @@
             this.gbo_KhuyenMai.Controls.Add(this.label9);
             this.gbo_KhuyenMai.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbo_KhuyenMai.Location = new System.Drawing.Point(16, 89);
-            this.gbo_KhuyenMai.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbo_KhuyenMai.Margin = new System.Windows.Forms.Padding(4);
             this.gbo_KhuyenMai.Name = "gbo_KhuyenMai";
-            this.gbo_KhuyenMai.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbo_KhuyenMai.Padding = new System.Windows.Forms.Padding(4);
             this.gbo_KhuyenMai.Size = new System.Drawing.Size(1305, 434);
             this.gbo_KhuyenMai.TabIndex = 72;
             this.gbo_KhuyenMai.TabStop = false;
@@ -376,7 +375,7 @@
             // 
             this.cbo_LocDuLieu.FormattingEnabled = true;
             this.cbo_LocDuLieu.Location = new System.Drawing.Point(940, 144);
-            this.cbo_LocDuLieu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbo_LocDuLieu.Margin = new System.Windows.Forms.Padding(4);
             this.cbo_LocDuLieu.Name = "cbo_LocDuLieu";
             this.cbo_LocDuLieu.Size = new System.Drawing.Size(200, 32);
             this.cbo_LocDuLieu.TabIndex = 120;
@@ -396,7 +395,7 @@
             // btn_Sua
             // 
             this.btn_Sua.Location = new System.Drawing.Point(1168, 145);
-            this.btn_Sua.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_Sua.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Sua.Name = "btn_Sua";
             this.btn_Sua.Size = new System.Drawing.Size(100, 31);
             this.btn_Sua.TabIndex = 118;
@@ -408,7 +407,7 @@
             // 
             this.txt_MaKM.Enabled = false;
             this.txt_MaKM.Location = new System.Drawing.Point(149, 47);
-            this.txt_MaKM.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_MaKM.Margin = new System.Windows.Forms.Padding(4);
             this.txt_MaKM.Name = "txt_MaKM";
             this.txt_MaKM.Size = new System.Drawing.Size(200, 29);
             this.txt_MaKM.TabIndex = 117;
@@ -418,7 +417,7 @@
             this.rb_Tat.AutoSize = true;
             this.rb_Tat.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rb_Tat.Location = new System.Drawing.Point(659, 149);
-            this.rb_Tat.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rb_Tat.Margin = new System.Windows.Forms.Padding(4);
             this.rb_Tat.Name = "rb_Tat";
             this.rb_Tat.Size = new System.Drawing.Size(54, 24);
             this.rb_Tat.TabIndex = 116;
@@ -431,7 +430,7 @@
             this.rb_Bat.AutoSize = true;
             this.rb_Bat.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rb_Bat.Location = new System.Drawing.Point(568, 149);
-            this.rb_Bat.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rb_Bat.Margin = new System.Windows.Forms.Padding(4);
             this.rb_Bat.Name = "rb_Bat";
             this.rb_Bat.Size = new System.Drawing.Size(56, 24);
             this.rb_Bat.TabIndex = 115;
@@ -443,7 +442,7 @@
             // 
             this.cbo_LoaiApDung.FormattingEnabled = true;
             this.cbo_LoaiApDung.Location = new System.Drawing.Point(940, 47);
-            this.cbo_LoaiApDung.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbo_LoaiApDung.Margin = new System.Windows.Forms.Padding(4);
             this.cbo_LoaiApDung.Name = "cbo_LoaiApDung";
             this.cbo_LoaiApDung.Size = new System.Drawing.Size(200, 32);
             this.cbo_LoaiApDung.TabIndex = 77;
@@ -453,7 +452,7 @@
             // 
             this.dtp_NgayKetThuc.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtp_NgayKetThuc.Location = new System.Drawing.Point(531, 97);
-            this.dtp_NgayKetThuc.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtp_NgayKetThuc.Margin = new System.Windows.Forms.Padding(4);
             this.dtp_NgayKetThuc.Name = "dtp_NgayKetThuc";
             this.dtp_NgayKetThuc.Size = new System.Drawing.Size(200, 29);
             this.dtp_NgayKetThuc.TabIndex = 75;
@@ -506,7 +505,7 @@
             // txt_TenKM
             // 
             this.txt_TenKM.Location = new System.Drawing.Point(149, 98);
-            this.txt_TenKM.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_TenKM.Margin = new System.Windows.Forms.Padding(4);
             this.txt_TenKM.Name = "txt_TenKM";
             this.txt_TenKM.Size = new System.Drawing.Size(200, 29);
             this.txt_TenKM.TabIndex = 50;
@@ -559,7 +558,8 @@
             this.Controls.Add(this.gbo_ChiTietKhuyenMai);
             this.Controls.Add(this.pnl_Title);
             this.Controls.Add(this.gbo_KhuyenMai);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
+            this.MinimizeBox = false;
             this.Name = "frm_QuanLyKhuyenMai";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frm_QuanLyKhuyenMai";

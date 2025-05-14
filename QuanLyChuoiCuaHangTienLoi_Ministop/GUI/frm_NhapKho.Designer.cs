@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lbl_Title = new System.Windows.Forms.Label();
             this.cbo_MaCH = new System.Windows.Forms.ComboBox();
@@ -62,11 +63,13 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.panel1.SuspendLayout();
             this.gbo_NhapThongTin.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Data)).BeginInit();
             this.gbo_ThongTin.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_DataChiTiet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -203,6 +206,7 @@
             // 
             // btn_HoanTat
             // 
+            this.btn_HoanTat.Enabled = false;
             this.btn_HoanTat.Location = new System.Drawing.Point(614, 79);
             this.btn_HoanTat.Name = "btn_HoanTat";
             this.btn_HoanTat.Size = new System.Drawing.Size(75, 49);
@@ -219,6 +223,7 @@
             this.btn_InPhieuNhap.TabIndex = 67;
             this.btn_InPhieuNhap.Text = "In phiếu nhập";
             this.btn_InPhieuNhap.UseVisualStyleBackColor = true;
+            this.btn_InPhieuNhap.Click += new System.EventHandler(this.btn_InPhieuNhap_Click);
             // 
             // cbo_NCC
             // 
@@ -244,9 +249,10 @@
             this.dgv_Data.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_Data.Location = new System.Drawing.Point(23, 133);
             this.dgv_Data.Name = "dgv_Data";
+            this.dgv_Data.RowHeadersWidth = 51;
             this.dgv_Data.Size = new System.Drawing.Size(815, 135);
             this.dgv_Data.TabIndex = 62;
-            this.dgv_Data.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_Data_CellClick);
+            this.dgv_Data.Click += new System.EventHandler(this.dgv_Data_Click);
             // 
             // txt_MaNV
             // 
@@ -335,6 +341,7 @@
             this.dgv_DataChiTiet.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_DataChiTiet.Location = new System.Drawing.Point(23, 181);
             this.dgv_DataChiTiet.Name = "dgv_DataChiTiet";
+            this.dgv_DataChiTiet.RowHeadersWidth = 51;
             this.dgv_DataChiTiet.Size = new System.Drawing.Size(815, 163);
             this.dgv_DataChiTiet.TabIndex = 65;
             this.dgv_DataChiTiet.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_DataChiTiet_CellClick);
@@ -389,6 +396,7 @@
             this.txt_SLNhap.Name = "txt_SLNhap";
             this.txt_SLNhap.Size = new System.Drawing.Size(151, 24);
             this.txt_SLNhap.TabIndex = 50;
+            this.txt_SLNhap.Leave += new System.EventHandler(this.txt_SLNhap_Leave);
             // 
             // label7
             // 
@@ -420,6 +428,10 @@
             this.label9.TabIndex = 52;
             this.label9.Text = "Mã sản phẩm";
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // frm_NhapKho
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -429,8 +441,10 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.gbo_NhapThongTin);
             this.Controls.Add(this.gbo_ThongTin);
+            this.MinimizeBox = false;
             this.Name = "frm_NhapKho";
             this.Text = "frm_NhapKho";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frm_NhapKho_Load);
             this.Resize += new System.EventHandler(this.frm_NhapKho_Resize);
             this.panel1.ResumeLayout(false);
@@ -441,6 +455,7 @@
             this.gbo_ThongTin.ResumeLayout(false);
             this.gbo_ThongTin.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_DataChiTiet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -481,5 +496,6 @@
         private System.Windows.Forms.TextBox txt_GiaNhap;
         private System.Windows.Forms.Button btn_InPhieuNhap;
         private System.Windows.Forms.Button btn_HoanTat;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

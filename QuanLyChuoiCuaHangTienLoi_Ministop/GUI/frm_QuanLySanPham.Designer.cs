@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.btn_LamMoi = new System.Windows.Forms.Button();
             this.txt_GiaBanTieuChuan = new System.Windows.Forms.TextBox();
             this.btn_Sua = new System.Windows.Forms.Button();
@@ -49,10 +50,12 @@
             this.txt_TenSP = new System.Windows.Forms.TextBox();
             this.lbl_Title = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.gbo_ThongTin.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Data)).BeginInit();
             this.gbo_NhapThongTin.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // btn_LamMoi
@@ -71,6 +74,7 @@
             this.txt_GiaBanTieuChuan.Name = "txt_GiaBanTieuChuan";
             this.txt_GiaBanTieuChuan.Size = new System.Drawing.Size(192, 24);
             this.txt_GiaBanTieuChuan.TabIndex = 90;
+            this.txt_GiaBanTieuChuan.Leave += new System.EventHandler(this.txt_GiaBanTieuChuan_Leave);
             // 
             // btn_Sua
             // 
@@ -269,6 +273,10 @@
             this.panel1.Size = new System.Drawing.Size(944, 52);
             this.panel1.TabIndex = 83;
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // frm_QuanLySanPham
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -278,6 +286,7 @@
             this.Controls.Add(this.gbo_ThongTin);
             this.Controls.Add(this.gbo_NhapThongTin);
             this.Controls.Add(this.panel1);
+            this.MinimizeBox = false;
             this.Name = "frm_QuanLySanPham";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frm_QuanLySanPham";
@@ -291,6 +300,7 @@
             this.gbo_NhapThongTin.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -318,5 +328,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TextBox txt_TimKiem;
         private System.Windows.Forms.Button btn_TimKiem;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }
