@@ -41,10 +41,10 @@ namespace DAL
             return ds;
 
         }
-        public List<ET_DoanhThuCuaHangTheoThang> BaoCaoDoanhThuCuaHangDieuChinhTheoTgianMongMuon(string maCH , DateTime tuNgay, DateTime denNgay)
+        public List<ET_DoanhThuCuaHangTheoThang> BaoCaoDoanhThuCuaHangDieuChinhTheoTgianMongMuon(string maCH, DateTime tuNgay, DateTime denNgay)
         {
             var ds = db.HoaDons
-                .Where(hd =>hd.MaCuaHang == maCH && hd.NgayLap >= tuNgay && hd.NgayLap <= denNgay)
+                .Where(hd => hd.MaCuaHang == maCH && hd.NgayLap >= tuNgay && hd.NgayLap <= denNgay)
                 .SelectMany(hd => hd.ChiTietHoaDons, (hd, ct) => new
                 {
                     hd.NgayLap,
@@ -73,23 +73,23 @@ namespace DAL
         public List<ET_TongDoanhThu> TongDoanhThuTheoThang()
         {
             var ds = db.HoaDons
-                .SelectMany(hd => hd.ChiTietHoaDons , (hd , ct)=> new
+                .SelectMany(hd => hd.ChiTietHoaDons, (hd, ct) => new
                 {
                     hd.NgayLap,
                     hd.MaCuaHang,
-                    ct.ThanhTien 
+                    ct.ThanhTien
                 })
                 .GroupBy(x => new
                 {
                     x.NgayLap.Value.Year,
                     x.NgayLap.Value.Month
                 })
-                .Select( g => new ET_TongDoanhThu
+                .Select(g => new ET_TongDoanhThu
                 {
-                    Nam = g.Key.Year , 
+                    Nam = g.Key.Year,
                     Thang = g.Key.Month,
                     TongDoanhThu = (decimal)g.Sum(x => x.ThanhTien)
-                }).OrderBy(x => x.Nam).ThenBy (x => x.Thang).ToList();
+                }).OrderBy(x => x.Nam).ThenBy(x => x.Thang).ToList();
             return ds;
         }
         public List<ET_BaoCaoTonKho> BaoCaoTonKhoTrongCuaHang(int nam, int thang, string maCH)
@@ -139,7 +139,7 @@ namespace DAL
                                  && ct.ChenhLech > 0)
                              .Sum(ct => (int?)ct.ChenhLech) ?? 0
                              let tongXuat = xuatHang + xuatBan
-                             let tongKiem = slChenhLechDu +slChenhLechThieu
+                             let tongKiem = slChenhLechDu + slChenhLechThieu
                              let tonCuoiKy = (tonDauKy + nhapTrongKy) - tongXuat + tongKiem
                              select new ET_BaoCaoTonKho
                              {
@@ -163,5 +163,35 @@ namespace DAL
 
 
         }
+        public List<ET_SanPhamHayMat>LaySanPhamHayThatThoatCuaCuaHangTheoTgianTuyChinh(string maCH, DateTime? tuNgay = null, DateTime? denNgay = null, int nguongLan = 2)
+        {
+            var query = db.ChiTietKiemKhos
+                .Where(ct => ct.ChenhLech < 0 && ct.KiemKho.MaCuaHang == maCH);
+            if (tuNgay.HasValue)
+                query = query.Where(ct => ct.KiemKho.NgayKiem >= tuNgay.Value);
+
+            if (denNgay.HasValue)
+                query = query.Where(ct => ct.KiemKho.NgayKiem <= denNgay.Value);
+
+            var ketQua = query
+                .GroupBy(ct => new { ct.MaSanPham, ct.SanPham.TenSanPham })
+                .Select(g => new
+                {
+                    g.Key.MaSanPham,
+                    g.Key.TenSanPham,
+                    SoLanThatThoat = g.Count()
+                })
+                .Where(x => x.SoLanThatThoat >= nguongLan)
+                .OrderByDescending(x => x.SoLanThatThoat)
+                .ToList();
+
+            return ketQua.Select(x => new ET_SanPhamHayMat
+            {
+                MaSanPham = x.MaSanPham ,
+                TenSanPham = x.TenSanPham, 
+                SoLanBiThatThoat = x.SoLanThatThoat
+            }).ToList();
+        }
+
     }
 }

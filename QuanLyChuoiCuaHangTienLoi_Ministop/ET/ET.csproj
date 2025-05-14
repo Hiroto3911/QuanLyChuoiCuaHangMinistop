@@ -63,6 +63,7 @@
     <Compile Include="ET_NhanVien.cs" />
     <Compile Include="ET_NhapHang.cs" />
     <Compile Include="ET_SanPham.cs" />
+    <Compile Include="ET_SanPhamHayMat.cs" />
     <Compile Include="ET_TongDoanhThu.cs" />
     <Compile Include="ET_XuatHang.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

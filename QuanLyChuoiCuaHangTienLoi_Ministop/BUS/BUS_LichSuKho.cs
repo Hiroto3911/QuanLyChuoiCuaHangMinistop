@@ -40,6 +40,10 @@ namespace BUS
         {
             return dal.LayLichSuTheoMaCTK(maCTK);
         }
+        public List<ET_LichSuKho> LayLichSuTheoMaLoai(string maCTK, string loaiThayDoi)
+        {
+            return dal.LayLichSuTheoMaLoai(maCTK, loaiThayDoi);
+        }
         public List<string> LayDanhSachMaLSK()
         {
             return dal.LayDanhSachMaLSK();

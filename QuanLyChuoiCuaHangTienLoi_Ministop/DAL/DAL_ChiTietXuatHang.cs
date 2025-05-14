@@ -62,7 +62,7 @@ namespace DAL
             if (obj == null) return false;
             obj.SoLuong = ct.SoLuong;
             obj.GiaXuat = (decimal)ct.GiaXuat;
-            obj.TongTien = (decimal)ct.TongTien;
+            //obj.TongTien = (decimal)ct.TongTien;
             obj.GhiChu = ct.GhiChu;
             db.SubmitChanges();
             return true;

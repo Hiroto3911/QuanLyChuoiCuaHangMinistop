@@ -22,6 +22,11 @@ namespace BUS
             return dal_CTK.LayGiaBanCuaSanPhamCuaMotCH(maCH, maSP);
 
         }
+        public int LaySLSanPhamCuaMotCH(string maCH, string maSP)
+        {
+            return dal_CTK.LaySLSanPhamCuaMotCH(maCH, maSP);
+
+        }
         public bool KiemTraSanPhamConHang(string maCH, ET_ChiTietHoaDon sp)
         {
 
@@ -53,6 +58,10 @@ namespace BUS
         public bool CapNhapChiTietKhoKhiXuatHang(string maCH, ET_ChiTietXuatHang xh, DateTime ngayXuat)
         {
             return dal_CTK.CapNhapChiTietKhoKhiXuatHang(maCH,xh,ngayXuat);
+        }
+        public bool CapNhapChiTietKhoKhiKiemKho(string maCH, ET_ChiTietKiemKho ctkk, DateTime ngayKiem)
+        {
+            return dal_CTK.CapNhapChiTietKhoKhiKiemKho(maCH,ctkk,ngayKiem);
         }
         public ET_ChiTietKho layChiTietKhoTheoMaSPVaMaCH(string maCH, string maSP)
         {

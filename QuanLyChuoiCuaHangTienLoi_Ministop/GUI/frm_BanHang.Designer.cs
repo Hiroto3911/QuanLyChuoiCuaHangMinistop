@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lbl_Title = new System.Windows.Forms.Label();
             this.cbo_MaCH = new System.Windows.Forms.ComboBox();
@@ -65,11 +66,13 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.panel1.SuspendLayout();
             this.gbo_HoaDon.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Data)).BeginInit();
             this.gbo_ChiTietHoaDon.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_DataChiTiet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -413,6 +416,7 @@
             this.txt_SL.Name = "txt_SL";
             this.txt_SL.Size = new System.Drawing.Size(151, 24);
             this.txt_SL.TabIndex = 56;
+            this.txt_SL.Leave += new System.EventHandler(this.txt_SL_Leave);
             // 
             // txt_MaCTHD
             // 
@@ -462,6 +466,10 @@
             this.label9.TabIndex = 52;
             this.label9.Text = "Mã sản phẩm";
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // frm_BanHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -487,6 +495,7 @@
             this.gbo_ChiTietHoaDon.ResumeLayout(false);
             this.gbo_ChiTietHoaDon.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_DataChiTiet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -530,5 +539,6 @@
         private System.Windows.Forms.Label lbl_TenSP;
         private System.Windows.Forms.Label lbl_KhuyenMai_HoaDon;
         private System.Windows.Forms.Label lbl_KhuyenMai_SanPham;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

@@ -33,5 +33,9 @@ namespace BUS
 
 
         }
+        public List<ET_SanPhamHayMat> LaySanPhamHayThatThoatCuaCuaHangTheoTgianTuyChinh(string maCH, DateTime? tuNgay = null, DateTime? denNgay = null, int nguongLan = 2)
+        {
+            return dal_BaoCao.LaySanPhamHayThatThoatCuaCuaHangTheoTgianTuyChinh(maCH, tuNgay, denNgay, nguongLan);
+        }
     }
 }
