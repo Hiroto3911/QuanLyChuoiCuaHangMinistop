@@ -214,20 +214,30 @@ namespace GUI
         private void frm_XuatKho_Load(object sender, EventArgs e)
         {
             LoadComboBox();
+            
             if (Session.VaiTro == "Admin")
             {
                 cbo_MaCH.Enabled = true;
-                btn_Them.Enabled = true;
-                btn_Xoa.Enabled = true;
-                btn_HoanTat.Enabled = true;
+                btn_Them.Enabled = false;
+                btn_Xoa.Enabled = false;
+                btn_HoanTat.Enabled = false;
+                cbo_MaCH.SelectedIndex = 0;
 
             }
-            else
+            else if (Session.VaiTro == "QuanLy")
             {
                 cbo_MaCH.SelectedValue = Session.MaCuaHang;
                 txt_MaNV.Text = Session.MaNhanVien;
             }
+            else
+            {
+                btn_Them.Enabled = true;
+                cbo_MaCH.SelectedValue = Session.MaCuaHang;
+                txt_MaNV.Text = Session.MaNhanVien;
+            }
             LoadDuLieuXuatHang();
+            if (dgv_Data.CurrentCell == null || dgv_Data.Rows.Count == 0)
+                return;
             LoadChiTietTheoMaPX(dgv_Data.CurrentRow.Cells[0].Value.ToString());
         }
 

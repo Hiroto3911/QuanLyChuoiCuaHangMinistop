@@ -1,4 +1,5 @@
 ﻿using ET;
+using GUI.Reporting;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -55,7 +56,6 @@ namespace GUI
                         pnl_QuanLyNhaCungCap,
                         pnl_QuanLySanPham,
                         pnl_QuanLyKhuyenMai,
-                        pnl_TongHopHeThong,
                         pnl_TongDoanhThu
                     };
 
@@ -63,6 +63,7 @@ namespace GUI
                 }
                 else
                 {
+                    bToolStripMenuItem.Visible = false;
                     panelFunToHide = new List<Panel>()
                     {
                         pnl_QuanLyCuaHang,
@@ -75,7 +76,6 @@ namespace GUI
                         pnl_QuanLyLichSuGiaSP,
                         pnl_DoanhThuCuaHang,
                         pnl_BaoCaoKho,
-                        pnl_TongHopHeThong,
                         pnl_TongDoanhThu,
                         pnl_SanPhamHayThatThoat
                     };
@@ -188,6 +188,21 @@ namespace GUI
             frm_BaoCaoSanPhamHayThatThoat sphm = new frm_BaoCaoSanPhamHayThatThoat();
             sphm.MdiParent = this;
             sphm.Show();
+        }
+
+        private void phiếuNhậpToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frm_RP_DanhSachChiNhanh frm = new frm_RP_DanhSachChiNhanh();
+            frm.MdiParent = this;
+            frm.Show();
+        }
+
+        private void phiếuXuấtHàngToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            string maCH = Session.MaCuaHang;
+            frm_RP_DanhSachNhanVien frm = new frm_RP_DanhSachNhanVien(maCH);
+            frm.MdiParent = this;
+            frm.Show();
         }
     }
 }

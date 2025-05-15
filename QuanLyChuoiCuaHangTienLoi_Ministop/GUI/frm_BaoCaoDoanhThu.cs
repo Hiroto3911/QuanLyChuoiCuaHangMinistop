@@ -25,18 +25,21 @@ namespace GUI
 
         private void frm_BaoCaoDoanhThu_Load(object sender, EventArgs e)
         {
-            LoadDuLieuCuaHangCombobox();
-            if (Session.VaiTro == "Admin")
+            try
             {
-                cbo_MaCH.Enabled = true;
-                cbo_MaCH.SelectedIndex = 0;
-                LoadTatCaDulieuDatagridview(cbo_MaCH.SelectedValue.ToString());
-            }
-            else if(Session.VaiTro =="QuanLy")
-            {
-                cbo_MaCH.SelectedValue=Session.MaCuaHang;  
-                LoadTatCaDulieuDatagridview(cbo_MaCH.SelectedValue.ToString());
-            }
+                LoadDuLieuCuaHangCombobox();
+                if (Session.VaiTro == "Admin")
+                {
+                    cbo_MaCH.Enabled = true;
+                    cbo_MaCH.SelectedIndex = 0;
+                    LoadTatCaDulieuDatagridview(cbo_MaCH.SelectedValue.ToString());
+                }
+                else if (Session.VaiTro == "QuanLy")
+                {
+                    cbo_MaCH.SelectedValue = Session.MaCuaHang;
+                    LoadTatCaDulieuDatagridview(cbo_MaCH.SelectedValue.ToString());
+                }
+            }catch(Exception ex) { MessageBox.Show("Loi " + ex); }
 
         }
         private void LoadTatCaDulieuDatagridview(string maCH= null)
@@ -53,27 +56,30 @@ namespace GUI
             cbo_MaCH.ValueMember = "MaCH";
             cbo_MaCH.DisplayMember = "TenCH";
         }
-        private void LoadDuLieuLenChart(List<ET_DoanhThuCuaHangTheoThang> ds )
+        private void LoadDuLieuLenChart(List<ET_DoanhThuCuaHangTheoThang> ds)
         {
-            if (ds == null || ds.Count == 0)
+            try
             {
-                MessageBox.Show("Không có dữ liệu doanh thu để hiển thị.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return;
-            }
-            chart_DoanhThu.Series.Clear();
-            Series series = new Series("DoanhThu");
-            series.ChartType = SeriesChartType.Column;
-            for (int i = 0; i < ds.Count; i++)
-            {
-                string label = $"{ds[i].Thang}/{ds[i].Nam}";
-                decimal value = ds[i].DoanhThu;
+                if (ds == null || ds.Count == 0)
+                {
+                    MessageBox.Show("Không có dữ liệu doanh thu để hiển thị.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+                }
+                chart_DoanhThu.Series.Clear();
+                Series series = new Series("DoanhThu");
+                series.ChartType = SeriesChartType.Column;
+                for (int i = 0; i < ds.Count; i++)
+                {
+                    string label = $"{ds[i].Thang}/{ds[i].Nam}";
+                    decimal value = ds[i].DoanhThu;
 
-                series.Points.AddXY(label, value);
-            }
-            chart_DoanhThu.Series.Add(series);
-            chart_DoanhThu.ChartAreas[0].AxisX.Title = "Tháng/Năm";
-            chart_DoanhThu.ChartAreas[0].AxisY.Title = "Doanh thu (VND)";
-            chart_DoanhThu.Series[0].IsValueShownAsLabel = true;
+                    series.Points.AddXY(label, value);
+                }
+                chart_DoanhThu.Series.Add(series);
+                chart_DoanhThu.ChartAreas[0].AxisX.Title = "Tháng/Năm";
+                chart_DoanhThu.ChartAreas[0].AxisY.Title = "Doanh thu (VND)";
+                chart_DoanhThu.Series[0].IsValueShownAsLabel = true;
+            }catch(Exception ex) { MessageBox.Show("Loi "+ex); }
         }
 
 
