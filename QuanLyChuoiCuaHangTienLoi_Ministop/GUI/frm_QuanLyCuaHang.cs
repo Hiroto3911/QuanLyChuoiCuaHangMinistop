@@ -41,6 +41,7 @@ namespace GUI
                 bus_CuaHang.Them(et_CuaHang);
                 MessageBox.Show(" Thêm Thành Công");
                 btn_LamMoi_Click(sender, e);
+                txt_MaNguoiQL.Enabled = true;
             }
             catch (Exception ex)
             {
@@ -75,6 +76,7 @@ namespace GUI
                 et_CuaHang.SDT = txt_DTH.Text;
                 et_CuaHang.DChi = rtf_DiaChi.Text;
                 et_CuaHang.MaCH = txt_MaCH.Text;
+                et_CuaHang.NguoiQL = txt_MaNguoiQL.Text;
                 bus_CuaHang.Sua(et_CuaHang);
                 btn_LamMoi_Click(sender, e);
                 MessageBox.Show(" Sửa Thành Công");
@@ -94,7 +96,6 @@ namespace GUI
             rtf_DiaChi.Clear();
             txt_MaNguoiQL.Clear();
             txt_TenCH.Focus();
-            txt_MaNguoiQL.Enabled = false;
             LoadDuLieuCH();
         }
 

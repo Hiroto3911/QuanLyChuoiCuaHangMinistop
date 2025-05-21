@@ -132,7 +132,9 @@ namespace GUI
         private void cbo_MaCH_SelectedValueChanged(object sender, EventArgs e)
         {
             if (Session.VaiTro == "QuanLy") return;
-            LoadDuLieuLichSuGiaDataGridView(cbo_MaCH.SelectedText.ToString(), cbo_MaSP.SelectedValue.ToString());
+            if(cbo_MaCH.SelectedValue ==  null) return;
+            if (cbo_MaSP.SelectedValue == null) return;
+            LoadDuLieuLichSuGiaDataGridView(cbo_MaCH.SelectedValue.ToString(), cbo_MaSP.SelectedValue.ToString());
         }
 
         private void cbo_MaSP_SelectedValueChanged(object sender, EventArgs e)

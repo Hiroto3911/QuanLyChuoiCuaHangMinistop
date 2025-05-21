@@ -144,7 +144,7 @@ namespace GUI
                     et_NhanVien.MaNV = TaoMaTuDong.TaoMa(bus_NhanVien.LayDanhSachMaNVTheoVaiTro(vaiTro), "AD");
                     et_NhanVien.MaCuaHang = null;
                 }
-                else if (vaiTro == "Quản Lý")
+                else if (vaiTro == "QuanLy")
                 {
                     et_NhanVien.MaNV = TaoMaTuDong.TaoMa(bus_NhanVien.LayDanhSachMaNVTheoVaiTro(vaiTro), "QL");
                     et_NhanVien.MaCuaHang = cbo_MaCH.SelectedValue.ToString();

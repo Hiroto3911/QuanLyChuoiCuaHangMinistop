@@ -101,3 +101,44 @@ BEGIN
     WHERE cthd.MaHoaDon = @MaHoaDon;
 END
 --drop PROCEDURE sp_GetChiTietHoaDon
+go
+--Tao danh sach liet ke cac chi nhanh va nhan vien quan ly
+CREATE PROCEDURE sp_DanhSachCuaHangVaQuanLy
+AS
+BEGIN
+    SELECT 
+        CH.MaCuaHang,
+        CH.TenCuaHang,
+        CH.DiaChi,
+        CH.SoDienThoai AS SoDienThoaiCuaHang,
+        NV.MaNhanVien AS MaQuanLy,
+        NV.HoTen AS TenQuanLy,
+        NV.SoDienThoai AS SoDienThoaiQuanLy
+    FROM 
+        CuaHang CH
+    LEFT JOIN 
+        NhanVien NV ON CH.MaQuanLy = NV.MaNhanVien
+END
+go
+--Tao danh sach cac nhan vien cua chi nhanh
+CREATE PROCEDURE sp_DanhSachNhanVienChiNhanh @MaCuaHang VARCHAR(6)
+AS
+BEGIN
+    SELECT 
+        CH.MaCuaHang,
+        CH.TenCuaHang,
+        CH.DiaChi,
+        NV.MaNhanVien AS MaNhanVien,
+        NV.HoTen AS TenNhanVien,
+		NV.NgaySinh,
+		NV.GioiTinh,
+		NV.NgayLamViec,
+        NV.SoDienThoai AS SoDienThoaiNhanVien
+    FROM 
+        CuaHang CH
+    LEFT JOIN 
+        NhanVien NV ON CH.MaCuaHang = NV.MaCuaHang
+		where CH.MaCuaHang = @MaCuaHang
+END
+
+--drop proc sp_DanhSachNhanVienChiNhanh

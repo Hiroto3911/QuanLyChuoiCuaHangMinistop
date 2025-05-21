@@ -52,6 +52,8 @@ namespace GUI
             txt_MaNV.Text = Session.MaNhanVien;
             dtp_NgayLapHD.Text = DateTime.Now.ToShortDateString();
             LoadHoaDon();
+            if (dgv_Data.CurrentCell == null || dgv_Data.Rows.Count == 0)
+                return;
             LoadChiTietHoaDonTheoMaHD(dgv_Data.CurrentRow.Cells[0].Value.ToString());
 
 

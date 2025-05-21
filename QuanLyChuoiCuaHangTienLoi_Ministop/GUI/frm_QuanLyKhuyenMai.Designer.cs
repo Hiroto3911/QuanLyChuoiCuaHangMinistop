@@ -92,7 +92,7 @@
             // 
             // cbo_MaKM
             // 
-            this.cbo_MaKM.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.cbo_MaKM.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbo_MaKM.DropDownWidth = 200;
             this.cbo_MaKM.FormattingEnabled = true;
             this.cbo_MaKM.Location = new System.Drawing.Point(168, 46);
@@ -192,6 +192,7 @@
             // 
             // cbo_MaSP
             // 
+            this.cbo_MaSP.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbo_MaSP.DropDownWidth = 200;
             this.cbo_MaSP.FormattingEnabled = true;
             this.cbo_MaSP.Location = new System.Drawing.Point(168, 98);
@@ -202,6 +203,7 @@
             // 
             // cbo_UuTien
             // 
+            this.cbo_UuTien.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbo_UuTien.FormattingEnabled = true;
             this.cbo_UuTien.Location = new System.Drawing.Point(531, 98);
             this.cbo_UuTien.Margin = new System.Windows.Forms.Padding(4);
@@ -373,6 +375,7 @@
             // 
             // cbo_LocDuLieu
             // 
+            this.cbo_LocDuLieu.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbo_LocDuLieu.FormattingEnabled = true;
             this.cbo_LocDuLieu.Location = new System.Drawing.Point(940, 144);
             this.cbo_LocDuLieu.Margin = new System.Windows.Forms.Padding(4);
@@ -421,13 +424,13 @@
             this.rb_Tat.Name = "rb_Tat";
             this.rb_Tat.Size = new System.Drawing.Size(54, 24);
             this.rb_Tat.TabIndex = 116;
-            this.rb_Tat.TabStop = true;
             this.rb_Tat.Text = "Tắt";
             this.rb_Tat.UseVisualStyleBackColor = true;
             // 
             // rb_Bat
             // 
             this.rb_Bat.AutoSize = true;
+            this.rb_Bat.Checked = true;
             this.rb_Bat.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rb_Bat.Location = new System.Drawing.Point(568, 149);
             this.rb_Bat.Margin = new System.Windows.Forms.Padding(4);
@@ -440,6 +443,7 @@
             // 
             // cbo_LoaiApDung
             // 
+            this.cbo_LoaiApDung.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbo_LoaiApDung.FormattingEnabled = true;
             this.cbo_LoaiApDung.Location = new System.Drawing.Point(940, 47);
             this.cbo_LoaiApDung.Margin = new System.Windows.Forms.Padding(4);
