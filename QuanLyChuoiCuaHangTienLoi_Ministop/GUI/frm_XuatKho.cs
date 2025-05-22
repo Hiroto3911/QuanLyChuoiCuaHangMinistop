@@ -105,7 +105,7 @@ namespace GUI
             {
                 foreach (var ct in bus_ChiTietXuat.LayChiTietTheoMaPhieu(maXuatMoiThem))
                 {
-                    bus_CTK.CapNhapChiTietKhoKhiXuatHang(cbo_MaCH.Text, ct, et_XuatHang.NgayXuat);
+                    bus_CTK.CapNhapChiTietKhoKhiXuatHang(cbo_MaCH.SelectedValue.ToString(), ct, et_XuatHang.NgayXuat);
                 }
                 maXuatMoiThem = null;
                 MessageBox.Show("Cập nhập kho thành công");
@@ -138,6 +138,12 @@ namespace GUI
                 et_ChiTietXuat.SoLuong = int.Parse(txt_SLNhap.Text);
                 et_ChiTietXuat.GiaXuat = double.Parse(txt_GiaXuat.Text);
                 et_ChiTietXuat.GhiChu = rtf_GhiChu.Text;
+                var slHienTai = bus_CTK.LaySLSanPhamCuaMotCH(cbo_MaCH.SelectedValue.ToString(), et_ChiTietXuat.MaSanPham);
+                if(slHienTai < et_ChiTietXuat.SoLuong)
+                {
+                    MessageBox.Show("Xin lỗi hiện tại số lượng xuất đang lớn hơn số lượng trong kho");
+                    return;
+                }
                 bus_ChiTietXuat.Them(et_ChiTietXuat);
 
                 MessageBox.Show("Thêm chi tiết xuất thành công");
