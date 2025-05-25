@@ -52,9 +52,9 @@ namespace GUI
             txt_MaNV.Text = Session.MaNhanVien;
             dtp_NgayLapHD.Text = DateTime.Now.ToShortDateString();
             LoadHoaDon();
+            if (dgv_Data.CurrentCell == null || dgv_Data.Rows.Count == 0)
+                return;
             LoadChiTietHoaDonTheoMaHD(dgv_Data.CurrentRow.Cells[0].Value.ToString());
-
-            //LoadComboboxCuaHang();
 
 
         }
@@ -242,6 +242,8 @@ namespace GUI
 
         private void dgv_Data_Click(object sender, EventArgs e)
         {
+            if (dgv_Data.CurrentCell == null || dgv_Data.Rows.Count == 0)
+                return;
             int dong = dgv_Data.CurrentCell.RowIndex;
             if (dong > dgv_Data.Rows.Count - 1) return;
             txt_MaHD.Text = dgv_Data.Rows[dong].Cells[0].Value.ToString();
@@ -252,7 +254,8 @@ namespace GUI
 
         private void dgv_DataChiTiet_Click(object sender, EventArgs e)
         {
-
+            if (dgv_DataChiTiet.CurrentCell == null || dgv_DataChiTiet.Rows.Count == 0)
+                return;
             int dong = dgv_DataChiTiet.CurrentCell.RowIndex;
             if (dong > dgv_DataChiTiet.Rows.Count - 1) return;
             txt_MaCTHD.Text = dgv_DataChiTiet.Rows[dong].Cells[0].Value.ToString();
@@ -410,7 +413,22 @@ namespace GUI
             lbl_KhuyenMai_HoaDon.Text = "";
             lbl_KhuyenMai_SanPham.Text = "";
         }
+        public bool KiemTraSoNguyenHopLe(string s)
+        {
+            return int.TryParse(s, out _);
+        }
 
-
+        private void txt_SL_Leave(object sender, EventArgs e)
+        {
+            if (!KiemTraSoNguyenHopLe(txt_SL.Text))
+            {
+                errorProvider1.SetError(txt_SL,"Chỉ được nhập số");
+                txt_SL.Text = "";
+            }
+            else
+            {
+                errorProvider1.SetError(txt_SL, ""); 
+            }
+        }
     }
 }

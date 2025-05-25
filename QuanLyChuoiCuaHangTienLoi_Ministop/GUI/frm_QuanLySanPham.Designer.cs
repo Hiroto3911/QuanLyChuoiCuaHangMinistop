@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.btn_LamMoi = new System.Windows.Forms.Button();
             this.txt_GiaBanTieuChuan = new System.Windows.Forms.TextBox();
             this.btn_Sua = new System.Windows.Forms.Button();
@@ -49,10 +50,12 @@
             this.txt_TenSP = new System.Windows.Forms.TextBox();
             this.lbl_Title = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.gbo_ThongTin.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Data)).BeginInit();
             this.gbo_NhapThongTin.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // btn_LamMoi
@@ -73,6 +76,7 @@
             this.txt_GiaBanTieuChuan.Name = "txt_GiaBanTieuChuan";
             this.txt_GiaBanTieuChuan.Size = new System.Drawing.Size(255, 29);
             this.txt_GiaBanTieuChuan.TabIndex = 90;
+            this.txt_GiaBanTieuChuan.Leave += new System.EventHandler(this.txt_GiaBanTieuChuan_Leave);
             // 
             // btn_Sua
             // 
@@ -244,6 +248,7 @@
             // 
             // cbo_DonVi
             // 
+            this.cbo_DonVi.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbo_DonVi.FormattingEnabled = true;
             this.cbo_DonVi.Location = new System.Drawing.Point(220, 217);
             this.cbo_DonVi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
@@ -253,6 +258,7 @@
             // 
             // cbo_LoaiSP
             // 
+            this.cbo_LoaiSP.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbo_LoaiSP.FormattingEnabled = true;
             this.cbo_LoaiSP.Location = new System.Drawing.Point(220, 162);
             this.cbo_LoaiSP.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
@@ -292,6 +298,10 @@
             this.panel1.Size = new System.Drawing.Size(1259, 64);
             this.panel1.TabIndex = 83;
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // frm_QuanLySanPham
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -316,6 +326,7 @@
             this.gbo_NhapThongTin.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -343,5 +354,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TextBox txt_TimKiem;
         private System.Windows.Forms.Button btn_TimKiem;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

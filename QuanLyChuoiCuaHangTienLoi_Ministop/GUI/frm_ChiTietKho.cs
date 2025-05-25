@@ -26,22 +26,33 @@ namespace GUI
 
         private void frm_ChiTietKho_Load(object sender, EventArgs e)
         {
-            LoadComboBox();
-            if (Session.VaiTro == "Admin")
+            try
             {
-                cbo_MaCH.Enabled = false;
+                LoadComboBox();
+                if (Session.VaiTro == "Admin")
+                {
+                    cbo_MaCH.Enabled = false;
+                }
+                else
+                {
+                    cbo_MaCH.SelectedValue = Session.MaCuaHang;
+                }
+                LoadDuLieuChiTietKho();
+                if (dgv_Data.CurrentCell == null || dgv_Data.Rows.Count == 0)
+                    return;
+
+
+                LoadDuLieuLichSuKhoTheoMa(dgv_Data.CurrentRow.Cells[0].Value.ToString());
+
             }
-            else
-            {
-                cbo_MaCH.SelectedValue = Session.MaCuaHang;
-            }
-            LoadDuLieuChiTietKho();
-            LoadDuLieuLichSuKhoTheoMa(dgv_Data.CurrentRow.Cells[0].Value.ToString());
-            
+            catch (Exception ex) { MessageBox.Show(ex.Message); }
+
+
+
         }
+
         private void LoadComboBox()
         {
-            string[] listLoai = { "Xuat", "Nhap", "Kiem" };
 
             cbo_MaCH.DataSource = bus_CuaHang.HienThiDuLieuSapXepGiamDanTheoMa();
             cbo_MaCH.DisplayMember = "TenCH";
@@ -50,11 +61,12 @@ namespace GUI
             cbo_MaSP.DataSource = bus_SanPham.HienThiDuLieuSapXepGiamDanTheoMa();
             cbo_MaSP.DisplayMember = "MaSanPham";
             cbo_MaSP.ValueMember = "MaSanPham";
+            cbo_LoaiThayDoi.DataSource = new List<string>() { "Nhap", "Xuat", "Kiem", "Ban" };
         }
 
         public void LoadDuLieuChiTietKho()
         {
-           
+
             dgv_Data.DataSource = bus_ChiTietKho.HienThiDuLieuSapXepGiamDanTheoMaCH(cbo_MaCH.SelectedValue.ToString());
         }
 
@@ -117,8 +129,34 @@ namespace GUI
 
         private void btn_LamMoiChiTiet_Click(object sender, EventArgs e)
         {
+
             LoadDuLieuChiTietKho();
             LoadDuLieuLichSuKhoTheoMa(dgv_Data.CurrentRow.Cells[0].Value.ToString());
+        }
+
+        private void frm_ChiTietKho_Resize(object sender, EventArgs e)
+        {
+            lbl_Title.Left = (this.ClientSize.Width - lbl_Title.Width) / 2;
+            gbo_ThongTin.Left = (this.ClientSize.Width - gbo_ThongTin.Width) / 2;
+            gbo_ThongTin.Top = 90;
+            gbo_ThongTinChiTiet.Left = (this.ClientSize.Width - gbo_ThongTinChiTiet.Width) / 2;
+            gbo_ThongTinChiTiet.Top = gbo_ThongTin.Bottom + 20;
+        }
+
+        private void cbo_MaSP_SelectedValueChanged(object sender, EventArgs e)
+        {
+            var name = TimTenSanPham(cbo_MaSP.SelectedValue.ToString()) ?? "Null";
+            lbl_TenSP.Text = name;
+        }
+        private string TimTenSanPham(string maSP)
+        {
+            return bus_SanPham.TimTenSPBangMaSP(maSP);
+        }
+
+        private void LocDanhSachLichSuTheoLoai(string maCTK, string loaiThayDoi)
+        {
+            if (string.IsNullOrEmpty(maCTK) && string.IsNullOrEmpty(loaiThayDoi)) { return; }
+            dgv_DataChiTiet.DataSource = bus_LichSuKho.LayLichSuTheoMaLoai(maCTK, loaiThayDoi);
         }
     }
 }

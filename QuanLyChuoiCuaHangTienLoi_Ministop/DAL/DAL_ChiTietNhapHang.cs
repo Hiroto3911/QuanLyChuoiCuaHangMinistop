@@ -9,7 +9,7 @@ namespace DAL
 {
     public class DAL_ChiTietNhapHang
     {
-        private DB_QuanLyChuoiCuaHangTienLoiMinistopDataContext db = new DB_QuanLyChuoiCuaHangTienLoiMinistopDataContext();
+        private DB_QuanLyChuoiCuaHangTienLoiMinistopDataContext db = DB_Context_Custom.getDataContext();
 
         // Hiển thị tất cả chi tiết nhập hàng
         public List<ET_ChiTietNhapHang> HienThiTatCa()

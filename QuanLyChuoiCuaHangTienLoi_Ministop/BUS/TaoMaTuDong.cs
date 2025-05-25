@@ -25,7 +25,7 @@ namespace BUS
                 int length = soCuoi.Length;
                 return tienTo + stt.ToString($"D{length}");
             }
-            return tienTo + "1";
+            return tienTo + "001";
 
         }
     }

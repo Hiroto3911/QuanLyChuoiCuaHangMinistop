@@ -9,7 +9,7 @@ namespace DAL
 {
     public class DAL_ChiTietXuatHang
     {
-        private DB_QuanLyChuoiCuaHangTienLoiMinistopDataContext db = new DB_QuanLyChuoiCuaHangTienLoiMinistopDataContext();
+        private DB_QuanLyChuoiCuaHangTienLoiMinistopDataContext db = DB_Context_Custom.getDataContext();
 
         public List<ET_ChiTietXuatHang> HienThiTatCa()
         {
@@ -62,7 +62,7 @@ namespace DAL
             if (obj == null) return false;
             obj.SoLuong = ct.SoLuong;
             obj.GiaXuat = (decimal)ct.GiaXuat;
-            obj.TongTien = (decimal)ct.TongTien;
+            //obj.TongTien = (decimal)ct.TongTien;
             obj.GhiChu = ct.GhiChu;
             db.SubmitChanges();
             return true;

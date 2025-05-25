@@ -35,7 +35,7 @@
             this.btn_HoanTat = new System.Windows.Forms.Button();
             this.btn_LamMoi = new System.Windows.Forms.Button();
             this.btn_Them = new System.Windows.Forms.Button();
-            this.label6 = new System.Windows.Forms.Label();
+            this.lbl_Title = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.gbo_NhapThongTin = new System.Windows.Forms.GroupBox();
             this.rtf_LyDo = new System.Windows.Forms.RichTextBox();
@@ -91,6 +91,7 @@
             // 
             // btn_Sua
             // 
+            this.btn_Sua.Enabled = false;
             this.btn_Sua.Location = new System.Drawing.Point(173, 341);
             this.btn_Sua.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_Sua.Name = "btn_Sua";
@@ -102,6 +103,7 @@
             // 
             // btn_Xoa
             // 
+            this.btn_Xoa.Enabled = false;
             this.btn_Xoa.Location = new System.Drawing.Point(332, 341);
             this.btn_Xoa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_Xoa.Name = "btn_Xoa";
@@ -113,6 +115,7 @@
             // 
             // btn_HoanTat
             // 
+            this.btn_HoanTat.Enabled = false;
             this.btn_HoanTat.Location = new System.Drawing.Point(484, 341);
             this.btn_HoanTat.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_HoanTat.Name = "btn_HoanTat";
@@ -144,22 +147,22 @@
             this.btn_Them.UseVisualStyleBackColor = true;
             this.btn_Them.Click += new System.EventHandler(this.btn_Them_Click);
             // 
-            // label6
+            // lbl_Title
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(292, 11);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(675, 42);
-            this.label6.TabIndex = 18;
-            this.label6.Text = "Quản lý lịch sử thay đổi giá sản phẩm";
+            this.lbl_Title.AutoSize = true;
+            this.lbl_Title.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Title.ForeColor = System.Drawing.Color.White;
+            this.lbl_Title.Location = new System.Drawing.Point(292, 11);
+            this.lbl_Title.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_Title.Name = "lbl_Title";
+            this.lbl_Title.Size = new System.Drawing.Size(675, 42);
+            this.lbl_Title.TabIndex = 18;
+            this.lbl_Title.Text = "Quản lý lịch sử thay đổi giá sản phẩm";
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(81)))), ((int)(((byte)(152)))));
-            this.panel1.Controls.Add(this.label6);
+            this.panel1.Controls.Add(this.lbl_Title);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
@@ -215,6 +218,7 @@
             // 
             // cbo_MaSP
             // 
+            this.cbo_MaSP.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbo_MaSP.FormattingEnabled = true;
             this.cbo_MaSP.Location = new System.Drawing.Point(173, 100);
             this.cbo_MaSP.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
@@ -225,6 +229,7 @@
             // 
             // txt_MaLSG
             // 
+            this.txt_MaLSG.Enabled = false;
             this.txt_MaLSG.Location = new System.Drawing.Point(173, 148);
             this.txt_MaLSG.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txt_MaLSG.Name = "txt_MaLSG";
@@ -285,6 +290,7 @@
             // 
             // dtp_TgianCapNhap
             // 
+            this.dtp_TgianCapNhap.Enabled = false;
             this.dtp_TgianCapNhap.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtp_TgianCapNhap.Location = new System.Drawing.Point(571, 144);
             this.dtp_TgianCapNhap.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
@@ -294,6 +300,7 @@
             // 
             // cbo_MaCH
             // 
+            this.cbo_MaCH.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbo_MaCH.Enabled = false;
             this.cbo_MaCH.FormattingEnabled = true;
             this.cbo_MaCH.Location = new System.Drawing.Point(173, 49);
@@ -338,6 +345,7 @@
             // 
             // txt_GiaCu
             // 
+            this.txt_GiaCu.Enabled = false;
             this.txt_GiaCu.Location = new System.Drawing.Point(571, 49);
             this.txt_GiaCu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txt_GiaCu.Name = "txt_GiaCu";
@@ -369,6 +377,7 @@
             this.Name = "frm_QuanLyLichSuThayDoiGiaSanPham";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frm_QuanLyLichSuThayDoiGiaSanPham_Load);
+            this.Resize += new System.EventHandler(this.frm_QuanLyLichSuThayDoiGiaSanPham_Resize);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Data)).EndInit();
             this.gbo_ThongTin.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
@@ -382,7 +391,7 @@
         #endregion
         private System.Windows.Forms.DataGridView dgv_Data;
         private System.Windows.Forms.GroupBox gbo_ThongTin;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label lbl_Title;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.GroupBox gbo_NhapThongTin;
         private System.Windows.Forms.Button btn_LamMoi;

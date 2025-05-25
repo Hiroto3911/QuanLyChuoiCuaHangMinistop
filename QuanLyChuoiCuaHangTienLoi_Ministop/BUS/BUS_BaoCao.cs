@@ -17,6 +17,11 @@ namespace BUS
             return dal_BaoCao.BaoCaoDoanhThuCuaHangTheoThang(maCH);
 
         }
+        public List<ET_DoanhThuCuaHangTheoThang> BaoCaoDoanhThuCuaHangDieuChinhTheoTgianMongMuon(string maCH, DateTime tuNgay, DateTime denNgay)
+        {
+            return dal_BaoCao.BaoCaoDoanhThuCuaHangDieuChinhTheoTgianMongMuon(maCH, tuNgay, denNgay);
+
+        }
         public List<ET_TongDoanhThu> TongDoanhThuTheoThang()
         {
             return dal_BaoCao.TongDoanhThuTheoThang();
@@ -27,6 +32,10 @@ namespace BUS
             return dal_BaoCao.BaoCaoTonKhoTrongCuaHang(nam,thang,maCH);
 
 
+        }
+        public List<ET_SanPhamHayMat> LaySanPhamHayThatThoatCuaCuaHangTheoTgianTuyChinh(string maCH, DateTime? tuNgay = null, DateTime? denNgay = null, int nguongLan = 2)
+        {
+            return dal_BaoCao.LaySanPhamHayThatThoatCuaCuaHangTheoTgianTuyChinh(maCH, tuNgay, denNgay, nguongLan);
         }
     }
 }

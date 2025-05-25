@@ -1,4 +1,5 @@
-﻿using CrystalDecisions.CrystalReports.Engine;
+﻿using BUS;
+using CrystalDecisions.CrystalReports.Engine;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -23,14 +24,19 @@ namespace GUI.Reporting
 
         private void frm_RP_PhieuXuat_Load(object sender, EventArgs e)
         {
-            ReportDocument cryRpt = new ReportDocument();
-            string reportPath = Path.Combine(Application.StartupPath, "Reporting", "RP_PhieuXuatHang.rpt");
-            cryRpt.Load(reportPath);
-
-            cryRpt.SetParameterValue("@MaPhieuXuat", maXH);
-
-            crystalReportViewer1.ReportSource = cryRpt;
-            crystalReportViewer1.Refresh();
+            try
+            {
+                ReportDocument cryRpt = new ReportDocument();
+                string reportPath = Path.Combine(Application.StartupPath, "Reporting", "RP_PhieuXuatHang.rpt");
+				cryRpt.Load(reportPath);
+				BUS_CrystalReportHelper.ApplyConnection(cryRpt);
+                cryRpt.SetParameterValue("@MaPhieuXuat", maXH);
+				crystalReportViewer1.ReportSource = cryRpt;
+                crystalReportViewer1.Refresh();
+            }catch(Exception ex)
+            {
+				MessageBox.Show("Lỗi Crystal: " + ex.Message);
+			}
         }
     }
 }
