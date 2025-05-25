@@ -46,6 +46,8 @@ namespace GUI
                 txt_MaNV.Text = Session.MaNhanVien;
             }
             LoadDuLieuNhapHang();
+            if (dgv_Data.CurrentCell == null || dgv_Data.Rows.Count == 0)
+                return;
             LoadChiTietTheoMaPN(dgv_Data.CurrentRow.Cells[0].Value.ToString());
 
         }

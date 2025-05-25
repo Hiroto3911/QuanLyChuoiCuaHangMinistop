@@ -44,5 +44,16 @@ namespace DAL.Properties {
                 return ((string)(this["QuanLyChuoiCuaHangMinistopConnectionString1"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-G20M4PR;Initial Catalog=QuanLyChuoiCuaHangMinistop;Integrated" +
+            " Security=True;Encrypt=True;TrustServerCertificate=True")]
+        public string QuanLyChuoiCuaHangMinistopConnectionString2 {
+            get {
+                return ((string)(this["QuanLyChuoiCuaHangMinistopConnectionString2"]));
+            }
+        }
     }
 }

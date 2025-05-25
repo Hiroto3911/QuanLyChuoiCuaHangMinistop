@@ -105,7 +105,7 @@ namespace GUI
             {
                 foreach (var ct in bus_ChiTietXuat.LayChiTietTheoMaPhieu(maXuatMoiThem))
                 {
-                    bus_CTK.CapNhapChiTietKhoKhiXuatHang(cbo_MaCH.Text, ct, et_XuatHang.NgayXuat);
+                    bus_CTK.CapNhapChiTietKhoKhiXuatHang(cbo_MaCH.SelectedValue.ToString(), ct, et_XuatHang.NgayXuat);
                 }
                 maXuatMoiThem = null;
                 MessageBox.Show("Cập nhập kho thành công");
@@ -138,6 +138,12 @@ namespace GUI
                 et_ChiTietXuat.SoLuong = int.Parse(txt_SLNhap.Text);
                 et_ChiTietXuat.GiaXuat = double.Parse(txt_GiaXuat.Text);
                 et_ChiTietXuat.GhiChu = rtf_GhiChu.Text;
+                var slHienTai = bus_CTK.LaySLSanPhamCuaMotCH(cbo_MaCH.SelectedValue.ToString(), et_ChiTietXuat.MaSanPham);
+                if(slHienTai < et_ChiTietXuat.SoLuong)
+                {
+                    MessageBox.Show("Xin lỗi hiện tại số lượng xuất đang lớn hơn số lượng trong kho");
+                    return;
+                }
                 bus_ChiTietXuat.Them(et_ChiTietXuat);
 
                 MessageBox.Show("Thêm chi tiết xuất thành công");
@@ -214,20 +220,30 @@ namespace GUI
         private void frm_XuatKho_Load(object sender, EventArgs e)
         {
             LoadComboBox();
+            
             if (Session.VaiTro == "Admin")
             {
                 cbo_MaCH.Enabled = true;
-                btn_Them.Enabled = true;
-                btn_Xoa.Enabled = true;
-                btn_HoanTat.Enabled = true;
+                btn_Them.Enabled = false;
+                btn_Xoa.Enabled = false;
+                btn_HoanTat.Enabled = false;
+                cbo_MaCH.SelectedIndex = 0;
 
             }
-            else
+            else if (Session.VaiTro == "QuanLy")
             {
                 cbo_MaCH.SelectedValue = Session.MaCuaHang;
                 txt_MaNV.Text = Session.MaNhanVien;
             }
+            else
+            {
+                btn_Them.Enabled = true;
+                cbo_MaCH.SelectedValue = Session.MaCuaHang;
+                txt_MaNV.Text = Session.MaNhanVien;
+            }
             LoadDuLieuXuatHang();
+            if (dgv_Data.CurrentCell == null || dgv_Data.Rows.Count == 0)
+                return;
             LoadChiTietTheoMaPX(dgv_Data.CurrentRow.Cells[0].Value.ToString());
         }
 

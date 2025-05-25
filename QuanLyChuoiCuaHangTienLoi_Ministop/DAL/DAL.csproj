@@ -32,6 +32,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.Linq" />
@@ -52,6 +54,7 @@
     <Compile Include="DAL_ChiTietKho.cs" />
     <Compile Include="DAL_ChiTietNhapHang.cs" />
     <Compile Include="DAL_ChiTietXuatHang.cs" />
+    <Compile Include="DAL_CrystalReportHelper.cs" />
     <Compile Include="DAL_CuaHang.cs" />
     <Compile Include="DAL_DangNhap.cs" />
     <Compile Include="DAL_HoaDon.cs" />
@@ -65,6 +68,11 @@
     <Compile Include="DAL_NhapHang.cs" />
     <Compile Include="DAL_SanPham.cs" />
     <Compile Include="DAL_XuatHang.cs" />
+    <Compile Include="DAL_DBConnect.cs" />
+    <Compile Include="DB_Context_Custom.cs" />
+    <Compile Include="DB_QuanLyChuoiCuaHangTienLoiMinistop.cs">
+      <DependentUpon>DB_QuanLyChuoiCuaHangTienLoiMinistop.dbml</DependentUpon>
+    </Compile>
     <Compile Include="DB_QuanLyChuoiCuaHangTienLoiMinistop.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

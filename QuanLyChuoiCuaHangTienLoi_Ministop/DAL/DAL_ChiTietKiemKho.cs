@@ -10,7 +10,7 @@ namespace DAL
 {
     public class DAL_ChiTietKiemKho
     {
-        private DB_QuanLyChuoiCuaHangTienLoiMinistopDataContext db = new DB_QuanLyChuoiCuaHangTienLoiMinistopDataContext();
+        private DB_QuanLyChuoiCuaHangTienLoiMinistopDataContext db = DB_Context_Custom.getDataContext();
 
         public List<ET_ChiTietKiemKho> LayChiTietTheoMaPhieu(string maKK)
         {

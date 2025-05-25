@@ -92,6 +92,8 @@ namespace GUI
                 txt_MaNV.Text = Session.MaNhanVien;
             }
             LoadThongTinDatagridview();
+            if (dgv_Data.CurrentCell == null || dgv_Data.Rows.Count == 0)
+                return;
             LoadThongTinChiTietTheoMaDatagridview(dgv_Data.CurrentRow.Cells[0].Value.ToString());
         }
 

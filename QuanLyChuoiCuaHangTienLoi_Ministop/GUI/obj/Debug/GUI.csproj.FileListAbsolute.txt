@@ -174,3 +174,17 @@ D:\DoAnCN.Net\QuanLyChuoiCuaHangMinistop\QuanLyChuoiCuaHangTienLoi_Ministop\GUI\
 D:\DoAnCN.Net\QuanLyChuoiCuaHangMinistop\QuanLyChuoiCuaHangTienLoi_Ministop\GUI\obj\Debug\GUI.Reporting.frm_RP_PhieuNhapHang.resources
 D:\DoAnCN.Net\QuanLyChuoiCuaHangMinistop\QuanLyChuoiCuaHangTienLoi_Ministop\GUI\obj\Debug\GUI.Reporting.frm_RP_PhieuXuatHang.resources
 D:\DoAnCN.Net\QuanLyChuoiCuaHangMinistop\QuanLyChuoiCuaHangTienLoi_Ministop\GUI\obj\Debug\GUI.frm_BaoCaoSanPhamHayThatThoat.resources
+C:\Users\Chris\Desktop\DoAnDotNET\project-AnhHao\QuanLyChuoiCuaHangTienLoi_Ministop\GUI\obj\Debug\GUI.frm_BaoCaoSanPhamHayThatThoat.resources
+C:\Users\Chris\Desktop\DoAnDotNET\project-AnhHao\QuanLyChuoiCuaHangTienLoi_Ministop\GUI\bin\Debug\Reporting\RP_DanhSachChiNhanh.rpt
+C:\Users\Chris\Desktop\DoAnDotNET\project-AnhHao\QuanLyChuoiCuaHangTienLoi_Ministop\GUI\bin\Debug\Reporting\RP_DanhSachNhanVien.rpt
+C:\Users\Chris\Desktop\DoAnDotNET\project-AnhHao\QuanLyChuoiCuaHangTienLoi_Ministop\GUI\bin\Debug\Reporting\RP_DanhSachChiNhanh.cs
+C:\Users\Chris\Desktop\DoAnDotNET\project-AnhHao\QuanLyChuoiCuaHangTienLoi_Ministop\GUI\bin\Debug\Reporting\RP_DanhSachNhanVien.cs
+C:\Users\Chris\Desktop\DoAnDotNET\project-AnhHao\QuanLyChuoiCuaHangTienLoi_Ministop\GUI\obj\Debug\GUI.Reporting.frm_RP_DanhSachChiNhanh.resources
+C:\Users\Chris\Desktop\DoAnDotNET\project-AnhHao\QuanLyChuoiCuaHangTienLoi_Ministop\GUI\obj\Debug\GUI.Reporting.frm_RP_DanhSachNhanVien.resources
+D:\DoAnCN.Net\QuanLyChuoiCuaHangMinistop\QuanLyChuoiCuaHangTienLoi_Ministop\GUI\bin\Debug\Reporting\RP_DanhSachChiNhanh.rpt
+D:\DoAnCN.Net\QuanLyChuoiCuaHangMinistop\QuanLyChuoiCuaHangTienLoi_Ministop\GUI\bin\Debug\Reporting\RP_DanhSachNhanVien.rpt
+D:\DoAnCN.Net\QuanLyChuoiCuaHangMinistop\QuanLyChuoiCuaHangTienLoi_Ministop\GUI\bin\Debug\Reporting\RP_DanhSachChiNhanh.cs
+D:\DoAnCN.Net\QuanLyChuoiCuaHangMinistop\QuanLyChuoiCuaHangTienLoi_Ministop\GUI\bin\Debug\Reporting\RP_DanhSachNhanVien.cs
+D:\DoAnCN.Net\QuanLyChuoiCuaHangMinistop\QuanLyChuoiCuaHangTienLoi_Ministop\GUI\obj\Debug\GUI.Reporting.frm_RP_DanhSachChiNhanh.resources
+D:\DoAnCN.Net\QuanLyChuoiCuaHangMinistop\QuanLyChuoiCuaHangTienLoi_Ministop\GUI\obj\Debug\GUI.Reporting.frm_RP_DanhSachNhanVien.resources
+D:\DoAnCN.Net\QuanLyChuoiCuaHangMinistop\QuanLyChuoiCuaHangTienLoi_Ministop\GUI\obj\Debug\GUI.frm_ThayDoiChuoiSQLServer.resources
