@@ -11,7 +11,7 @@ namespace DAL
 {
     public class DAL_BaoCao
     {
-        private DB_QuanLyChuoiCuaHangTienLoiMinistopDataContext db = new DB_QuanLyChuoiCuaHangTienLoiMinistopDataContext();
+        private DB_QuanLyChuoiCuaHangTienLoiMinistopDataContext db = DB_Context_Custom.getDataContext();
         public List<ET_DoanhThuCuaHangTheoThang> BaoCaoDoanhThuCuaHangTheoThang(string maCH = null)
         {
             var ds = db.HoaDons

@@ -84,7 +84,7 @@ namespace DAL
     #endregion
 		
 		public DB_QuanLyChuoiCuaHangTienLoiMinistopDataContext() : 
-				base(global::DAL.Properties.Settings.Default.QuanLyChuoiCuaHangMinistopConnectionString2, mappingSource)
+				base(global::DAL.Properties.Settings.Default.QuanLyChuoiCuaHangMinistopConnectionString1, mappingSource)
 		{
 			OnCreated();
 		}

@@ -11,7 +11,7 @@ namespace DAL
 {
     public class DAL_LichSuThayDoiGia
     {
-        private DB_QuanLyChuoiCuaHangTienLoiMinistopDataContext db = new DB_QuanLyChuoiCuaHangTienLoiMinistopDataContext();
+        private DB_QuanLyChuoiCuaHangTienLoiMinistopDataContext db = DB_Context_Custom.getDataContext();
         public List<ET_LichSuThayDoiGia> HienThiDuLieuSapXepGiamDanTheoMaCHVaMaSP(string maCH, string maSP)
         {
             var query = db.LichSuThayDoiGias.Where(ls => ls.MaCuaHang == maCH && ls.MaSanPham == maSP).OrderByDescending(ma => ma.MaLichSu).ToList();

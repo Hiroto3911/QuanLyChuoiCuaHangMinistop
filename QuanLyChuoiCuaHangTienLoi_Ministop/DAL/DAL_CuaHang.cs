@@ -9,7 +9,7 @@ namespace DAL
 {
     public class DAL_CuaHang
     {
-        private DB_QuanLyChuoiCuaHangTienLoiMinistopDataContext db = new DB_QuanLyChuoiCuaHangTienLoiMinistopDataContext();
+        private DB_QuanLyChuoiCuaHangTienLoiMinistopDataContext db = DB_Context_Custom.getDataContext();
         public List<ET_CuaHang> HienThiDuLieuSapXepGiamDanTheoMa()
         {
             var query = db.CuaHangs.OrderByDescending(ma => ma.MaCuaHang).ToList();

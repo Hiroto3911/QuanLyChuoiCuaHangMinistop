@@ -187,3 +187,4 @@ D:\DoAnCN.Net\QuanLyChuoiCuaHangMinistop\QuanLyChuoiCuaHangTienLoi_Ministop\GUI\
 D:\DoAnCN.Net\QuanLyChuoiCuaHangMinistop\QuanLyChuoiCuaHangTienLoi_Ministop\GUI\bin\Debug\Reporting\RP_DanhSachNhanVien.cs
 D:\DoAnCN.Net\QuanLyChuoiCuaHangMinistop\QuanLyChuoiCuaHangTienLoi_Ministop\GUI\obj\Debug\GUI.Reporting.frm_RP_DanhSachChiNhanh.resources
 D:\DoAnCN.Net\QuanLyChuoiCuaHangMinistop\QuanLyChuoiCuaHangTienLoi_Ministop\GUI\obj\Debug\GUI.Reporting.frm_RP_DanhSachNhanVien.resources
+D:\DoAnCN.Net\QuanLyChuoiCuaHangMinistop\QuanLyChuoiCuaHangTienLoi_Ministop\GUI\obj\Debug\GUI.frm_ThayDoiChuoiSQLServer.resources
