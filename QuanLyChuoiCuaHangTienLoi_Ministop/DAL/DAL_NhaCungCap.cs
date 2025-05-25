@@ -57,7 +57,7 @@ namespace DAL
             if (string.IsNullOrWhiteSpace(maNCC)) return false;
             try
             {
-                var del = TimCuaSanPhamMaSanPham(maNCC);
+                var del = TimNhaCungCapBangMaNCC(maNCC);
                 if (del == null) return false;
                 db.NhaCungCaps.DeleteOnSubmit(del);
                 db.SubmitChanges();
@@ -72,7 +72,7 @@ namespace DAL
             if (maNCC == null) return false;
             try
             {
-                var capNhat = TimCuaSanPhamMaSanPham(maNCC.MaNcc);
+                var capNhat = TimNhaCungCapBangMaNCC(maNCC.MaNcc);
                 if (capNhat == null) return false;
 
                 capNhat.TenNCC = maNCC.TenNcc;
@@ -99,10 +99,17 @@ namespace DAL
             var danhSachID = db.NhaCungCaps.Select(id => id.MaNCC).ToList();
             return danhSachID;
         }
-        private NhaCungCap TimCuaSanPhamMaSanPham(string maNCC)
+        private NhaCungCap TimNhaCungCapBangMaNCC(string maNCC)
         {
             var kq = db.NhaCungCaps.Where(n => n.MaNCC == maNCC).FirstOrDefault();
             return kq;
         }
-    }
+		public string TimTenNhaCungCapBangMaNCC(string maNCC)
+		{
+			var kq = db.NhaCungCaps.Where(n => n.MaNCC == maNCC).Select(n => n.TenNCC).FirstOrDefault();
+			return kq;
+		}
+
+
+	}
 }
