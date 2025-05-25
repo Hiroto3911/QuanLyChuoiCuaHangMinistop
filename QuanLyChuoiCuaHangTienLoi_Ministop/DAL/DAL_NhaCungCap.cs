@@ -9,7 +9,7 @@ namespace DAL
 {
     public class DAL_NhaCungCap
     {
-        private DB_QuanLyChuoiCuaHangTienLoiMinistopDataContext db = new DB_QuanLyChuoiCuaHangTienLoiMinistopDataContext();
+        private DB_QuanLyChuoiCuaHangTienLoiMinistopDataContext db = DB_Context_Custom.getDataContext();
         public List<ET_NhaCungCap> HienThiDuLieuSapXepGiamDanTheoMa()
         {
             var query = db.NhaCungCaps.OrderByDescending(ma => ma.MaNCC).ToList();

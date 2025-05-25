@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using GUI.Reporting;
+using System.Text.RegularExpressions;
 
 namespace GUI
 {
@@ -62,6 +63,7 @@ namespace GUI
 
         private void btn_Them_Click(object sender, EventArgs e)
         {
+            btn_HoanTat.Enabled = true;
             try
             {
                 maXuatMoiThem = TaoMaTuDong.TaoMa(bus_XuatHang.LayDanhSachMaXH(), "PX");
@@ -70,14 +72,8 @@ namespace GUI
                 et_XuatHang.MaNhanVien = Session.MaNhanVien;
                 et_XuatHang.NgayXuat = dtp_NgayXuat.Value;
                 et_XuatHang.LoaiXuat = cbo_LoaiXuat.SelectedItem.ToString();
-
                 bus_XuatHang.Them(et_XuatHang);
-
                 MessageBox.Show("Thêm phiếu xuất thành công");
-
-
-
-
                 LoadDuLieuXuatHang(); // Tải lại danh sách
             }
             catch (Exception ex)
@@ -88,6 +84,8 @@ namespace GUI
 
         private void btn_Xoa_Click(object sender, EventArgs e)
         {
+            var chapNhanXoa = MessageBox.Show($"Bạn có chắc muốn xoá dữ liệu {maXuatMoiThem} này không", "Thông báo", MessageBoxButtons.OKCancel);
+            if (DialogResult.Cancel == chapNhanXoa) return;
             try
             {
 
@@ -107,7 +105,7 @@ namespace GUI
             {
                 foreach (var ct in bus_ChiTietXuat.LayChiTietTheoMaPhieu(maXuatMoiThem))
                 {
-                    bus_CTK.CapNhapChiTietKhoKhiXuatHang(cbo_MaCH.Text, ct, et_XuatHang.NgayXuat);
+                    bus_CTK.CapNhapChiTietKhoKhiXuatHang(cbo_MaCH.SelectedValue.ToString(), ct, et_XuatHang.NgayXuat);
                 }
                 maXuatMoiThem = null;
                 MessageBox.Show("Cập nhập kho thành công");
@@ -140,6 +138,12 @@ namespace GUI
                 et_ChiTietXuat.SoLuong = int.Parse(txt_SLNhap.Text);
                 et_ChiTietXuat.GiaXuat = double.Parse(txt_GiaXuat.Text);
                 et_ChiTietXuat.GhiChu = rtf_GhiChu.Text;
+                var slHienTai = bus_CTK.LaySLSanPhamCuaMotCH(cbo_MaCH.SelectedValue.ToString(), et_ChiTietXuat.MaSanPham);
+                if(slHienTai < et_ChiTietXuat.SoLuong)
+                {
+                    MessageBox.Show("Xin lỗi hiện tại số lượng xuất đang lớn hơn số lượng trong kho");
+                    return;
+                }
                 bus_ChiTietXuat.Them(et_ChiTietXuat);
 
                 MessageBox.Show("Thêm chi tiết xuất thành công");
@@ -158,6 +162,8 @@ namespace GUI
                 MessageBox.Show("Thành thật xin lỗi bạn. Phiếu xuất này hiện tại đã hoàn tất không thể thêm xoá sửa được nữa " +
                 "\n !Xin vui lòng tạo phiếu xuất mới rồi bạn có thể thêm xoá sửa!", "Thông báo", MessageBoxButtons.OKCancel); return;
             }
+            var chapNhanXoa = MessageBox.Show($"Bạn có chắc muốn xoá dữ liệu {maXuatMoiThem}-{cbo_MaSP.SelectedValue.ToString()} này không", "Thông báo", MessageBoxButtons.OKCancel);
+            if (DialogResult.Cancel == chapNhanXoa) return;
             try
             {
                 string maSanPham = cbo_MaSP.SelectedValue.ToString();
@@ -185,10 +191,7 @@ namespace GUI
                 et_ChiTietXuat.SoLuong = int.Parse(txt_SLNhap.Text);
                 et_ChiTietXuat.GiaXuat = double.Parse(txt_GiaXuat.Text);
                 et_ChiTietXuat.GhiChu = rtf_GhiChu.Text;
-
                 bus_ChiTietXuat.Sua(et_ChiTietXuat);
-
-
                 MessageBox.Show("Sửa chi tiết xuất thành công");
                 btn_LamMoiChiTiet_Click(sender, e);
 
@@ -201,7 +204,7 @@ namespace GUI
 
         private void btn_LamMoiChiTiet_Click(object sender, EventArgs e)
         {
-           
+
             LoadDuLieuXuatHang();
             LoadChiTietTheoMaPX(txt_MaXH.Text);
             txt_MaXH.Clear();
@@ -217,26 +220,36 @@ namespace GUI
         private void frm_XuatKho_Load(object sender, EventArgs e)
         {
             LoadComboBox();
+            
             if (Session.VaiTro == "Admin")
             {
                 cbo_MaCH.Enabled = true;
-                btn_Them.Enabled = true;
-                btn_Xoa.Enabled = true;
-                btn_HoanTat.Enabled = true;
+                btn_Them.Enabled = false;
+                btn_Xoa.Enabled = false;
+                btn_HoanTat.Enabled = false;
+                cbo_MaCH.SelectedIndex = 0;
 
             }
-            else
+            else if (Session.VaiTro == "QuanLy")
             {
                 cbo_MaCH.SelectedValue = Session.MaCuaHang;
                 txt_MaNV.Text = Session.MaNhanVien;
             }
+            else
+            {
+                btn_Them.Enabled = true;
+                cbo_MaCH.SelectedValue = Session.MaCuaHang;
+                txt_MaNV.Text = Session.MaNhanVien;
+            }
             LoadDuLieuXuatHang();
+            if (dgv_Data.CurrentCell == null || dgv_Data.Rows.Count == 0)
+                return;
             LoadChiTietTheoMaPX(dgv_Data.CurrentRow.Cells[0].Value.ToString());
         }
 
 
 
-       
+
 
         private void frm_XuatKho_Resize(object sender, EventArgs e)
         {
@@ -249,6 +262,8 @@ namespace GUI
 
         private void dgv_Data_Click(object sender, EventArgs e)
         {
+            if (dgv_Data.CurrentCell == null || dgv_Data.Rows.Count == 0)
+                return;
             int dong = dgv_Data.CurrentCell.RowIndex;
             if (dong > dgv_Data.Rows.Count - 1) return;
             txt_MaXH.Text = dgv_Data.Rows[dong].Cells[0].Value.ToString();
@@ -257,13 +272,15 @@ namespace GUI
             dtp_NgayXuat.Text = dgv_Data.Rows[dong].Cells[3].Value.ToString();
             cbo_LoaiXuat.Text = dgv_Data.Rows[dong].Cells[4].Value.ToString();
             LoadChiTietTheoMaPX(txt_MaXH.Text);
-        
 
 
-            }
+
+        }
 
         private void dgv_DataChiTiet_Click(object sender, EventArgs e)
         {
+            if (dgv_DataChiTiet.CurrentCell == null || dgv_DataChiTiet.Rows.Count == 0)
+                return;
             int dong = dgv_Data.CurrentCell.RowIndex;
             if (dong > dgv_Data.Rows.Count - 1) return;
             txt_MaXH.Text = dgv_DataChiTiet.Rows[dong].Cells[0].Value.ToString();
@@ -274,11 +291,31 @@ namespace GUI
             rtf_GhiChu.Text = dgv_DataChiTiet.Rows[dong].Cells[5].Value?.ToString();
         }
 
-        private void txt_GiaXuat_Leave(object sender, EventArgs e)
+        private void cbo_MaSP_SelectedValueChanged(object sender, EventArgs e)
         {
+            txt_GiaXuat.Text = bus_CTK.LayGiaBanCuaSanPhamCuaMotCH(cbo_MaCH.SelectedValue.ToString(), cbo_MaSP.SelectedValue.ToString()).ToString();
+        }
+
+        private void txt_SLNhap_Leave(object sender, EventArgs e)
+        {
+            if (!KiemTraSoNguyenHopLe(txt_SLNhap.Text))
+            {
+                errorProvider1.SetError(txt_SLNhap, "Chỉ được nhập số");
+                txt_SLNhap.Text = "";
+                txt_TongTien.Text = "";
+                return;
+            }
+            errorProvider1.SetError(txt_SLNhap, "");
             int sl = Convert.ToInt32(txt_SLNhap.Text);
             double gia = Convert.ToDouble(txt_GiaXuat.Text);
-            txt_TongTien.Text = (sl*gia).ToString();
+            txt_TongTien.Text = (sl * gia).ToString();
+
         }
+        public bool KiemTraSoNguyenHopLe(string s)
+        {
+            return int.TryParse(s, out _);
+        }
+
+
     }
 }

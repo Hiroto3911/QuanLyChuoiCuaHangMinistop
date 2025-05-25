@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.txt_GiaXuat = new System.Windows.Forms.TextBox();
             this.cbo_LoaiXuat = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -62,24 +63,27 @@
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lbl_Title = new System.Windows.Forms.Label();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.gbo_ThongTin.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_DataChiTiet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Data)).BeginInit();
             this.gbo_NhapThongTin.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // txt_GiaXuat
             // 
+            this.txt_GiaXuat.Enabled = false;
             this.txt_GiaXuat.Location = new System.Drawing.Point(168, 142);
             this.txt_GiaXuat.Margin = new System.Windows.Forms.Padding(4);
             this.txt_GiaXuat.Name = "txt_GiaXuat";
             this.txt_GiaXuat.Size = new System.Drawing.Size(200, 29);
             this.txt_GiaXuat.TabIndex = 70;
-            this.txt_GiaXuat.Leave += new System.EventHandler(this.txt_GiaXuat_Leave);
             // 
             // cbo_LoaiXuat
             // 
+            this.cbo_LoaiXuat.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbo_LoaiXuat.FormattingEnabled = true;
             this.cbo_LoaiXuat.Location = new System.Drawing.Point(564, 80);
             this.cbo_LoaiXuat.Margin = new System.Windows.Forms.Padding(4);
@@ -223,12 +227,14 @@
             // 
             // cbo_MaSP
             // 
+            this.cbo_MaSP.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbo_MaSP.FormattingEnabled = true;
             this.cbo_MaSP.Location = new System.Drawing.Point(168, 44);
             this.cbo_MaSP.Margin = new System.Windows.Forms.Padding(4);
             this.cbo_MaSP.Name = "cbo_MaSP";
             this.cbo_MaSP.Size = new System.Drawing.Size(200, 32);
             this.cbo_MaSP.TabIndex = 48;
+            this.cbo_MaSP.SelectedValueChanged += new System.EventHandler(this.cbo_MaSP_SelectedValueChanged);
             // 
             // txt_SLNhap
             // 
@@ -237,6 +243,7 @@
             this.txt_SLNhap.Name = "txt_SLNhap";
             this.txt_SLNhap.Size = new System.Drawing.Size(200, 29);
             this.txt_SLNhap.TabIndex = 50;
+            this.txt_SLNhap.Leave += new System.EventHandler(this.txt_SLNhap_Leave);
             // 
             // label7
             // 
@@ -321,6 +328,7 @@
             // 
             // btn_HoanTat
             // 
+            this.btn_HoanTat.Enabled = false;
             this.btn_HoanTat.Location = new System.Drawing.Point(821, 95);
             this.btn_HoanTat.Margin = new System.Windows.Forms.Padding(4);
             this.btn_HoanTat.Name = "btn_HoanTat";
@@ -332,7 +340,7 @@
             // 
             // btn_InPhieuNhap
             // 
-            this.btn_InPhieuNhap.Location = new System.Drawing.Point(978, 95);
+            this.btn_InPhieuNhap.Location = new System.Drawing.Point(979, 95);
             this.btn_InPhieuNhap.Margin = new System.Windows.Forms.Padding(4);
             this.btn_InPhieuNhap.Name = "btn_InPhieuNhap";
             this.btn_InPhieuNhap.Size = new System.Drawing.Size(100, 60);
@@ -343,6 +351,7 @@
             // 
             // btn_Them
             // 
+            this.btn_Them.Enabled = false;
             this.btn_Them.Location = new System.Drawing.Point(821, 23);
             this.btn_Them.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Them.Name = "btn_Them";
@@ -354,7 +363,7 @@
             // 
             // btn_Xoa
             // 
-            this.btn_Xoa.Location = new System.Drawing.Point(978, 24);
+            this.btn_Xoa.Location = new System.Drawing.Point(979, 25);
             this.btn_Xoa.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Xoa.Name = "btn_Xoa";
             this.btn_Xoa.Size = new System.Drawing.Size(100, 59);
@@ -365,6 +374,7 @@
             // 
             // cbo_MaCH
             // 
+            this.cbo_MaCH.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbo_MaCH.Enabled = false;
             this.cbo_MaCH.FormattingEnabled = true;
             this.cbo_MaCH.Location = new System.Drawing.Point(168, 39);
@@ -459,10 +469,15 @@
             this.lbl_Title.TabIndex = 18;
             this.lbl_Title.Text = "Xuất Hàng";
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // frm_XuatKho
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(240)))), ((int)(((byte)(144)))));
             this.ClientSize = new System.Drawing.Size(1337, 878);
             this.Controls.Add(this.gbo_ThongTin);
@@ -483,6 +498,7 @@
             this.gbo_NhapThongTin.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -523,5 +539,6 @@
         private System.Windows.Forms.Button btn_InPhieuNhap;
         private System.Windows.Forms.Button btn_Them;
         private System.Windows.Forms.Button btn_Xoa;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

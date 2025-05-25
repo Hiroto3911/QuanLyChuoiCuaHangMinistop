@@ -211,6 +211,8 @@ namespace GUI
 
         private void dgv_DataChiTiet_Click(object sender, EventArgs e)
         {
+            if (dgv_DataChiTiet.CurrentCell == null || dgv_DataChiTiet.Rows.Count == 0)
+                return;
             int dong = dgv_DataChiTiet.CurrentCell.RowIndex;
             if (dong > dgv_DataChiTiet.Rows.Count - 1) { return; }
             cbo_MaKM.SelectedValue = dgv_DataChiTiet.Rows[dong].Cells[0].Value.ToString();
@@ -222,6 +224,8 @@ namespace GUI
 
         private void dgv_Data_Click(object sender, EventArgs e)
         {
+            if (dgv_Data.CurrentCell == null || dgv_Data.Rows.Count == 0)
+                return;
             int dong = dgv_Data.CurrentCell.RowIndex;
             if (dong > dgv_Data.Rows.Count - 1) { return; }
             txt_MaKM.Text = dgv_Data.Rows[dong].Cells[0].Value.ToString();
@@ -306,7 +310,12 @@ namespace GUI
         {
             if (cbo_LoaiApDung.Text == "Sản phẩm")
             {
+                txt_DieuKienApDung.Enabled = false;
                 txt_DieuKienApDung.Text = "0";
+            }
+            else
+            {
+                txt_DieuKienApDung.Enabled = true;
             }
         }
 

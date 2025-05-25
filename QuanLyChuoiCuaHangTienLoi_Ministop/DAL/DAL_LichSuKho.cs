@@ -9,7 +9,7 @@ namespace DAL
 {
     public class DAL_LichSuKho
     {
-        private DB_QuanLyChuoiCuaHangTienLoiMinistopDataContext db = new DB_QuanLyChuoiCuaHangTienLoiMinistopDataContext();
+        private DB_QuanLyChuoiCuaHangTienLoiMinistopDataContext db = DB_Context_Custom.getDataContext();
 
         public List<ET_LichSuKho> HienThiTatCa()
         {
@@ -38,7 +38,20 @@ namespace DAL
                     MaThamChieu = ct.MaThamChieu
                 }).ToList();
         }
-
+        public List<ET_LichSuKho> LayLichSuTheoMaLoai(string maCTK,string loaiThayDoi)
+        {
+            return db.LichSuKhos
+                .Where(lss => lss.MaChiTietKho.Equals(maCTK) && lss.LoaiThayDoi ==loaiThayDoi)
+                .Select(ct => new ET_LichSuKho
+                {
+                    MaLichSuKho = ct.MaLichSuKho,
+                    MaChiTietKho = ct.MaChiTietKho,
+                    NgayThayDoi = (DateTime)ct.NgayThayDoi,
+                    SoLuongThayDoi = (int)ct.SoLuongThayDoi,
+                    LoaiThayDoi = ct.LoaiThayDoi,
+                    MaThamChieu = ct.MaThamChieu
+                }).ToList();
+        }
         public bool Them(ET_LichSuKho ls)
         {
             try

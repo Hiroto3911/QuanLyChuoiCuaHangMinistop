@@ -11,7 +11,7 @@ namespace DAL
 {
     public class DAL_LichSuThayDoiGia
     {
-        private DB_QuanLyChuoiCuaHangTienLoiMinistopDataContext db = new DB_QuanLyChuoiCuaHangTienLoiMinistopDataContext();
+        private DB_QuanLyChuoiCuaHangTienLoiMinistopDataContext db = DB_Context_Custom.getDataContext();
         public List<ET_LichSuThayDoiGia> HienThiDuLieuSapXepGiamDanTheoMaCHVaMaSP(string maCH, string maSP)
         {
             var query = db.LichSuThayDoiGias.Where(ls => ls.MaCuaHang == maCH && ls.MaSanPham == maSP).OrderByDescending(ma => ma.MaLichSu).ToList();
@@ -79,6 +79,7 @@ namespace DAL
                 var capNhat = TimLichSuBangMaCHVaMaLS(ls.MaCuaHang, ls.MaLichSu);
                 if (capNhat == null) return false;
                 capNhat.GiaMoi = ls.GiaMoi;
+                capNhat.NgayThayDoi = ls.NgayThayDoi;
                 capNhat.LyDo = ls.LyDo; 
                 db.SubmitChanges();
                 return true;
@@ -119,6 +120,13 @@ namespace DAL
         {
             var danhSachID = db.LichSuThayDoiGias.Select(id => id.MaLichSu).ToList();
             return danhSachID;
+        }
+        public decimal TinhTongThayDoiGiaTrongMotThang(ET_LichSuThayDoiGia ls)
+        {
+            DateTime ngayBatDau = ls.NgayThayDoi.AddMonths(-1);
+            var phanTram = db.LichSuThayDoiGias.Where(lsg => lsg.MaCuaHang == ls.MaCuaHang && lsg.MaSanPham == ls.MaSanPham && ngayBatDau <= ls.NgayThayDoi)
+                .Sum(lsg => (lsg.GiaMoi - lsg.GiaCu)/lsg.GiaCu*100);
+            return (decimal)phanTram; 
         }
     }
 }

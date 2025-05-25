@@ -1,4 +1,6 @@
-﻿SET DATEFORMAT DMY 
+﻿USE QuanLyChuoiCuaHangMinistop;
+GO
+SET DATEFORMAT DMY 
 GO
 
 -- CỬA HÀNG
