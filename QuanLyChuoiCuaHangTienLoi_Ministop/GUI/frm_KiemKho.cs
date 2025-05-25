@@ -299,7 +299,9 @@ namespace GUI
 
         private void cbo_MaSP_SelectedValueChanged(object sender, EventArgs e)
         {
-            txt_SLHeThong.Text = bus_ChiTietKho.LaySLSanPhamCuaMotCH(cbo_MaCH.SelectedValue.ToString(), cbo_MaSP.SelectedValue.ToString()).ToString();
+			string tenSP = TimTenSanPham(cbo_MaSP.SelectedValue.ToString());
+			txt_TenSP.Text = tenSP;
+			txt_SLHeThong.Text = bus_ChiTietKho.LaySLSanPhamCuaMotCH(cbo_MaCH.SelectedValue.ToString(), cbo_MaSP.SelectedValue.ToString()).ToString();
         }
 
         private void txt_SLThucTe_Leave(object sender, EventArgs e)
@@ -312,6 +314,9 @@ namespace GUI
 
         }
 
-       
-    }
+		private string TimTenSanPham(string maSP)
+		{
+			return bus_SanPham.TimTenSPBangMaSP(maSP);
+		}
+	}
 }
