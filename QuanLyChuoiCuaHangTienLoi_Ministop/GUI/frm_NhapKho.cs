@@ -257,7 +257,7 @@ namespace GUI
             {
                 foreach (var ct in bus_CT.LayChiTietTheoMaPhieu(maNhapMoiThem))
                 {
-                    bus_CTK.CapNhapChiTietKhoKhiNhapHang(cbo_MaCH.Text, ct, et_NhapHang.NgayNhap);
+                    bus_CTK.CapNhapChiTietKhoKhiNhapHang(cbo_MaCH.SelectedValue.ToString(), ct, et_NhapHang.NgayNhap);
                 }
                 maNhapMoiThem = null;
                 MessageBox.Show("Cập nhập kho thành công");
@@ -333,5 +333,33 @@ namespace GUI
                 errorProvider1.SetError(txt_SLNhap, "");
             }
         }
-    }
+
+		private void cbo_MaSP_SelectedValueChanged(object sender, EventArgs e)
+		{
+			string tenSP = TimTenSanPham(cbo_MaSP.SelectedValue.ToString());
+			txt_TenSP.Text = tenSP;
+			txt_GiaNhap.Text = "Giá hiện tại là: "+ LayGiaBanCuaSanPham(Session.MaCuaHang, cbo_MaSP.SelectedValue.ToString()).ToString();
+            txt_GiaNhap.ForeColor = Color.Gray;
+		}
+		private string TimTenSanPham(string maSP)
+		{
+			return bus_SanPham.TimTenSPBangMaSP(maSP);
+		}
+		private double LayGiaBanCuaSanPham(string maCH, string maSP)
+		{
+
+			return bus_CTK.LayGiaBanCuaSanPhamCuaMotCH(maCH, maSP);
+		}
+
+		private void txt_GiaNhap_Enter(object sender, EventArgs e)
+		{
+            txt_GiaNhap.Clear();
+            txt_GiaNhap.ForeColor = Color.Black;
+		}
+
+		private void cbo_NCC_SelectedValueChanged(object sender, EventArgs e)
+		{
+            lbl_TenNCC.Text = bus_NhaCungCap.TimTenNhaCungCapBangMaNCC(cbo_NCC.SelectedValue.ToString());
+		}
+	}
 }

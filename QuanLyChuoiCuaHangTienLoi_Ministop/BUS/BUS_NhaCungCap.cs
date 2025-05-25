@@ -35,5 +35,9 @@ namespace BUS
         {
             return dal_NhaCungCap.LayDanhSachMaNCC();
         }
-    }
+		public string TimTenNhaCungCapBangMaNCC(string maNCC)
+		{
+            return dal_NhaCungCap.TimTenNhaCungCapBangMaNCC(maNCC);
+		}
+	}
 }
