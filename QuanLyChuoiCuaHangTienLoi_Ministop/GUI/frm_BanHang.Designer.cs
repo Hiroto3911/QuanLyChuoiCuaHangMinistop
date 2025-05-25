@@ -313,7 +313,7 @@
 			// lbl_TenSP
 			// 
 			this.lbl_TenSP.AutoSize = true;
-			this.lbl_TenSP.Location = new System.Drawing.Point(123, 102);
+			this.lbl_TenSP.Location = new System.Drawing.Point(123, 113);
 			this.lbl_TenSP.Name = "lbl_TenSP";
 			this.lbl_TenSP.Size = new System.Drawing.Size(102, 18);
 			this.lbl_TenSP.TabIndex = 72;

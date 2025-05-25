@@ -75,6 +75,7 @@ namespace GUI
                 bus_XuatHang.Them(et_XuatHang);
                 MessageBox.Show("Thêm phiếu xuất thành công");
                 LoadDuLieuXuatHang(); // Tải lại danh sách
+
             }
             catch (Exception ex)
             {
@@ -293,7 +294,9 @@ namespace GUI
 
         private void cbo_MaSP_SelectedValueChanged(object sender, EventArgs e)
         {
-            txt_GiaXuat.Text = bus_CTK.LayGiaBanCuaSanPhamCuaMotCH(cbo_MaCH.SelectedValue.ToString(), cbo_MaSP.SelectedValue.ToString()).ToString();
+			string tenSP = TimTenSanPham(cbo_MaSP.SelectedValue.ToString());
+			txt_TenSP.Text = tenSP;
+			txt_GiaXuat.Text = bus_CTK.LayGiaBanCuaSanPhamCuaMotCH(cbo_MaCH.SelectedValue.ToString(), cbo_MaSP.SelectedValue.ToString()).ToString();
         }
 
         private void txt_SLNhap_Leave(object sender, EventArgs e)
@@ -315,7 +318,10 @@ namespace GUI
         {
             return int.TryParse(s, out _);
         }
+		private string TimTenSanPham(string maSP)
+		{
+			return bus_SanPham.TimTenSPBangMaSP(maSP);
+		}   
 
-
-    }
+	}
 }
