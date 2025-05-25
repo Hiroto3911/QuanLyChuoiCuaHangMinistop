@@ -9,7 +9,7 @@ namespace DAL
 {
     public class DAL_ChiTietHoaDon
     {
-        private DB_QuanLyChuoiCuaHangTienLoiMinistopDataContext db = new DB_QuanLyChuoiCuaHangTienLoiMinistopDataContext();
+        private DB_QuanLyChuoiCuaHangTienLoiMinistopDataContext db = DB_Context_Custom.getDataContext();
         public List<ET_ChiTietHoaDon> HienThiDuLieuSapXepGiamDanTheoMaHD(string maHD)
         {
             var query = db.ChiTietHoaDons.Where(ma =>ma.MaHoaDon == maHD).OrderByDescending(ma => ma.MaChiTietHD).ToList();

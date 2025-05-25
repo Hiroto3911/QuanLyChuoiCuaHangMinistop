@@ -55,6 +55,8 @@ namespace GUI
 
         private void btn_Xoa_Click(object sender, EventArgs e)
         {
+            var chapNhanXoa = MessageBox.Show($"Bạn có chắc muốn xoá dữ liệu {txt_MaSP.Text} này không", "Thông báo", MessageBoxButtons.OKCancel);
+            if (DialogResult.Cancel == chapNhanXoa) return;
             try
             {
 
@@ -113,6 +115,8 @@ namespace GUI
 
         private void dgv_Data_Click(object sender, EventArgs e)
         {
+            if (dgv_Data.CurrentCell == null || dgv_Data.Rows.Count == 0)
+                return;
             int dong = dgv_Data.CurrentCell.RowIndex;
             txt_MaSP.Text = dgv_Data.Rows[dong].Cells[0].Value.ToString();
             txt_TenSP.Text = dgv_Data.Rows[dong].Cells[1].Value.ToString();
@@ -157,6 +161,23 @@ namespace GUI
             gbo_ThongTin.Left = gbo_NhapThongTin.Right + 20;
             gbo_NhapThongTin.Top = 90;
             gbo_ThongTin.Top = 90;
+        }
+        private bool KiemTraSoThuc(string s)
+        {
+            return decimal.TryParse(s, out _);
+        }
+
+        private void txt_GiaBanTieuChuan_Leave(object sender, EventArgs e)
+        {
+            if (!KiemTraSoThuc(txt_GiaBanTieuChuan.Text))
+            {
+                errorProvider1.SetError(txt_GiaBanTieuChuan, "Chỉ được nhập số");
+               
+            }
+            else
+            {
+                errorProvider1.SetError(txt_GiaBanTieuChuan, "");
+            }
         }
     }
 }

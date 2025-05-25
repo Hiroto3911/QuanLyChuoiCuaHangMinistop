@@ -9,7 +9,7 @@ namespace DAL
 {
     public class DAL_NhapHang
     {
-        private DB_QuanLyChuoiCuaHangTienLoiMinistopDataContext db = new DB_QuanLyChuoiCuaHangTienLoiMinistopDataContext();
+        private DB_QuanLyChuoiCuaHangTienLoiMinistopDataContext db = DB_Context_Custom.getDataContext();
         public List<ET_NhapHang> HienThiDuLieuTheoMaCH(string maCH)
         {
             return db.PhieuNhaps.Where(pn=> pn.MaCuaHang == maCH).Select(p => new ET_NhapHang

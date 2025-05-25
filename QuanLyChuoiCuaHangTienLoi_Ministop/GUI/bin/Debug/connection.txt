@@ -1,0 +1,1 @@
+Data Source=DESKTOP-G20M4PR;Initial Catalog=QuanLyChuoiCuaHangMinistop;Integrated Security=True;

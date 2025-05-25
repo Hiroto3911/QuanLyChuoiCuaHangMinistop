@@ -34,12 +34,6 @@ namespace GUI
             cbo_MaCH.DisplayMember = "TenCH";
         }
       
-
-        private void dgv_Data_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
         private void frm_QuanLyNhanVien_Load(object sender, EventArgs e)
         {
             cbo_VaiTro.DataSource = new List<string> { "NhanVien", "QuanLy", "Admin" };
@@ -51,6 +45,8 @@ namespace GUI
 
         private void dgv_Data_Click(object sender, EventArgs e)
         {
+            if (dgv_Data.CurrentCell == null || dgv_Data.Rows.Count == 0)
+                return;
             try
             {
                 int dong = dgv_Data.CurrentCell.RowIndex;
@@ -112,12 +108,6 @@ namespace GUI
 
         }
 
-       
-
-     
-
-       
-
         private void frm_QuanLyNhanVien_Resize(object sender, EventArgs e)
         {
             lbl_Title.Left = (this.ClientSize.Width - lbl_Title.Width) / 2; 
@@ -154,7 +144,7 @@ namespace GUI
                     et_NhanVien.MaNV = TaoMaTuDong.TaoMa(bus_NhanVien.LayDanhSachMaNVTheoVaiTro(vaiTro), "AD");
                     et_NhanVien.MaCuaHang = null;
                 }
-                else if (vaiTro == "Quản Lý")
+                else if (vaiTro == "QuanLy")
                 {
                     et_NhanVien.MaNV = TaoMaTuDong.TaoMa(bus_NhanVien.LayDanhSachMaNVTheoVaiTro(vaiTro), "QL");
                     et_NhanVien.MaCuaHang = cbo_MaCH.SelectedValue.ToString();
@@ -180,6 +170,8 @@ namespace GUI
 
         private void btn_Xoa_Click(object sender, EventArgs e)
         {
+            var chapNhanXoa = MessageBox.Show($"Bạn có chắc muốn xoá dữ liệu {txt_MaNV.Text}-{txt_HoTen.Text} này không", "Thông báo", MessageBoxButtons.OKCancel);
+            if (DialogResult.Cancel == chapNhanXoa) return;
             try
             {
 
@@ -244,6 +236,23 @@ namespace GUI
         private void cbo_LocDanhSach_SelectedValueChanged(object sender, EventArgs e)
         {
             dgv_Data.DataSource = bus_NhanVien.HienThiDuLieuTheoVaiTro(cbo_LocDanhSach.SelectedItem.ToString());
+        }
+        public bool KiemTraSoDienThoai(string s)
+        {
+            return s.All(char.IsDigit) && s.Length == 10 && s.StartsWith("0");
+        }
+
+        private void txt_sodienthoai_Leave(object sender, EventArgs e)
+        {
+            if (!KiemTraSoDienThoai(txt_sodienthoai.Text))
+            {
+                errorProvider1.SetError(txt_sodienthoai, "Chỉ được nhập số và giới hạn là 10 số");
+                txt_sodienthoai.Text = "";
+            }
+            else
+            {
+                errorProvider1.SetError(txt_sodienthoai, "");
+            }
         }
     }
 }

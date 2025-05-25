@@ -10,7 +10,7 @@ namespace DAL
 {
     public class DAL_ChiTietKho
     {
-        private DB_QuanLyChuoiCuaHangTienLoiMinistopDataContext db = new DB_QuanLyChuoiCuaHangTienLoiMinistopDataContext();
+        private DB_QuanLyChuoiCuaHangTienLoiMinistopDataContext db = DB_Context_Custom.getDataContext();
         public List<ET_ChiTietKho> HienThiDuLieuSapXepGiamDanTheoMaCH(string maCH)
         {
             var query = db.ChiTietKhos.Where(ma => ma.MaCuaHang == maCH).OrderByDescending(ma => ma.MaSanPham).ToList();
@@ -67,6 +67,13 @@ namespace DAL
             return Convert.ToDouble(query);
 
         }
+        public int LaySLSanPhamCuaMotCH(string maCH, string maSP)
+        {
+            var query = db.ChiTietKhos.Where(ma => ma.MaCuaHang == maCH && ma.MaSanPham == maSP).Select(ma => ma.SoLuongTon).FirstOrDefault();
+            if (query == null) return 0;
+            return Convert.ToInt32(query);
+
+        }
         public bool KiemTraSanPhamConHang(string maCH, ET_ChiTietHoaDon sp) {
 
             var query = db.ChiTietKhos.Any(ctk => ctk.MaCuaHang == maCH && ctk.MaSanPham == sp.MaSanPham && ctk.SoLuongTon >= sp.SoLuong);
@@ -117,6 +124,25 @@ namespace DAL
             }
                        
         }
+        public bool CapNhapGiaCuaSanPhamTaiMotCuaHang(ET_LichSuThayDoiGia lsg)
+        {
+            if (lsg == null) return false;
+            try
+            {
+
+                var query = db.ChiTietKhos.Where(ctk => ctk.MaCuaHang == lsg.MaCuaHang && ctk.MaSanPham == lsg.MaSanPham).FirstOrDefault();
+                if (query == null) return false;
+                query.GiaBan = lsg.GiaMoi;
+                db.SubmitChanges();
+                return true;
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+        }
         public bool CapNhapChiTietKhoKhiNhapHang(string maCH, ET_ChiTietNhapHang nh, DateTime ngayNhap)
         {
             try
@@ -154,7 +180,7 @@ namespace DAL
                 else
                 {
                     chitietKho.SoLuongTon += nh.SoLuong;
-                    chitietKho.GiaBan = nh.GiaNhap;
+                    //chitietKho.GiaBan = nh.GiaNhap;
                     db.SubmitChanges();
                     lsk.Them(new ET_LichSuKho
                     {
@@ -211,7 +237,43 @@ namespace DAL
             }
         }
 
-        
+        public bool CapNhapChiTietKhoKhiKiemKho(string maCH, ET_ChiTietKiemKho ctkk, DateTime ngayKiem)
+        {
+            try
+            {
+                var chitietKho = db.ChiTietKhos
+                    .FirstOrDefault(ctk => ctk.MaCuaHang == maCH && ctk.MaSanPham == ctkk.MaSanPham);
+
+                DAL_LichSuKho lsk = new DAL_LichSuKho();
+
+                if (chitietKho == null)
+                {
+                    return false;
+                }
+                else
+                {
+                   
+                    chitietKho.SoLuongTon += ctkk.ChenhLech;
+                  
+                    db.SubmitChanges();
+                    lsk.Them(new ET_LichSuKho
+                    {
+                        MaLichSuKho = TaoMa(lsk.LayDanhSachMaLSK(), "LSK"),
+                        MaChiTietKho = chitietKho.MaChiTietKho,
+                        NgayThayDoi = ngayKiem,
+                        SoLuongThayDoi = ctkk.ChenhLech,
+                        LoaiThayDoi = "Kiem Kho",
+                        MaThamChieu = ctkk.MaKiemKho
+                    });
+                }
+
+                return true;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Lỗi khi cập nhật kho: " + ex.Message);
+            }
+        }
 
         private string TaoMa(List<string> DanhSachMa, string tienTo)
         {

@@ -10,7 +10,7 @@ namespace DAL
     public class DAL_DangNhap
     {
         ET_NhanVien nv = new ET_NhanVien();
-        private DB_QuanLyChuoiCuaHangTienLoiMinistopDataContext db = new DB_QuanLyChuoiCuaHangTienLoiMinistopDataContext();
+        private DB_QuanLyChuoiCuaHangTienLoiMinistopDataContext db = DB_Context_Custom.getDataContext();
         /// <summary>
         /// Hàm dùng để kiểm tra tài khoản mà người dùng đăng nhập
         /// </summary>

@@ -9,7 +9,7 @@ namespace DAL
     public class DAL_NhanVien
     {
 
-        private DB_QuanLyChuoiCuaHangTienLoiMinistopDataContext db = new DB_QuanLyChuoiCuaHangTienLoiMinistopDataContext();
+        private DB_QuanLyChuoiCuaHangTienLoiMinistopDataContext db = DB_Context_Custom.getDataContext();
 
         public ET_NhanVien TimNhanVienDuaTrenTaiKhoanDangNhap(string vaiTro, string taiKhoan, string matKhau)
         {
