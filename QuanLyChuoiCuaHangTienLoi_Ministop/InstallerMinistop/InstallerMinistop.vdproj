@@ -15,13 +15,13 @@
     {
         "Entry"
         {
-        "MsmKey" = "8:_2A643ED1A98B4714B43DB59FF106041E"
+        "MsmKey" = "8:_42D7DAE3488E417EAC2E9F00E9F2D39F"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_42985CB408F5425C9FB32CEA47B26ED4"
+        "MsmKey" = "8:_4EE0830173FD43149E6147BE561BEE7A"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -47,6 +47,12 @@
         {
         "MsmKey" = "8:_7DD4606094622A170E54F43F92BC3044"
         "OwnerKey" = "8:_F835C44326854C30B8F8658BD6008D5A"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_7E18E8DBFBB34A82BE424D3358A3B8A3"
+        "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -81,7 +87,7 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_CF21857A2EA44538AC8E21AB17B9F098"
+        "MsmKey" = "8:_CC3B877163B74A8EBC93E453AEAD65AE"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -99,7 +105,7 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_EC17B7B01E004C98832EAD49C0F7A876"
+        "MsmKey" = "8:_EAFEEDFF60C240898A43F12759923A69"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -111,26 +117,14 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_FF1CB30AC944485590A91E585363FD09"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_7DD4606094622A170E54F43F92BC3044"
+        "OwnerKey" = "8:_7BB8C2B7A418DCE1FC15899A98B003A5"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_F835C44326854C30B8F8658BD6008D5A"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_7BB8C2B7A418DCE1FC15899A98B003A5"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -163,6 +157,12 @@
         "OwnerKey" = "8:_CADDE4540350E1851E6D35DE8136E129"
         "MsmSig" = "8:_UNDEFINED"
         }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_7DD4606094622A170E54F43F92BC3044"
+        "MsmSig" = "8:_UNDEFINED"
+        }
     }
     "Configurations"
     {
@@ -181,6 +181,14 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+            }
         }
         "Release"
         {
@@ -197,6 +205,14 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+            }
         }
     }
     "Deployable"
@@ -226,10 +242,10 @@
         }
         "File"
         {
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_2A643ED1A98B4714B43DB59FF106041E"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_42D7DAE3488E417EAC2E9F00E9F2D39F"
             {
-            "SourcePath" = "8:..\\GUI\\Reporting\\RP_HoaDon.rpt"
-            "TargetName" = "8:RP_HoaDon.rpt"
+            "SourcePath" = "8:..\\GUI\\Reporting\\RP_DanhSachNhanVien.rpt"
+            "TargetName" = "8:RP_DanhSachNhanVien.rpt"
             "Tag" = "8:"
             "Folder" = "8:_870BB43E963C4C53AC7760EC643F4A77"
             "Condition" = "8:"
@@ -246,10 +262,10 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_42985CB408F5425C9FB32CEA47B26ED4"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_4EE0830173FD43149E6147BE561BEE7A"
             {
-            "SourcePath" = "8:..\\GUI\\Reporting\\RP_PhieuXuatHang.rpt"
-            "TargetName" = "8:RP_PhieuXuatHang.rpt"
+            "SourcePath" = "8:..\\GUI\\Reporting\\RP_DanhSachChiNhanh.rpt"
+            "TargetName" = "8:RP_DanhSachChiNhanh.rpt"
             "Tag" = "8:"
             "Folder" = "8:_870BB43E963C4C53AC7760EC643F4A77"
             "Condition" = "8:"
@@ -359,6 +375,26 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_7E18E8DBFBB34A82BE424D3358A3B8A3"
+            {
+            "SourcePath" = "8:..\\GUI\\Reporting\\RP_PhieuXuatHang.rpt"
+            "TargetName" = "8:RP_PhieuXuatHang.rpt"
+            "Tag" = "8:"
+            "Folder" = "8:_870BB43E963C4C53AC7760EC643F4A77"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_9470BC7310BBEB7E5EF6B6FD18284C7A"
             {
             "AssemblyRegister" = "3:1"
@@ -452,10 +488,10 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_CF21857A2EA44538AC8E21AB17B9F098"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_CC3B877163B74A8EBC93E453AEAD65AE"
             {
-            "SourcePath" = "8:..\\GUI\\Reporting\\RP_DanhSachChiNhanh.rpt"
-            "TargetName" = "8:RP_DanhSachChiNhanh.rpt"
+            "SourcePath" = "8:..\\GUI\\Reporting\\RP_HoaDon.rpt"
+            "TargetName" = "8:RP_HoaDon.rpt"
             "Tag" = "8:"
             "Folder" = "8:_870BB43E963C4C53AC7760EC643F4A77"
             "Condition" = "8:"
@@ -523,27 +559,7 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_EC17B7B01E004C98832EAD49C0F7A876"
-            {
-            "SourcePath" = "8:..\\GUI\\Reporting\\RP_DanhSachNhanVien.rpt"
-            "TargetName" = "8:RP_DanhSachNhanVien.rpt"
-            "Tag" = "8:"
-            "Folder" = "8:_870BB43E963C4C53AC7760EC643F4A77"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_FF1CB30AC944485590A91E585363FD09"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_EAFEEDFF60C240898A43F12759923A69"
             {
             "SourcePath" = "8:..\\GUI\\Reporting\\RP_PhieuNhapHang.rpt"
             "TargetName" = "8:RP_PhieuNhapHang.rpt"
