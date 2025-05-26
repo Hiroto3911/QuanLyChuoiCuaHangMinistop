@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Main));
             this.pnl_header = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.pnl_Hello = new System.Windows.Forms.Panel();
@@ -208,7 +209,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(1685, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(1685, 30);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -217,7 +218,7 @@
             this.hệThốngToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.thoátToolStripMenuItem});
             this.hệThốngToolStripMenuItem.Name = "hệThốngToolStripMenuItem";
-            this.hệThốngToolStripMenuItem.Size = new System.Drawing.Size(85, 24);
+            this.hệThốngToolStripMenuItem.Size = new System.Drawing.Size(85, 26);
             this.hệThốngToolStripMenuItem.Text = "Hệ thống";
             // 
             // thoátToolStripMenuItem
@@ -232,7 +233,7 @@
             this.phiếuNhậpToolStripMenuItem,
             this.phiếuXuấtHàngToolStripMenuItem});
             this.bToolStripMenuItem.Name = "bToolStripMenuItem";
-            this.bToolStripMenuItem.Size = new System.Drawing.Size(105, 24);
+            this.bToolStripMenuItem.Size = new System.Drawing.Size(105, 26);
             this.bToolStripMenuItem.Text = "In danh sách";
             // 
             // phiếuNhậpToolStripMenuItem
@@ -807,6 +808,7 @@
             this.Controls.Add(this.fqnl_Menu);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.pnl_header);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(4);

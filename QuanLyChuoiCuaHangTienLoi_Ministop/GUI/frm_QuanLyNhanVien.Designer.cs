@@ -457,7 +457,6 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MinimizeBox = false;
             this.Name = "frm_QuanLyNhanVien";
-            this.Text = "frm_QuanLyNhanVien";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frm_QuanLyNhanVien_Load);
             this.Resize += new System.EventHandler(this.frm_QuanLyNhanVien_Resize);

@@ -11,7 +11,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ET", "ET\ET.csproj", "{5073
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GUI", "GUI\GUI.csproj", "{793C3164-1583-4C6D-B761-B8F74EC73D87}"
 EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Installer_Ministop", "Installer_Ministop\Installer_Ministop.vdproj", "{A036EF4E-0A5A-45B7-91CC-52EF507BC393}"
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "InstallerMinistop", "InstallerMinistop\InstallerMinistop.vdproj", "{4DD82CA8-F146-4626-A4DA-099D98FC2B2B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -53,10 +53,10 @@ Global
 		{793C3164-1583-4C6D-B761-B8F74EC73D87}.Release|Any CPU.Build.0 = Release|Any CPU
 		{793C3164-1583-4C6D-B761-B8F74EC73D87}.Release|x64.ActiveCfg = Release|x64
 		{793C3164-1583-4C6D-B761-B8F74EC73D87}.Release|x64.Build.0 = Release|x64
-		{A036EF4E-0A5A-45B7-91CC-52EF507BC393}.Debug|Any CPU.ActiveCfg = Debug
-		{A036EF4E-0A5A-45B7-91CC-52EF507BC393}.Debug|x64.ActiveCfg = Debug
-		{A036EF4E-0A5A-45B7-91CC-52EF507BC393}.Release|Any CPU.ActiveCfg = Release
-		{A036EF4E-0A5A-45B7-91CC-52EF507BC393}.Release|x64.ActiveCfg = Release
+		{4DD82CA8-F146-4626-A4DA-099D98FC2B2B}.Debug|Any CPU.ActiveCfg = Debug
+		{4DD82CA8-F146-4626-A4DA-099D98FC2B2B}.Debug|x64.ActiveCfg = Debug
+		{4DD82CA8-F146-4626-A4DA-099D98FC2B2B}.Release|Any CPU.ActiveCfg = Release
+		{4DD82CA8-F146-4626-A4DA-099D98FC2B2B}.Release|x64.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

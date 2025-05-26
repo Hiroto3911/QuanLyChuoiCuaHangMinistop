@@ -566,7 +566,6 @@
             this.MinimizeBox = false;
             this.Name = "frm_QuanLyKhuyenMai";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frm_QuanLyKhuyenMai";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frm_QuanLyKhuyenMai_Load);
             this.Resize += new System.EventHandler(this.frm_QuanLyKhuyenMai_Resize);

@@ -4,3 +4,9 @@ C:\Users\Chris\Desktop\DoAnDotNET\Packaging\QuanLyChuoiCuaHangTienLoi_Ministop\E
 C:\Users\Chris\Desktop\DoAnDotNET\Packaging\QuanLyChuoiCuaHangTienLoi_Ministop\ET\obj\x64\Debug\ET.csproj.CoreCompileInputs.cache
 C:\Users\Chris\Desktop\DoAnDotNET\Packaging\QuanLyChuoiCuaHangTienLoi_Ministop\ET\obj\x64\Debug\ET.dll
 C:\Users\Chris\Desktop\DoAnDotNET\Packaging\QuanLyChuoiCuaHangTienLoi_Ministop\ET\obj\x64\Debug\ET.pdb
+C:\Users\Chris\Desktop\DoAnDotNET\project-NguyenKhang\QuanLyChuoiCuaHangTienLoi_Ministop\ET\bin\x64\Debug\ET.dll
+C:\Users\Chris\Desktop\DoAnDotNET\project-NguyenKhang\QuanLyChuoiCuaHangTienLoi_Ministop\ET\bin\x64\Debug\ET.pdb
+C:\Users\Chris\Desktop\DoAnDotNET\project-NguyenKhang\QuanLyChuoiCuaHangTienLoi_Ministop\ET\obj\x64\Debug\ET.csproj.AssemblyReference.cache
+C:\Users\Chris\Desktop\DoAnDotNET\project-NguyenKhang\QuanLyChuoiCuaHangTienLoi_Ministop\ET\obj\x64\Debug\ET.csproj.CoreCompileInputs.cache
+C:\Users\Chris\Desktop\DoAnDotNET\project-NguyenKhang\QuanLyChuoiCuaHangTienLoi_Ministop\ET\obj\x64\Debug\ET.dll
+C:\Users\Chris\Desktop\DoAnDotNET\project-NguyenKhang\QuanLyChuoiCuaHangTienLoi_Ministop\ET\obj\x64\Debug\ET.pdb

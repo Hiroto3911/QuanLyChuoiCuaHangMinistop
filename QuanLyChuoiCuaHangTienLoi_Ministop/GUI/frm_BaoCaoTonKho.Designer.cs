@@ -253,7 +253,6 @@
             this.MinimizeBox = false;
             this.Name = "frm_BaoCaoTonKho";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frm_BaoCaoTonKho";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frm_BaoCaoTonKho_Load);
             this.Resize += new System.EventHandler(this.frm_BaoCaoTonKho_Resize);

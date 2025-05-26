@@ -62,7 +62,7 @@
             this.pnl_Title.Controls.Add(this.lbl_Title);
             this.pnl_Title.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnl_Title.Location = new System.Drawing.Point(0, 0);
-            this.pnl_Title.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnl_Title.Margin = new System.Windows.Forms.Padding(4);
             this.pnl_Title.Name = "pnl_Title";
             this.pnl_Title.Size = new System.Drawing.Size(1259, 64);
             this.pnl_Title.TabIndex = 78;
@@ -84,7 +84,7 @@
             this.dgv_Data.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_Data.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_Data.Location = new System.Drawing.Point(24, 63);
-            this.dgv_Data.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgv_Data.Margin = new System.Windows.Forms.Padding(4);
             this.dgv_Data.Name = "dgv_Data";
             this.dgv_Data.RowHeadersWidth = 51;
             this.dgv_Data.Size = new System.Drawing.Size(620, 490);
@@ -109,9 +109,9 @@
             this.gbo_NhapThongTin.Controls.Add(this.txt_MaCH);
             this.gbo_NhapThongTin.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbo_NhapThongTin.Location = new System.Drawing.Point(16, 94);
-            this.gbo_NhapThongTin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbo_NhapThongTin.Margin = new System.Windows.Forms.Padding(4);
             this.gbo_NhapThongTin.Name = "gbo_NhapThongTin";
-            this.gbo_NhapThongTin.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbo_NhapThongTin.Padding = new System.Windows.Forms.Padding(4);
             this.gbo_NhapThongTin.Size = new System.Drawing.Size(523, 582);
             this.gbo_NhapThongTin.TabIndex = 81;
             this.gbo_NhapThongTin.TabStop = false;
@@ -120,7 +120,7 @@
             // rtf_DiaChi
             // 
             this.rtf_DiaChi.Location = new System.Drawing.Point(220, 217);
-            this.rtf_DiaChi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rtf_DiaChi.Margin = new System.Windows.Forms.Padding(4);
             this.rtf_DiaChi.Name = "rtf_DiaChi";
             this.rtf_DiaChi.Size = new System.Drawing.Size(255, 102);
             this.rtf_DiaChi.TabIndex = 91;
@@ -129,7 +129,7 @@
             // btn_LamMoi
             // 
             this.btn_LamMoi.Location = new System.Drawing.Point(269, 492);
-            this.btn_LamMoi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_LamMoi.Margin = new System.Windows.Forms.Padding(4);
             this.btn_LamMoi.Name = "btn_LamMoi";
             this.btn_LamMoi.Size = new System.Drawing.Size(100, 60);
             this.btn_LamMoi.TabIndex = 73;
@@ -140,7 +140,7 @@
             // txt_MaNguoiQL
             // 
             this.txt_MaNguoiQL.Location = new System.Drawing.Point(220, 343);
-            this.txt_MaNguoiQL.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_MaNguoiQL.Margin = new System.Windows.Forms.Padding(4);
             this.txt_MaNguoiQL.Name = "txt_MaNguoiQL";
             this.txt_MaNguoiQL.Size = new System.Drawing.Size(255, 29);
             this.txt_MaNguoiQL.TabIndex = 90;
@@ -148,7 +148,7 @@
             // btn_Sua
             // 
             this.btn_Sua.Location = new System.Drawing.Point(119, 492);
-            this.btn_Sua.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_Sua.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Sua.Name = "btn_Sua";
             this.btn_Sua.Size = new System.Drawing.Size(100, 60);
             this.btn_Sua.TabIndex = 72;
@@ -159,7 +159,7 @@
             // txt_DTH
             // 
             this.txt_DTH.Location = new System.Drawing.Point(220, 162);
-            this.txt_DTH.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_DTH.Margin = new System.Windows.Forms.Padding(4);
             this.txt_DTH.Name = "txt_DTH";
             this.txt_DTH.Size = new System.Drawing.Size(255, 29);
             this.txt_DTH.TabIndex = 89;
@@ -168,7 +168,7 @@
             // btn_Xoa
             // 
             this.btn_Xoa.Location = new System.Drawing.Point(269, 409);
-            this.btn_Xoa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_Xoa.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Xoa.Name = "btn_Xoa";
             this.btn_Xoa.Size = new System.Drawing.Size(100, 60);
             this.btn_Xoa.TabIndex = 71;
@@ -179,7 +179,7 @@
             // btn_Them
             // 
             this.btn_Them.Location = new System.Drawing.Point(119, 409);
-            this.btn_Them.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_Them.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Them.Name = "btn_Them";
             this.btn_Them.Size = new System.Drawing.Size(100, 60);
             this.btn_Them.TabIndex = 70;
@@ -245,7 +245,7 @@
             // txt_TenCH
             // 
             this.txt_TenCH.Location = new System.Drawing.Point(220, 111);
-            this.txt_TenCH.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_TenCH.Margin = new System.Windows.Forms.Padding(4);
             this.txt_TenCH.Name = "txt_TenCH";
             this.txt_TenCH.Size = new System.Drawing.Size(255, 29);
             this.txt_TenCH.TabIndex = 82;
@@ -254,7 +254,7 @@
             // 
             this.txt_MaCH.Enabled = false;
             this.txt_MaCH.Location = new System.Drawing.Point(220, 63);
-            this.txt_MaCH.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_MaCH.Margin = new System.Windows.Forms.Padding(4);
             this.txt_MaCH.Name = "txt_MaCH";
             this.txt_MaCH.Size = new System.Drawing.Size(255, 29);
             this.txt_MaCH.TabIndex = 81;
@@ -264,9 +264,9 @@
             this.gbo_Data.Controls.Add(this.dgv_Data);
             this.gbo_Data.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbo_Data.Location = new System.Drawing.Point(572, 94);
-            this.gbo_Data.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbo_Data.Margin = new System.Windows.Forms.Padding(4);
             this.gbo_Data.Name = "gbo_Data";
-            this.gbo_Data.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbo_Data.Padding = new System.Windows.Forms.Padding(4);
             this.gbo_Data.Size = new System.Drawing.Size(671, 582);
             this.gbo_Data.TabIndex = 82;
             this.gbo_Data.TabStop = false;
@@ -286,11 +286,10 @@
             this.Controls.Add(this.gbo_Data);
             this.Controls.Add(this.gbo_NhapThongTin);
             this.Controls.Add(this.pnl_Title);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MinimizeBox = false;
             this.Name = "frm_QuanLyCuaHang";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frm_QuanLyCuaHang";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frm_QuanLyCuaHang_Load);
             this.Resize += new System.EventHandler(this.frm_QuanLyCuaHang_Resize);

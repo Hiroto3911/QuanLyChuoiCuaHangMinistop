@@ -35,5 +35,10 @@ namespace GUI.Reporting
 				MessageBox.Show("Lỗi Crystal: " + ex.Message);
 			}
         }
+
+        private void crystalReportViewer1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

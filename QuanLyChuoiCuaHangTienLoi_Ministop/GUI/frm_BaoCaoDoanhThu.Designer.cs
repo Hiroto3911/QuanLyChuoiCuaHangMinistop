@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lbl_Title = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
@@ -63,7 +63,7 @@
             this.panel1.Controls.Add(this.lbl_Title);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1259, 64);
             this.panel1.TabIndex = 65;
@@ -89,7 +89,7 @@
             this.tableLayoutPanel1.Controls.Add(this.gbo_ThongTin, 1, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 64);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -98,19 +98,19 @@
             // 
             // chart_DoanhThu
             // 
-            chartArea1.Name = "ChartArea1";
-            this.chart_DoanhThu.ChartAreas.Add(chartArea1);
+            chartArea2.Name = "ChartArea1";
+            this.chart_DoanhThu.ChartAreas.Add(chartArea2);
             this.chart_DoanhThu.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend1.Name = "Legend1";
-            this.chart_DoanhThu.Legends.Add(legend1);
+            legend2.Name = "Legend1";
+            this.chart_DoanhThu.Legends.Add(legend2);
             this.chart_DoanhThu.Location = new System.Drawing.Point(4, 4);
-            this.chart_DoanhThu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.chart_DoanhThu.Margin = new System.Windows.Forms.Padding(4);
             this.chart_DoanhThu.Name = "chart_DoanhThu";
-            series1.ChartArea = "ChartArea1";
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            series1.YValuesPerPoint = 2;
-            this.chart_DoanhThu.Series.Add(series1);
+            series2.ChartArea = "ChartArea1";
+            series2.Legend = "Legend1";
+            series2.Name = "Series1";
+            series2.YValuesPerPoint = 2;
+            this.chart_DoanhThu.Series.Add(series2);
             this.chart_DoanhThu.Size = new System.Drawing.Size(793, 668);
             this.chart_DoanhThu.TabIndex = 67;
             this.chart_DoanhThu.Text = "Báo cao doanh thu của hàng";
@@ -125,9 +125,9 @@
             this.gbo_ThongTin.Controls.Add(this.dgv_Data);
             this.gbo_ThongTin.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gbo_ThongTin.Location = new System.Drawing.Point(805, 4);
-            this.gbo_ThongTin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbo_ThongTin.Margin = new System.Windows.Forms.Padding(4);
             this.gbo_ThongTin.Name = "gbo_ThongTin";
-            this.gbo_ThongTin.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbo_ThongTin.Padding = new System.Windows.Forms.Padding(4);
             this.gbo_ThongTin.Size = new System.Drawing.Size(450, 668);
             this.gbo_ThongTin.TabIndex = 68;
             this.gbo_ThongTin.TabStop = false;
@@ -148,7 +148,7 @@
             this.cbo_MaCH.Enabled = false;
             this.cbo_MaCH.FormattingEnabled = true;
             this.cbo_MaCH.Location = new System.Drawing.Point(103, 20);
-            this.cbo_MaCH.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbo_MaCH.Margin = new System.Windows.Forms.Padding(4);
             this.cbo_MaCH.Name = "cbo_MaCH";
             this.cbo_MaCH.Size = new System.Drawing.Size(240, 24);
             this.cbo_MaCH.TabIndex = 78;
@@ -160,9 +160,9 @@
             this.gbo_DieuChinhTGian.Controls.Add(this.dtp_DenNgay);
             this.gbo_DieuChinhTGian.Controls.Add(this.dtp_TuNgay);
             this.gbo_DieuChinhTGian.Location = new System.Drawing.Point(237, 470);
-            this.gbo_DieuChinhTGian.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbo_DieuChinhTGian.Margin = new System.Windows.Forms.Padding(4);
             this.gbo_DieuChinhTGian.Name = "gbo_DieuChinhTGian";
-            this.gbo_DieuChinhTGian.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbo_DieuChinhTGian.Padding = new System.Windows.Forms.Padding(4);
             this.gbo_DieuChinhTGian.Size = new System.Drawing.Size(205, 132);
             this.gbo_DieuChinhTGian.TabIndex = 77;
             this.gbo_DieuChinhTGian.TabStop = false;
@@ -195,7 +195,7 @@
             this.dtp_DenNgay.Enabled = false;
             this.dtp_DenNgay.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtp_DenNgay.Location = new System.Drawing.Point(63, 84);
-            this.dtp_DenNgay.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtp_DenNgay.Margin = new System.Windows.Forms.Padding(4);
             this.dtp_DenNgay.Name = "dtp_DenNgay";
             this.dtp_DenNgay.Size = new System.Drawing.Size(137, 22);
             this.dtp_DenNgay.TabIndex = 84;
@@ -205,7 +205,7 @@
             this.dtp_TuNgay.Enabled = false;
             this.dtp_TuNgay.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtp_TuNgay.Location = new System.Drawing.Point(63, 28);
-            this.dtp_TuNgay.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtp_TuNgay.Margin = new System.Windows.Forms.Padding(4);
             this.dtp_TuNgay.Name = "dtp_TuNgay";
             this.dtp_TuNgay.Size = new System.Drawing.Size(137, 22);
             this.dtp_TuNgay.TabIndex = 83;
@@ -215,9 +215,9 @@
             this.groupBox2.Controls.Add(this.rb_TuChinh);
             this.groupBox2.Controls.Add(this.rb_XemTatCa);
             this.groupBox2.Location = new System.Drawing.Point(8, 470);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox2.Size = new System.Drawing.Size(221, 132);
             this.groupBox2.TabIndex = 76;
             this.groupBox2.TabStop = false;
@@ -227,7 +227,7 @@
             // 
             this.rb_TuChinh.AutoSize = true;
             this.rb_TuChinh.Location = new System.Drawing.Point(20, 28);
-            this.rb_TuChinh.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rb_TuChinh.Margin = new System.Windows.Forms.Padding(4);
             this.rb_TuChinh.Name = "rb_TuChinh";
             this.rb_TuChinh.Size = new System.Drawing.Size(139, 20);
             this.rb_TuChinh.TabIndex = 73;
@@ -240,7 +240,7 @@
             this.rb_XemTatCa.AutoSize = true;
             this.rb_XemTatCa.Checked = true;
             this.rb_XemTatCa.Location = new System.Drawing.Point(20, 80);
-            this.rb_XemTatCa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rb_XemTatCa.Margin = new System.Windows.Forms.Padding(4);
             this.rb_XemTatCa.Name = "rb_XemTatCa";
             this.rb_XemTatCa.Size = new System.Drawing.Size(90, 20);
             this.rb_XemTatCa.TabIndex = 72;
@@ -253,7 +253,7 @@
             // 
             this.btn_Xem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Xem.Location = new System.Drawing.Point(177, 620);
-            this.btn_Xem.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_Xem.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Xem.Name = "btn_Xem";
             this.btn_Xem.Size = new System.Drawing.Size(100, 37);
             this.btn_Xem.TabIndex = 72;
@@ -266,7 +266,7 @@
             this.dgv_Data.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_Data.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_Data.Location = new System.Drawing.Point(0, 57);
-            this.dgv_Data.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgv_Data.Margin = new System.Windows.Forms.Padding(4);
             this.dgv_Data.Name = "dgv_Data";
             this.dgv_Data.RowHeadersWidth = 51;
             this.dgv_Data.Size = new System.Drawing.Size(443, 406);
@@ -281,11 +281,10 @@
             this.ClientSize = new System.Drawing.Size(1259, 740);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MinimizeBox = false;
             this.Name = "frm_BaoCaoDoanhThu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frm_BaoCaoDoanhThu";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frm_BaoCaoDoanhThu_Load);
             this.Resize += new System.EventHandler(this.frm_BaoCaoDoanhThu_Resize);
