@@ -29,18 +29,43 @@ namespace GUI
 		private void btn_Ok_Click(object sender, EventArgs e)
 		{
 
-			string connstr = LayChuoiKetNoi();
-			if (!BUS_DBConnect.TestConnectionString(connstr))
+			string fullConnStr = LayChuoiKetNoi(); // With Initial Catalog = your database
+			string serverOnlyConnStr = LayChuoiKetNoiServerOnly(); // Just connects to master
+
+			if (string.IsNullOrEmpty(fullConnStr) || string.IsNullOrEmpty(serverOnlyConnStr))
 			{
-				MessageBox.Show("Kết nối thất bại. Kiểm tra lại thông tin!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+				MessageBox.Show("Thiếu thông tin kết nối.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
 				return;
+			}
+
+			string dbName = cbo_DataBaseName.Text.Trim();
+
+			if (!BUS_DBConnect.Check(serverOnlyConnStr, dbName))
+			{
+				if (BUS_DBConnect.CreatingDatabase(serverOnlyConnStr))
+				{
+					MessageBox.Show("✅ Tạo database và dữ liệu thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+				}
+				else
+				{
+					MessageBox.Show("❌ Lỗi khi tạo database hoặc dữ liệu.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+					return;
+				}
 			}
 			else
 			{
-				BUS_DBConnect.SetConnectionString(connstr);
-				MessageBox.Show("Kết nối thành công và đã lưu!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-				this.DialogResult = DialogResult.OK;
+				MessageBox.Show("⚠ Database đã tồn tại. Bỏ qua bước tạo.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
 			}
+
+			if (!BUS_DBConnect.TestConnectionString(fullConnStr))
+			{
+				MessageBox.Show("❌ Kết nối thất bại sau khi tạo database.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+				return;
+			}
+
+			BUS_DBConnect.SetConnectionString(fullConnStr);
+			MessageBox.Show("✅ Kết nối thành công và đã lưu!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+			this.DialogResult = DialogResult.OK;
 
 		}
 
@@ -101,6 +126,24 @@ namespace GUI
 
 			}
 			return null;	
+		}
+		private string LayChuoiKetNoiServerOnly()
+		{
+			string serverName = txt_ServerName.Text.Trim();
+			if (string.IsNullOrEmpty(serverName)) return null;
+
+			if (cbo_Authentication.SelectedItem == "Windows Authentication")
+			{
+				return $"Data Source={serverName};Initial Catalog=master;Integrated Security=True;";
+			}
+			else if (cbo_Authentication.SelectedItem == "SQL Server Authentication")
+			{
+				string userName = txt_UserName.Text.Trim();
+				string password = txt_Password.Text.Trim();
+				if (string.IsNullOrEmpty(userName) || string.IsNullOrEmpty(password)) return null;
+				return $"Data Source={serverName};Initial Catalog=master;User Id={userName};Password={password};";
+			}
+			return null;
 		}
 	}
 }

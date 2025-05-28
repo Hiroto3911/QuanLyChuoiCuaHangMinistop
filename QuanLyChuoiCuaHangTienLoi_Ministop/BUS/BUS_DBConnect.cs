@@ -23,5 +23,14 @@ namespace BUS
 		{
 			return DAL_DBConnect.TestConnectionString(connstr);
 		}
+		public static bool CreatingDatabase(string connstr)
+		{
+			return DAL_DBConnect.RunAllScripts(connstr);
+		}
+
+		public static bool Check(string connstr, string dbname)
+		{
+			return DAL_DBConnect.CheckDatabaseExists(connstr, dbname);
+		}
 	}
 }
